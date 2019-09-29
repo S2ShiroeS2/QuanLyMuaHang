@@ -15,13 +15,26 @@ namespace WindowsFormsApplication1
         public form_CTHD()
         {
             InitializeComponent();
-            cb_hanh_dong.SelectedIndex = 0;
+ 
 
         }
 
-        private void cb_hanh_dong_SelectedIndexChanged(object sender, EventArgs e)
+        private void MS_sua_HD_Click(object sender, EventArgs e)
         {
+            bt_luu.Enabled = true;
+        }
 
+        private void MS_xoa_HD_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
     }
 }

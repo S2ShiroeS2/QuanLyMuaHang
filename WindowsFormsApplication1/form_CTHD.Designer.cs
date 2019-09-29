@@ -47,7 +47,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tb_Tong_tien_HD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cb_hanh_dong = new System.Windows.Forms.ComboBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MS_hanh_dong = new System.Windows.Forms.ToolStripMenuItem();
+            this.MS_sua_HD = new System.Windows.Forms.ToolStripMenuItem();
+            this.MS_xoa_HD = new System.Windows.Forms.ToolStripMenuItem();
+            this.bt_luu = new System.Windows.Forms.Button();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -212,28 +217,58 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Tổng tiền";
             // 
-            // cb_hanh_dong
+            // menuStrip1
             // 
-            this.cb_hanh_dong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_hanh_dong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_hanh_dong.FormattingEnabled = true;
-            this.cb_hanh_dong.Items.AddRange(new object[] {
-            "Hành động",
-            "Sửa hóa đơn",
-            "Xóa hóa đơn"});
-            this.cb_hanh_dong.Location = new System.Drawing.Point(728, 12);
-            this.cb_hanh_dong.Name = "cb_hanh_dong";
-            this.cb_hanh_dong.Size = new System.Drawing.Size(121, 28);
-            this.cb_hanh_dong.TabIndex = 14;
-            this.cb_hanh_dong.Tag = "";
-            this.cb_hanh_dong.SelectedIndexChanged += new System.EventHandler(this.cb_hanh_dong_SelectedIndexChanged);
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MS_hanh_dong});
+            this.menuStrip1.Location = new System.Drawing.Point(728, 9);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(199, 29);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MS_hanh_dong
+            // 
+            this.MS_hanh_dong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MS_sua_HD,
+            this.MS_xoa_HD});
+            this.MS_hanh_dong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.MS_hanh_dong.Name = "MS_hanh_dong";
+            this.MS_hanh_dong.Size = new System.Drawing.Size(99, 25);
+            this.MS_hanh_dong.Text = "Hành động";
+            // 
+            // MS_sua_HD
+            // 
+            this.MS_sua_HD.Name = "MS_sua_HD";
+            this.MS_sua_HD.Size = new System.Drawing.Size(168, 26);
+            this.MS_sua_HD.Text = "Sửa hóa đơn";
+            this.MS_sua_HD.Click += new System.EventHandler(this.MS_sua_HD_Click);
+            // 
+            // MS_xoa_HD
+            // 
+            this.MS_xoa_HD.Name = "MS_xoa_HD";
+            this.MS_xoa_HD.Size = new System.Drawing.Size(168, 26);
+            this.MS_xoa_HD.Text = "Xóa hóa đơn";
+            this.MS_xoa_HD.Click += new System.EventHandler(this.MS_xoa_HD_Click);
+            // 
+            // bt_luu
+            // 
+            this.bt_luu.Enabled = false;
+            this.bt_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_luu.Location = new System.Drawing.Point(25, 387);
+            this.bt_luu.Name = "bt_luu";
+            this.bt_luu.Size = new System.Drawing.Size(87, 36);
+            this.bt_luu.TabIndex = 15;
+            this.bt_luu.Text = "Lưu";
+            this.bt_luu.UseVisualStyleBackColor = true;
             // 
             // form_CTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 474);
-            this.Controls.Add(this.cb_hanh_dong);
+            this.Controls.Add(this.bt_luu);
             this.Controls.Add(this.tb_Tong_tien_HD);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_Thue_HD);
@@ -247,8 +282,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_Ma_HD);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "form_CTHD";
             this.Text = "form_CTHD";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,6 +314,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_Tong_tien_HD;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cb_hanh_dong;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem MS_hanh_dong;
+        private System.Windows.Forms.ToolStripMenuItem MS_sua_HD;
+        private System.Windows.Forms.ToolStripMenuItem MS_xoa_HD;
+        private System.Windows.Forms.Button bt_luu;
     }
 }
