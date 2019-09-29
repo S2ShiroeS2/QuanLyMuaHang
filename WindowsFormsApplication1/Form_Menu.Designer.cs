@@ -43,21 +43,31 @@
             this.bt_import = new System.Windows.Forms.Button();
             this.bt_tao_moi = new System.Windows.Forms.Button();
             this.TabP_QLSP = new System.Windows.Forms.TabPage();
-            this.TabP_QLNCC = new System.Windows.Forms.TabPage();
-            this.TabP_QLNV = new System.Windows.Forms.TabPage();
-            this.bt_Tai_len_SP = new System.Windows.Forms.Button();
-            this.bt_tao_moi_SP = new System.Windows.Forms.Button();
+            this.tb_tim_kiem_SP = new System.Windows.Forms.TextBox();
+            this.bt_tim_kiem_SP = new System.Windows.Forms.Button();
             this.lv_SP = new System.Windows.Forms.ListView();
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tb_tim_kiem_SP = new System.Windows.Forms.TextBox();
-            this.bt_tim_kiem_SP = new System.Windows.Forms.Button();
+            this.bt_Tai_len_SP = new System.Windows.Forms.Button();
+            this.bt_tao_moi_SP = new System.Windows.Forms.Button();
+            this.TabP_QLNCC = new System.Windows.Forms.TabPage();
+            this.TabP_QLNV = new System.Windows.Forms.TabPage();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_tim_kiem_NCC = new System.Windows.Forms.TextBox();
+            this.bt_tim_kiem_NCC = new System.Windows.Forms.Button();
+            this.bt_tai_len_NCC = new System.Windows.Forms.Button();
+            this.bt_tao_moi_NCC = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
             this.TabP_QLHD.SuspendLayout();
             this.TabP_QLSP.SuspendLayout();
+            this.TabP_QLNCC.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
@@ -194,45 +204,22 @@
             this.TabP_QLSP.Text = "Quản lý sản phẩm";
             this.TabP_QLSP.UseVisualStyleBackColor = true;
             // 
-            // TabP_QLNCC
+            // tb_tim_kiem_SP
             // 
-            this.TabP_QLNCC.Location = new System.Drawing.Point(4, 29);
-            this.TabP_QLNCC.Name = "TabP_QLNCC";
-            this.TabP_QLNCC.Padding = new System.Windows.Forms.Padding(3);
-            this.TabP_QLNCC.Size = new System.Drawing.Size(916, 442);
-            this.TabP_QLNCC.TabIndex = 2;
-            this.TabP_QLNCC.Text = "Quản lý nhà cung cấp";
-            this.TabP_QLNCC.UseVisualStyleBackColor = true;
+            this.tb_tim_kiem_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_tim_kiem_SP.Location = new System.Drawing.Point(666, 33);
+            this.tb_tim_kiem_SP.Name = "tb_tim_kiem_SP";
+            this.tb_tim_kiem_SP.Size = new System.Drawing.Size(244, 30);
+            this.tb_tim_kiem_SP.TabIndex = 14;
             // 
-            // TabP_QLNV
+            // bt_tim_kiem_SP
             // 
-            this.TabP_QLNV.Location = new System.Drawing.Point(4, 29);
-            this.TabP_QLNV.Name = "TabP_QLNV";
-            this.TabP_QLNV.Padding = new System.Windows.Forms.Padding(3);
-            this.TabP_QLNV.Size = new System.Drawing.Size(916, 442);
-            this.TabP_QLNV.TabIndex = 3;
-            this.TabP_QLNV.Text = "Quản lý nhân viên";
-            this.TabP_QLNV.UseVisualStyleBackColor = true;
-            // 
-            // bt_Tai_len_SP
-            // 
-            this.bt_Tai_len_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Tai_len_SP.Location = new System.Drawing.Point(111, 23);
-            this.bt_Tai_len_SP.Name = "bt_Tai_len_SP";
-            this.bt_Tai_len_SP.Size = new System.Drawing.Size(79, 40);
-            this.bt_Tai_len_SP.TabIndex = 4;
-            this.bt_Tai_len_SP.Text = "Tải lên";
-            this.bt_Tai_len_SP.UseVisualStyleBackColor = true;
-            // 
-            // bt_tao_moi_SP
-            // 
-            this.bt_tao_moi_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_tao_moi_SP.Location = new System.Drawing.Point(6, 23);
-            this.bt_tao_moi_SP.Name = "bt_tao_moi_SP";
-            this.bt_tao_moi_SP.Size = new System.Drawing.Size(79, 40);
-            this.bt_tao_moi_SP.TabIndex = 3;
-            this.bt_tao_moi_SP.Text = "Tạo mới";
-            this.bt_tao_moi_SP.UseVisualStyleBackColor = true;
+            this.bt_tim_kiem_SP.Location = new System.Drawing.Point(559, 23);
+            this.bt_tim_kiem_SP.Name = "bt_tim_kiem_SP";
+            this.bt_tim_kiem_SP.Size = new System.Drawing.Size(81, 40);
+            this.bt_tim_kiem_SP.TabIndex = 13;
+            this.bt_tim_kiem_SP.Text = "Tìm kiếm";
+            this.bt_tim_kiem_SP.UseVisualStyleBackColor = true;
             // 
             // lv_SP
             // 
@@ -268,29 +255,128 @@
             // columnHeader11
             // 
             this.columnHeader11.Text = "Giá";
-            this.columnHeader11.Width = 127;
+            this.columnHeader11.Width = 133;
             // 
             // columnHeader12
             // 
             this.columnHeader12.Text = "Số lượng";
             this.columnHeader12.Width = 191;
             // 
-            // tb_tim_kiem_SP
+            // bt_Tai_len_SP
             // 
-            this.tb_tim_kiem_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_tim_kiem_SP.Location = new System.Drawing.Point(666, 33);
-            this.tb_tim_kiem_SP.Name = "tb_tim_kiem_SP";
-            this.tb_tim_kiem_SP.Size = new System.Drawing.Size(244, 30);
-            this.tb_tim_kiem_SP.TabIndex = 14;
+            this.bt_Tai_len_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Tai_len_SP.Location = new System.Drawing.Point(111, 23);
+            this.bt_Tai_len_SP.Name = "bt_Tai_len_SP";
+            this.bt_Tai_len_SP.Size = new System.Drawing.Size(79, 40);
+            this.bt_Tai_len_SP.TabIndex = 4;
+            this.bt_Tai_len_SP.Text = "Tải lên";
+            this.bt_Tai_len_SP.UseVisualStyleBackColor = true;
             // 
-            // bt_tim_kiem_SP
+            // bt_tao_moi_SP
             // 
-            this.bt_tim_kiem_SP.Location = new System.Drawing.Point(559, 23);
-            this.bt_tim_kiem_SP.Name = "bt_tim_kiem_SP";
-            this.bt_tim_kiem_SP.Size = new System.Drawing.Size(81, 40);
-            this.bt_tim_kiem_SP.TabIndex = 13;
-            this.bt_tim_kiem_SP.Text = "Tìm kiếm";
-            this.bt_tim_kiem_SP.UseVisualStyleBackColor = true;
+            this.bt_tao_moi_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_tao_moi_SP.Location = new System.Drawing.Point(6, 23);
+            this.bt_tao_moi_SP.Name = "bt_tao_moi_SP";
+            this.bt_tao_moi_SP.Size = new System.Drawing.Size(79, 40);
+            this.bt_tao_moi_SP.TabIndex = 3;
+            this.bt_tao_moi_SP.Text = "Tạo mới";
+            this.bt_tao_moi_SP.UseVisualStyleBackColor = true;
+            // 
+            // TabP_QLNCC
+            // 
+            this.TabP_QLNCC.Controls.Add(this.tb_tim_kiem_NCC);
+            this.TabP_QLNCC.Controls.Add(this.bt_tim_kiem_NCC);
+            this.TabP_QLNCC.Controls.Add(this.bt_tai_len_NCC);
+            this.TabP_QLNCC.Controls.Add(this.bt_tao_moi_NCC);
+            this.TabP_QLNCC.Controls.Add(this.listView2);
+            this.TabP_QLNCC.Location = new System.Drawing.Point(4, 29);
+            this.TabP_QLNCC.Name = "TabP_QLNCC";
+            this.TabP_QLNCC.Padding = new System.Windows.Forms.Padding(3);
+            this.TabP_QLNCC.Size = new System.Drawing.Size(916, 442);
+            this.TabP_QLNCC.TabIndex = 2;
+            this.TabP_QLNCC.Text = "Quản lý nhà cung cấp";
+            this.TabP_QLNCC.UseVisualStyleBackColor = true;
+            // 
+            // TabP_QLNV
+            // 
+            this.TabP_QLNV.Location = new System.Drawing.Point(4, 29);
+            this.TabP_QLNV.Name = "TabP_QLNV";
+            this.TabP_QLNV.Padding = new System.Windows.Forms.Padding(3);
+            this.TabP_QLNV.Size = new System.Drawing.Size(916, 442);
+            this.TabP_QLNV.TabIndex = 3;
+            this.TabP_QLNV.Text = "Quản lý nhân viên";
+            this.TabP_QLNV.UseVisualStyleBackColor = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16});
+            this.listView2.Location = new System.Drawing.Point(3, 101);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(910, 155);
+            this.listView2.TabIndex = 0;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Mã nhà cung cấp";
+            this.columnHeader13.Width = 149;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Tên nhà cung cấp";
+            this.columnHeader14.Width = 302;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Số điện thoại";
+            this.columnHeader15.Width = 190;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Email";
+            this.columnHeader16.Width = 264;
+            // 
+            // tb_tim_kiem_NCC
+            // 
+            this.tb_tim_kiem_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_tim_kiem_NCC.Location = new System.Drawing.Point(664, 31);
+            this.tb_tim_kiem_NCC.Name = "tb_tim_kiem_NCC";
+            this.tb_tim_kiem_NCC.Size = new System.Drawing.Size(244, 30);
+            this.tb_tim_kiem_NCC.TabIndex = 18;
+            // 
+            // bt_tim_kiem_NCC
+            // 
+            this.bt_tim_kiem_NCC.Location = new System.Drawing.Point(557, 21);
+            this.bt_tim_kiem_NCC.Name = "bt_tim_kiem_NCC";
+            this.bt_tim_kiem_NCC.Size = new System.Drawing.Size(81, 40);
+            this.bt_tim_kiem_NCC.TabIndex = 17;
+            this.bt_tim_kiem_NCC.Text = "Tìm kiếm";
+            this.bt_tim_kiem_NCC.UseVisualStyleBackColor = true;
+            // 
+            // bt_tai_len_NCC
+            // 
+            this.bt_tai_len_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_tai_len_NCC.Location = new System.Drawing.Point(109, 21);
+            this.bt_tai_len_NCC.Name = "bt_tai_len_NCC";
+            this.bt_tai_len_NCC.Size = new System.Drawing.Size(79, 40);
+            this.bt_tai_len_NCC.TabIndex = 16;
+            this.bt_tai_len_NCC.Text = "Tải lên";
+            this.bt_tai_len_NCC.UseVisualStyleBackColor = true;
+            // 
+            // bt_tao_moi_NCC
+            // 
+            this.bt_tao_moi_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_tao_moi_NCC.Location = new System.Drawing.Point(4, 21);
+            this.bt_tao_moi_NCC.Name = "bt_tao_moi_NCC";
+            this.bt_tao_moi_NCC.Size = new System.Drawing.Size(79, 40);
+            this.bt_tao_moi_NCC.TabIndex = 15;
+            this.bt_tao_moi_NCC.Text = "Tạo mới";
+            this.bt_tao_moi_NCC.UseVisualStyleBackColor = true;
             // 
             // Form_Menu
             // 
@@ -305,6 +391,8 @@
             this.TabP_QLHD.PerformLayout();
             this.TabP_QLSP.ResumeLayout(false);
             this.TabP_QLSP.PerformLayout();
+            this.TabP_QLNCC.ResumeLayout(false);
+            this.TabP_QLNCC.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -338,5 +426,14 @@
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.TextBox tb_tim_kiem_SP;
         private System.Windows.Forms.Button bt_tim_kiem_SP;
+        private System.Windows.Forms.TextBox tb_tim_kiem_NCC;
+        private System.Windows.Forms.Button bt_tim_kiem_NCC;
+        private System.Windows.Forms.Button bt_tai_len_NCC;
+        private System.Windows.Forms.Button bt_tao_moi_NCC;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
     }
 }
