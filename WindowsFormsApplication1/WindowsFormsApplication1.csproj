@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formCT_ncc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCT_ncc.Designer.cs">
+      <DependentUpon>formCT_ncc.cs</DependentUpon>
+    </Compile>
     <Compile Include="form_CTHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formCT_ncc.resx">
+      <DependentUpon>formCT_ncc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form_CTHD.resx">
       <DependentUpon>form_CTHD.cs</DependentUpon>
     </EmbeddedResource>

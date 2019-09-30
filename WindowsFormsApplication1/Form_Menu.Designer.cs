@@ -54,20 +54,30 @@
             this.bt_Tai_len_SP = new System.Windows.Forms.Button();
             this.bt_tao_moi_SP = new System.Windows.Forms.Button();
             this.TabP_QLNCC = new System.Windows.Forms.TabPage();
-            this.TabP_QLNV = new System.Windows.Forms.TabPage();
+            this.tb_tim_kiem_NCC = new System.Windows.Forms.TextBox();
+            this.bt_tim_kiem_NCC = new System.Windows.Forms.Button();
+            this.bt_tai_len_NCC = new System.Windows.Forms.Button();
+            this.bt_tao_moi_NCC = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tb_tim_kiem_NCC = new System.Windows.Forms.TextBox();
-            this.bt_tim_kiem_NCC = new System.Windows.Forms.Button();
-            this.bt_tai_len_NCC = new System.Windows.Forms.Button();
-            this.bt_tao_moi_NCC = new System.Windows.Forms.Button();
+            this.TabP_QLNV = new System.Windows.Forms.TabPage();
+            this.tb_tim_kiem_NV = new System.Windows.Forms.TextBox();
+            this.bt_tim_kiem_NV = new System.Windows.Forms.Button();
+            this.lv_NV = new System.Windows.Forms.ListView();
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bt_tao_moi_NV = new System.Windows.Forms.Button();
             this.TabControl.SuspendLayout();
             this.TabP_QLHD.SuspendLayout();
             this.TabP_QLSP.SuspendLayout();
             this.TabP_QLNCC.SuspendLayout();
+            this.TabP_QLNV.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
@@ -297,50 +307,6 @@
             this.TabP_QLNCC.Text = "Quản lý nhà cung cấp";
             this.TabP_QLNCC.UseVisualStyleBackColor = true;
             // 
-            // TabP_QLNV
-            // 
-            this.TabP_QLNV.Location = new System.Drawing.Point(4, 29);
-            this.TabP_QLNV.Name = "TabP_QLNV";
-            this.TabP_QLNV.Padding = new System.Windows.Forms.Padding(3);
-            this.TabP_QLNV.Size = new System.Drawing.Size(916, 442);
-            this.TabP_QLNV.TabIndex = 3;
-            this.TabP_QLNV.Text = "Quản lý nhân viên";
-            this.TabP_QLNV.UseVisualStyleBackColor = true;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15,
-            this.columnHeader16});
-            this.listView2.Location = new System.Drawing.Point(3, 101);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(910, 155);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Mã nhà cung cấp";
-            this.columnHeader13.Width = 149;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Tên nhà cung cấp";
-            this.columnHeader14.Width = 302;
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Số điện thoại";
-            this.columnHeader15.Width = 190;
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Email";
-            this.columnHeader16.Width = 264;
-            // 
             // tb_tim_kiem_NCC
             // 
             this.tb_tim_kiem_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -378,6 +344,122 @@
             this.bt_tao_moi_NCC.Text = "Tạo mới";
             this.bt_tao_moi_NCC.UseVisualStyleBackColor = true;
             // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16});
+            this.listView2.Location = new System.Drawing.Point(3, 101);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(910, 155);
+            this.listView2.TabIndex = 0;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Mã nhà cung cấp";
+            this.columnHeader13.Width = 149;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Tên nhà cung cấp";
+            this.columnHeader14.Width = 302;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Số điện thoại";
+            this.columnHeader15.Width = 190;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Email";
+            this.columnHeader16.Width = 264;
+            // 
+            // TabP_QLNV
+            // 
+            this.TabP_QLNV.Controls.Add(this.tb_tim_kiem_NV);
+            this.TabP_QLNV.Controls.Add(this.bt_tim_kiem_NV);
+            this.TabP_QLNV.Controls.Add(this.lv_NV);
+            this.TabP_QLNV.Controls.Add(this.bt_tao_moi_NV);
+            this.TabP_QLNV.Location = new System.Drawing.Point(4, 29);
+            this.TabP_QLNV.Name = "TabP_QLNV";
+            this.TabP_QLNV.Padding = new System.Windows.Forms.Padding(3);
+            this.TabP_QLNV.Size = new System.Drawing.Size(916, 442);
+            this.TabP_QLNV.TabIndex = 3;
+            this.TabP_QLNV.Text = "Quản lý nhân viên";
+            this.TabP_QLNV.UseVisualStyleBackColor = true;
+            // 
+            // tb_tim_kiem_NV
+            // 
+            this.tb_tim_kiem_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_tim_kiem_NV.Location = new System.Drawing.Point(634, 30);
+            this.tb_tim_kiem_NV.Name = "tb_tim_kiem_NV";
+            this.tb_tim_kiem_NV.Size = new System.Drawing.Size(244, 30);
+            this.tb_tim_kiem_NV.TabIndex = 16;
+            // 
+            // bt_tim_kiem_NV
+            // 
+            this.bt_tim_kiem_NV.Location = new System.Drawing.Point(527, 20);
+            this.bt_tim_kiem_NV.Name = "bt_tim_kiem_NV";
+            this.bt_tim_kiem_NV.Size = new System.Drawing.Size(81, 40);
+            this.bt_tim_kiem_NV.TabIndex = 15;
+            this.bt_tim_kiem_NV.Text = "Tìm kiếm";
+            this.bt_tim_kiem_NV.UseVisualStyleBackColor = true;
+            // 
+            // lv_NV
+            // 
+            this.lv_NV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21});
+            this.lv_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_NV.Location = new System.Drawing.Point(5, 77);
+            this.lv_NV.Name = "lv_NV";
+            this.lv_NV.Size = new System.Drawing.Size(907, 242);
+            this.lv_NV.TabIndex = 14;
+            this.lv_NV.UseCompatibleStateImageBehavior = false;
+            this.lv_NV.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Mã nhân viên";
+            this.columnHeader17.Width = 186;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Họ và tên";
+            this.columnHeader18.Width = 234;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Tuổi";
+            this.columnHeader19.Width = 171;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Vai trò";
+            this.columnHeader20.Width = 195;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Tình trạng";
+            this.columnHeader21.Width = 117;
+            // 
+            // bt_tao_moi_NV
+            // 
+            this.bt_tao_moi_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_tao_moi_NV.Location = new System.Drawing.Point(7, 20);
+            this.bt_tao_moi_NV.Name = "bt_tao_moi_NV";
+            this.bt_tao_moi_NV.Size = new System.Drawing.Size(79, 40);
+            this.bt_tao_moi_NV.TabIndex = 13;
+            this.bt_tao_moi_NV.Text = "Tạo mới";
+            this.bt_tao_moi_NV.UseVisualStyleBackColor = true;
+            // 
             // Form_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,6 +475,8 @@
             this.TabP_QLSP.PerformLayout();
             this.TabP_QLNCC.ResumeLayout(false);
             this.TabP_QLNCC.PerformLayout();
+            this.TabP_QLNV.ResumeLayout(false);
+            this.TabP_QLNV.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -435,5 +519,14 @@
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.TextBox tb_tim_kiem_NV;
+        private System.Windows.Forms.Button bt_tim_kiem_NV;
+        private System.Windows.Forms.ListView lv_NV;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.Button bt_tao_moi_NV;
     }
 }
