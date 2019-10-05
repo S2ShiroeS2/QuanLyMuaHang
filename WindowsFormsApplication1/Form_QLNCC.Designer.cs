@@ -36,14 +36,15 @@
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SoDT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // tb_tim_kiem_NCC
             // 
             this.tb_tim_kiem_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_tim_kiem_NCC.Location = new System.Drawing.Point(888, 44);
-            this.tb_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4);
             this.tb_tim_kiem_NCC.Name = "tb_tim_kiem_NCC";
             this.tb_tim_kiem_NCC.Size = new System.Drawing.Size(324, 36);
             this.tb_tim_kiem_NCC.TabIndex = 23;
@@ -51,7 +52,7 @@
             // bt_tim_kiem_NCC
             // 
             this.bt_tim_kiem_NCC.Location = new System.Drawing.Point(745, 32);
-            this.bt_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4);
             this.bt_tim_kiem_NCC.Name = "bt_tim_kiem_NCC";
             this.bt_tim_kiem_NCC.Size = new System.Drawing.Size(108, 49);
             this.bt_tim_kiem_NCC.TabIndex = 22;
@@ -62,7 +63,7 @@
             // 
             this.bt_tai_len_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_tai_len_NCC.Location = new System.Drawing.Point(148, 32);
-            this.bt_tai_len_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_tai_len_NCC.Margin = new System.Windows.Forms.Padding(4);
             this.bt_tai_len_NCC.Name = "bt_tai_len_NCC";
             this.bt_tai_len_NCC.Size = new System.Drawing.Size(105, 49);
             this.bt_tai_len_NCC.TabIndex = 21;
@@ -73,7 +74,7 @@
             // 
             this.bt_tao_moi_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_tao_moi_NCC.Location = new System.Drawing.Point(13, 32);
-            this.bt_tao_moi_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_tao_moi_NCC.Margin = new System.Windows.Forms.Padding(4);
             this.bt_tao_moi_NCC.Name = "bt_tao_moi_NCC";
             this.bt_tao_moi_NCC.Size = new System.Drawing.Size(105, 49);
             this.bt_tao_moi_NCC.TabIndex = 20;
@@ -86,12 +87,13 @@
             this.columnHeader13,
             this.columnHeader14,
             this.columnHeader15,
-            this.columnHeader16});
+            this.SoDT,
+            this.Email});
             this.lv_list_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_list_ncc.Location = new System.Drawing.Point(13, 123);
-            this.lv_list_ncc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lv_list_ncc.Margin = new System.Windows.Forms.Padding(4);
             this.lv_list_ncc.Name = "lv_list_ncc";
-            this.lv_list_ncc.Size = new System.Drawing.Size(1212, 271);
+            this.lv_list_ncc.Size = new System.Drawing.Size(1314, 447);
             this.lv_list_ncc.TabIndex = 24;
             this.lv_list_ncc.UseCompatibleStateImageBehavior = false;
             this.lv_list_ncc.View = System.Windows.Forms.View.Details;
@@ -108,25 +110,29 @@
             // 
             // columnHeader15
             // 
-            this.columnHeader15.Text = "Số điện thoại";
+            this.columnHeader15.Text = "Địa chỉ";
             this.columnHeader15.Width = 190;
             // 
-            // columnHeader16
+            // SoDT
             // 
-            this.columnHeader16.Text = "Email";
-            this.columnHeader16.Width = 264;
+            this.SoDT.Text = "Số điện thoại";
+            this.SoDT.Width = 264;
+            // 
+            // Email
+            // 
+            this.Email.Text = "Email";
             // 
             // Form_QLNCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 583);
+            this.ClientSize = new System.Drawing.Size(1340, 583);
             this.Controls.Add(this.lv_list_ncc);
             this.Controls.Add(this.tb_tim_kiem_NCC);
             this.Controls.Add(this.bt_tim_kiem_NCC);
             this.Controls.Add(this.bt_tai_len_NCC);
             this.Controls.Add(this.bt_tao_moi_NCC);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_QLNCC";
             this.Text = "Form_QLNCC";
             this.Load += new System.EventHandler(this.Form_QLNCC_Load);
@@ -145,6 +151,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader SoDT;
+        private System.Windows.Forms.ColumnHeader Email;
     }
 }
