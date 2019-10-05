@@ -16,5 +16,17 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+        DataClasses1DataContext a = new DataClasses1DataContext();
+        ListViewItem lvi_vendor = new ListViewItem();
+        private void Form_QLNCC_Load(object sender, EventArgs e)
+        {
+            var ncc = from listncc in a.Vendors
+                      select listncc;
+            foreach(var tmp in ncc)
+            {
+                lvi_vendor = lv_list_ncc.Items.Add(tmp.VendorID.ToString());
+                lvi_vendor.SubItems.Add(tmp.VendorName);
+            }
+        }
     }
 }

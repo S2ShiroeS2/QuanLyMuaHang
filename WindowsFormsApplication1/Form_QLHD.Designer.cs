@@ -30,7 +30,7 @@
         {
             this.tb_search = new System.Windows.Forms.TextBox();
             this.bt_search = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lv_list_HD = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,9 +59,9 @@
             this.bt_search.Text = "Tìm kiếm";
             this.bt_search.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // lv_list_HD
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_list_HD.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -69,13 +69,13 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.Location = new System.Drawing.Point(5, 69);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(907, 242);
-            this.listView1.TabIndex = 15;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lv_list_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_list_HD.Location = new System.Drawing.Point(5, 69);
+            this.lv_list_HD.Name = "lv_list_HD";
+            this.lv_list_HD.Size = new System.Drawing.Size(907, 242);
+            this.lv_list_HD.TabIndex = 15;
+            this.lv_list_HD.UseCompatibleStateImageBehavior = false;
+            this.lv_list_HD.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -131,6 +131,7 @@
             this.bt_tao_moi.TabIndex = 13;
             this.bt_tao_moi.Text = "Tạo mới";
             this.bt_tao_moi.UseVisualStyleBackColor = true;
+            this.bt_tao_moi.Click += new System.EventHandler(this.bt_tao_moi_Click);
             // 
             // Form_QLHD
             // 
@@ -139,7 +140,7 @@
             this.ClientSize = new System.Drawing.Size(924, 474);
             this.Controls.Add(this.tb_search);
             this.Controls.Add(this.bt_search);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lv_list_HD);
             this.Controls.Add(this.bt_import);
             this.Controls.Add(this.bt_tao_moi);
             this.Name = "Form_QLHD";
@@ -153,7 +154,7 @@
 
         private System.Windows.Forms.TextBox tb_search;
         private System.Windows.Forms.Button bt_search;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lv_list_HD;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

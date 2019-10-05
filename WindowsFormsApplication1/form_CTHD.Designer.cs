@@ -224,7 +224,7 @@
             this.MS_hanh_dong});
             this.menuStrip1.Location = new System.Drawing.Point(728, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(199, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(107, 29);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 

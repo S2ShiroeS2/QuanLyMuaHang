@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.bt_QLHD = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.bt_QLSP = new System.Windows.Forms.Button();
+            this.bt_QLNCC = new System.Windows.Forms.Button();
+            this.bt_QLNV = new System.Windows.Forms.Button();
             this.bt_gui_yc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,32 +44,32 @@
             this.bt_QLHD.Text = "Quản lý hóa đơn";
             this.bt_QLHD.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // bt_QLSP
             // 
-            this.button2.Location = new System.Drawing.Point(571, 148);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 39);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "bt";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_QLSP.Location = new System.Drawing.Point(571, 148);
+            this.bt_QLSP.Name = "bt_QLSP";
+            this.bt_QLSP.Size = new System.Drawing.Size(75, 39);
+            this.bt_QLSP.TabIndex = 1;
+            this.bt_QLSP.Text = "Quản lý sản phẩm";
+            this.bt_QLSP.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // bt_QLNCC
             // 
-            this.button3.Location = new System.Drawing.Point(571, 228);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 39);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bt_QLNCC.Location = new System.Drawing.Point(571, 228);
+            this.bt_QLNCC.Name = "bt_QLNCC";
+            this.bt_QLNCC.Size = new System.Drawing.Size(75, 39);
+            this.bt_QLNCC.TabIndex = 3;
+            this.bt_QLNCC.Text = "Quản lý nhà cung cấp";
+            this.bt_QLNCC.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // bt_QLNV
             // 
-            this.button4.Location = new System.Drawing.Point(302, 228);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 39);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bt_QLNV.Location = new System.Drawing.Point(302, 228);
+            this.bt_QLNV.Name = "bt_QLNV";
+            this.bt_QLNV.Size = new System.Drawing.Size(75, 39);
+            this.bt_QLNV.TabIndex = 2;
+            this.bt_QLNV.Text = "Quản lý nhân viên";
+            this.bt_QLNV.UseVisualStyleBackColor = true;
             // 
             // bt_gui_yc
             // 
@@ -86,9 +86,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 474);
             this.Controls.Add(this.bt_gui_yc);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bt_QLNCC);
+            this.Controls.Add(this.bt_QLNV);
+            this.Controls.Add(this.bt_QLSP);
             this.Controls.Add(this.bt_QLHD);
             this.Name = "Form_Menu";
             this.Text = "form_menu";
@@ -99,9 +99,9 @@
         #endregion
 
         private System.Windows.Forms.Button bt_QLHD;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bt_QLSP;
+        private System.Windows.Forms.Button bt_QLNCC;
+        private System.Windows.Forms.Button bt_QLNV;
         private System.Windows.Forms.Button bt_gui_yc;
     }
 }

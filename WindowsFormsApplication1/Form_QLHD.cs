@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void bt_tao_moi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

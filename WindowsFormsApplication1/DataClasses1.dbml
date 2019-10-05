@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PTUD" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-2UM47P3;Initial Catalog=PTUD;Integrated Security=True" SettingsObjectName="WindowsFormsApplication1.Properties.Settings" SettingsPropertyName="PTUDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.NV" Member="NVs">
+    <Type Name="NV">
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="userAccount" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="userPassword" Type="System.String" DbType="Char(18) NOT NULL" CanBeNull="false" />
+      <Column Name="userEmail" Type="System.String" DbType="Char(60) NOT NULL" CanBeNull="false" />
+      <Column Name="userPhone" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="role" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="activation" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="NV_OrderTable" Member="OrderTables" ThisKey="userID" OtherKey="userID" Type="OrderTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderDetail" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="orderDetailID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="orderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="unitPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="orderQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="OrderTable_OrderDetail" Member="OrderTable" ThisKey="orderID" OtherKey="orderID" Type="OrderTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderTable" Member="OrderTables">
+    <Type Name="OrderTable">
+      <Column Name="orderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tax" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="total" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="orderDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="modifyDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="modifyUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OrderTable_OrderDetail" Member="OrderDetails" ThisKey="orderID" OtherKey="orderID" Type="OrderDetail" />
+      <Association Name="NV_OrderTable" Member="NV" ThisKey="userID" OtherKey="userID" Type="NV" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vendor" Member="Vendors">
+    <Type Name="Vendor">
+      <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VendorName" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorAddress" Type="System.String" DbType="Char(60) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorEmail" Type="System.String" DbType="Char(60) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorPhone" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

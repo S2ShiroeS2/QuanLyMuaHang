@@ -32,7 +32,7 @@
             this.bt_tim_kiem_NCC = new System.Windows.Forms.Button();
             this.bt_tai_len_NCC = new System.Windows.Forms.Button();
             this.bt_tao_moi_NCC = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.lv_list_ncc = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -76,20 +76,21 @@
             this.bt_tao_moi_NCC.Text = "Tạo mới";
             this.bt_tao_moi_NCC.UseVisualStyleBackColor = true;
             // 
-            // listView2
+            // lv_list_ncc
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_list_ncc.CheckBoxes = true;
+            this.lv_list_ncc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader13,
             this.columnHeader14,
             this.columnHeader15,
             this.columnHeader16});
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.Location = new System.Drawing.Point(10, 100);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(910, 221);
-            this.listView2.TabIndex = 24;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.lv_list_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_list_ncc.Location = new System.Drawing.Point(10, 100);
+            this.lv_list_ncc.Name = "lv_list_ncc";
+            this.lv_list_ncc.Size = new System.Drawing.Size(910, 221);
+            this.lv_list_ncc.TabIndex = 24;
+            this.lv_list_ncc.UseCompatibleStateImageBehavior = false;
+            this.lv_list_ncc.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader13
             // 
@@ -116,13 +117,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 474);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.lv_list_ncc);
             this.Controls.Add(this.tb_tim_kiem_NCC);
             this.Controls.Add(this.bt_tim_kiem_NCC);
             this.Controls.Add(this.bt_tai_len_NCC);
             this.Controls.Add(this.bt_tao_moi_NCC);
             this.Name = "Form_QLNCC";
             this.Text = "Form_QLNCC";
+            this.Load += new System.EventHandler(this.Form_QLNCC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,7 +136,7 @@
         private System.Windows.Forms.Button bt_tim_kiem_NCC;
         private System.Windows.Forms.Button bt_tai_len_NCC;
         private System.Windows.Forms.Button bt_tao_moi_NCC;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lv_list_ncc;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
