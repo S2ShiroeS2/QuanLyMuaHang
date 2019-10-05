@@ -76,6 +76,30 @@
     <Compile Include="Form_Menu.Designer.cs">
       <DependentUpon>Form_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_QLHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QLHD.Designer.cs">
+      <DependentUpon>Form_QLHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QLNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QLNCC.Designer.cs">
+      <DependentUpon>Form_QLNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QLNV.Designer.cs">
+      <DependentUpon>Form_QLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QLSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QLSP.Designer.cs">
+      <DependentUpon>Form_QLSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formCT_ncc.resx">
@@ -92,6 +116,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Menu.resx">
       <DependentUpon>Form_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_QLHD.resx">
+      <DependentUpon>Form_QLHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_QLNCC.resx">
+      <DependentUpon>Form_QLNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_QLNV.resx">
+      <DependentUpon>Form_QLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_QLSP.resx">
+      <DependentUpon>Form_QLSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
