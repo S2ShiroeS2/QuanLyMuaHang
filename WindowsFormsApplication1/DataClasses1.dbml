@@ -3,11 +3,11 @@
   <Table Name="dbo.NV" Member="NVs">
     <Type Name="NV">
       <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="userName" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
-      <Column Name="userAccount" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
-      <Column Name="userPassword" Type="System.String" DbType="Char(18) NOT NULL" CanBeNull="false" />
-      <Column Name="userEmail" Type="System.String" DbType="Char(60) NOT NULL" CanBeNull="false" />
-      <Column Name="userPhone" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="userAccount" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="userPassword" Type="System.String" DbType="NVarChar(18) NOT NULL" CanBeNull="false" />
+      <Column Name="userEmail" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="userPhone" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
       <Column Name="role" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="activation" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="NV_OrderTable" Member="OrderTables" ThisKey="userID" OtherKey="userID" Type="OrderTable" />
@@ -41,9 +41,9 @@
   <Table Name="dbo.Product" Member="Products">
     <Type Name="Product">
       <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ProductName" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
       <Column Name="ProductType" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="ProductCategory" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCategory" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="ProductQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ProductPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -54,10 +54,10 @@
   <Table Name="dbo.Vendor" Member="Vendors">
     <Type Name="Vendor">
       <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="VendorName" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
-      <Column Name="VendorAddress" Type="System.String" DbType="Char(60) NOT NULL" CanBeNull="false" />
-      <Column Name="VendorEmail" Type="System.String" DbType="Char(60) NOT NULL" CanBeNull="false" />
-      <Column Name="VendorPhone" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorAddress" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorEmail" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorPhone" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
       <Association Name="Vendor_Product" Member="Products" ThisKey="VendorID" OtherKey="VendorID" Type="Product" />
     </Type>
   </Table>

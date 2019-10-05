@@ -42,16 +42,18 @@
             // tb_tim_kiem_NCC
             // 
             this.tb_tim_kiem_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_tim_kiem_NCC.Location = new System.Drawing.Point(666, 36);
+            this.tb_tim_kiem_NCC.Location = new System.Drawing.Point(888, 44);
+            this.tb_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_tim_kiem_NCC.Name = "tb_tim_kiem_NCC";
-            this.tb_tim_kiem_NCC.Size = new System.Drawing.Size(244, 30);
+            this.tb_tim_kiem_NCC.Size = new System.Drawing.Size(324, 36);
             this.tb_tim_kiem_NCC.TabIndex = 23;
             // 
             // bt_tim_kiem_NCC
             // 
-            this.bt_tim_kiem_NCC.Location = new System.Drawing.Point(559, 26);
+            this.bt_tim_kiem_NCC.Location = new System.Drawing.Point(745, 32);
+            this.bt_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_tim_kiem_NCC.Name = "bt_tim_kiem_NCC";
-            this.bt_tim_kiem_NCC.Size = new System.Drawing.Size(81, 40);
+            this.bt_tim_kiem_NCC.Size = new System.Drawing.Size(108, 49);
             this.bt_tim_kiem_NCC.TabIndex = 22;
             this.bt_tim_kiem_NCC.Text = "Tìm kiếm";
             this.bt_tim_kiem_NCC.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // bt_tai_len_NCC
             // 
             this.bt_tai_len_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_tai_len_NCC.Location = new System.Drawing.Point(111, 26);
+            this.bt_tai_len_NCC.Location = new System.Drawing.Point(148, 32);
+            this.bt_tai_len_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_tai_len_NCC.Name = "bt_tai_len_NCC";
-            this.bt_tai_len_NCC.Size = new System.Drawing.Size(79, 40);
+            this.bt_tai_len_NCC.Size = new System.Drawing.Size(105, 49);
             this.bt_tai_len_NCC.TabIndex = 21;
             this.bt_tai_len_NCC.Text = "Tải lên";
             this.bt_tai_len_NCC.UseVisualStyleBackColor = true;
@@ -69,25 +72,26 @@
             // bt_tao_moi_NCC
             // 
             this.bt_tao_moi_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_tao_moi_NCC.Location = new System.Drawing.Point(10, 26);
+            this.bt_tao_moi_NCC.Location = new System.Drawing.Point(13, 32);
+            this.bt_tao_moi_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_tao_moi_NCC.Name = "bt_tao_moi_NCC";
-            this.bt_tao_moi_NCC.Size = new System.Drawing.Size(79, 40);
+            this.bt_tao_moi_NCC.Size = new System.Drawing.Size(105, 49);
             this.bt_tao_moi_NCC.TabIndex = 20;
             this.bt_tao_moi_NCC.Text = "Tạo mới";
             this.bt_tao_moi_NCC.UseVisualStyleBackColor = true;
             // 
             // lv_list_ncc
             // 
-            this.lv_list_ncc.CheckBoxes = true;
             this.lv_list_ncc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader13,
             this.columnHeader14,
             this.columnHeader15,
             this.columnHeader16});
             this.lv_list_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lv_list_ncc.Location = new System.Drawing.Point(10, 100);
+            this.lv_list_ncc.Location = new System.Drawing.Point(13, 123);
+            this.lv_list_ncc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lv_list_ncc.Name = "lv_list_ncc";
-            this.lv_list_ncc.Size = new System.Drawing.Size(910, 221);
+            this.lv_list_ncc.Size = new System.Drawing.Size(1212, 271);
             this.lv_list_ncc.TabIndex = 24;
             this.lv_list_ncc.UseCompatibleStateImageBehavior = false;
             this.lv_list_ncc.View = System.Windows.Forms.View.Details;
@@ -114,14 +118,15 @@
             // 
             // Form_QLNCC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 474);
+            this.ClientSize = new System.Drawing.Size(1232, 583);
             this.Controls.Add(this.lv_list_ncc);
             this.Controls.Add(this.tb_tim_kiem_NCC);
             this.Controls.Add(this.bt_tim_kiem_NCC);
             this.Controls.Add(this.bt_tai_len_NCC);
             this.Controls.Add(this.bt_tao_moi_NCC);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form_QLNCC";
             this.Text = "Form_QLNCC";
             this.Load += new System.EventHandler(this.Form_QLNCC_Load);

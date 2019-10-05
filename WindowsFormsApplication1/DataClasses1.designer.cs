@@ -190,7 +190,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="Char(40) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
 		public string userName
 		{
 			get
@@ -210,7 +210,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userAccount", DbType="Char(40) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userAccount", DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
 		public string userAccount
 		{
 			get
@@ -230,7 +230,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userPassword", DbType="Char(18) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userPassword", DbType="NVarChar(18) NOT NULL", CanBeNull=false)]
 		public string userPassword
 		{
 			get
@@ -250,7 +250,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userEmail", DbType="Char(60) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userEmail", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
 		public string userEmail
 		{
 			get
@@ -270,7 +270,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userPhone", DbType="Char(15) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userPhone", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
 		public string userPhone
 		{
 			get
@@ -986,7 +986,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="Char(40) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
 		public string ProductName
 		{
 			get
@@ -1026,7 +1026,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCategory", DbType="Char(30) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCategory", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
 		public string ProductCategory
 		{
 			get
@@ -1250,7 +1250,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorName", DbType="Char(40) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorName", DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
 		public string VendorName
 		{
 			get
@@ -1270,7 +1270,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorAddress", DbType="Char(60) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorAddress", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
 		public string VendorAddress
 		{
 			get
@@ -1290,7 +1290,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorEmail", DbType="Char(60) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorEmail", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
 		public string VendorEmail
 		{
 			get
@@ -1310,7 +1310,7 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorPhone", DbType="Char(15) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorPhone", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
 		public string VendorPhone
 		{
 			get
