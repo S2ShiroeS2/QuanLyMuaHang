@@ -16,15 +16,28 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        List<ListViewItem> lvi_vendor = new List<ListViewItem>();
+        List<ListViewItem> list_vendor = new List<ListViewItem>();
         VendorController VC = new VendorController();
 
         private void Form_QLNCC_Load(object sender, EventArgs e)
         {
-            lvi_vendor = VC.VendorList();
+            list_vendor.Clear();
+            lv_list_ncc.Items.Clear();
+            list_vendor = VC.VendorList();
 
-            foreach (ListViewItem V in lvi_vendor)
-                lv_list_ncc.Items.Add(V);//Ngon lanh
+            foreach (ListViewItem V in list_vendor)
+                lv_list_ncc.Items.Add(V);
+        }
+
+
+        private void bt_tim_kiem_NCC_Click(object sender, EventArgs e)
+        {
+            list_vendor.Clear();
+            lv_list_ncc.Items.Clear();
+            list_vendor = VC.VendorListSearch(tb_tim_kiem_NCC.Text.ToString());
+
+            foreach (ListViewItem V in list_vendor)
+                lv_list_ncc.Items.Add(V);
         }
     }
 }

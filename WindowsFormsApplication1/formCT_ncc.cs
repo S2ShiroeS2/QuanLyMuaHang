@@ -16,5 +16,15 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void formCT_ncc_Load(object sender, EventArgs e)
+        {
+            tb_dia_chi.Clear();
+            tb_dt.Clear();
+            tb_NccEmail.Clear();
+            tb_NccID.Clear();
+            tb_ten_ncc.Clear();
+            
+        }
     }
 }

@@ -58,6 +58,7 @@
             this.bt_tim_kiem_NCC.TabIndex = 22;
             this.bt_tim_kiem_NCC.Text = "Tìm kiếm";
             this.bt_tim_kiem_NCC.UseVisualStyleBackColor = true;
+            this.bt_tim_kiem_NCC.Click += new System.EventHandler(this.bt_tim_kiem_NCC_Click);
             // 
             // bt_tai_len_NCC
             // 
