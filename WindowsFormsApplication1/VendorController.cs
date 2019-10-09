@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1
             listVendor.Clear();
             //List<string> SearchName = new List<string>();
             var VendorVar = from V in data.Vendors
-                            where (V.VendorName == SearchNameData )
+                            where (V.VendorName.Contains(SearchNameData))
                             select V;
             foreach (var V in VendorVar)
             {

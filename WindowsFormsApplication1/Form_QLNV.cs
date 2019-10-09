@@ -27,5 +27,15 @@ namespace WindowsFormsApplication1
             foreach (ListViewItem Nv in list_NV)
                 lv_list_NV.Items.Add(Nv);
         }
+
+        private void bt_tim_kiem_NCC_Click(object sender, EventArgs e)
+        {
+            list_NV.Clear();
+            lv_list_NV.Items.Clear();
+            list_NV = NVC.NVListSearch(tb_tim_kiem_nv.Text.ToString());
+
+            foreach (ListViewItem V in list_NV)
+                lv_list_NV.Items.Add(V);
+        }
     }
 }
