@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
                 lvi.SubItems.Add(V.VendorAddress);
                 lvi.SubItems.Add(V.VendorPhone);
                 lvi.SubItems.Add(V.VendorEmail);
+                lvi.SubItems.Add(V.VendorHaveProduct.ToString());
                 listVendor.Add(lvi);
             }
             
@@ -46,6 +47,7 @@ namespace WindowsFormsApplication1
                 lvi.SubItems.Add(V.VendorAddress);
                 lvi.SubItems.Add(V.VendorPhone);
                 lvi.SubItems.Add(V.VendorEmail);
+                lvi.SubItems.Add(V.VendorHaveProduct.ToString());
                 listVendor.Add(lvi);
             }
             return listVendor;

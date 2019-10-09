@@ -1206,6 +1206,8 @@ namespace WindowsFormsApplication1
 		
 		private string _VendorPhone;
 		
+		private bool _VendorHaveProduct;
+		
 		private EntitySet<Product> _Products;
 		
     #region Extensibility Method Definitions
@@ -1222,6 +1224,8 @@ namespace WindowsFormsApplication1
     partial void OnVendorEmailChanged();
     partial void OnVendorPhoneChanging(string value);
     partial void OnVendorPhoneChanged();
+    partial void OnVendorHaveProductChanging(bool value);
+    partial void OnVendorHaveProductChanged();
     #endregion
 		
 		public Vendor()
@@ -1326,6 +1330,26 @@ namespace WindowsFormsApplication1
 					this._VendorPhone = value;
 					this.SendPropertyChanged("VendorPhone");
 					this.OnVendorPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorHaveProduct", DbType="Bit NOT NULL")]
+		public bool VendorHaveProduct
+		{
+			get
+			{
+				return this._VendorHaveProduct;
+			}
+			set
+			{
+				if ((this._VendorHaveProduct != value))
+				{
+					this.OnVendorHaveProductChanging(value);
+					this.SendPropertyChanging();
+					this._VendorHaveProduct = value;
+					this.SendPropertyChanged("VendorHaveProduct");
+					this.OnVendorHaveProductChanged();
 				}
 			}
 		}

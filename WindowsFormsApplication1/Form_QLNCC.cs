@@ -18,6 +18,8 @@ namespace WindowsFormsApplication1
         }
         List<ListViewItem> list_vendor = new List<ListViewItem>();
         VendorController VC = new VendorController();
+        public static ListViewItem lvi_ncc = new ListViewItem();
+        public static bool flag_ncc = true;
 
         private void Form_QLNCC_Load(object sender, EventArgs e)
         {
@@ -42,8 +44,27 @@ namespace WindowsFormsApplication1
 
         private void bt_tao_moi_NCC_Click(object sender, EventArgs e)
         {
+            flag_ncc = true;
             formCT_ncc formCT_ncc = new formCT_ncc();
             formCT_ncc.Show();
+        }
+
+        private void lv_list_ncc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lv_list_ncc.SelectedItems.Count > 0)
+                lvi_ncc = lv_list_ncc.SelectedItems[0];
+        }
+
+        private void bt_sua_ncc_Click(object sender, EventArgs e)
+        {
+            flag_ncc = false;
+            if (lv_list_ncc.SelectedItems.Count > 0)
+            {
+                formCT_ncc formCT_ncc = new formCT_ncc();
+                formCT_ncc.Show();
+            }
+            else
+                MessageBox.Show("Vui lòng chọn 1 nhà cung cấp");
         }
     }
 }

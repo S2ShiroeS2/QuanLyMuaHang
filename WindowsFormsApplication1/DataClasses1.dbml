@@ -58,6 +58,7 @@
       <Column Name="VendorAddress" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
       <Column Name="VendorEmail" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
       <Column Name="VendorPhone" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorHaveProduct" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="Vendor_Product" Member="Products" ThisKey="VendorID" OtherKey="VendorID" Type="Product" />
     </Type>
   </Table>
