@@ -81,6 +81,7 @@
             this.bt_tao_moi_NCC.TabIndex = 20;
             this.bt_tao_moi_NCC.Text = "Tạo mới";
             this.bt_tao_moi_NCC.UseVisualStyleBackColor = true;
+            this.bt_tao_moi_NCC.Click += new System.EventHandler(this.bt_tao_moi_NCC_Click);
             // 
             // lv_list_ncc
             // 

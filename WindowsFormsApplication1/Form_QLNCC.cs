@@ -39,5 +39,11 @@ namespace WindowsFormsApplication1
             foreach (ListViewItem V in list_vendor)
                 lv_list_ncc.Items.Add(V);
         }
+
+        private void bt_tao_moi_NCC_Click(object sender, EventArgs e)
+        {
+            formCT_ncc formCT_ncc = new formCT_ncc();
+            formCT_ncc.Show();
+        }
     }
 }
