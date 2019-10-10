@@ -38,8 +38,9 @@
             this.tb_NccEmail = new System.Windows.Forms.TextBox();
             this.tb_NccID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.bt_sua_ncc = new System.Windows.Forms.Button();
-            this.bt__sua_ncc_confirm = new System.Windows.Forms.Button();
+            this.bt_tao_ncc = new System.Windows.Forms.Button();
+            this.bt__sua_ncc = new System.Windows.Forms.Button();
+            this.btn_Luu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -123,6 +124,7 @@
             // 
             // tb_NccID
             // 
+            this.tb_NccID.Enabled = false;
             this.tb_NccID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_NccID.Location = new System.Drawing.Point(216, 116);
             this.tb_NccID.Margin = new System.Windows.Forms.Padding(4);
@@ -141,32 +143,43 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Mã nhà cung cấp";
             // 
-            // bt_sua_ncc
+            // bt_tao_ncc
             // 
-            this.bt_sua_ncc.Location = new System.Drawing.Point(238, 438);
-            this.bt_sua_ncc.Name = "bt_sua_ncc";
-            this.bt_sua_ncc.Size = new System.Drawing.Size(127, 55);
-            this.bt_sua_ncc.TabIndex = 10;
-            this.bt_sua_ncc.Text = "Tạo";
-            this.bt_sua_ncc.UseVisualStyleBackColor = true;
-            this.bt_sua_ncc.Click += new System.EventHandler(this.bt_sua_ncc_Click);
+            this.bt_tao_ncc.Location = new System.Drawing.Point(238, 438);
+            this.bt_tao_ncc.Name = "bt_tao_ncc";
+            this.bt_tao_ncc.Size = new System.Drawing.Size(127, 55);
+            this.bt_tao_ncc.TabIndex = 10;
+            this.bt_tao_ncc.Text = "Tạo";
+            this.bt_tao_ncc.UseVisualStyleBackColor = true;
             // 
-            // bt__sua_ncc_confirm
+            // bt__sua_ncc
             // 
-            this.bt__sua_ncc_confirm.Location = new System.Drawing.Point(674, 438);
-            this.bt__sua_ncc_confirm.Name = "bt__sua_ncc_confirm";
-            this.bt__sua_ncc_confirm.Size = new System.Drawing.Size(127, 55);
-            this.bt__sua_ncc_confirm.TabIndex = 11;
-            this.bt__sua_ncc_confirm.Text = "Sửa ";
-            this.bt__sua_ncc_confirm.UseVisualStyleBackColor = true;
+            this.bt__sua_ncc.Location = new System.Drawing.Point(674, 438);
+            this.bt__sua_ncc.Name = "bt__sua_ncc";
+            this.bt__sua_ncc.Size = new System.Drawing.Size(127, 55);
+            this.bt__sua_ncc.TabIndex = 11;
+            this.bt__sua_ncc.Text = "Sửa ";
+            this.bt__sua_ncc.UseVisualStyleBackColor = true;
+            this.bt__sua_ncc.Click += new System.EventHandler(this.bt__sua_ncc_Click);
+            // 
+            // btn_Luu
+            // 
+            this.btn_Luu.Location = new System.Drawing.Point(873, 438);
+            this.btn_Luu.Name = "btn_Luu";
+            this.btn_Luu.Size = new System.Drawing.Size(127, 55);
+            this.btn_Luu.TabIndex = 12;
+            this.btn_Luu.Text = "Lưu";
+            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // formCT_ncc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 583);
-            this.Controls.Add(this.bt__sua_ncc_confirm);
-            this.Controls.Add(this.bt_sua_ncc);
+            this.Controls.Add(this.btn_Luu);
+            this.Controls.Add(this.bt__sua_ncc);
+            this.Controls.Add(this.bt_tao_ncc);
             this.Controls.Add(this.tb_NccEmail);
             this.Controls.Add(this.tb_NccID);
             this.Controls.Add(this.label5);
@@ -198,7 +211,8 @@
         private System.Windows.Forms.TextBox tb_NccEmail;
         private System.Windows.Forms.TextBox tb_NccID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button bt_sua_ncc;
-        private System.Windows.Forms.Button bt__sua_ncc_confirm;
+        private System.Windows.Forms.Button bt_tao_ncc;
+        private System.Windows.Forms.Button bt__sua_ncc;
+        private System.Windows.Forms.Button btn_Luu;
     }
 }

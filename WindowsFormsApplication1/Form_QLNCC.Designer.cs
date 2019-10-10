@@ -38,8 +38,8 @@
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SoDT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.bt_sua_ncc = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bt_sua_ncc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tb_tim_kiem_NCC
@@ -105,6 +105,7 @@
             this.lv_list_ncc.UseCompatibleStateImageBehavior = false;
             this.lv_list_ncc.View = System.Windows.Forms.View.Details;
             this.lv_list_ncc.SelectedIndexChanged += new System.EventHandler(this.lv_list_ncc_SelectedIndexChanged);
+            this.lv_list_ncc.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lv_list_ncc_MouseDoubleClick);
             // 
             // columnHeader13
             // 
@@ -130,6 +131,11 @@
             // 
             this.Email.Text = "Email";
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Có Product";
+            this.columnHeader1.Width = 114;
+            // 
             // bt_sua_ncc
             // 
             this.bt_sua_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,11 +147,6 @@
             this.bt_sua_ncc.Text = "Sửa ncc";
             this.bt_sua_ncc.UseVisualStyleBackColor = true;
             this.bt_sua_ncc.Click += new System.EventHandler(this.bt_sua_ncc_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Có Product";
-            this.columnHeader1.Width = 114;
             // 
             // Form_QLNCC
             // 
