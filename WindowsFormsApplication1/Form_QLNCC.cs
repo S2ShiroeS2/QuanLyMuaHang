@@ -34,12 +34,17 @@ namespace WindowsFormsApplication1
 
         private void bt_tim_kiem_NCC_Click(object sender, EventArgs e)
         {
-            list_vendor.Clear();
-            lv_list_ncc.Items.Clear();
-            list_vendor = VC.VendorListSearch(tb_tim_kiem_NCC.Text.ToString());
+            if (tb_tim_kiem_NCC.Text.Count() > 0)
+            {
+                list_vendor.Clear();
+                lv_list_ncc.Items.Clear();
+                list_vendor = VC.VendorListSearch(tb_tim_kiem_NCC.Text.ToString());
 
-            foreach (ListViewItem V in list_vendor)
-                lv_list_ncc.Items.Add(V);
+                foreach (ListViewItem V in list_vendor)
+                    lv_list_ncc.Items.Add(V);
+            }
+            else
+                MessageBox.Show("Vui lòng điền thông tin muốn tìm");
         }
 
         private void bt_tao_moi_NCC_Click(object sender, EventArgs e)
@@ -77,6 +82,16 @@ namespace WindowsFormsApplication1
             }
             else
                 MessageBox.Show("Vui lòng chọn 1 nhà cung cấp");
+        }
+
+        private void btn_Lam_Moi_Click(object sender, EventArgs e)
+        {
+            list_vendor.Clear();
+            lv_list_ncc.Items.Clear();
+            list_vendor = VC.VendorList();
+
+            foreach (ListViewItem V in list_vendor)
+                lv_list_ncc.Items.Add(V);
         }
     }
 }

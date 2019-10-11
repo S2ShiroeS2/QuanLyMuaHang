@@ -57,6 +57,7 @@ namespace WindowsFormsApplication1
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
+            
             lvi_them_ncc.Text = tb_NccID.Text;
             lvi_them_ncc.SubItems.Add(tb_ten_ncc.Text);
             lvi_them_ncc.SubItems.Add(tb_dia_chi.Text);
@@ -64,7 +65,11 @@ namespace WindowsFormsApplication1
             lvi_them_ncc.SubItems.Add(tb_NccEmail.Text);
             lvi_them_ncc.SubItems.Add(false.ToString());
 
-            Vc.VendorAddNew(lvi_them_ncc);
+            if (Form_QLNCC.flag_ncc)
+                Vc.VendorAddNew(lvi_them_ncc);
+            else
+                Vc.SuaNcc(lvi_them_ncc);
+
             MessageBox.Show("Lưu thành công");
         }
 

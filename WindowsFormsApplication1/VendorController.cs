@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
 
         public List<ListViewItem> VendorList() {
             listVendor.Clear();
+            data = new DataClasses1DataContext();
             var VendorVar = from V in data.Vendors
                             select V;
             foreach (var V in VendorVar)
@@ -63,7 +64,10 @@ namespace WindowsFormsApplication1
 
         public void VendorAddNew(ListViewItem lvi_vendor)
         {
+            //Insert Ncc trong databse
             Vendor V = new Vendor();
+            data = new DataClasses1DataContext();
+
             V.VendorID = Int32.Parse(lvi_vendor.Text);
             V.VendorName = lvi_vendor.SubItems[1].Text;
             V.VendorAddress = lvi_vendor.SubItems[2].Text;
@@ -72,6 +76,23 @@ namespace WindowsFormsApplication1
             V.VendorHaveProduct = bool.Parse(lvi_vendor.SubItems[5].Text);
 
             data.Vendors.InsertOnSubmit(V);
+            data.SubmitChanges();
+        }
+
+        public void SuaNcc(ListViewItem lvi_vendor)
+        {
+            //Update Ncc trong database
+            data = new DataClasses1DataContext();
+            var VendorList = (from V in data.Vendors
+                        where V.VendorID.ToString() == lvi_vendor.Text
+                        select V);
+            foreach (Vendor VD in VendorList) {
+                VD.VendorName = lvi_vendor.SubItems[1].Text;
+                VD.VendorAddress = lvi_vendor.SubItems[2].Text;
+                VD.VendorPhone = lvi_vendor.SubItems[3].Text;
+                VD.VendorEmail = lvi_vendor.SubItems[4].Text;
+                VD.VendorHaveProduct = bool.Parse(lvi_vendor.SubItems[5].Text);
+            }
             data.SubmitChanges();
         }
     }
