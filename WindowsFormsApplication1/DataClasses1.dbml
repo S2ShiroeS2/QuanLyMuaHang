@@ -34,8 +34,10 @@
       <Column Name="orderDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="modifyDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="modifyUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VendorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="OrderTable_OrderDetail" Member="OrderDetails" ThisKey="orderID" OtherKey="orderID" Type="OrderDetail" />
       <Association Name="NV_OrderTable" Member="NV" ThisKey="userID" OtherKey="userID" Type="NV" IsForeignKey="true" />
+      <Association Name="Vendor_OrderTable" Member="Vendor" ThisKey="VendorID" OtherKey="VendorID" Type="Vendor" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Product" Member="Products">
@@ -46,9 +48,8 @@
       <Column Name="ProductCategory" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="ProductQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ProductPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Manufacture" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Association Name="Product_OrderDetail" Member="OrderDetails" ThisKey="ProductID" OtherKey="ProductID" Type="OrderDetail" />
-      <Association Name="Vendor_Product" Member="Vendor" ThisKey="VendorID" OtherKey="VendorID" Type="Vendor" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Vendor" Member="Vendors">
@@ -56,10 +57,11 @@
       <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="VendorName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
       <Column Name="VendorAddress" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="VAT" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="VendorEmail" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
       <Column Name="VendorPhone" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="VendorHaveProduct" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Association Name="Vendor_Product" Member="Products" ThisKey="VendorID" OtherKey="VendorID" Type="Product" />
+      <Column Name="VendorAvailable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Vendor_OrderTable" Member="OrderTables" ThisKey="VendorID" OtherKey="VendorID" Type="OrderTable" />
     </Type>
   </Table>
 </Database>

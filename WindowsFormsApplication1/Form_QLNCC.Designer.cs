@@ -33,13 +33,14 @@
             this.bt_tai_len_NCC = new System.Windows.Forms.Button();
             this.bt_tao_moi_NCC = new System.Windows.Forms.Button();
             this.lv_list_ncc = new System.Windows.Forms.ListView();
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SoDT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.VendorName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.VendorAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.VAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.VendorPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_Lam_Moi = new System.Windows.Forms.Button();
+            this.VendorAvailable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // tb_tim_kiem_NCC
@@ -88,12 +89,13 @@
             // lv_list_ncc
             // 
             this.lv_list_ncc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15,
-            this.SoDT,
+            this.ID,
+            this.VendorName,
+            this.VendorAddress,
+            this.VAT,
             this.Email,
-            this.columnHeader1});
+            this.VendorPhone,
+            this.VendorAvailable});
             this.lv_list_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_list_ncc.FullRowSelect = true;
             this.lv_list_ncc.Location = new System.Drawing.Point(28, 136);
@@ -107,34 +109,35 @@
             this.lv_list_ncc.SelectedIndexChanged += new System.EventHandler(this.lv_list_ncc_SelectedIndexChanged);
             this.lv_list_ncc.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lv_list_ncc_MouseDoubleClick);
             // 
-            // columnHeader13
+            // ID
             // 
-            this.columnHeader13.Text = "Mã nhà cung cấp";
-            this.columnHeader13.Width = 149;
+            this.ID.Text = "Mã nhà cung cấp";
+            this.ID.Width = 164;
             // 
-            // columnHeader14
+            // VendorName
             // 
-            this.columnHeader14.Text = "Tên nhà cung cấp";
-            this.columnHeader14.Width = 302;
+            this.VendorName.Text = "Tên nhà cung cấp";
+            this.VendorName.Width = 174;
             // 
-            // columnHeader15
+            // VendorAddress
             // 
-            this.columnHeader15.Text = "Địa chỉ";
-            this.columnHeader15.Width = 190;
+            this.VendorAddress.Text = "Địa chỉ";
+            this.VendorAddress.Width = 200;
             // 
-            // SoDT
+            // VAT
             // 
-            this.SoDT.Text = "Số điện thoại";
-            this.SoDT.Width = 264;
+            this.VAT.Text = "VAT";
+            this.VAT.Width = 63;
             // 
             // Email
             // 
             this.Email.Text = "Email";
+            this.Email.Width = 179;
             // 
-            // columnHeader1
+            // VendorPhone
             // 
-            this.columnHeader1.Text = "Có Product";
-            this.columnHeader1.Width = 114;
+            this.VendorPhone.Text = "Số điện thoại";
+            this.VendorPhone.Width = 149;
             // 
             // btn_Lam_Moi
             // 
@@ -147,6 +150,11 @@
             this.btn_Lam_Moi.Text = "Refresh";
             this.btn_Lam_Moi.UseVisualStyleBackColor = true;
             this.btn_Lam_Moi.Click += new System.EventHandler(this.btn_Lam_Moi_Click);
+            // 
+            // VendorAvailable
+            // 
+            this.VendorAvailable.Text = "Been there done that";
+            this.VendorAvailable.Width = 198;
             // 
             // Form_QLNCC
             // 
@@ -175,12 +183,13 @@
         private System.Windows.Forms.Button bt_tai_len_NCC;
         private System.Windows.Forms.Button bt_tao_moi_NCC;
         private System.Windows.Forms.ListView lv_list_ncc;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ColumnHeader SoDT;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader VendorName;
+        private System.Windows.Forms.ColumnHeader VendorAddress;
+        private System.Windows.Forms.ColumnHeader VAT;
         private System.Windows.Forms.ColumnHeader Email;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader VendorPhone;
         private System.Windows.Forms.Button btn_Lam_Moi;
+        private System.Windows.Forms.ColumnHeader VendorAvailable;
     }
 }

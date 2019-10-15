@@ -29,18 +29,22 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.tb_ten_ncc = new System.Windows.Forms.TextBox();
+            this.txb_ten_ncc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tb_dia_chi = new System.Windows.Forms.TextBox();
-            this.tb_dt = new System.Windows.Forms.TextBox();
+            this.txb_dia_chi = new System.Windows.Forms.TextBox();
+            this.txb_dt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tb_NccEmail = new System.Windows.Forms.TextBox();
-            this.tb_NccID = new System.Windows.Forms.TextBox();
+            this.txb_NccEmail = new System.Windows.Forms.TextBox();
+            this.txb_NccID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.bt_tao_ncc = new System.Windows.Forms.Button();
             this.bt__sua_ncc = new System.Windows.Forms.Button();
             this.btn_Luu = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txb_Available = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txb_VAT = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -54,14 +58,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên nhà cung cấp";
             // 
-            // tb_ten_ncc
+            // txb_ten_ncc
             // 
-            this.tb_ten_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_ten_ncc.Location = new System.Drawing.Point(21, 39);
-            this.tb_ten_ncc.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_ten_ncc.Name = "tb_ten_ncc";
-            this.tb_ten_ncc.Size = new System.Drawing.Size(265, 30);
-            this.tb_ten_ncc.TabIndex = 1;
+            this.txb_ten_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_ten_ncc.Location = new System.Drawing.Point(21, 39);
+            this.txb_ten_ncc.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_ten_ncc.Name = "txb_ten_ncc";
+            this.txb_ten_ncc.Size = new System.Drawing.Size(265, 30);
+            this.txb_ten_ncc.TabIndex = 1;
             // 
             // label2
             // 
@@ -74,24 +78,24 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Địa chỉ";
             // 
-            // tb_dia_chi
+            // txb_dia_chi
             // 
-            this.tb_dia_chi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_dia_chi.Location = new System.Drawing.Point(133, 240);
-            this.tb_dia_chi.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_dia_chi.Multiline = true;
-            this.tb_dia_chi.Name = "tb_dia_chi";
-            this.tb_dia_chi.Size = new System.Drawing.Size(301, 57);
-            this.tb_dia_chi.TabIndex = 3;
+            this.txb_dia_chi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_dia_chi.Location = new System.Drawing.Point(133, 240);
+            this.txb_dia_chi.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_dia_chi.Multiline = true;
+            this.txb_dia_chi.Name = "txb_dia_chi";
+            this.txb_dia_chi.Size = new System.Drawing.Size(301, 57);
+            this.txb_dia_chi.TabIndex = 3;
             // 
-            // tb_dt
+            // txb_dt
             // 
-            this.tb_dt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_dt.Location = new System.Drawing.Point(815, 267);
-            this.tb_dt.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_dt.Name = "tb_dt";
-            this.tb_dt.Size = new System.Drawing.Size(265, 30);
-            this.tb_dt.TabIndex = 5;
+            this.txb_dt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_dt.Location = new System.Drawing.Point(815, 267);
+            this.txb_dt.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_dt.Name = "txb_dt";
+            this.txb_dt.Size = new System.Drawing.Size(265, 30);
+            this.txb_dt.TabIndex = 5;
             // 
             // label3
             // 
@@ -115,22 +119,22 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Email";
             // 
-            // tb_NccEmail
+            // txb_NccEmail
             // 
-            this.tb_NccEmail.Location = new System.Drawing.Point(133, 352);
-            this.tb_NccEmail.Name = "tb_NccEmail";
-            this.tb_NccEmail.Size = new System.Drawing.Size(301, 22);
-            this.tb_NccEmail.TabIndex = 9;
+            this.txb_NccEmail.Location = new System.Drawing.Point(133, 352);
+            this.txb_NccEmail.Name = "txb_NccEmail";
+            this.txb_NccEmail.Size = new System.Drawing.Size(301, 22);
+            this.txb_NccEmail.TabIndex = 9;
             // 
-            // tb_NccID
+            // txb_NccID
             // 
-            this.tb_NccID.Enabled = false;
-            this.tb_NccID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_NccID.Location = new System.Drawing.Point(216, 116);
-            this.tb_NccID.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_NccID.Name = "tb_NccID";
-            this.tb_NccID.Size = new System.Drawing.Size(265, 30);
-            this.tb_NccID.TabIndex = 8;
+            this.txb_NccID.Enabled = false;
+            this.txb_NccID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_NccID.Location = new System.Drawing.Point(216, 116);
+            this.txb_NccID.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_NccID.Name = "txb_NccID";
+            this.txb_NccID.Size = new System.Drawing.Size(265, 30);
+            this.txb_NccID.TabIndex = 8;
             // 
             // label5
             // 
@@ -172,23 +176,68 @@
             this.btn_Luu.UseVisualStyleBackColor = true;
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(731, 57);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(196, 25);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Been there Done that";
+            // 
+            // txb_Available
+            // 
+            this.txb_Available.Enabled = false;
+            this.txb_Available.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_Available.Location = new System.Drawing.Point(736, 97);
+            this.txb_Available.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Available.Name = "txb_Available";
+            this.txb_Available.Size = new System.Drawing.Size(265, 30);
+            this.txb_Available.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(649, 174);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 25);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "VAT";
+            // 
+            // txb_VAT
+            // 
+            this.txb_VAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_VAT.Location = new System.Drawing.Point(766, 169);
+            this.txb_VAT.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_VAT.Name = "txb_VAT";
+            this.txb_VAT.Size = new System.Drawing.Size(265, 30);
+            this.txb_VAT.TabIndex = 16;
+            // 
             // formCT_ncc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 583);
+            this.Controls.Add(this.txb_VAT);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txb_Available);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Luu);
             this.Controls.Add(this.bt__sua_ncc);
             this.Controls.Add(this.bt_tao_ncc);
-            this.Controls.Add(this.tb_NccEmail);
-            this.Controls.Add(this.tb_NccID);
+            this.Controls.Add(this.txb_NccEmail);
+            this.Controls.Add(this.txb_NccID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tb_dt);
+            this.Controls.Add(this.txb_dt);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tb_dia_chi);
+            this.Controls.Add(this.txb_dia_chi);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tb_ten_ncc);
+            this.Controls.Add(this.txb_ten_ncc);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formCT_ncc";
@@ -202,17 +251,21 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_ten_ncc;
+        private System.Windows.Forms.TextBox txb_ten_ncc;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tb_dia_chi;
-        private System.Windows.Forms.TextBox tb_dt;
+        private System.Windows.Forms.TextBox txb_dia_chi;
+        private System.Windows.Forms.TextBox txb_dt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tb_NccEmail;
-        private System.Windows.Forms.TextBox tb_NccID;
+        private System.Windows.Forms.TextBox txb_NccEmail;
+        private System.Windows.Forms.TextBox txb_NccID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button bt_tao_ncc;
         private System.Windows.Forms.Button bt__sua_ncc;
         private System.Windows.Forms.Button btn_Luu;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txb_Available;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txb_VAT;
     }
 }

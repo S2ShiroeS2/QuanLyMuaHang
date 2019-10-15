@@ -22,24 +22,27 @@ namespace WindowsFormsApplication1
 
         private void Enable_txb(bool Active)
         {
-            tb_dia_chi.Enabled = tb_dt.Enabled=tb_NccEmail.Enabled=tb_ten_ncc.Enabled=Active;
+            txb_dia_chi.Enabled = txb_dt.Enabled=txb_NccEmail.Enabled=txb_ten_ncc.Enabled=txb_VAT.Enabled=Active;
         }
 
         private void formCT_ncc_Load(object sender, EventArgs e)
         {
-            tb_dia_chi.Clear();
-            tb_dt.Clear();
-            tb_NccEmail.Clear();
-            tb_NccID.Clear();
-            tb_ten_ncc.Clear();
+            txb_dia_chi.Clear();
+            txb_dt.Clear();
+            txb_NccEmail.Clear();
+            txb_NccID.Clear();
+            txb_ten_ncc.Clear();
+            txb_Available.Clear();
 
             if (Form_QLNCC.flag_ncc == false)
             {
-                tb_NccID.Text = Form_QLNCC.lvi_ncc.SubItems[0].Text;
-                tb_ten_ncc.Text = Form_QLNCC.lvi_ncc.SubItems[1].Text;
-                tb_dia_chi.Text = Form_QLNCC.lvi_ncc.SubItems[2].Text;
-                tb_dt.Text = Form_QLNCC.lvi_ncc.SubItems[3].Text;
-                tb_NccEmail.Text = Form_QLNCC.lvi_ncc.SubItems[4].Text;
+                txb_NccID.Text = Form_QLNCC.lvi_ncc.SubItems[0].Text;
+                txb_ten_ncc.Text = Form_QLNCC.lvi_ncc.SubItems[1].Text;
+                txb_dia_chi.Text = Form_QLNCC.lvi_ncc.SubItems[2].Text;
+                txb_VAT.Text = Form_QLNCC.lvi_ncc.SubItems[3].Text;
+                txb_NccEmail.Text = Form_QLNCC.lvi_ncc.SubItems[4].Text;
+                txb_dt.Text = Form_QLNCC.lvi_ncc.SubItems[5].Text;
+                txb_Available.Text = Form_QLNCC.lvi_ncc.SubItems[6].Text;
                 bt_tao_ncc.Enabled = false;
                 bt__sua_ncc.Enabled = true;
 
@@ -49,7 +52,7 @@ namespace WindowsFormsApplication1
                 bt_tao_ncc.Enabled = true;
                 bt__sua_ncc.Enabled = false;
                 int Next_Vendor_Id = Vc.Get_Max_Vendor_id()+1;
-                tb_NccID.Text = Next_Vendor_Id.ToString();
+                txb_NccID.Text = Next_Vendor_Id.ToString();
             }
 
         }
@@ -58,13 +61,14 @@ namespace WindowsFormsApplication1
         private void btn_Luu_Click(object sender, EventArgs e)
         {
             
-            lvi_them_ncc.Text = tb_NccID.Text;
-            lvi_them_ncc.SubItems.Add(tb_ten_ncc.Text);
-            lvi_them_ncc.SubItems.Add(tb_dia_chi.Text);
-            lvi_them_ncc.SubItems.Add(tb_dt.Text);
-            lvi_them_ncc.SubItems.Add(tb_NccEmail.Text);
+            lvi_them_ncc.Text = txb_NccID.Text;
+            lvi_them_ncc.SubItems.Add(txb_ten_ncc.Text);
+            lvi_them_ncc.SubItems.Add(txb_dia_chi.Text);
+            lvi_them_ncc.SubItems.Add(txb_VAT.Text);
+            lvi_them_ncc.SubItems.Add(txb_dt.Text);
+            lvi_them_ncc.SubItems.Add(txb_NccEmail.Text);
             lvi_them_ncc.SubItems.Add(false.ToString());
-
+            lvi_them_ncc.SubItems.Add(txb_Available.Text);
             if (Form_QLNCC.flag_ncc)
                 Vc.VendorAddNew(lvi_them_ncc);
             else

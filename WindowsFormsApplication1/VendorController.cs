@@ -25,9 +25,10 @@ namespace WindowsFormsApplication1
                 lvi.Text = V.VendorID.ToString();
                 lvi.SubItems.Add(V.VendorName);
                 lvi.SubItems.Add(V.VendorAddress);
-                lvi.SubItems.Add(V.VendorPhone);
+                lvi.SubItems.Add(V.VAT.ToString());
                 lvi.SubItems.Add(V.VendorEmail);
-                lvi.SubItems.Add(V.VendorHaveProduct.ToString());
+                lvi.SubItems.Add(V.VendorPhone);
+                lvi.SubItems.Add(V.VendorAvailable.ToString());
                 listVendor.Add(lvi);
             }
             
@@ -47,9 +48,10 @@ namespace WindowsFormsApplication1
                 lvi.Text = V.VendorID.ToString();
                 lvi.SubItems.Add(V.VendorName);
                 lvi.SubItems.Add(V.VendorAddress);
-                lvi.SubItems.Add(V.VendorPhone);
+                lvi.SubItems.Add(V.VAT.ToString());
                 lvi.SubItems.Add(V.VendorEmail);
-                lvi.SubItems.Add(V.VendorHaveProduct.ToString());
+                lvi.SubItems.Add(V.VendorPhone);
+                lvi.SubItems.Add(V.VendorAvailable.ToString());
                 listVendor.Add(lvi);
             }
             return listVendor;
@@ -66,14 +68,14 @@ namespace WindowsFormsApplication1
         {
             //Insert Ncc trong databse
             Vendor V = new Vendor();
-            data = new DataClasses1DataContext();
 
             V.VendorID = Int32.Parse(lvi_vendor.Text);
             V.VendorName = lvi_vendor.SubItems[1].Text;
             V.VendorAddress = lvi_vendor.SubItems[2].Text;
-            V.VendorPhone = lvi_vendor.SubItems[3].Text;
+            V.VAT = Int64.Parse(lvi_vendor.SubItems[3].Text);
             V.VendorEmail = lvi_vendor.SubItems[4].Text;
-            V.VendorHaveProduct = bool.Parse(lvi_vendor.SubItems[5].Text);
+            V.VendorPhone = lvi_vendor.SubItems[5].Text;
+            V.VendorAvailable = bool.Parse(lvi_vendor.SubItems[6].Text);
 
             data.Vendors.InsertOnSubmit(V);
             data.SubmitChanges();
@@ -89,9 +91,10 @@ namespace WindowsFormsApplication1
             foreach (Vendor VD in VendorList) {
                 VD.VendorName = lvi_vendor.SubItems[1].Text;
                 VD.VendorAddress = lvi_vendor.SubItems[2].Text;
-                VD.VendorPhone = lvi_vendor.SubItems[3].Text;
+                VD.VAT = Int64.Parse(lvi_vendor.SubItems[3].Text);
                 VD.VendorEmail = lvi_vendor.SubItems[4].Text;
-                VD.VendorHaveProduct = bool.Parse(lvi_vendor.SubItems[5].Text);
+                VD.VendorPhone = lvi_vendor.SubItems[5].Text;
+                VD.VendorAvailable = bool.Parse(lvi_vendor.SubItems[6].Text);
             }
             data.SubmitChanges();
         }
