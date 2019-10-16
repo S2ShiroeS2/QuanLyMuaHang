@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        public static ListViewItem lvi_them_ncc = new ListViewItem();
+        public static ListViewItem lvi_them_ncc { get; private set; } = new ListViewItem();
         VendorController Vc = new VendorController();
 
         private void Enable_txb(bool Active)
@@ -33,7 +33,6 @@ namespace WindowsFormsApplication1
             txb_NccID.Clear();
             txb_ten_ncc.Clear();
             txb_Available.Clear();
-
             if (Form_QLNCC.flag_ncc == false)
             {
                 txb_NccID.Text = Form_QLNCC.lvi_ncc.SubItems[0].Text;
@@ -60,7 +59,7 @@ namespace WindowsFormsApplication1
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            
+            ListViewItem lvi_them_ncc = new ListViewItem();
             lvi_them_ncc.Text = txb_NccID.Text;
             lvi_them_ncc.SubItems.Add(txb_ten_ncc.Text);
             lvi_them_ncc.SubItems.Add(txb_dia_chi.Text);

@@ -27,6 +27,11 @@ namespace WindowsFormsApplication1
                 lvi.SubItems.Add(V.userAccount);
                 lvi.SubItems.Add(V.userEmail);
                 lvi.SubItems.Add(V.userPhone);
+                if (V.role)
+                    lvi.SubItems.Add("Admin");
+                else
+                    lvi.SubItems.Add("Nhân viên");
+                lvi.SubItems.Add(V.activation.ToString());
                 listNV.Add(lvi);
             }
 
@@ -46,8 +51,13 @@ namespace WindowsFormsApplication1
                 lvi.Text = V.userID.ToString();
                 lvi.SubItems.Add(V.userName);
                 lvi.SubItems.Add(V.userAccount);
-                lvi.SubItems.Add(V.userPhone);
                 lvi.SubItems.Add(V.userEmail);
+                lvi.SubItems.Add(V.userPhone);
+                if (V.role)
+                    lvi.SubItems.Add("Admin");
+                else
+                    lvi.SubItems.Add("Nhân viên");
+                lvi.SubItems.Add(V.activation.ToString());
                 listNV.Add(lvi);
             }
             return listNV;

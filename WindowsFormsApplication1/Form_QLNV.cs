@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
 
         List<ListViewItem> list_NV = new List<ListViewItem>();
         NhanVienController NVC = new NhanVienController();
+        public static bool flag_nv { get; private set; } = true;
 
         private void Form_QLNV_Load(object sender, EventArgs e)
         {
@@ -40,7 +41,9 @@ namespace WindowsFormsApplication1
 
         private void bt_tao_moi_NCC_Click(object sender, EventArgs e)
         {
-            
+            flag_nv = true;
+            frm_CTNV frm_ct_nv = new frm_CTNV();
+            frm_ct_nv.Show();
         }
     }
 }

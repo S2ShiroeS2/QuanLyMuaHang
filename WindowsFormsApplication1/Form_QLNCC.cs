@@ -18,8 +18,8 @@ namespace WindowsFormsApplication1
         }
         List<ListViewItem> list_vendor = new List<ListViewItem>();
         VendorController VC = new VendorController();
-        public static ListViewItem lvi_ncc = new ListViewItem();
-        public static bool flag_ncc = true;
+        public static ListViewItem lvi_ncc { get; private set; } = new ListViewItem();
+        public static bool flag_ncc { get;private set; } = true;
 
         private void Form_QLNCC_Load(object sender, EventArgs e)
         {

@@ -81,9 +81,8 @@ namespace WindowsFormsApplication1
             data.SubmitChanges();
         }
 
-        public void SuaNcc(ListViewItem lvi_vendor)
+        public void SuaNcc(ListViewItem lvi_vendor) //Update Vendor trong database
         {
-            //Update Ncc trong database
             data = new DataClasses1DataContext();
             var VendorList = (from V in data.Vendors
                         where V.VendorID.ToString() == lvi_vendor.Text
@@ -97,6 +96,26 @@ namespace WindowsFormsApplication1
                 VD.VendorAvailable = bool.Parse(lvi_vendor.SubItems[6].Text);
             }
             data.SubmitChanges();
+        }
+
+        public List<ListViewItem> GetVendor(int ID) {
+            
+            var VendorListFromData= from V in data.Vendors
+                            where V.VendorID == ID
+                            select V;
+            ListViewItem lvi = new ListViewItem();
+            foreach (var V in VendorListFromData)
+            {
+                lvi.Text = V.VendorID.ToString();
+                lvi.SubItems.Add(V.VendorName);
+                lvi.SubItems.Add(V.VendorAddress);
+                lvi.SubItems.Add(V.VAT.ToString());
+                lvi.SubItems.Add(V.VendorEmail);
+                lvi.SubItems.Add(V.VendorPhone);
+                lvi.SubItems.Add(V.VendorAvailable.ToString());
+                listVendor.Add(lvi);
+            }
+            return listVendor;
         }
     }
 }

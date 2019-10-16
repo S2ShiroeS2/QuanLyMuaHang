@@ -38,6 +38,8 @@
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // tb_tim_kiem_nv
@@ -90,7 +92,9 @@
             this.columnHeader14,
             this.columnHeader15,
             this.columnHeader16,
-            this.columnHeader1});
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
             this.lv_list_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_list_NV.Location = new System.Drawing.Point(9, 137);
             this.lv_list_NV.Margin = new System.Windows.Forms.Padding(4);
@@ -103,12 +107,12 @@
             // columnHeader13
             // 
             this.columnHeader13.Text = "Mã nhà nhân viên";
-            this.columnHeader13.Width = 149;
+            this.columnHeader13.Width = 183;
             // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "Họ tên";
-            this.columnHeader14.Width = 302;
+            this.columnHeader14.Width = 132;
             // 
             // columnHeader15
             // 
@@ -117,12 +121,23 @@
             // 
             // columnHeader16
             // 
-            this.columnHeader16.Text = "Số điện thoại";
-            this.columnHeader16.Width = 264;
+            this.columnHeader16.Text = "Email";
+            this.columnHeader16.Width = 137;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Email";
+            this.columnHeader1.Text = "Số điện thoại";
+            this.columnHeader1.Width = 135;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Vai trò";
+            this.columnHeader2.Width = 77;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Kích hoạt";
+            this.columnHeader3.Width = 109;
             // 
             // Form_QLNV
             // 
@@ -155,5 +170,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
