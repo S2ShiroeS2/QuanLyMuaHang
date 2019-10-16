@@ -242,6 +242,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formCT_ncc";
             this.Text = "formCT_ncc";
+
             this.Load += new System.EventHandler(this.formCT_ncc_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

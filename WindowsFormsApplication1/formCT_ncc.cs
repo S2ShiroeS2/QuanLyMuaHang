@@ -74,11 +74,15 @@ namespace WindowsFormsApplication1
                 Vc.SuaNcc(lvi_them_ncc);
 
             MessageBox.Show("Lưu thành công");
+            this.Close();
+            
         }
 
         private void bt__sua_ncc_Click(object sender, EventArgs e)
         {
             Enable_txb(true);
         }
+
+
     }
 }

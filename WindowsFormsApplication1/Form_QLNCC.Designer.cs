@@ -39,7 +39,6 @@
             this.VAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.VendorPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btn_Lam_Moi = new System.Windows.Forms.Button();
             this.VendorAvailable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
@@ -139,18 +138,6 @@
             this.VendorPhone.Text = "Số điện thoại";
             this.VendorPhone.Width = 149;
             // 
-            // btn_Lam_Moi
-            // 
-            this.btn_Lam_Moi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Lam_Moi.Location = new System.Drawing.Point(586, 32);
-            this.btn_Lam_Moi.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Lam_Moi.Name = "btn_Lam_Moi";
-            this.btn_Lam_Moi.Size = new System.Drawing.Size(105, 49);
-            this.btn_Lam_Moi.TabIndex = 25;
-            this.btn_Lam_Moi.Text = "Refresh";
-            this.btn_Lam_Moi.UseVisualStyleBackColor = true;
-            this.btn_Lam_Moi.Click += new System.EventHandler(this.btn_Lam_Moi_Click);
-            // 
             // VendorAvailable
             // 
             this.VendorAvailable.Text = "Been there done that";
@@ -161,7 +148,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 583);
-            this.Controls.Add(this.btn_Lam_Moi);
             this.Controls.Add(this.lv_list_ncc);
             this.Controls.Add(this.tb_tim_kiem_NCC);
             this.Controls.Add(this.bt_tim_kiem_NCC);
@@ -189,7 +175,6 @@
         private System.Windows.Forms.ColumnHeader VAT;
         private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.ColumnHeader VendorPhone;
-        private System.Windows.Forms.Button btn_Lam_Moi;
         private System.Windows.Forms.ColumnHeader VendorAvailable;
     }
 }
