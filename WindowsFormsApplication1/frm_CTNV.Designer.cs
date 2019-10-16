@@ -32,9 +32,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txb_nv_account = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_Luu = new System.Windows.Forms.Button();
-            this.bt__sua_ncc = new System.Windows.Forms.Button();
-            this.bt_tao_ncc = new System.Windows.Forms.Button();
+            this.btn_nv_luu = new System.Windows.Forms.Button();
+            this.btn_nv_update = new System.Windows.Forms.Button();
+            this.btn_nv_create = new System.Windows.Forms.Button();
             this.txb_nv_email = new System.Windows.Forms.TextBox();
             this.txb_nv_id = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -88,32 +88,32 @@
             this.label6.TabIndex = 30;
             this.label6.Text = "Tài khoản";
             // 
-            // btn_Luu
+            // btn_nv_luu
             // 
-            this.btn_Luu.Location = new System.Drawing.Point(884, 466);
-            this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(127, 55);
-            this.btn_Luu.TabIndex = 29;
-            this.btn_Luu.Text = "Lưu";
-            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_nv_luu.Location = new System.Drawing.Point(884, 466);
+            this.btn_nv_luu.Name = "btn_nv_luu";
+            this.btn_nv_luu.Size = new System.Drawing.Size(127, 55);
+            this.btn_nv_luu.TabIndex = 29;
+            this.btn_nv_luu.Text = "Lưu";
+            this.btn_nv_luu.UseVisualStyleBackColor = true;
             // 
-            // bt__sua_ncc
+            // btn_nv_update
             // 
-            this.bt__sua_ncc.Location = new System.Drawing.Point(685, 466);
-            this.bt__sua_ncc.Name = "bt__sua_ncc";
-            this.bt__sua_ncc.Size = new System.Drawing.Size(127, 55);
-            this.bt__sua_ncc.TabIndex = 28;
-            this.bt__sua_ncc.Text = "Sửa ";
-            this.bt__sua_ncc.UseVisualStyleBackColor = true;
+            this.btn_nv_update.Location = new System.Drawing.Point(685, 466);
+            this.btn_nv_update.Name = "btn_nv_update";
+            this.btn_nv_update.Size = new System.Drawing.Size(127, 55);
+            this.btn_nv_update.TabIndex = 28;
+            this.btn_nv_update.Text = "Sửa ";
+            this.btn_nv_update.UseVisualStyleBackColor = true;
             // 
-            // bt_tao_ncc
+            // btn_nv_create
             // 
-            this.bt_tao_ncc.Location = new System.Drawing.Point(249, 466);
-            this.bt_tao_ncc.Name = "bt_tao_ncc";
-            this.bt_tao_ncc.Size = new System.Drawing.Size(127, 55);
-            this.bt_tao_ncc.TabIndex = 27;
-            this.bt_tao_ncc.Text = "Tạo";
-            this.bt_tao_ncc.UseVisualStyleBackColor = true;
+            this.btn_nv_create.Location = new System.Drawing.Point(249, 466);
+            this.btn_nv_create.Name = "btn_nv_create";
+            this.btn_nv_create.Size = new System.Drawing.Size(127, 55);
+            this.btn_nv_create.TabIndex = 27;
+            this.btn_nv_create.Text = "Tạo";
+            this.btn_nv_create.UseVisualStyleBackColor = true;
             // 
             // txb_nv_email
             // 
@@ -224,9 +224,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txb_nv_account);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btn_Luu);
-            this.Controls.Add(this.bt__sua_ncc);
-            this.Controls.Add(this.bt_tao_ncc);
+            this.Controls.Add(this.btn_nv_luu);
+            this.Controls.Add(this.btn_nv_update);
+            this.Controls.Add(this.btn_nv_create);
             this.Controls.Add(this.txb_nv_email);
             this.Controls.Add(this.txb_nv_id);
             this.Controls.Add(this.label5);
@@ -250,9 +250,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txb_nv_account;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btn_Luu;
-        private System.Windows.Forms.Button bt__sua_ncc;
-        private System.Windows.Forms.Button bt_tao_ncc;
+        private System.Windows.Forms.Button btn_nv_luu;
+        private System.Windows.Forms.Button btn_nv_update;
+        private System.Windows.Forms.Button btn_nv_create;
         private System.Windows.Forms.TextBox txb_nv_email;
         private System.Windows.Forms.TextBox txb_nv_id;
         private System.Windows.Forms.Label label5;

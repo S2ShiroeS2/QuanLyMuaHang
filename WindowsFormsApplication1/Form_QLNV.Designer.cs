@@ -96,13 +96,17 @@
             this.columnHeader2,
             this.columnHeader3});
             this.lv_list_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_list_NV.FullRowSelect = true;
             this.lv_list_NV.Location = new System.Drawing.Point(9, 137);
             this.lv_list_NV.Margin = new System.Windows.Forms.Padding(4);
+            this.lv_list_NV.MultiSelect = false;
             this.lv_list_NV.Name = "lv_list_NV";
             this.lv_list_NV.Size = new System.Drawing.Size(1212, 285);
             this.lv_list_NV.TabIndex = 19;
             this.lv_list_NV.UseCompatibleStateImageBehavior = false;
             this.lv_list_NV.View = System.Windows.Forms.View.Details;
+            this.lv_list_NV.SelectedIndexChanged += new System.EventHandler(this.lv_list_NV_SelectedIndexChanged);
+            this.lv_list_NV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lv_list_NV_MouseDoubleClick);
             // 
             // columnHeader13
             // 

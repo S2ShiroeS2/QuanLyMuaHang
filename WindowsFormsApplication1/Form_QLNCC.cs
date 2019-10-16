@@ -53,8 +53,6 @@ namespace WindowsFormsApplication1
         private void bt_tao_moi_NCC_Click(object sender, EventArgs e)
         {
             flag_ncc = true;
-        
-
             formCT_ncc formCT_ncc = new formCT_ncc();
             formCT_ncc.ShowDialog();
             lam_moi();

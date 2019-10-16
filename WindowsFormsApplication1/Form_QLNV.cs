@@ -20,6 +20,7 @@ namespace WindowsFormsApplication1
         List<ListViewItem> list_NV = new List<ListViewItem>();
         NhanVienController NVC = new NhanVienController();
         public static bool flag_nv { get; private set; } = true;
+        public static ListViewItem lvi_nv { get; private set; } = new ListViewItem();
 
         private void Form_QLNV_Load(object sender, EventArgs e)
         {
@@ -43,7 +44,36 @@ namespace WindowsFormsApplication1
         {
             flag_nv = true;
             frm_CTNV frm_ct_nv = new frm_CTNV();
-            frm_ct_nv.Show();
+            frm_ct_nv.ShowDialog();
+        }
+
+        private void lam_moi()
+        {
+            list_NV.Clear();
+            lv_list_NV.Items.Clear();
+            list_NV = NVC.NhanVienList();
+
+            foreach (ListViewItem V in list_NV)
+                lv_list_NV.Items.Add(V);
+        }
+
+        private void lv_list_NV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lv_list_NV.SelectedItems.Count > 0)
+                lvi_nv = lv_list_NV.SelectedItems[0];
+        }
+
+        private void lv_list_NV_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            flag_nv = false;
+            if (lv_list_NV.SelectedItems.Count > 0)
+            {
+                frm_CTNV frm_CtNv = new frm_CTNV();
+                frm_CtNv.ShowDialog();
+            }
+            else
+                MessageBox.Show("Vui lòng chọn 1 nhà cung cấp");
+            lam_moi();
         }
     }
 }
