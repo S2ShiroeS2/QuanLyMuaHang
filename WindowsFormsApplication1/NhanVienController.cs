@@ -107,6 +107,7 @@ namespace WindowsFormsApplication1
             data.SubmitChanges();
         }
 
+        //Lay thong tin NV qua ID cua nv do
         public List<ListViewItem> GetNV(int ID)
         {
 
