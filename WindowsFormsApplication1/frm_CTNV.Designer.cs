@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txb_nv_activation = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txb_nv_account = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_nv_luu = new System.Windows.Forms.Button();
             this.btn_nv_update = new System.Windows.Forms.Button();
-            this.btn_nv_create = new System.Windows.Forms.Button();
             this.txb_nv_email = new System.Windows.Forms.TextBox();
             this.txb_nv_id = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,16 +43,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txb_nv_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txb_nv_active = new System.Windows.Forms.TextBox();
+            this.btn_nv_active = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // txb_nv_activation
-            // 
-            this.txb_nv_activation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_nv_activation.Location = new System.Drawing.Point(491, 314);
-            this.txb_nv_activation.Margin = new System.Windows.Forms.Padding(4);
-            this.txb_nv_activation.Name = "txb_nv_activation";
-            this.txb_nv_activation.Size = new System.Drawing.Size(157, 30);
-            this.txb_nv_activation.TabIndex = 33;
             // 
             // label7
             // 
@@ -69,7 +60,6 @@
             // 
             // txb_nv_account
             // 
-            this.txb_nv_account.Enabled = false;
             this.txb_nv_account.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_nv_account.Location = new System.Drawing.Point(491, 67);
             this.txb_nv_account.Margin = new System.Windows.Forms.Padding(4);
@@ -96,6 +86,7 @@
             this.btn_nv_luu.TabIndex = 29;
             this.btn_nv_luu.Text = "Lưu";
             this.btn_nv_luu.UseVisualStyleBackColor = true;
+            this.btn_nv_luu.Click += new System.EventHandler(this.btn_nv_luu_Click);
             // 
             // btn_nv_update
             // 
@@ -105,15 +96,7 @@
             this.btn_nv_update.TabIndex = 28;
             this.btn_nv_update.Text = "Sửa ";
             this.btn_nv_update.UseVisualStyleBackColor = true;
-            // 
-            // btn_nv_create
-            // 
-            this.btn_nv_create.Location = new System.Drawing.Point(249, 466);
-            this.btn_nv_create.Name = "btn_nv_create";
-            this.btn_nv_create.Size = new System.Drawing.Size(127, 55);
-            this.btn_nv_create.TabIndex = 27;
-            this.btn_nv_create.Text = "Tạo";
-            this.btn_nv_create.UseVisualStyleBackColor = true;
+            this.btn_nv_update.Click += new System.EventHandler(this.btn_nv_update_Click);
             // 
             // txb_nv_email
             // 
@@ -176,6 +159,7 @@
             // 
             // txb_nv_role
             // 
+            this.txb_nv_role.Enabled = false;
             this.txb_nv_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_nv_role.Location = new System.Drawing.Point(32, 314);
             this.txb_nv_role.Margin = new System.Windows.Forms.Padding(4);
@@ -215,18 +199,36 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Tên nhân viên";
             // 
+            // txb_nv_active
+            // 
+            this.txb_nv_active.Enabled = false;
+            this.txb_nv_active.Location = new System.Drawing.Point(491, 314);
+            this.txb_nv_active.Name = "txb_nv_active";
+            this.txb_nv_active.Size = new System.Drawing.Size(100, 22);
+            this.txb_nv_active.TabIndex = 33;
+            // 
+            // btn_nv_active
+            // 
+            this.btn_nv_active.Enabled = false;
+            this.btn_nv_active.Location = new System.Drawing.Point(597, 298);
+            this.btn_nv_active.Name = "btn_nv_active";
+            this.btn_nv_active.Size = new System.Drawing.Size(127, 55);
+            this.btn_nv_active.TabIndex = 35;
+            this.btn_nv_active.Text = "Active";
+            this.btn_nv_active.UseVisualStyleBackColor = true;
+            // 
             // frm_CTNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 561);
-            this.Controls.Add(this.txb_nv_activation);
+            this.Controls.Add(this.btn_nv_active);
+            this.Controls.Add(this.txb_nv_active);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txb_nv_account);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_nv_luu);
             this.Controls.Add(this.btn_nv_update);
-            this.Controls.Add(this.btn_nv_create);
             this.Controls.Add(this.txb_nv_email);
             this.Controls.Add(this.txb_nv_id);
             this.Controls.Add(this.label5);
@@ -239,20 +241,18 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_CTNV";
             this.Text = "frm_CTNV";
+            this.Load += new System.EventHandler(this.frm_CTNV_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txb_nv_activation;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txb_nv_account;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_nv_luu;
         private System.Windows.Forms.Button btn_nv_update;
-        private System.Windows.Forms.Button btn_nv_create;
         private System.Windows.Forms.TextBox txb_nv_email;
         private System.Windows.Forms.TextBox txb_nv_id;
         private System.Windows.Forms.Label label5;
@@ -263,5 +263,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txb_nv_name;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txb_nv_active;
+        private System.Windows.Forms.Button btn_nv_active;
     }
 }

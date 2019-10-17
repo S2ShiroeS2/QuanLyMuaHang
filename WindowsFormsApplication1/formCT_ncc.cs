@@ -82,7 +82,5 @@ namespace WindowsFormsApplication1
         {
             Enable_txb(true);
         }
-
-
     }
 }
