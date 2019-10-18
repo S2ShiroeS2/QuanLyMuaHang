@@ -33,7 +33,8 @@ namespace WindowsFormsApplication1
 
         public List<ListViewItem> NhanVienList()
         {
-
+            listNV.Clear();
+            data = new DataClasses1DataContext();
             var NhanVienVar = from V in data.NVs
                               select V;
             foreach (NV V in NhanVienVar) 
@@ -61,38 +62,52 @@ namespace WindowsFormsApplication1
             return list.Max();
         }
 
-        public void NVAddNew(ListViewItem lvi_nv)
-        {
-            //Insert Ncc trong databse
+        public NV AddNVInV(ListViewItem lvi_nv) {
             NV V = new NV();
 
             V.userID = Int32.Parse(lvi_nv.Text);
             V.userName = lvi_nv.SubItems[1].Text;
             V.userAccount = lvi_nv.SubItems[2].Text;
+            V.userPassword = "123";
             V.userEmail = lvi_nv.SubItems[3].Text;
-            V.userPhone = lvi_nv.SubItems[5].Text;
-            V.role= bool.Parse(lvi_nv.SubItems[6].Text);
-            V.activation = bool.Parse(lvi_nv.SubItems[7].Text);
+            V.userPhone = lvi_nv.SubItems[4].Text;
+            if (lvi_nv.SubItems[5].Text == "Nhân viên")
+                V.role = false;
+            else
+                V.role = true;
+            if (lvi_nv.SubItems[6].Text == "Active")
+                V.activation = true;
+            else
+                V.activation = false;
+            return V;
+        }
 
-            data.NVs.InsertOnSubmit(V);
+        public void NVAddNew(ListViewItem lvi_nv)
+        {
+            //Insert Ncc trong databse
+            data.NVs.InsertOnSubmit(AddNVInV(lvi_nv));
             data.SubmitChanges();
         }
 
-        public void UpdateNV(ListViewItem lvi_nv) //Update Vendor trong database
+        public void UpdateNV(ListViewItem lvi_nv) //Update NhanVien trong database
         {
-            data = new DataClasses1DataContext();
             var NhanVienList = (from a in data.NVs
                               where a.userID.ToString() == lvi_nv.Text
                               select a);
             foreach (NV V in NhanVienList)
             {
-                V.userID = Int32.Parse(lvi_nv.Text);
                 V.userName = lvi_nv.SubItems[1].Text;
                 V.userAccount = lvi_nv.SubItems[2].Text;
                 V.userEmail = lvi_nv.SubItems[3].Text;
-                V.userPhone = lvi_nv.SubItems[5].Text;
-                V.role = bool.Parse(lvi_nv.SubItems[6].Text);
-                V.activation = bool.Parse(lvi_nv.SubItems[7].Text);
+                V.userPhone = lvi_nv.SubItems[4].Text;
+                if (lvi_nv.SubItems[5].Text == "Nhân viên")
+                    V.role = false;
+                else
+                    V.role = true;
+                if (lvi_nv.SubItems[6].Text == "Active")
+                    V.activation = true;
+                else
+                    V.activation = false;
             }
             data.SubmitChanges();
         }

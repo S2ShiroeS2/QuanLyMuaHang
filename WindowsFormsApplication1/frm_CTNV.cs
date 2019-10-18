@@ -30,18 +30,28 @@ namespace WindowsFormsApplication1
 
         private void btn_nv_luu_Click(object sender, EventArgs e)
         {
+            lvi_them_nv = new ListViewItem();
+            lvi_them_nv.Text = txb_nv_id.Text;
+            lvi_them_nv.SubItems.Add(txb_nv_name.Text);
+            lvi_them_nv.SubItems.Add(txb_nv_account.Text);
+            lvi_them_nv.SubItems.Add(txb_nv_email.Text);
+            lvi_them_nv.SubItems.Add(txb_nv_phone.Text);
+            lvi_them_nv.SubItems.Add(txb_nv_role.Text);
+            lvi_them_nv.SubItems.Add(txb_nv_active.Text);
+            if (Form_QLNV.flag_nv)
+            {
+                NVC.NVAddNew(lvi_them_nv);
+                MessageBox.Show("Password mặc định là: 123");
+            }
+            else
+                NVC.UpdateNV(lvi_them_nv);
 
+            MessageBox.Show("Lưu thành công");
+            this.Close();
         }
 
         private void frm_CTNV_Load(object sender, EventArgs e)
         {
-            txb_nv_account.Clear();
-            txb_nv_email.Clear();
-            txb_nv_id.Clear();
-            txb_nv_name.Clear();
-            txb_nv_phone.Clear();
-            txb_nv_role.Clear();
-            txb_nv_active.Clear();
             if (Form_QLNV.flag_nv == false)
             {
                 txb_nv_id.Text = Form_QLNV.lvi_nv.SubItems[0].Text;

@@ -87,13 +87,8 @@ namespace WindowsFormsApplication1
         private void lv_list_ncc_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             flag_ncc = false;
-            if (lv_list_ncc.SelectedItems.Count > 0)
-            {
-                formCT_ncc formCT_ncc = new formCT_ncc();
-                formCT_ncc.ShowDialog();
-            }
-            else
-                MessageBox.Show("Vui lòng chọn 1 nhà cung cấp");
+            formCT_ncc formCT_ncc = new formCT_ncc();
+            formCT_ncc.ShowDialog();
             lam_moi();
 
         }

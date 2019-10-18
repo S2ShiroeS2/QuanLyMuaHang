@@ -167,6 +167,7 @@
             this.txb_nv_role.Name = "txb_nv_role";
             this.txb_nv_role.Size = new System.Drawing.Size(105, 30);
             this.txb_nv_role.TabIndex = 20;
+            this.txb_nv_role.Text = "Nhân viên";
             // 
             // label2
             // 

@@ -43,8 +43,9 @@ namespace WindowsFormsApplication1
         private void bt_tao_moi_NCC_Click(object sender, EventArgs e)
         {
             flag_nv = true;
-            frm_CTNV frm_ct_nv = new frm_CTNV();
-            frm_ct_nv.ShowDialog();
+            frm_CTNV frm_CtNv = new frm_CTNV();
+            frm_CtNv.ShowDialog();
+            lam_moi();
         }
 
         private void lam_moi()
@@ -66,13 +67,8 @@ namespace WindowsFormsApplication1
         private void lv_list_NV_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             flag_nv = false;
-            if (lv_list_NV.SelectedItems.Count > 0)
-            {
-                frm_CTNV frm_CtNv = new frm_CTNV();
-                frm_CtNv.ShowDialog();
-            }
-            else
-                MessageBox.Show("Vui lòng chọn 1 nhà cung cấp");
+            frm_CTNV frm_CtNv = new frm_CTNV();
+            frm_CtNv.ShowDialog();
             lam_moi();
         }
     }
