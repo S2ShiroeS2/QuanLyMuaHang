@@ -115,6 +115,7 @@
     <Compile Include="NhanVienController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanPhamController.cs" />
     <Compile Include="VendorController.cs" />
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
