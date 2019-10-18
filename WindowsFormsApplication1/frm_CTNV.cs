@@ -53,7 +53,12 @@ namespace WindowsFormsApplication1
                 txb_nv_active.Text = Form_QLNV.lvi_nv.SubItems[6].Text;
                 btn_nv_update.Enabled = true;
                 btn_nv_active.Enabled = true;
+                if (txb_nv_active.Text == "Active")
+                    btn_nv_active.Text = "Deactive";
+                else
+                    btn_nv_active.Text = "Active";
                 Enable_txb(false);
+                
             }
             else
             {
@@ -61,6 +66,20 @@ namespace WindowsFormsApplication1
                 txb_nv_active.Text = "Active";
                 int NextNVId = NVC.GetMaxNVID() + 1;
                 txb_nv_id.Text = NextNVId.ToString();
+            }
+        }
+
+        private void btn_nv_active_Click(object sender, EventArgs e)
+        {
+            if (btn_nv_active.Text == "Active")
+            {
+                txb_nv_active.Text = "Active";
+                btn_nv_active.Text = "Deactive";
+            }
+            else
+            {
+                txb_nv_active.Text = "Deactive";
+                btn_nv_active.Text = "Active";
             }
         }
     }

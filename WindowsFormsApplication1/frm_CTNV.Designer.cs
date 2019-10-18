@@ -216,6 +216,7 @@
             this.btn_nv_active.TabIndex = 35;
             this.btn_nv_active.Text = "Active";
             this.btn_nv_active.UseVisualStyleBackColor = true;
+            this.btn_nv_active.Click += new System.EventHandler(this.btn_nv_active_Click);
             // 
             // frm_CTNV
             // 

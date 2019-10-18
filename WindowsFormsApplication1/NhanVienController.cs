@@ -13,28 +13,31 @@ namespace WindowsFormsApplication1
 
         List<ListViewItem> listNV = new List<ListViewItem>();
 
+        public ListViewItem AddLviItem(NV V) {
+            ListViewItem lvi = new ListViewItem();
+            lvi.Text = V.userID.ToString();
+            lvi.SubItems.Add(V.userName);
+            lvi.SubItems.Add(V.userAccount);
+            lvi.SubItems.Add(V.userEmail);
+            lvi.SubItems.Add(V.userPhone);
+            if (V.role)
+                lvi.SubItems.Add("Admin");
+            else
+                lvi.SubItems.Add("Nhân viên");
+            if (V.activation==true)
+                lvi.SubItems.Add("Active");
+            else
+                lvi.SubItems.Add("Deactive");
+            return lvi;
+        }
 
         public List<ListViewItem> NhanVienList()
         {
 
             var NhanVienVar = from V in data.NVs
                               select V;
-            foreach (var V in NhanVienVar)
-            {
-                ListViewItem lvi = new ListViewItem();
-                lvi.Text = V.userID.ToString();
-                lvi.SubItems.Add(V.userName);
-                lvi.SubItems.Add(V.userAccount);
-                lvi.SubItems.Add(V.userEmail);
-                lvi.SubItems.Add(V.userPhone);
-                if (V.role)
-                    lvi.SubItems.Add("Admin");
-                else
-                    lvi.SubItems.Add("Nhân viên");
-                lvi.SubItems.Add(V.activation.ToString());
-                listNV.Add(lvi);
-            }
-
+            foreach (NV V in NhanVienVar) 
+                listNV.Add(AddLviItem(V));
             return listNV;
         }
 
@@ -46,20 +49,7 @@ namespace WindowsFormsApplication1
                             where (V.userName.Contains(SearchNameData))
                             select V;
             foreach (var V in VendorVar)
-            {
-                ListViewItem lvi = new ListViewItem();
-                lvi.Text = V.userID.ToString();
-                lvi.SubItems.Add(V.userName);
-                lvi.SubItems.Add(V.userAccount);
-                lvi.SubItems.Add(V.userEmail);
-                lvi.SubItems.Add(V.userPhone);
-                if (V.role)
-                    lvi.SubItems.Add("Admin");
-                else
-                    lvi.SubItems.Add("Nhân viên");
-                lvi.SubItems.Add(V.activation.ToString());
-                listNV.Add(lvi);
-            }
+                listNV.Add(AddLviItem(V));
             return listNV;
 
         }

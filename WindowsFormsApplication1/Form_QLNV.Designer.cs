@@ -53,6 +53,7 @@
             // 
             // bt_tim_kiem_NCC
             // 
+            this.bt_tim_kiem_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.bt_tim_kiem_NCC.Location = new System.Drawing.Point(748, 38);
             this.bt_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4);
             this.bt_tim_kiem_NCC.Name = "bt_tim_kiem_NCC";
