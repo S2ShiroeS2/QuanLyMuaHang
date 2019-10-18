@@ -20,14 +20,8 @@ namespace WindowsFormsApplication1
             lvi.SubItems.Add(V.userAccount);
             lvi.SubItems.Add(V.userEmail);
             lvi.SubItems.Add(V.userPhone);
-            if (V.role)
-                lvi.SubItems.Add("Admin");
-            else
-                lvi.SubItems.Add("Nhân viên");
-            if (V.activation==true)
-                lvi.SubItems.Add("Active");
-            else
-                lvi.SubItems.Add("Deactive");
+            lvi.SubItems.Add(V.role ? "Admin" : "Nhân viên");
+            lvi.SubItems.Add(V.activation ? "Active" : "Deactive");
             return lvi;
         }
 

@@ -70,11 +70,11 @@
     <Compile Include="form_CTSP.Designer.cs">
       <DependentUpon>form_CTSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Dang_nhap.cs">
+    <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Dang_nhap.Designer.cs">
-      <DependentUpon>Form_Dang_nhap.cs</DependentUpon>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Menu.cs">
       <SubType>Form</SubType>
@@ -112,6 +112,7 @@
     <Compile Include="frm_CTNV.Designer.cs">
       <DependentUpon>frm_CTNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginCotroller.cs" />
     <Compile Include="NhanVienController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,8 +130,8 @@
     <EmbeddedResource Include="form_CTSP.resx">
       <DependentUpon>form_CTSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Dang_nhap.resx">
-      <DependentUpon>Form_Dang_nhap.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Menu.resx">
       <DependentUpon>Form_Menu.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form_Dang_Nhap
+    partial class frm_Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tb_Username = new System.Windows.Forms.TextBox();
+            this.txb_Account = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tb_password = new System.Windows.Forms.TextBox();
+            this.txb_Password = new System.Windows.Forms.TextBox();
             this.bt_Login = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // tb_Username
+            // txb_Account
             // 
-            this.tb_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Username.Location = new System.Drawing.Point(380, 260);
-            this.tb_Username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(188, 34);
-            this.tb_Username.TabIndex = 0;
+            this.txb_Account.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_Account.Location = new System.Drawing.Point(380, 263);
+            this.txb_Account.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Account.Name = "txb_Account";
+            this.txb_Account.Size = new System.Drawing.Size(188, 34);
+            this.txb_Account.TabIndex = 0;
             // 
             // label1
             // 
@@ -66,19 +66,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Mật Khẩu";
             // 
-            // tb_password
+            // txb_Password
             // 
-            this.tb_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_password.Location = new System.Drawing.Point(380, 331);
-            this.tb_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(188, 34);
-            this.tb_password.TabIndex = 2;
+            this.txb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_Password.Location = new System.Drawing.Point(380, 331);
+            this.txb_Password.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Password.Name = "txb_Password";
+            this.txb_Password.Size = new System.Drawing.Size(188, 34);
+            this.txb_Password.TabIndex = 2;
             // 
             // bt_Login
             // 
             this.bt_Login.Location = new System.Drawing.Point(380, 418);
-            this.bt_Login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_Login.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Login.Name = "bt_Login";
             this.bt_Login.Size = new System.Drawing.Size(132, 57);
             this.bt_Login.TabIndex = 4;
@@ -86,19 +86,19 @@
             this.bt_Login.UseVisualStyleBackColor = true;
             this.bt_Login.Click += new System.EventHandler(this.bt_Login_Click);
             // 
-            // Form_Dang_Nhap
+            // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 578);
             this.Controls.Add(this.bt_Login);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tb_password);
+            this.Controls.Add(this.txb_Password);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb_Username);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form_Dang_Nhap";
-            this.Text = "Form_Dang_Nhap";
+            this.Controls.Add(this.txb_Account);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frm_Login";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,10 +107,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tb_Username;
+        private System.Windows.Forms.TextBox txb_Account;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tb_password;
+        private System.Windows.Forms.TextBox txb_Password;
         private System.Windows.Forms.Button bt_Login;
     }
 }
