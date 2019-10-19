@@ -20,6 +20,7 @@ namespace WindowsFormsApplication1
         List<ListViewItem> list_SanPham = new List<ListViewItem>();
         SanPhamController navigate_SanPham = new SanPhamController();
         public static ListViewItem sanPham { get; private set; } = new ListViewItem();
+        public static bool flag_sp { get; private set; } = true;
 
         private void Form_QLSP_Load(object sender, EventArgs e)
         {
@@ -34,6 +35,24 @@ namespace WindowsFormsApplication1
         {
             list_SanPham.Clear();
             lstv_list_SP.Items.Clear();
+        }
+
+        private void lam_moi()
+        {
+            list_SanPham.Clear();
+            lstv_list_SP.Items.Clear();
+            list_SanPham = navigate_SanPham.Load_List_San_Pham();
+
+            foreach (ListViewItem V in list_SanPham)
+                lstv_list_SP.Items.Add(V);
+        }
+
+        private void lstv_list_SP_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            flag_sp = false; // Lúc sửa sản phẩm
+            form_CTSP GUI_CTSP = new form_CTSP();
+            GUI_CTSP.ShowDialog();
+            
         }
     }
 }

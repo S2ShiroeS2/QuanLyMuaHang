@@ -42,9 +42,10 @@
             this.lbl_nha_san_xuat = new System.Windows.Forms.Label();
             this.cbo_loai_sp = new System.Windows.Forms.ComboBox();
             this.cbo_danh_muc_sp = new System.Windows.Forms.ComboBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstv_nha_cung_cap = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_sua = new System.Windows.Forms.Button();
+            this.btn_luu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_ma_sp
@@ -173,18 +174,18 @@
             this.cbo_danh_muc_sp.Size = new System.Drawing.Size(168, 21);
             this.cbo_danh_muc_sp.TabIndex = 18;
             // 
-            // listView1
+            // lstv_nha_cung_cap
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstv_nha_cung_cap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(579, 29);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 168);
-            this.listView1.TabIndex = 19;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lstv_nha_cung_cap.FullRowSelect = true;
+            this.lstv_nha_cung_cap.Location = new System.Drawing.Point(579, 29);
+            this.lstv_nha_cung_cap.MultiSelect = false;
+            this.lstv_nha_cung_cap.Name = "lstv_nha_cung_cap";
+            this.lstv_nha_cung_cap.Size = new System.Drawing.Size(121, 168);
+            this.lstv_nha_cung_cap.TabIndex = 19;
+            this.lstv_nha_cung_cap.UseCompatibleStateImageBehavior = false;
+            this.lstv_nha_cung_cap.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -193,20 +194,30 @@
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(135, 276);
+            this.btn_sua.Location = new System.Drawing.Point(154, 259);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(94, 50);
             this.btn_sua.TabIndex = 20;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
             // 
+            // btn_luu
+            // 
+            this.btn_luu.Location = new System.Drawing.Point(335, 259);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(94, 50);
+            this.btn_luu.TabIndex = 21;
+            this.btn_luu.Text = "Lưu";
+            this.btn_luu.UseVisualStyleBackColor = true;
+            // 
             // form_CTSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 474);
+            this.ClientSize = new System.Drawing.Size(727, 321);
+            this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.btn_sua);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lstv_nha_cung_cap);
             this.Controls.Add(this.cbo_danh_muc_sp);
             this.Controls.Add(this.cbo_loai_sp);
             this.Controls.Add(this.textBox2);
@@ -223,6 +234,7 @@
             this.Controls.Add(this.lbl_ma_sp);
             this.Name = "form_CTSP";
             this.Text = "form_CTSP";
+            this.Load += new System.EventHandler(this.form_CTSP_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,8 +256,9 @@
         private System.Windows.Forms.Label lbl_nha_san_xuat;
         private System.Windows.Forms.ComboBox cbo_loai_sp;
         private System.Windows.Forms.ComboBox cbo_danh_muc_sp;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstv_nha_cung_cap;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button btn_sua;
+        private System.Windows.Forms.Button btn_luu;
     }
 }

@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Login());
+            Application.Run(new form_CTSP());
         }
     }
 }

@@ -16,5 +16,15 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void form_CTSP_Load(object sender, EventArgs e)
+        {
+            txt_ma_sp.Text = Form_QLSP.sanPham.SubItems[0].Text;
+            //txt_ten_sp.Text = Form_QLSP.sanPham.SubItems[1].Text;
+            //cbo_loai_sp.Text = Form_QLSP.sanPham.SubItems[2].Text;
+            //cbo_danh_muc_sp.Text = Form_QLSP.sanPham.SubItems[3].Text;
+            //txt_so_luong_sp.Text = Form_QLSP.sanPham.SubItems[4].Text;
+            //txt_gia_sp.Text = Form_QLSP.sanPham.SubItems[5].Text;
+        }
     }
 }
