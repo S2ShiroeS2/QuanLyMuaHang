@@ -37,6 +37,8 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_tao_moi_SP = new System.Windows.Forms.Button();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // txt_tim_kiem_SP
@@ -64,14 +66,19 @@
             this.columnHeader9,
             this.columnHeader10,
             this.columnHeader11,
-            this.columnHeader12});
+            this.columnHeader12,
+            this.columnHeader1,
+            this.columnHeader2});
             this.lstv_list_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstv_list_SP.Location = new System.Drawing.Point(11, 103);
+            this.lstv_list_SP.FullRowSelect = true;
+            this.lstv_list_SP.Location = new System.Drawing.Point(12, 81);
+            this.lstv_list_SP.MultiSelect = false;
             this.lstv_list_SP.Name = "lstv_list_SP";
             this.lstv_list_SP.Size = new System.Drawing.Size(907, 242);
             this.lstv_list_SP.TabIndex = 17;
             this.lstv_list_SP.UseCompatibleStateImageBehavior = false;
             this.lstv_list_SP.View = System.Windows.Forms.View.Details;
+            this.lstv_list_SP.SelectedIndexChanged += new System.EventHandler(this.lstv_list_SP_SelectedIndexChanged);
             this.lstv_list_SP.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstv_list_SP_MouseDoubleClick);
             // 
             // columnHeader8
@@ -108,6 +115,15 @@
             this.btn_tao_moi_SP.TabIndex = 15;
             this.btn_tao_moi_SP.Text = "Tạo mới";
             this.btn_tao_moi_SP.UseVisualStyleBackColor = true;
+            this.btn_tao_moi_SP.Click += new System.EventHandler(this.btn_tao_moi_SP_Click);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Giá";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nhà sản xuất";
             // 
             // Form_QLSP
             // 
@@ -137,5 +153,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.Button btn_tao_moi_SP;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

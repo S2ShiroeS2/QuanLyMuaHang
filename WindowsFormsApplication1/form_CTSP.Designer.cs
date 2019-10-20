@@ -38,7 +38,7 @@
             this.lbl_so_luong_sp = new System.Windows.Forms.Label();
             this.txt_gia_sp = new System.Windows.Forms.TextBox();
             this.lbl_gia_sp = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_nha_sx = new System.Windows.Forms.TextBox();
             this.lbl_nha_san_xuat = new System.Windows.Forms.Label();
             this.cbo_loai_sp = new System.Windows.Forms.ComboBox();
             this.cbo_danh_muc_sp = new System.Windows.Forms.ComboBox();
@@ -60,6 +60,7 @@
             // 
             // txt_ma_sp
             // 
+            this.txt_ma_sp.Enabled = false;
             this.txt_ma_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ma_sp.Location = new System.Drawing.Point(25, 52);
             this.txt_ma_sp.Name = "txt_ma_sp";
@@ -140,13 +141,13 @@
             this.lbl_gia_sp.TabIndex = 13;
             this.lbl_gia_sp.Text = "Giá";
             // 
-            // textBox2
+            // txt_nha_sx
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(331, 158);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 26);
-            this.textBox2.TabIndex = 16;
+            this.txt_nha_sx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nha_sx.Location = new System.Drawing.Point(331, 158);
+            this.txt_nha_sx.Name = "txt_nha_sx";
+            this.txt_nha_sx.Size = new System.Drawing.Size(168, 26);
+            this.txt_nha_sx.TabIndex = 16;
             // 
             // lbl_nha_san_xuat
             // 
@@ -200,6 +201,7 @@
             this.btn_sua.TabIndex = 20;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_luu
             // 
@@ -220,7 +222,7 @@
             this.Controls.Add(this.lstv_nha_cung_cap);
             this.Controls.Add(this.cbo_danh_muc_sp);
             this.Controls.Add(this.cbo_loai_sp);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_nha_sx);
             this.Controls.Add(this.lbl_nha_san_xuat);
             this.Controls.Add(this.txt_gia_sp);
             this.Controls.Add(this.lbl_gia_sp);
@@ -252,7 +254,7 @@
         private System.Windows.Forms.Label lbl_so_luong_sp;
         private System.Windows.Forms.TextBox txt_gia_sp;
         private System.Windows.Forms.Label lbl_gia_sp;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_nha_sx;
         private System.Windows.Forms.Label lbl_nha_san_xuat;
         private System.Windows.Forms.ComboBox cbo_loai_sp;
         private System.Windows.Forms.ComboBox cbo_danh_muc_sp;

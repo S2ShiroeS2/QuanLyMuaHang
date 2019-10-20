@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
         public List<ListViewItem> NVListSearch(string SearchNameData)
         {
             listNV.Clear();
-            //List<string> SearchName = new List<string>();
+
             var VendorVar = from V in data.NVs
                             where (V.userName.Contains(SearchNameData))
                             select V;
