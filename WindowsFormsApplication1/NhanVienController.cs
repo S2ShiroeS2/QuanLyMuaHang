@@ -106,18 +106,28 @@ namespace WindowsFormsApplication1
             data.SubmitChanges();
         }
 
+        //Kiem tra account co ton tai trong database
+        public bool CheckAccountExsits(string account) {
+            var listNV = from nhanvien in data.NVs
+                         where nhanvien.userAccount == account
+                         select nhanvien;
+            if (listNV.Count()>1)
+                return false;
+            return true;
+        }
+
         //Lay thong tin NV qua ID cua nv do
         public List<ListViewItem> GetNV(int ID)
         {
 
             var NVListFromData = from V in data.NVs
-                                     where V.userID == ID
-                                     select V;
+                                 where V.userID == ID
+                                 select V;
             ListViewItem lvi = new ListViewItem();
             foreach (var V in NVListFromData)
             {
                 lvi.Text = V.userID.ToString();
-                lvi.SubItems.Add(V.userName);   
+                lvi.SubItems.Add(V.userName);
                 lvi.SubItems.Add(V.userAccount);
                 lvi.SubItems.Add(V.userEmail);
                 lvi.SubItems.Add(V.userPhone);
@@ -127,5 +137,6 @@ namespace WindowsFormsApplication1
             }
             return listNV;
         }
+
     }
 }

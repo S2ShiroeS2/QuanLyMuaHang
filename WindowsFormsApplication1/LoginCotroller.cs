@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
             else
             {
                 foreach (NV NhanVien in N)
-                    if (NhanVien.userPassword == password)
+                    if (NhanVien.userPassword == password && NhanVien.activation==true)
                     {
                         UserRole=NhanVien.role.ToString();
                         UserID = NhanVien.userID;

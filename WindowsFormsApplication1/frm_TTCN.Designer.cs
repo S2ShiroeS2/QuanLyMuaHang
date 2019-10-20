@@ -39,10 +39,12 @@
             this.txb_ttcn_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_ChangePassword = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txb_ttcn_account
             // 
+            this.txb_ttcn_account.Enabled = false;
             this.txb_ttcn_account.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ttcn_account.Location = new System.Drawing.Point(636, 143);
             this.txb_ttcn_account.Margin = new System.Windows.Forms.Padding(4);
@@ -63,9 +65,11 @@
             // 
             // txb_ttcn_email
             // 
+            this.txb_ttcn_email.Enabled = false;
+            this.txb_ttcn_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txb_ttcn_email.Location = new System.Drawing.Point(177, 300);
             this.txb_ttcn_email.Name = "txb_ttcn_email";
-            this.txb_ttcn_email.Size = new System.Drawing.Size(301, 22);
+            this.txb_ttcn_email.Size = new System.Drawing.Size(301, 30);
             this.txb_ttcn_email.TabIndex = 45;
             // 
             // txb_nv_id
@@ -102,6 +106,7 @@
             // 
             // txb_ttcn_phone
             // 
+            this.txb_ttcn_phone.Enabled = false;
             this.txb_ttcn_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ttcn_phone.Location = new System.Drawing.Point(636, 292);
             this.txb_ttcn_phone.Margin = new System.Windows.Forms.Padding(4);
@@ -122,6 +127,7 @@
             // 
             // txb_ttcn_name
             // 
+            this.txb_ttcn_name.Enabled = false;
             this.txb_ttcn_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ttcn_name.Location = new System.Drawing.Point(177, 143);
             this.txb_ttcn_name.Margin = new System.Windows.Forms.Padding(4);
@@ -143,19 +149,30 @@
             // btn_ChangePassword
             // 
             this.btn_ChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_ChangePassword.Location = new System.Drawing.Point(561, 407);
+            this.btn_ChangePassword.Location = new System.Drawing.Point(177, 382);
             this.btn_ChangePassword.Name = "btn_ChangePassword";
-            this.btn_ChangePassword.Size = new System.Drawing.Size(75, 38);
+            this.btn_ChangePassword.Size = new System.Drawing.Size(151, 38);
             this.btn_ChangePassword.TabIndex = 48;
-            this.btn_ChangePassword.Text = "button1";
+            this.btn_ChangePassword.Text = "Đổi mật khẩu";
             this.btn_ChangePassword.UseVisualStyleBackColor = true;
             this.btn_ChangePassword.Click += new System.EventHandler(this.btn_ChangePassword_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Location = new System.Drawing.Point(636, 382);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(231, 38);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "Đổi thông tin cá nhân";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frm_TTCN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1073, 544);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_ChangePassword);
             this.Controls.Add(this.txb_ttcn_account);
             this.Controls.Add(this.label6);
@@ -169,6 +186,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_TTCN";
             this.Text = "frm_TTCN";
+            this.Load += new System.EventHandler(this.frm_TTCN_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +205,6 @@
         private System.Windows.Forms.TextBox txb_ttcn_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_ChangePassword;
+        private System.Windows.Forms.Button button1;
     }
 }
