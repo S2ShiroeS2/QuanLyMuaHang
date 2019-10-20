@@ -112,11 +112,24 @@
     <Compile Include="frm_CTNV.Designer.cs">
       <DependentUpon>frm_CTNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_PasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PasswordChange.Designer.cs">
+      <DependentUpon>frm_PasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TTCN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TTCN.Designer.cs">
+      <DependentUpon>frm_TTCN.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginCotroller.cs" />
     <Compile Include="NhanVienController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPhamController.cs" />
+    <Compile Include="TTCNController.cs" />
     <Compile Include="VendorController.cs" />
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
@@ -150,6 +163,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CTNV.resx">
       <DependentUpon>frm_CTNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PasswordChange.resx">
+      <DependentUpon>frm_PasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TTCN.resx">
+      <DependentUpon>frm_TTCN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
