@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class form_CTHD : Form
+    public partial class frm_CTHD : Form
     {
-        public form_CTHD()
+        public frm_CTHD()
         {
             InitializeComponent();
- 
-
         }
 
         private void MS_sua_HD_Click(object sender, EventArgs e)
         {
-            bt_luu.Enabled = true;
+            btn_sua.Enabled = true;
         }
 
         private void MS_xoa_HD_Click(object sender, EventArgs e)
@@ -35,6 +33,11 @@ namespace WindowsFormsApplication1
             {
                 //do something else
             }
+        }
+
+        private void frm_CTHD_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

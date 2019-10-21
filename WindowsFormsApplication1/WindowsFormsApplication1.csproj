@@ -58,11 +58,11 @@
     <Compile Include="formCT_ncc.Designer.cs">
       <DependentUpon>formCT_ncc.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_CTHD.cs">
+    <Compile Include="frm_CTHD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_CTHD.Designer.cs">
-      <DependentUpon>form_CTHD.cs</DependentUpon>
+    <Compile Include="frm_CTHD.Designer.cs">
+      <DependentUpon>frm_CTHD.cs</DependentUpon>
     </Compile>
     <Compile Include="form_CTSP.cs">
       <SubType>Form</SubType>
@@ -82,11 +82,11 @@
     <Compile Include="Form_Menu.Designer.cs">
       <DependentUpon>Form_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_QLHD.cs">
+    <Compile Include="frm_QLHD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_QLHD.Designer.cs">
-      <DependentUpon>Form_QLHD.cs</DependentUpon>
+    <Compile Include="frm_QLHD.Designer.cs">
+      <DependentUpon>frm_QLHD.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_QLNCC.cs">
       <SubType>Form</SubType>
@@ -124,6 +124,7 @@
     <Compile Include="frm_TTCN.Designer.cs">
       <DependentUpon>frm_TTCN.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLHD_Controller.cs" />
     <Compile Include="LoginCotroller.cs" />
     <Compile Include="NhanVienController.cs" />
     <Compile Include="Program.cs" />
@@ -137,8 +138,8 @@
     <EmbeddedResource Include="formCT_ncc.resx">
       <DependentUpon>formCT_ncc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_CTHD.resx">
-      <DependentUpon>form_CTHD.cs</DependentUpon>
+    <EmbeddedResource Include="frm_CTHD.resx">
+      <DependentUpon>frm_CTHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_CTSP.resx">
       <DependentUpon>form_CTSP.cs</DependentUpon>
@@ -149,8 +150,8 @@
     <EmbeddedResource Include="Form_Menu.resx">
       <DependentUpon>Form_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_QLHD.resx">
-      <DependentUpon>Form_QLHD.cs</DependentUpon>
+    <EmbeddedResource Include="frm_QLHD.resx">
+      <DependentUpon>frm_QLHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_QLNCC.resx">
       <DependentUpon>Form_QLNCC.cs</DependentUpon>
