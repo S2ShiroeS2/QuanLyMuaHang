@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1
 
         QLHD_Controller QLHD_crtl = new QLHD_Controller(); // Khởi tạo biến của QLHD_Controller
         List<ListViewItem> list_lvi_hd = new List<ListViewItem>();// Danh sach lưu thông tin của hóa đơn
-        public bool flag { get; private set; } = true;// Biến kiểm tra xem button tạo mới được click hay là double click ở listview
+        public static bool flag { get; private set; } = true;// Biến kiểm tra xem button tạo mới được click hay là double click ở listview
         public int hd_id { get; private set; } = new int();
 
         private void bt_tao_moi_Click(object sender, EventArgs e)

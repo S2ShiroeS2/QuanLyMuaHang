@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         public List<ListViewItem> load_list_hd()
         {
             List<ListViewItem> list_lvi_hd = new List<ListViewItem>(); // Mảng lưu trữ thông tin của danh sách hóa đơn
-            var data_hd = from hd in data.OrderTables
+            var data_hd = from hd in data.OrderTables                                           // biến lấy danh sách các hóa đơn trong database
                           join cthd in data.OrderDetails on hd.orderID equals cthd.orderID
                           join vd in data.Vendors on hd.VendorID equals vd.VendorID
                           join nv in data.NVs on hd.userID equals nv.userID

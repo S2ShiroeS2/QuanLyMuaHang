@@ -35,9 +35,26 @@ namespace WindowsFormsApplication1
             }
         }
 
+
+        //
+        // Hàm dùng để điều khiển các control trong form
+        //
+        private void enable_control(bool flag)
+        {
+            btn_luu.Enabled =cbo_nha_cc.Enabled= flag;
+            btn_sua.Enabled = !flag;
+        }
+
         private void frm_CTHD_Load(object sender, EventArgs e)
         {
-           
+           if(frm_QLHD.flag==true)
+            {
+                enable_control(frm_QLHD.flag);
+            }
+           else
+            {
+                enable_control(frm_QLHD.flag);
+            }
         }
     }
 }

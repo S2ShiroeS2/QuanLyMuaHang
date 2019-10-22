@@ -31,7 +31,6 @@
             this.lbl_chitiethoadon = new System.Windows.Forms.Label();
             this.txt_Ma_HD = new System.Windows.Forms.TextBox();
             this.lbl_nhacc = new System.Windows.Forms.Label();
-            this.txt_NCC = new System.Windows.Forms.TextBox();
             this.lbl_ngay_dat_hang = new System.Windows.Forms.Label();
             this.dtpk_ngay_dat_hang = new System.Windows.Forms.DateTimePicker();
             this.lstv_list_cthd = new System.Windows.Forms.ListView();
@@ -49,6 +48,8 @@
             this.lbl_tongtien = new System.Windows.Forms.Label();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_luu = new System.Windows.Forms.Button();
+            this.lbl_ma_hoa_don = new System.Windows.Forms.Label();
+            this.cbo_nha_cc = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lbl_chitiethoadon
@@ -65,7 +66,7 @@
             // 
             this.txt_Ma_HD.Enabled = false;
             this.txt_Ma_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Ma_HD.Location = new System.Drawing.Point(12, 36);
+            this.txt_Ma_HD.Location = new System.Drawing.Point(142, 36);
             this.txt_Ma_HD.Name = "txt_Ma_HD";
             this.txt_Ma_HD.Size = new System.Drawing.Size(100, 29);
             this.txt_Ma_HD.TabIndex = 1;
@@ -79,15 +80,6 @@
             this.lbl_nhacc.Size = new System.Drawing.Size(107, 20);
             this.lbl_nhacc.TabIndex = 2;
             this.lbl_nhacc.Text = "Nhà cung cấp";
-            // 
-            // txt_NCC
-            // 
-            this.txt_NCC.Enabled = false;
-            this.txt_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NCC.Location = new System.Drawing.Point(142, 81);
-            this.txt_NCC.Name = "txt_NCC";
-            this.txt_NCC.Size = new System.Drawing.Size(175, 29);
-            this.txt_NCC.TabIndex = 3;
             // 
             // lbl_ngay_dat_hang
             // 
@@ -235,11 +227,32 @@
             this.btn_luu.Text = "Lưu";
             this.btn_luu.UseVisualStyleBackColor = true;
             // 
+            // lbl_ma_hoa_don
+            // 
+            this.lbl_ma_hoa_don.AutoSize = true;
+            this.lbl_ma_hoa_don.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ma_hoa_don.Location = new System.Drawing.Point(19, 45);
+            this.lbl_ma_hoa_don.Name = "lbl_ma_hoa_don";
+            this.lbl_ma_hoa_don.Size = new System.Drawing.Size(93, 20);
+            this.lbl_ma_hoa_don.TabIndex = 17;
+            this.lbl_ma_hoa_don.Text = "Mã hóa đơn";
+            // 
+            // cbo_nha_cc
+            // 
+            this.cbo_nha_cc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_nha_cc.FormattingEnabled = true;
+            this.cbo_nha_cc.Location = new System.Drawing.Point(142, 89);
+            this.cbo_nha_cc.Name = "cbo_nha_cc";
+            this.cbo_nha_cc.Size = new System.Drawing.Size(121, 21);
+            this.cbo_nha_cc.TabIndex = 18;
+            // 
             // frm_CTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 474);
+            this.Controls.Add(this.cbo_nha_cc);
+            this.Controls.Add(this.lbl_ma_hoa_don);
             this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.txt_Tong_tien_HD);
@@ -251,7 +264,6 @@
             this.Controls.Add(this.lstv_list_cthd);
             this.Controls.Add(this.dtpk_ngay_dat_hang);
             this.Controls.Add(this.lbl_ngay_dat_hang);
-            this.Controls.Add(this.txt_NCC);
             this.Controls.Add(this.lbl_nhacc);
             this.Controls.Add(this.txt_Ma_HD);
             this.Controls.Add(this.lbl_chitiethoadon);
@@ -268,7 +280,6 @@
         private System.Windows.Forms.Label lbl_chitiethoadon;
         private System.Windows.Forms.TextBox txt_Ma_HD;
         private System.Windows.Forms.Label lbl_nhacc;
-        private System.Windows.Forms.TextBox txt_NCC;
         private System.Windows.Forms.Label lbl_ngay_dat_hang;
         private System.Windows.Forms.DateTimePicker dtpk_ngay_dat_hang;
         private System.Windows.Forms.ListView lstv_list_cthd;
@@ -286,5 +297,7 @@
         private System.Windows.Forms.Label lbl_tongtien;
         private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_luu;
+        private System.Windows.Forms.Label lbl_ma_hoa_don;
+        private System.Windows.Forms.ComboBox cbo_nha_cc;
     }
 }
