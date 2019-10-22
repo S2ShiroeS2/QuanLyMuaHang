@@ -77,6 +77,7 @@
             this.lstv_list_HD.TabIndex = 15;
             this.lstv_list_HD.UseCompatibleStateImageBehavior = false;
             this.lstv_list_HD.View = System.Windows.Forms.View.Details;
+            this.lstv_list_HD.SelectedIndexChanged += new System.EventHandler(this.lstv_list_HD_SelectedIndexChanged);
             this.lstv_list_HD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstv_list_HD_MouseDoubleClick);
             // 
             // columnHeader1

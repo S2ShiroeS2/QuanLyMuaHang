@@ -17,6 +17,9 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        CTHD_controller b = new CTHD_controller();
+
+
         private void MS_sua_HD_Click(object sender, EventArgs e)
         {
             btn_sua.Enabled = true;
@@ -45,16 +48,22 @@ namespace WindowsFormsApplication1
             btn_sua.Enabled = !flag;
         }
 
+        //
+        // Load dữ liệu lên form
+        //
         private void frm_CTHD_Load(object sender, EventArgs e)
         {
-           if(frm_QLHD.flag==true)
+           if(frm_QLHD.flag==true)                                      // Button tạo mới được click
             {
                 enable_control(frm_QLHD.flag);
             }
-           else
+           else                                                         // Double click vào list view item
             {
                 enable_control(frm_QLHD.flag);
+                
             }
         }
+        
+        
     }
 }

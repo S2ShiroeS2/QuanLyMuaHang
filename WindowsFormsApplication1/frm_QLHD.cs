@@ -51,5 +51,10 @@ namespace WindowsFormsApplication1
             ct.ShowDialog();
             this.Show();
         }
+
+        private void lstv_list_HD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hd_id = Convert.ToInt16(lstv_list_HD.SelectedItems[0].SubItems[0].Text);
+        }
     }
 }
