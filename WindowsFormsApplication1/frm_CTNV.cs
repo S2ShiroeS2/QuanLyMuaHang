@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1
             lvi_them_nv.SubItems.Add(txb_nv_active.Text);
             if (Form_QLNV.flag_nv)
             {
-                NVC.NVAddNew(lvi_them_nv);
+                NVC.NVAddNew(lvi_them_nv,"123");
                 MessageBox.Show("Password mặc định là: 123");
             }
             else

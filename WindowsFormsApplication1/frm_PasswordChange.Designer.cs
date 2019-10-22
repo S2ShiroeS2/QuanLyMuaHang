@@ -76,6 +76,7 @@
             this.btn_ConfirmPassword.TabIndex = 3;
             this.btn_ConfirmPassword.Text = "Lưu";
             this.btn_ConfirmPassword.UseVisualStyleBackColor = true;
+            this.btn_ConfirmPassword.Click += new System.EventHandler(this.btn_ConfirmPassword_Click);
             // 
             // txb_OldPassword
             // 

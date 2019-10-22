@@ -56,13 +56,13 @@ namespace WindowsFormsApplication1
             return list.Max();
         }
 
-        public NV AddNVInV(ListViewItem lvi_nv) {
+        public NV AddNVInV(ListViewItem lvi_nv,string password) {
             NV V = new NV();
 
             V.userID = Int32.Parse(lvi_nv.Text);
             V.userName = lvi_nv.SubItems[1].Text;
             V.userAccount = lvi_nv.SubItems[2].Text;
-            V.userPassword = "123";
+            V.userPassword = password;
             V.userEmail = lvi_nv.SubItems[3].Text;
             V.userPhone = lvi_nv.SubItems[4].Text;
             if (lvi_nv.SubItems[5].Text == "Nhân viên")
@@ -76,14 +76,14 @@ namespace WindowsFormsApplication1
             return V;
         }
 
-        public void NVAddNew(ListViewItem lvi_nv)
+        public void NVAddNew(ListViewItem lvi_nv,string password)
         {
-            //Insert Ncc trong databse
-            data.NVs.InsertOnSubmit(AddNVInV(lvi_nv));
+            //Insert Ncc trong databse voi password 
+            data.NVs.InsertOnSubmit(AddNVInV(lvi_nv,password));
             data.SubmitChanges();
         }
 
-        public void UpdateNV(ListViewItem lvi_nv) //Update NhanVien trong database
+        public void UpdateNV(ListViewItem lvi_nv) //Update NhanVien trong database(Khong doi password duoc)
         {
             var NhanVienList = (from a in data.NVs
                               where a.userID.ToString() == lvi_nv.Text

@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void btn_ConfirmPassword_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
