@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Thêm sản phẩm"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.lbl_chitiethoadon = new System.Windows.Forms.Label();
             this.txt_Ma_HD = new System.Windows.Forms.TextBox();
             this.lbl_nhacc = new System.Windows.Forms.Label();
@@ -111,12 +113,18 @@
             this.columnHeader4,
             this.columnHeader5});
             this.lstv_list_cthd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstv_list_cthd.FullRowSelect = true;
+            this.lstv_list_cthd.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
             this.lstv_list_cthd.Location = new System.Drawing.Point(12, 138);
+            this.lstv_list_cthd.MultiSelect = false;
             this.lstv_list_cthd.Name = "lstv_list_cthd";
             this.lstv_list_cthd.Size = new System.Drawing.Size(900, 197);
             this.lstv_list_cthd.TabIndex = 7;
             this.lstv_list_cthd.UseCompatibleStateImageBehavior = false;
             this.lstv_list_cthd.View = System.Windows.Forms.View.Details;
+            this.lstv_list_cthd.SelectedIndexChanged += new System.EventHandler(this.lstv_list_cthd_SelectedIndexChanged);
+            this.lstv_list_cthd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstv_list_cthd_MouseDoubleClick);
             // 
             // columnHeader1
             // 

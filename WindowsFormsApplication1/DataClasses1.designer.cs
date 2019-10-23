@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString2, mappingSource)
+				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -580,6 +580,8 @@ namespace WindowsFormsApplication1
 		
 		private double _unitPrice;
 		
+		private double _tax;
+		
 		private int _orderQuantity;
 		
 		private EntityRef<OrderTable> _OrderTable;
@@ -598,6 +600,8 @@ namespace WindowsFormsApplication1
     partial void OnorderIDChanged();
     partial void OnunitPriceChanging(double value);
     partial void OnunitPriceChanged();
+    partial void OntaxChanging(double value);
+    partial void OntaxChanged();
     partial void OnorderQuantityChanging(int value);
     partial void OnorderQuantityChanged();
     #endregion
@@ -693,6 +697,26 @@ namespace WindowsFormsApplication1
 					this._unitPrice = value;
 					this.SendPropertyChanged("unitPrice");
 					this.OnunitPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tax", DbType="Float NOT NULL")]
+		public double tax
+		{
+			get
+			{
+				return this._tax;
+			}
+			set
+			{
+				if ((this._tax != value))
+				{
+					this.OntaxChanging(value);
+					this.SendPropertyChanging();
+					this._tax = value;
+					this.SendPropertyChanged("tax");
+					this.OntaxChanged();
 				}
 			}
 		}
@@ -818,8 +842,6 @@ namespace WindowsFormsApplication1
 		
 		private int _status;
 		
-		private double _tax;
-		
 		private double _total;
 		
 		private System.DateTime _orderDate;
@@ -846,8 +868,6 @@ namespace WindowsFormsApplication1
     partial void OnuserIDChanged();
     partial void OnstatusChanging(int value);
     partial void OnstatusChanged();
-    partial void OntaxChanging(double value);
-    partial void OntaxChanged();
     partial void OntotalChanging(double value);
     partial void OntotalChanged();
     partial void OnorderDateChanging(System.DateTime value);
@@ -928,26 +948,6 @@ namespace WindowsFormsApplication1
 					this._status = value;
 					this.SendPropertyChanged("status");
 					this.OnstatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tax", DbType="Float NOT NULL")]
-		public double tax
-		{
-			get
-			{
-				return this._tax;
-			}
-			set
-			{
-				if ((this._tax != value))
-				{
-					this.OntaxChanging(value);
-					this.SendPropertyChanging();
-					this._tax = value;
-					this.SendPropertyChanged("tax");
-					this.OntaxChanged();
 				}
 			}
 		}

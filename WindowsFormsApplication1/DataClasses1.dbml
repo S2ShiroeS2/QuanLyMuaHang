@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PTUD" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-IFTJJR6\SQLEXPRESS;Initial Catalog=PTUD;Integrated Security=True" SettingsObjectName="WindowsFormsApplication1.Properties.Settings" SettingsPropertyName="PTUDConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-2UM47P3;Initial Catalog=PTUD;Integrated Security=True" SettingsObjectName="WindowsFormsApplication1.Properties.Settings" SettingsPropertyName="PTUDConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.NV" Member="NVs">
     <Type Name="NV">
       <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -27,6 +27,7 @@
       <Column Name="orderDetailID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="orderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="unitPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="tax" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="orderQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="OrderTable_OrderDetail" Member="OrderTable" ThisKey="orderID" OtherKey="orderID" Type="OrderTable" IsForeignKey="true" />
       <Association Name="Product_OrderDetail" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
@@ -37,7 +38,6 @@
       <Column Name="orderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="tax" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="total" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="orderDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="modifyDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />

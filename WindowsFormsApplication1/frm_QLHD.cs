@@ -20,8 +20,8 @@ namespace WindowsFormsApplication1
         QLHD_Controller QLHD_crtl = new QLHD_Controller(); // Khởi tạo biến của QLHD_Controller
         List<ListViewItem> list_lvi_hd = new List<ListViewItem>();// Danh sach lưu thông tin của hóa đơn
         public static bool flag { get; private set; } = true;// Biến kiểm tra xem button tạo mới được click hay là double click ở listview
-        public int hd_id { get; private set; } = new int();
-
+        public static int hd_id { get; private set; } = new int();
+        public static ListViewItem lvi_selected_hd = new ListViewItem();
         private void bt_tao_moi_Click(object sender, EventArgs e)
         {
             flag = true;
@@ -47,6 +47,7 @@ namespace WindowsFormsApplication1
             flag = !true;
             frm_CTHD ct = new frm_CTHD();
             this.Hide();
+            lvi_selected_hd = lstv_list_HD.SelectedItems[0];
             hd_id =Convert.ToInt16( lstv_list_HD.SelectedItems[0].SubItems[0].Text);
             ct.ShowDialog();
             this.Show();
@@ -54,7 +55,8 @@ namespace WindowsFormsApplication1
 
         private void lstv_list_HD_SelectedIndexChanged(object sender, EventArgs e)
         {
-            hd_id = Convert.ToInt16(lstv_list_HD.SelectedItems[0].SubItems[0].Text);
+            if(lstv_list_HD.SelectedItems.Count>0)
+                hd_id = Convert.ToInt16(lstv_list_HD.SelectedItems[0].SubItems[0].Text);
         }
     }
 }
