@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PTUD" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-RNDF124\SQLEXPRESS;Initial Catalog=PTUD;Integrated Security=True" SettingsObjectName="WindowsFormsApplication1.Properties.Settings" SettingsPropertyName="PTUDConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-IFTJJR6\SQLEXPRESS;Initial Catalog=PTUD;Integrated Security=True" SettingsObjectName="WindowsFormsApplication1.Properties.Settings" SettingsPropertyName="PTUDConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.NV" Member="NVs">
     <Type Name="NV">
       <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -11,6 +11,14 @@
       <Column Name="role" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="activation" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="NV_OrderTable" Member="OrderTables" ThisKey="userID" OtherKey="userID" Type="OrderTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VendorProduct" Member="VendorProducts">
+    <Type Name="VendorProduct">
+      <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Product_VendorProduct" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
+      <Association Name="Vendor_VendorProduct" Member="Vendor" ThisKey="VendorID" OtherKey="VendorID" Type="Vendor" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.OrderDetail" Member="OrderDetails">
@@ -49,37 +57,29 @@
       <Column Name="ProductQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ProductPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="Manufacture" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Association Name="Product_OrderDetail" Member="OrderDetails" ThisKey="ProductID" OtherKey="ProductID" Type="OrderDetail" />
       <Association Name="Product_VendorProduct" Member="VendorProducts" ThisKey="ProductID" OtherKey="ProductID" Type="VendorProduct" />
+      <Association Name="Product_OrderDetail" Member="OrderDetails" ThisKey="ProductID" OtherKey="ProductID" Type="OrderDetail" />
       <Association Name="ProductCategory_Product" Member="ProductCategory" ThisKey="ProductCategoryID" OtherKey="ProductCategoryID" Type="ProductCategory" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ProductCategory" Member="ProductCategories">
     <Type Name="ProductCategory">
       <Column Name="ProductCategoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ProductCategoryName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCategoryName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
       <Association Name="ProductCategory_Product" Member="Products" ThisKey="ProductCategoryID" OtherKey="ProductCategoryID" Type="Product" />
     </Type>
   </Table>
   <Table Name="dbo.Vendor" Member="Vendors">
     <Type Name="Vendor">
       <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="VendorName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="VendorName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
       <Column Name="VendorAddress" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
       <Column Name="VAT" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="VendorEmail" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
       <Column Name="VendorPhone" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
       <Column Name="VendorAvailable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Association Name="Vendor_OrderTable" Member="OrderTables" ThisKey="VendorID" OtherKey="VendorID" Type="OrderTable" />
       <Association Name="Vendor_VendorProduct" Member="VendorProducts" ThisKey="VendorID" OtherKey="VendorID" Type="VendorProduct" />
-    </Type>
-  </Table>
-  <Table Name="dbo.VendorProduct" Member="VendorProducts">
-    <Type Name="VendorProduct">
-      <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Product_VendorProduct" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
-      <Association Name="Vendor_VendorProduct" Member="Vendor" ThisKey="VendorID" OtherKey="VendorID" Type="Vendor" IsForeignKey="true" />
+      <Association Name="Vendor_OrderTable" Member="OrderTables" ThisKey="VendorID" OtherKey="VendorID" Type="OrderTable" />
     </Type>
   </Table>
 </Database>

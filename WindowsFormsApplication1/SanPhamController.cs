@@ -12,10 +12,7 @@ namespace WindowsFormsApplication1
         DataClasses1DataContext data_SP = new DataClasses1DataContext();
         List<ListViewItem> list_SP = new List<ListViewItem>();
         List<ListViewItem> listview_Ncc = new List<ListViewItem>();
-        //Đẩy sp vào list view
-
         //Load dữ liệu sản phẩm từ database lên
-
         public List<ListViewItem> Load_List_Ncc(int product_id)
         {
             listview_Ncc.Clear();
@@ -37,6 +34,7 @@ namespace WindowsFormsApplication1
                 
             return listview_Ncc;
         }
+        //Đẩy sp vào list view
         public List<ListViewItem> Load_List_San_Pham()
         {
             list_SP.Clear();

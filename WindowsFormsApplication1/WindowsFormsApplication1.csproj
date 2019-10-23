@@ -119,12 +119,19 @@
     <Compile Include="frm_PasswordChange.Designer.cs">
       <DependentUpon>frm_PasswordChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_themNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_themNhaCungCap.Designer.cs">
+      <DependentUpon>frm_themNhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_TTCN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_TTCN.Designer.cs">
       <DependentUpon>frm_TTCN.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhaCungCapController.cs" />
     <Compile Include="QLHD_Controller.cs" />
     <Compile Include="LoginCotroller.cs" />
     <Compile Include="NhanVienController.cs" />
@@ -168,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_PasswordChange.resx">
       <DependentUpon>frm_PasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_themNhaCungCap.resx">
+      <DependentUpon>frm_themNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TTCN.resx">
       <DependentUpon>frm_TTCN.cs</DependentUpon>

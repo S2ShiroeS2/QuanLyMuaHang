@@ -36,9 +36,9 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btn_tao_moi_SP = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_tao_moi_SP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_tim_kiem_SP
@@ -89,22 +89,31 @@
             // columnHeader9
             // 
             this.columnHeader9.Text = "Tên sản phẩm";
-            this.columnHeader9.Width = 230;
+            this.columnHeader9.Width = 200;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "Loại";
-            this.columnHeader10.Width = 167;
+            this.columnHeader10.Width = 150;
             // 
             // columnHeader11
             // 
             this.columnHeader11.Text = "Danh mục";
-            this.columnHeader11.Width = 248;
+            this.columnHeader11.Width = 200;
             // 
             // columnHeader12
             // 
             this.columnHeader12.Text = "Số lượng";
             this.columnHeader12.Width = 191;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Giá";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nhà sản xuất";
+            this.columnHeader2.Width = 200;
             // 
             // btn_tao_moi_SP
             // 
@@ -116,14 +125,6 @@
             this.btn_tao_moi_SP.Text = "Tạo mới";
             this.btn_tao_moi_SP.UseVisualStyleBackColor = true;
             this.btn_tao_moi_SP.Click += new System.EventHandler(this.btn_tao_moi_SP_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Giá";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Nhà sản xuất";
             // 
             // Form_QLSP
             // 
