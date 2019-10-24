@@ -33,8 +33,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_ConfirmPassword = new System.Windows.Forms.Button();
             this.txb_OldPassword = new System.Windows.Forms.TextBox();
-            this.txb_ConfirmPassword = new System.Windows.Forms.TextBox();
             this.txb_NewPassword = new System.Windows.Forms.TextBox();
+            this.txb_ConfirmPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -85,27 +85,27 @@
             this.txb_OldPassword.Size = new System.Drawing.Size(226, 22);
             this.txb_OldPassword.TabIndex = 4;
             // 
-            // txb_ConfirmPassword
-            // 
-            this.txb_ConfirmPassword.Location = new System.Drawing.Point(260, 113);
-            this.txb_ConfirmPassword.Name = "txb_ConfirmPassword";
-            this.txb_ConfirmPassword.Size = new System.Drawing.Size(226, 22);
-            this.txb_ConfirmPassword.TabIndex = 5;
-            // 
             // txb_NewPassword
             // 
-            this.txb_NewPassword.Location = new System.Drawing.Point(260, 70);
+            this.txb_NewPassword.Location = new System.Drawing.Point(260, 69);
             this.txb_NewPassword.Name = "txb_NewPassword";
             this.txb_NewPassword.Size = new System.Drawing.Size(226, 22);
-            this.txb_NewPassword.TabIndex = 6;
+            this.txb_NewPassword.TabIndex = 5;
+            // 
+            // txb_ConfirmPassword
+            // 
+            this.txb_ConfirmPassword.Location = new System.Drawing.Point(260, 109);
+            this.txb_ConfirmPassword.Name = "txb_ConfirmPassword";
+            this.txb_ConfirmPassword.Size = new System.Drawing.Size(226, 22);
+            this.txb_ConfirmPassword.TabIndex = 6;
             // 
             // frm_PasswordChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 202);
-            this.Controls.Add(this.txb_NewPassword);
             this.Controls.Add(this.txb_ConfirmPassword);
+            this.Controls.Add(this.txb_NewPassword);
             this.Controls.Add(this.txb_OldPassword);
             this.Controls.Add(this.btn_ConfirmPassword);
             this.Controls.Add(this.label3);
@@ -125,7 +125,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_ConfirmPassword;
         private System.Windows.Forms.TextBox txb_OldPassword;
-        private System.Windows.Forms.TextBox txb_ConfirmPassword;
         private System.Windows.Forms.TextBox txb_NewPassword;
+        private System.Windows.Forms.TextBox txb_ConfirmPassword;
     }
 }

@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1
 
         public static string LoginAccount { get; private set; }
         public static string LoginPassword { get; private set; }
-        LoginCotroller LC = new LoginCotroller();
+        LoginController LC = new LoginController();
 
         private void Form1_Load(object sender, EventArgs e)
         {

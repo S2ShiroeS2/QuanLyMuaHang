@@ -139,7 +139,7 @@
     </Compile>
     <Compile Include="NhaCungCapController.cs" />
     <Compile Include="QLHD_Controller.cs" />
-    <Compile Include="LoginCotroller.cs" />
+    <Compile Include="LoginController.cs" />
     <Compile Include="NhanVienController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

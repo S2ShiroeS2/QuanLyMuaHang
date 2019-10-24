@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class LoginCotroller
+    class LoginController
     {
         DataClasses1DataContext data = new DataClasses1DataContext();
+        private NhanVienController NVC = new NhanVienController();
         private string LoginAccount = frm_Login.LoginAccount;
         private string LoginPassword = frm_Login.LoginPassword;
-        public static string UserRole { get; private set; }
-        public static int UserID { get; private set; }
+        public string UserRole { get; private set; }
+        public int UserID { get; private set; }
 
-        public bool CheckAccount(string account,string password)
+        public bool CheckAccount(string account,string password)//Kiểm tra account có tồn tại trong database kèm theo pass của account đó
         {
             UserRole = null;
             UserID = -1;
@@ -36,5 +37,14 @@ namespace WindowsFormsApplication1
             }    
         }
 
+        public void ChangePassword(int id, string password)
+        {
+            NVC.ChangePassword(id, password);
+        }
+
+        public bool CheckPassword(int id,string password)
+        {
+            return NVC.Checkpassword(id, password);
+        }
     }
 }

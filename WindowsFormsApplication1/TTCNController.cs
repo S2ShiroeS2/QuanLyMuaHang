@@ -9,14 +9,14 @@ namespace WindowsFormsApplication1
 {
     class TTCNController
     {
-        private int UserID = LoginCotroller.UserID;
         private DataClasses1DataContext data = new DataClasses1DataContext();
         private NhanVienController NVC = new NhanVienController();
+        private LoginController LC = new LoginController();
         public List<ListViewItem> UserInformation { get; private set; } = new List<ListViewItem>();
 
         public List<ListViewItem> TakeUserInformation()
         {
-            return UserInformation = NVC.GetNV(1);
+            return UserInformation = NVC.GetNV(1);//Thay 1 = Lc.userID khi hoàn thành
         }
     }
         

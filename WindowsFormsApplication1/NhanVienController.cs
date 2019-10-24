@@ -138,5 +138,30 @@ namespace WindowsFormsApplication1
             return listNV;
         }
 
+        public void ChangePassword(int id,string password)//Thay đổi password
+        {
+            var varnv = from v in data.NVs
+                 where v.userID == id
+                 select v;
+            foreach(NV nv in varnv)
+            {
+                nv.userPassword = password;
+            }
+            data.SubmitChanges();
+        }
+
+        public bool Checkpassword(int id, string password)
+        {
+            var varnv = from v in data.NVs
+                        where v.userID == id
+                        select v;
+            foreach(NV nv in varnv)
+            {
+                if (nv.userPassword == password)
+                    return true;
+            }
+            return false;
+        }
+
     }
 }
