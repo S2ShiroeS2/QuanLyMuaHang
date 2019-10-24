@@ -52,6 +52,7 @@
             this.btn_luu = new System.Windows.Forms.Button();
             this.lbl_ma_hoa_don = new System.Windows.Forms.Label();
             this.cbo_nha_cc = new System.Windows.Forms.ComboBox();
+            this.btn_Xoa_SP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_chitiethoadon
@@ -77,7 +78,7 @@
             // 
             this.lbl_nhacc.AutoSize = true;
             this.lbl_nhacc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nhacc.Location = new System.Drawing.Point(12, 90);
+            this.lbl_nhacc.Location = new System.Drawing.Point(21, 90);
             this.lbl_nhacc.Name = "lbl_nhacc";
             this.lbl_nhacc.Size = new System.Drawing.Size(107, 20);
             this.lbl_nhacc.TabIndex = 2;
@@ -119,7 +120,7 @@
             this.lstv_list_cthd.Location = new System.Drawing.Point(12, 138);
             this.lstv_list_cthd.MultiSelect = false;
             this.lstv_list_cthd.Name = "lstv_list_cthd";
-            this.lstv_list_cthd.Size = new System.Drawing.Size(900, 197);
+            this.lstv_list_cthd.Size = new System.Drawing.Size(900, 199);
             this.lstv_list_cthd.TabIndex = 7;
             this.lstv_list_cthd.UseCompatibleStateImageBehavior = false;
             this.lstv_list_cthd.View = System.Windows.Forms.View.Details;
@@ -154,7 +155,7 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Tổng tiền";
-            this.columnHeader5.Width = 130;
+            this.columnHeader5.Width = 161;
             // 
             // txt_tong_tien_HD_khong_thue
             // 
@@ -217,7 +218,7 @@
             // 
             this.btn_sua.Enabled = false;
             this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.Location = new System.Drawing.Point(25, 387);
+            this.btn_sua.Location = new System.Drawing.Point(25, 401);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(87, 36);
             this.btn_sua.TabIndex = 15;
@@ -228,7 +229,7 @@
             // 
             this.btn_luu.Enabled = false;
             this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_luu.Location = new System.Drawing.Point(142, 387);
+            this.btn_luu.Location = new System.Drawing.Point(142, 401);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.Size = new System.Drawing.Size(87, 36);
             this.btn_luu.TabIndex = 16;
@@ -239,7 +240,7 @@
             // 
             this.lbl_ma_hoa_don.AutoSize = true;
             this.lbl_ma_hoa_don.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ma_hoa_don.Location = new System.Drawing.Point(19, 45);
+            this.lbl_ma_hoa_don.Location = new System.Drawing.Point(21, 45);
             this.lbl_ma_hoa_don.Name = "lbl_ma_hoa_don";
             this.lbl_ma_hoa_don.Size = new System.Drawing.Size(93, 20);
             this.lbl_ma_hoa_don.TabIndex = 17;
@@ -254,11 +255,23 @@
             this.cbo_nha_cc.Size = new System.Drawing.Size(121, 21);
             this.cbo_nha_cc.TabIndex = 18;
             // 
+            // btn_Xoa_SP
+            // 
+            this.btn_Xoa_SP.Enabled = false;
+            this.btn_Xoa_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xoa_SP.Location = new System.Drawing.Point(25, 343);
+            this.btn_Xoa_SP.Name = "btn_Xoa_SP";
+            this.btn_Xoa_SP.Size = new System.Drawing.Size(129, 36);
+            this.btn_Xoa_SP.TabIndex = 19;
+            this.btn_Xoa_SP.Text = "Xóa sản phẩm";
+            this.btn_Xoa_SP.UseVisualStyleBackColor = true;
+            // 
             // frm_CTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 474);
+            this.Controls.Add(this.btn_Xoa_SP);
             this.Controls.Add(this.cbo_nha_cc);
             this.Controls.Add(this.lbl_ma_hoa_don);
             this.Controls.Add(this.btn_luu);
@@ -307,5 +320,6 @@
         private System.Windows.Forms.Button btn_luu;
         private System.Windows.Forms.Label lbl_ma_hoa_don;
         private System.Windows.Forms.ComboBox cbo_nha_cc;
+        private System.Windows.Forms.Button btn_Xoa_SP;
     }
 }

@@ -64,5 +64,32 @@ namespace WindowsFormsApplication1
                    select hd.orderID;
             return id.Max()+1;
         }
+
+        public List<string> load_list_sp(string ncc)
+        {
+            List<string> a = new List<string>();
+            var list_sp = from sp in data.Products
+                          join vd_p in data.VendorProducts on sp.ProductID equals vd_p.ProductID
+                          join vd in data.Vendors on vd_p.VendorID equals vd.VendorID
+                          where vd.VendorName==ncc
+                           select sp.ProductName;
+            foreach (var sp in list_sp)
+                a.Add(sp);
+            return a;
+        }
+
+        public double load_gia_tien_sp(string ten_sp)
+        {
+           double giasp=0;
+           var i = from p in data.Products
+                  where p.ProductName == ten_sp
+                  select p;
+            foreach (var sp in i)
+            {
+                giasp = sp.ProductPrice;
+                break;
+            }
+            return giasp;
+        }
     }
 }

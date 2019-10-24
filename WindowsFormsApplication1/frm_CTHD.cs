@@ -19,7 +19,9 @@ namespace WindowsFormsApplication1
 
         CTHD_controller b = new CTHD_controller();
         CTHD_controller cthd_ctr = new CTHD_controller();
-        
+        public static string ncc_name { get; private set; } = "";
+        public static bool flag_them_sp { get; private set; } = true;
+
 
         private void MS_sua_HD_Click(object sender, EventArgs e)
         {
@@ -85,14 +87,25 @@ namespace WindowsFormsApplication1
             
             if (lstv_list_cthd.SelectedItems[0].Text == "Thêm sản phẩm")
             {
+                flag_them_sp = true;
                 if (cbo_nha_cc.SelectedItem == null)
+                {
                     MessageBox.Show("Bạn chưa chọn nhà cung cấp cho hóa đơn");
+                }
+                    
                 else
                 {
-
+                    Frm_Them_SP_vao_HD frm_them_sp = new Frm_Them_SP_vao_HD();
+                    this.Hide();
+                    ncc_name = cbo_nha_cc.SelectedItem.ToString();
+                    frm_them_sp.ShowDialog();                 
+                    this.Show();
                 }
             }
-                
+            else
+            {
+                flag_them_sp = true;
+            }    
         }
     }
 }
