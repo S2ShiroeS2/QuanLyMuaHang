@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txb_ttcn_account = new System.Windows.Forms.TextBox();
+            this.txb_Account = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txb_ttcn_email = new System.Windows.Forms.TextBox();
-            this.txb_ttcn_id = new System.Windows.Forms.TextBox();
+            this.txb_Email = new System.Windows.Forms.TextBox();
+            this.txb_ID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txb_ttcn_phone = new System.Windows.Forms.TextBox();
+            this.txb_Phone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txb_ttcn_name = new System.Windows.Forms.TextBox();
+            this.txb_Name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_ChangePassword = new System.Windows.Forms.Button();
             this.btn_ChangeInform = new System.Windows.Forms.Button();
             this.btn_SaveInform = new System.Windows.Forms.Button();
-            this.txb_ttcn_role = new System.Windows.Forms.TextBox();
+            this.txb_Role = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txb_ttcn_account
+            // txb_Account
             // 
-            this.txb_ttcn_account.Enabled = false;
-            this.txb_ttcn_account.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ttcn_account.Location = new System.Drawing.Point(636, 143);
-            this.txb_ttcn_account.Margin = new System.Windows.Forms.Padding(4);
-            this.txb_ttcn_account.Name = "txb_ttcn_account";
-            this.txb_ttcn_account.Size = new System.Drawing.Size(265, 30);
-            this.txb_ttcn_account.TabIndex = 47;
+            this.txb_Account.Enabled = false;
+            this.txb_Account.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_Account.Location = new System.Drawing.Point(636, 143);
+            this.txb_Account.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Account.Name = "txb_Account";
+            this.txb_Account.Size = new System.Drawing.Size(265, 30);
+            this.txb_Account.TabIndex = 47;
+            this.txb_Account.Validating += new System.ComponentModel.CancelEventHandler(this.txb_Account_Validating);
             // 
             // label6
             // 
@@ -66,24 +67,25 @@
             this.label6.TabIndex = 46;
             this.label6.Text = "Tài khoản";
             // 
-            // txb_ttcn_email
+            // txb_Email
             // 
-            this.txb_ttcn_email.Enabled = false;
-            this.txb_ttcn_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txb_ttcn_email.Location = new System.Drawing.Point(177, 300);
-            this.txb_ttcn_email.Name = "txb_ttcn_email";
-            this.txb_ttcn_email.Size = new System.Drawing.Size(301, 30);
-            this.txb_ttcn_email.TabIndex = 45;
+            this.txb_Email.Enabled = false;
+            this.txb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txb_Email.Location = new System.Drawing.Point(177, 300);
+            this.txb_Email.Name = "txb_Email";
+            this.txb_Email.Size = new System.Drawing.Size(301, 30);
+            this.txb_Email.TabIndex = 45;
+            this.txb_Email.Validating += new System.ComponentModel.CancelEventHandler(this.txb_Email_Validating);
             // 
-            // txb_ttcn_id
+            // txb_ID
             // 
-            this.txb_ttcn_id.Enabled = false;
-            this.txb_ttcn_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ttcn_id.Location = new System.Drawing.Point(177, 217);
-            this.txb_ttcn_id.Margin = new System.Windows.Forms.Padding(4);
-            this.txb_ttcn_id.Name = "txb_ttcn_id";
-            this.txb_ttcn_id.Size = new System.Drawing.Size(125, 30);
-            this.txb_ttcn_id.TabIndex = 44;
+            this.txb_ID.Enabled = false;
+            this.txb_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_ID.Location = new System.Drawing.Point(177, 217);
+            this.txb_ID.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_ID.Name = "txb_ID";
+            this.txb_ID.Size = new System.Drawing.Size(125, 30);
+            this.txb_ID.TabIndex = 44;
             // 
             // label5
             // 
@@ -107,15 +109,16 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "Email";
             // 
-            // txb_ttcn_phone
+            // txb_Phone
             // 
-            this.txb_ttcn_phone.Enabled = false;
-            this.txb_ttcn_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ttcn_phone.Location = new System.Drawing.Point(636, 292);
-            this.txb_ttcn_phone.Margin = new System.Windows.Forms.Padding(4);
-            this.txb_ttcn_phone.Name = "txb_ttcn_phone";
-            this.txb_ttcn_phone.Size = new System.Drawing.Size(265, 30);
-            this.txb_ttcn_phone.TabIndex = 41;
+            this.txb_Phone.Enabled = false;
+            this.txb_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_Phone.Location = new System.Drawing.Point(636, 292);
+            this.txb_Phone.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Phone.Name = "txb_Phone";
+            this.txb_Phone.Size = new System.Drawing.Size(265, 30);
+            this.txb_Phone.TabIndex = 41;
+            this.txb_Phone.Validating += new System.ComponentModel.CancelEventHandler(this.txb_Phone_Validating);
             // 
             // label3
             // 
@@ -128,15 +131,16 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "Số điện thoại";
             // 
-            // txb_ttcn_name
+            // txb_Name
             // 
-            this.txb_ttcn_name.Enabled = false;
-            this.txb_ttcn_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ttcn_name.Location = new System.Drawing.Point(177, 143);
-            this.txb_ttcn_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txb_ttcn_name.Name = "txb_ttcn_name";
-            this.txb_ttcn_name.Size = new System.Drawing.Size(265, 30);
-            this.txb_ttcn_name.TabIndex = 37;
+            this.txb_Name.Enabled = false;
+            this.txb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_Name.Location = new System.Drawing.Point(177, 143);
+            this.txb_Name.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Name.Name = "txb_Name";
+            this.txb_Name.Size = new System.Drawing.Size(265, 30);
+            this.txb_Name.TabIndex = 37;
+            this.txb_Name.Validating += new System.ComponentModel.CancelEventHandler(this.txb_Name_Validating);
             // 
             // label1
             // 
@@ -183,15 +187,15 @@
             this.btn_SaveInform.UseVisualStyleBackColor = true;
             this.btn_SaveInform.Click += new System.EventHandler(this.btn_SaveInform_Click);
             // 
-            // txb_ttcn_role
+            // txb_Role
             // 
-            this.txb_ttcn_role.Enabled = false;
-            this.txb_ttcn_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ttcn_role.Location = new System.Drawing.Point(636, 217);
-            this.txb_ttcn_role.Margin = new System.Windows.Forms.Padding(4);
-            this.txb_ttcn_role.Name = "txb_ttcn_role";
-            this.txb_ttcn_role.Size = new System.Drawing.Size(265, 30);
-            this.txb_ttcn_role.TabIndex = 52;
+            this.txb_Role.Enabled = false;
+            this.txb_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_Role.Location = new System.Drawing.Point(636, 217);
+            this.txb_Role.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Role.Name = "txb_Role";
+            this.txb_Role.Size = new System.Drawing.Size(265, 30);
+            this.txb_Role.TabIndex = 52;
             // 
             // label2
             // 
@@ -209,20 +213,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1073, 544);
-            this.Controls.Add(this.txb_ttcn_role);
+            this.Controls.Add(this.txb_Role);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_SaveInform);
             this.Controls.Add(this.btn_ChangeInform);
             this.Controls.Add(this.btn_ChangePassword);
-            this.Controls.Add(this.txb_ttcn_account);
+            this.Controls.Add(this.txb_Account);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txb_ttcn_email);
-            this.Controls.Add(this.txb_ttcn_id);
+            this.Controls.Add(this.txb_Email);
+            this.Controls.Add(this.txb_ID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txb_ttcn_phone);
+            this.Controls.Add(this.txb_Phone);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txb_ttcn_name);
+            this.Controls.Add(this.txb_Name);
             this.Controls.Add(this.label1);
             this.Name = "frm_TTCN";
             this.Text = "frm_TTCN";
@@ -234,20 +238,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txb_ttcn_account;
+        private System.Windows.Forms.TextBox txb_Account;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txb_ttcn_email;
-        private System.Windows.Forms.TextBox txb_ttcn_id;
+        private System.Windows.Forms.TextBox txb_Email;
+        private System.Windows.Forms.TextBox txb_ID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txb_ttcn_phone;
+        private System.Windows.Forms.TextBox txb_Phone;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txb_ttcn_name;
+        private System.Windows.Forms.TextBox txb_Name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_ChangePassword;
         private System.Windows.Forms.Button btn_ChangeInform;
         private System.Windows.Forms.Button btn_SaveInform;
-        private System.Windows.Forms.TextBox txb_ttcn_role;
+        private System.Windows.Forms.TextBox txb_Role;
         private System.Windows.Forms.Label label2;
     }
 }

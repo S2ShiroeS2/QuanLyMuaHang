@@ -17,11 +17,12 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
         public static ListViewItem lvi_them_nv { get; private set; } = new ListViewItem();
-        NhanVienController NVC = new NhanVienController();
+        private NhanVienController NVC = new NhanVienController();
+        private ErrorProvider EP = new ErrorProvider();
 
         private void Enable_txb(bool Active)
         {
-            txb_nv_name.Enabled = txb_nv_email.Enabled  = txb_nv_account.Enabled = txb_nv_phone.Enabled =btn_nv_active.Enabled= Active;
+            txb_NVName.Enabled = txb_NVEmail.Enabled = txb_NVAccount.Enabled = txb_NVPhone.Enabled = btn_NVActive.Enabled = Active;
         }
         private void btn_nv_update_Click(object sender, EventArgs e)
         {
@@ -31,16 +32,16 @@ namespace WindowsFormsApplication1
         private void btn_nv_luu_Click(object sender, EventArgs e)
         {
             lvi_them_nv = new ListViewItem();
-            lvi_them_nv.Text = txb_nv_id.Text;
-            lvi_them_nv.SubItems.Add(txb_nv_name.Text);
-            lvi_them_nv.SubItems.Add(txb_nv_account.Text);
-            lvi_them_nv.SubItems.Add(txb_nv_email.Text);
-            lvi_them_nv.SubItems.Add(txb_nv_phone.Text);
-            lvi_them_nv.SubItems.Add(txb_nv_role.Text);
-            lvi_them_nv.SubItems.Add(txb_nv_active.Text);
+            lvi_them_nv.Text = txb_NVID.Text;
+            lvi_them_nv.SubItems.Add(txb_NVName.Text);
+            lvi_them_nv.SubItems.Add(txb_NVAccount.Text);
+            lvi_them_nv.SubItems.Add(txb_NVEmail.Text);
+            lvi_them_nv.SubItems.Add(txb_NVPhone.Text);
+            lvi_them_nv.SubItems.Add(txb_NVRole.Text);
+            lvi_them_nv.SubItems.Add(txb_NVActivation.Text);
             if (Form_QLNV.flag_nv)
             {
-                NVC.NVAddNew(lvi_them_nv,"123");
+                NVC.NVAddNew(lvi_them_nv, "123");
                 MessageBox.Show("Password mặc định là: 123");
             }
             else
@@ -54,43 +55,124 @@ namespace WindowsFormsApplication1
         {
             if (Form_QLNV.flag_nv == false)
             {
-                txb_nv_id.Text = Form_QLNV.lvi_nv.SubItems[0].Text;
-                txb_nv_name.Text = Form_QLNV.lvi_nv.SubItems[1].Text;
-                txb_nv_account.Text = Form_QLNV.lvi_nv.SubItems[2].Text;
-                txb_nv_email.Text = Form_QLNV.lvi_nv.SubItems[3].Text;
-                txb_nv_phone.Text = Form_QLNV.lvi_nv.SubItems[4].Text;
-                txb_nv_role.Text = Form_QLNV.lvi_nv.SubItems[5].Text;
-                txb_nv_active.Text = Form_QLNV.lvi_nv.SubItems[6].Text;
-                btn_nv_update.Enabled = true;
-                btn_nv_active.Enabled = true;
-                if (txb_nv_active.Text == "Active")
-                    btn_nv_active.Text = "Deactive";
+                txb_NVID.Text = Form_QLNV.lvi_nv.SubItems[0].Text;
+                txb_NVName.Text = Form_QLNV.lvi_nv.SubItems[1].Text;
+                txb_NVAccount.Text = Form_QLNV.lvi_nv.SubItems[2].Text;
+                txb_NVEmail.Text = Form_QLNV.lvi_nv.SubItems[3].Text;
+                txb_NVPhone.Text = Form_QLNV.lvi_nv.SubItems[4].Text;
+                txb_NVRole.Text = Form_QLNV.lvi_nv.SubItems[5].Text;
+                txb_NVActivation.Text = Form_QLNV.lvi_nv.SubItems[6].Text;
+                btn_NVUpdate.Enabled = true;
+                btn_NVActive.Enabled = true;
+                if (txb_NVActivation.Text == "Active")
+                    btn_NVActive.Text = "Deactive";
                 else
-                    btn_nv_active.Text = "Active";
+                    btn_NVActive.Text = "Active";
                 Enable_txb(false);
-                
+
             }
             else
             {
-                btn_nv_update.Enabled = false;
-                txb_nv_active.Text = "Active";
+                btn_NVUpdate.Enabled = false;
+                txb_NVActivation.Text = "Active";
                 int NextNVId = NVC.GetMaxNVID() + 1;
-                txb_nv_id.Text = NextNVId.ToString();
+                txb_NVID.Text = NextNVId.ToString();
             }
         }
 
         private void btn_nv_active_Click(object sender, EventArgs e)
         {
-            if (btn_nv_active.Text == "Active")
+            if (btn_NVActive.Text == "Active")
             {
-                txb_nv_active.Text = "Active";
-                btn_nv_active.Text = "Deactive";
+                txb_NVActivation.Text = "Active";
+                btn_NVActive.Text = "Deactive";
             }
             else
             {
-                txb_nv_active.Text = "Deactive";
-                btn_nv_active.Text = "Active";
+                txb_NVActivation.Text = "Deactive";
+                btn_NVActive.Text = "Active";
             }
+        }
+
+        private void txb_NVName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_NVName.Text))
+            {
+                e.Cancel = true;
+                txb_NVName.Focus();
+                EP.SetError(txb_NVName, "Không được để trống");
+            }
+            else
+            {
+                e.Cancel = false;
+                EP.SetError(txb_NVName, null);
+            }
+        }
+
+        private void txb_NVAccount_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_NVAccount.Text))
+            {
+                e.Cancel = true;
+                txb_NVAccount.Focus();
+                EP.SetError(txb_NVAccount, "Không được để trống");
+            }
+            else
+            {
+                e.Cancel = false;
+                EP.SetError(txb_NVAccount, null);
+            }
+        }
+
+        private void txb_NVEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_NVEmail.Text))
+            {
+                e.Cancel = true;
+                txb_NVEmail.Focus();
+                EP.SetError(txb_NVEmail, "Không được để trống");
+            }
+            else
+            {
+                e.Cancel = false;
+                EP.SetError(txb_NVEmail, null);
+            }
+        }
+
+        private void txb_NVPhone_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_NVPhone.Text))
+            {
+                e.Cancel = true;
+                txb_NVPhone.Focus();
+                EP.SetError(txb_NVPhone, "Không được để trống");
+            }
+            else
+            {
+                e.Cancel = false;
+                EP.SetError(txb_NVPhone, null);
+            }
+        }
+
+        private void txb_NVRole_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_NVRole.Text))
+            {
+                e.Cancel = true;
+                txb_NVRole.Focus();
+                EP.SetError(txb_NVRole, "Không được để trống");
+            }
+            else if(string.Compare("nhân viên",txb_NVRole.Text,true)!=0 && string.Compare("admin", txb_NVRole.Text,true) != 0)
+                {
+                e.Cancel = true;
+                txb_NVRole.Focus();
+                EP.SetError(txb_NVRole, "Chỉ dược nhập \"Nhân viên\" hoặc \"Admin\"!");
+                }
+                else
+                {
+                    e.Cancel = false;
+                    EP.SetError(txb_NVRole, null);
+                }
         }
     }
 }
