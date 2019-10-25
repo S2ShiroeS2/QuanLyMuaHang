@@ -40,17 +40,19 @@ namespace WindowsFormsApplication1
             list_SP.Clear();
             data_SP = new DataClasses1DataContext();
    
-            var List_SanPham = from SP in data_SP.Products
+            var List_SanPham = from ODD in data_SP.OrderDetails                     
+                               join SP in data_SP.Products on ODD.ProductID equals SP.ProductID
                                join PC in data_SP.ProductCategories on SP.ProductCategoryID equals PC.ProductCategoryID
+                               group ODD by new { SP.ProductID, SP.ProductName, SP.ProductType, PC.ProductCategoryName,SP.ProductPrice,SP.Manufacture } into Quanti
                                select new
                                {
-                                   MaSP = SP.ProductID,
-                                   TenSP = SP.ProductName,
-                                   LoaiSP = SP.ProductType,
-                                   DanhMucSP = PC.ProductCategoryName,
-                                   SoLuong = SP.ProductQuantity,
-                                   Gia = SP.ProductPrice,
-                                   NhaSX = SP.Manufacture,
+                                   MaSP = Quanti.Key.ProductID,
+                                   TenSP = Quanti.Key.ProductName,
+                                   LoaiSP = Quanti.Key.ProductType,
+                                   DanhMucSP = Quanti.Key.ProductCategoryName,
+                                   SoLuong = Quanti.Sum(x => x.orderQuantity),
+                                   Gia = Quanti.Key.ProductPrice,
+                                   NhaSX = Quanti.Key.Manufacture,
                                };
             foreach (var SP in List_SanPham)
             {

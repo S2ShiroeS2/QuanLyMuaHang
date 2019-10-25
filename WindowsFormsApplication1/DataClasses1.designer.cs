@@ -33,28 +33,28 @@ namespace WindowsFormsApplication1
     partial void InsertNV(NV instance);
     partial void UpdateNV(NV instance);
     partial void DeleteNV(NV instance);
+    partial void InsertVendorProduct(VendorProduct instance);
+    partial void UpdateVendorProduct(VendorProduct instance);
+    partial void DeleteVendorProduct(VendorProduct instance);
     partial void InsertOrderDetail(OrderDetail instance);
     partial void UpdateOrderDetail(OrderDetail instance);
     partial void DeleteOrderDetail(OrderDetail instance);
     partial void InsertOrderTable(OrderTable instance);
     partial void UpdateOrderTable(OrderTable instance);
     partial void DeleteOrderTable(OrderTable instance);
-    partial void InsertProductCategory(ProductCategory instance);
-    partial void UpdateProductCategory(ProductCategory instance);
-    partial void DeleteProductCategory(ProductCategory instance);
     partial void InsertProduct(Product instance);
     partial void UpdateProduct(Product instance);
     partial void DeleteProduct(Product instance);
+    partial void InsertProductCategory(ProductCategory instance);
+    partial void UpdateProductCategory(ProductCategory instance);
+    partial void DeleteProductCategory(ProductCategory instance);
     partial void InsertVendor(Vendor instance);
     partial void UpdateVendor(Vendor instance);
     partial void DeleteVendor(Vendor instance);
-    partial void InsertVendorProduct(VendorProduct instance);
-    partial void UpdateVendorProduct(VendorProduct instance);
-    partial void DeleteVendorProduct(VendorProduct instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString1, mappingSource)
+				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -91,6 +91,14 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
+		public System.Data.Linq.Table<VendorProduct> VendorProducts
+		{
+			get
+			{
+				return this.GetTable<VendorProduct>();
+			}
+		}
+		
 		public System.Data.Linq.Table<OrderDetail> OrderDetails
 		{
 			get
@@ -107,14 +115,6 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		public System.Data.Linq.Table<ProductCategory> ProductCategories
-		{
-			get
-			{
-				return this.GetTable<ProductCategory>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Product> Products
 		{
 			get
@@ -123,19 +123,19 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
+		public System.Data.Linq.Table<ProductCategory> ProductCategories
+		{
+			get
+			{
+				return this.GetTable<ProductCategory>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Vendor> Vendors
 		{
 			get
 			{
 				return this.GetTable<Vendor>();
-			}
-		}
-		
-		public System.Data.Linq.Table<VendorProduct> VendorProducts
-		{
-			get
-			{
-				return this.GetTable<VendorProduct>();
 			}
 		}
 	}
@@ -398,6 +398,174 @@ namespace WindowsFormsApplication1
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VendorProduct")]
+	public partial class VendorProduct : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _VendorID;
+		
+		private int _ProductID;
+		
+		private EntityRef<Product> _Product;
+		
+		private EntityRef<Vendor> _Vendor;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnVendorIDChanging(int value);
+    partial void OnVendorIDChanged();
+    partial void OnProductIDChanging(int value);
+    partial void OnProductIDChanged();
+    #endregion
+		
+		public VendorProduct()
+		{
+			this._Product = default(EntityRef<Product>);
+			this._Vendor = default(EntityRef<Vendor>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int VendorID
+		{
+			get
+			{
+				return this._VendorID;
+			}
+			set
+			{
+				if ((this._VendorID != value))
+				{
+					if (this._Vendor.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnVendorIDChanging(value);
+					this.SendPropertyChanging();
+					this._VendorID = value;
+					this.SendPropertyChanged("VendorID");
+					this.OnVendorIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ProductID
+		{
+			get
+			{
+				return this._ProductID;
+			}
+			set
+			{
+				if ((this._ProductID != value))
+				{
+					if (this._Product.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnProductIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProductID = value;
+					this.SendPropertyChanged("ProductID");
+					this.OnProductIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_VendorProduct", Storage="_Product", ThisKey="ProductID", OtherKey="ProductID", IsForeignKey=true)]
+		public Product Product
+		{
+			get
+			{
+				return this._Product.Entity;
+			}
+			set
+			{
+				Product previousValue = this._Product.Entity;
+				if (((previousValue != value) 
+							|| (this._Product.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Product.Entity = null;
+						previousValue.VendorProducts.Remove(this);
+					}
+					this._Product.Entity = value;
+					if ((value != null))
+					{
+						value.VendorProducts.Add(this);
+						this._ProductID = value.ProductID;
+					}
+					else
+					{
+						this._ProductID = default(int);
+					}
+					this.SendPropertyChanged("Product");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Vendor_VendorProduct", Storage="_Vendor", ThisKey="VendorID", OtherKey="VendorID", IsForeignKey=true)]
+		public Vendor Vendor
+		{
+			get
+			{
+				return this._Vendor.Entity;
+			}
+			set
+			{
+				Vendor previousValue = this._Vendor.Entity;
+				if (((previousValue != value) 
+							|| (this._Vendor.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Vendor.Entity = null;
+						previousValue.VendorProducts.Remove(this);
+					}
+					this._Vendor.Entity = value;
+					if ((value != null))
+					{
+						value.VendorProducts.Add(this);
+						this._VendorID = value.VendorID;
+					}
+					else
+					{
+						this._VendorID = default(int);
+					}
+					this.SendPropertyChanged("Vendor");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrderDetail")]
 	public partial class OrderDetail : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -409,8 +577,6 @@ namespace WindowsFormsApplication1
 		private int _orderDetailID;
 		
 		private int _orderID;
-		
-		private double _unitPrice;
 		
 		private double _tax;
 		
@@ -430,8 +596,6 @@ namespace WindowsFormsApplication1
     partial void OnorderDetailIDChanged();
     partial void OnorderIDChanging(int value);
     partial void OnorderIDChanged();
-    partial void OnunitPriceChanging(double value);
-    partial void OnunitPriceChanged();
     partial void OntaxChanging(double value);
     partial void OntaxChanged();
     partial void OnorderQuantityChanging(int value);
@@ -509,26 +673,6 @@ namespace WindowsFormsApplication1
 					this._orderID = value;
 					this.SendPropertyChanged("orderID");
 					this.OnorderIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_unitPrice", DbType="Float NOT NULL")]
-		public double unitPrice
-		{
-			get
-			{
-				return this._unitPrice;
-			}
-			set
-			{
-				if ((this._unitPrice != value))
-				{
-					this.OnunitPriceChanging(value);
-					this.SendPropertyChanging();
-					this._unitPrice = value;
-					this.SendPropertyChanged("unitPrice");
-					this.OnunitPriceChanged();
 				}
 			}
 		}
@@ -1002,6 +1146,285 @@ namespace WindowsFormsApplication1
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Product")]
+	public partial class Product : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ProductID;
+		
+		private string _ProductName;
+		
+		private bool _ProductType;
+		
+		private int _ProductCategoryID;
+		
+		private double _ProductPrice;
+		
+		private string _Manufacture;
+		
+		private EntitySet<VendorProduct> _VendorProducts;
+		
+		private EntitySet<OrderDetail> _OrderDetails;
+		
+		private EntityRef<ProductCategory> _ProductCategory;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnProductIDChanging(int value);
+    partial void OnProductIDChanged();
+    partial void OnProductNameChanging(string value);
+    partial void OnProductNameChanged();
+    partial void OnProductTypeChanging(bool value);
+    partial void OnProductTypeChanged();
+    partial void OnProductCategoryIDChanging(int value);
+    partial void OnProductCategoryIDChanged();
+    partial void OnProductPriceChanging(double value);
+    partial void OnProductPriceChanged();
+    partial void OnManufactureChanging(string value);
+    partial void OnManufactureChanged();
+    #endregion
+		
+		public Product()
+		{
+			this._VendorProducts = new EntitySet<VendorProduct>(new Action<VendorProduct>(this.attach_VendorProducts), new Action<VendorProduct>(this.detach_VendorProducts));
+			this._OrderDetails = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetails), new Action<OrderDetail>(this.detach_OrderDetails));
+			this._ProductCategory = default(EntityRef<ProductCategory>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ProductID
+		{
+			get
+			{
+				return this._ProductID;
+			}
+			set
+			{
+				if ((this._ProductID != value))
+				{
+					this.OnProductIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProductID = value;
+					this.SendPropertyChanged("ProductID");
+					this.OnProductIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
+		public string ProductName
+		{
+			get
+			{
+				return this._ProductName;
+			}
+			set
+			{
+				if ((this._ProductName != value))
+				{
+					this.OnProductNameChanging(value);
+					this.SendPropertyChanging();
+					this._ProductName = value;
+					this.SendPropertyChanged("ProductName");
+					this.OnProductNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductType", DbType="Bit NOT NULL")]
+		public bool ProductType
+		{
+			get
+			{
+				return this._ProductType;
+			}
+			set
+			{
+				if ((this._ProductType != value))
+				{
+					this.OnProductTypeChanging(value);
+					this.SendPropertyChanging();
+					this._ProductType = value;
+					this.SendPropertyChanged("ProductType");
+					this.OnProductTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCategoryID", DbType="Int NOT NULL")]
+		public int ProductCategoryID
+		{
+			get
+			{
+				return this._ProductCategoryID;
+			}
+			set
+			{
+				if ((this._ProductCategoryID != value))
+				{
+					if (this._ProductCategory.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnProductCategoryIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProductCategoryID = value;
+					this.SendPropertyChanged("ProductCategoryID");
+					this.OnProductCategoryIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductPrice", DbType="Float NOT NULL")]
+		public double ProductPrice
+		{
+			get
+			{
+				return this._ProductPrice;
+			}
+			set
+			{
+				if ((this._ProductPrice != value))
+				{
+					this.OnProductPriceChanging(value);
+					this.SendPropertyChanging();
+					this._ProductPrice = value;
+					this.SendPropertyChanged("ProductPrice");
+					this.OnProductPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Manufacture", DbType="NVarChar(30)")]
+		public string Manufacture
+		{
+			get
+			{
+				return this._Manufacture;
+			}
+			set
+			{
+				if ((this._Manufacture != value))
+				{
+					this.OnManufactureChanging(value);
+					this.SendPropertyChanging();
+					this._Manufacture = value;
+					this.SendPropertyChanged("Manufacture");
+					this.OnManufactureChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_VendorProduct", Storage="_VendorProducts", ThisKey="ProductID", OtherKey="ProductID")]
+		public EntitySet<VendorProduct> VendorProducts
+		{
+			get
+			{
+				return this._VendorProducts;
+			}
+			set
+			{
+				this._VendorProducts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_OrderDetail", Storage="_OrderDetails", ThisKey="ProductID", OtherKey="ProductID")]
+		public EntitySet<OrderDetail> OrderDetails
+		{
+			get
+			{
+				return this._OrderDetails;
+			}
+			set
+			{
+				this._OrderDetails.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ProductCategory_Product", Storage="_ProductCategory", ThisKey="ProductCategoryID", OtherKey="ProductCategoryID", IsForeignKey=true)]
+		public ProductCategory ProductCategory
+		{
+			get
+			{
+				return this._ProductCategory.Entity;
+			}
+			set
+			{
+				ProductCategory previousValue = this._ProductCategory.Entity;
+				if (((previousValue != value) 
+							|| (this._ProductCategory.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ProductCategory.Entity = null;
+						previousValue.Products.Remove(this);
+					}
+					this._ProductCategory.Entity = value;
+					if ((value != null))
+					{
+						value.Products.Add(this);
+						this._ProductCategoryID = value.ProductCategoryID;
+					}
+					else
+					{
+						this._ProductCategoryID = default(int);
+					}
+					this.SendPropertyChanged("ProductCategory");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_VendorProducts(VendorProduct entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = this;
+		}
+		
+		private void detach_VendorProducts(VendorProduct entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = null;
+		}
+		
+		private void attach_OrderDetails(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = this;
+		}
+		
+		private void detach_OrderDetails(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ProductCategory")]
 	public partial class ProductCategory : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1116,309 +1539,6 @@ namespace WindowsFormsApplication1
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Product")]
-	public partial class Product : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ProductID;
-		
-		private string _ProductName;
-		
-		private bool _ProductType;
-		
-		private int _ProductCategoryID;
-		
-		private int _ProductQuantity;
-		
-		private double _ProductPrice;
-		
-		private string _Manufacture;
-		
-		private EntitySet<OrderDetail> _OrderDetails;
-		
-		private EntitySet<VendorProduct> _VendorProducts;
-		
-		private EntityRef<ProductCategory> _ProductCategory;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnProductIDChanging(int value);
-    partial void OnProductIDChanged();
-    partial void OnProductNameChanging(string value);
-    partial void OnProductNameChanged();
-    partial void OnProductTypeChanging(bool value);
-    partial void OnProductTypeChanged();
-    partial void OnProductCategoryIDChanging(int value);
-    partial void OnProductCategoryIDChanged();
-    partial void OnProductQuantityChanging(int value);
-    partial void OnProductQuantityChanged();
-    partial void OnProductPriceChanging(double value);
-    partial void OnProductPriceChanged();
-    partial void OnManufactureChanging(string value);
-    partial void OnManufactureChanged();
-    #endregion
-		
-		public Product()
-		{
-			this._OrderDetails = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetails), new Action<OrderDetail>(this.detach_OrderDetails));
-			this._VendorProducts = new EntitySet<VendorProduct>(new Action<VendorProduct>(this.attach_VendorProducts), new Action<VendorProduct>(this.detach_VendorProducts));
-			this._ProductCategory = default(EntityRef<ProductCategory>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int ProductID
-		{
-			get
-			{
-				return this._ProductID;
-			}
-			set
-			{
-				if ((this._ProductID != value))
-				{
-					this.OnProductIDChanging(value);
-					this.SendPropertyChanging();
-					this._ProductID = value;
-					this.SendPropertyChanged("ProductID");
-					this.OnProductIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
-		public string ProductName
-		{
-			get
-			{
-				return this._ProductName;
-			}
-			set
-			{
-				if ((this._ProductName != value))
-				{
-					this.OnProductNameChanging(value);
-					this.SendPropertyChanging();
-					this._ProductName = value;
-					this.SendPropertyChanged("ProductName");
-					this.OnProductNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductType", DbType="Bit NOT NULL")]
-		public bool ProductType
-		{
-			get
-			{
-				return this._ProductType;
-			}
-			set
-			{
-				if ((this._ProductType != value))
-				{
-					this.OnProductTypeChanging(value);
-					this.SendPropertyChanging();
-					this._ProductType = value;
-					this.SendPropertyChanged("ProductType");
-					this.OnProductTypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCategoryID", DbType="Int NOT NULL")]
-		public int ProductCategoryID
-		{
-			get
-			{
-				return this._ProductCategoryID;
-			}
-			set
-			{
-				if ((this._ProductCategoryID != value))
-				{
-					if (this._ProductCategory.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnProductCategoryIDChanging(value);
-					this.SendPropertyChanging();
-					this._ProductCategoryID = value;
-					this.SendPropertyChanged("ProductCategoryID");
-					this.OnProductCategoryIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductQuantity", DbType="Int NOT NULL")]
-		public int ProductQuantity
-		{
-			get
-			{
-				return this._ProductQuantity;
-			}
-			set
-			{
-				if ((this._ProductQuantity != value))
-				{
-					this.OnProductQuantityChanging(value);
-					this.SendPropertyChanging();
-					this._ProductQuantity = value;
-					this.SendPropertyChanged("ProductQuantity");
-					this.OnProductQuantityChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductPrice", DbType="Float NOT NULL")]
-		public double ProductPrice
-		{
-			get
-			{
-				return this._ProductPrice;
-			}
-			set
-			{
-				if ((this._ProductPrice != value))
-				{
-					this.OnProductPriceChanging(value);
-					this.SendPropertyChanging();
-					this._ProductPrice = value;
-					this.SendPropertyChanged("ProductPrice");
-					this.OnProductPriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Manufacture", DbType="NVarChar(30)")]
-		public string Manufacture
-		{
-			get
-			{
-				return this._Manufacture;
-			}
-			set
-			{
-				if ((this._Manufacture != value))
-				{
-					this.OnManufactureChanging(value);
-					this.SendPropertyChanging();
-					this._Manufacture = value;
-					this.SendPropertyChanged("Manufacture");
-					this.OnManufactureChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_OrderDetail", Storage="_OrderDetails", ThisKey="ProductID", OtherKey="ProductID")]
-		public EntitySet<OrderDetail> OrderDetails
-		{
-			get
-			{
-				return this._OrderDetails;
-			}
-			set
-			{
-				this._OrderDetails.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_VendorProduct", Storage="_VendorProducts", ThisKey="ProductID", OtherKey="ProductID")]
-		public EntitySet<VendorProduct> VendorProducts
-		{
-			get
-			{
-				return this._VendorProducts;
-			}
-			set
-			{
-				this._VendorProducts.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ProductCategory_Product", Storage="_ProductCategory", ThisKey="ProductCategoryID", OtherKey="ProductCategoryID", IsForeignKey=true)]
-		public ProductCategory ProductCategory
-		{
-			get
-			{
-				return this._ProductCategory.Entity;
-			}
-			set
-			{
-				ProductCategory previousValue = this._ProductCategory.Entity;
-				if (((previousValue != value) 
-							|| (this._ProductCategory.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ProductCategory.Entity = null;
-						previousValue.Products.Remove(this);
-					}
-					this._ProductCategory.Entity = value;
-					if ((value != null))
-					{
-						value.Products.Add(this);
-						this._ProductCategoryID = value.ProductCategoryID;
-					}
-					else
-					{
-						this._ProductCategoryID = default(int);
-					}
-					this.SendPropertyChanged("ProductCategory");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_OrderDetails(OrderDetail entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = this;
-		}
-		
-		private void detach_OrderDetails(OrderDetail entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = null;
-		}
-		
-		private void attach_VendorProducts(VendorProduct entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = this;
-		}
-		
-		private void detach_VendorProducts(VendorProduct entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Vendor")]
 	public partial class Vendor : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1439,9 +1559,9 @@ namespace WindowsFormsApplication1
 		
 		private bool _VendorAvailable;
 		
-		private EntitySet<OrderTable> _OrderTables;
-		
 		private EntitySet<VendorProduct> _VendorProducts;
+		
+		private EntitySet<OrderTable> _OrderTables;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1465,8 +1585,8 @@ namespace WindowsFormsApplication1
 		
 		public Vendor()
 		{
-			this._OrderTables = new EntitySet<OrderTable>(new Action<OrderTable>(this.attach_OrderTables), new Action<OrderTable>(this.detach_OrderTables));
 			this._VendorProducts = new EntitySet<VendorProduct>(new Action<VendorProduct>(this.attach_VendorProducts), new Action<VendorProduct>(this.detach_VendorProducts));
+			this._OrderTables = new EntitySet<OrderTable>(new Action<OrderTable>(this.attach_OrderTables), new Action<OrderTable>(this.detach_OrderTables));
 			OnCreated();
 		}
 		
@@ -1610,19 +1730,6 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Vendor_OrderTable", Storage="_OrderTables", ThisKey="VendorID", OtherKey="VendorID")]
-		public EntitySet<OrderTable> OrderTables
-		{
-			get
-			{
-				return this._OrderTables;
-			}
-			set
-			{
-				this._OrderTables.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Vendor_VendorProduct", Storage="_VendorProducts", ThisKey="VendorID", OtherKey="VendorID")]
 		public EntitySet<VendorProduct> VendorProducts
 		{
@@ -1636,6 +1743,19 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Vendor_OrderTable", Storage="_OrderTables", ThisKey="VendorID", OtherKey="VendorID")]
+		public EntitySet<OrderTable> OrderTables
+		{
+			get
+			{
+				return this._OrderTables;
+			}
+			set
+			{
+				this._OrderTables.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1654,18 +1774,6 @@ namespace WindowsFormsApplication1
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_OrderTables(OrderTable entity)
-		{
-			this.SendPropertyChanging();
-			entity.Vendor = this;
-		}
-		
-		private void detach_OrderTables(OrderTable entity)
-		{
-			this.SendPropertyChanging();
-			entity.Vendor = null;
 		}
 		
 		private void attach_VendorProducts(VendorProduct entity)
@@ -1679,173 +1787,17 @@ namespace WindowsFormsApplication1
 			this.SendPropertyChanging();
 			entity.Vendor = null;
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VendorProduct")]
-	public partial class VendorProduct : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _VendorID;
-		
-		private int _ProductID;
-		
-		private EntityRef<Product> _Product;
-		
-		private EntityRef<Vendor> _Vendor;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnVendorIDChanging(int value);
-    partial void OnVendorIDChanged();
-    partial void OnProductIDChanging(int value);
-    partial void OnProductIDChanged();
-    #endregion
-		
-		public VendorProduct()
+		private void attach_OrderTables(OrderTable entity)
 		{
-			this._Product = default(EntityRef<Product>);
-			this._Vendor = default(EntityRef<Vendor>);
-			OnCreated();
+			this.SendPropertyChanging();
+			entity.Vendor = this;
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int VendorID
+		private void detach_OrderTables(OrderTable entity)
 		{
-			get
-			{
-				return this._VendorID;
-			}
-			set
-			{
-				if ((this._VendorID != value))
-				{
-					if (this._Vendor.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnVendorIDChanging(value);
-					this.SendPropertyChanging();
-					this._VendorID = value;
-					this.SendPropertyChanged("VendorID");
-					this.OnVendorIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int ProductID
-		{
-			get
-			{
-				return this._ProductID;
-			}
-			set
-			{
-				if ((this._ProductID != value))
-				{
-					if (this._Product.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnProductIDChanging(value);
-					this.SendPropertyChanging();
-					this._ProductID = value;
-					this.SendPropertyChanged("ProductID");
-					this.OnProductIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_VendorProduct", Storage="_Product", ThisKey="ProductID", OtherKey="ProductID", IsForeignKey=true)]
-		public Product Product
-		{
-			get
-			{
-				return this._Product.Entity;
-			}
-			set
-			{
-				Product previousValue = this._Product.Entity;
-				if (((previousValue != value) 
-							|| (this._Product.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Product.Entity = null;
-						previousValue.VendorProducts.Remove(this);
-					}
-					this._Product.Entity = value;
-					if ((value != null))
-					{
-						value.VendorProducts.Add(this);
-						this._ProductID = value.ProductID;
-					}
-					else
-					{
-						this._ProductID = default(int);
-					}
-					this.SendPropertyChanged("Product");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Vendor_VendorProduct", Storage="_Vendor", ThisKey="VendorID", OtherKey="VendorID", IsForeignKey=true)]
-		public Vendor Vendor
-		{
-			get
-			{
-				return this._Vendor.Entity;
-			}
-			set
-			{
-				Vendor previousValue = this._Vendor.Entity;
-				if (((previousValue != value) 
-							|| (this._Vendor.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Vendor.Entity = null;
-						previousValue.VendorProducts.Remove(this);
-					}
-					this._Vendor.Entity = value;
-					if ((value != null))
-					{
-						value.VendorProducts.Add(this);
-						this._VendorID = value.VendorID;
-					}
-					else
-					{
-						this._VendorID = default(int);
-					}
-					this.SendPropertyChanged("Vendor");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
+			this.SendPropertyChanging();
+			entity.Vendor = null;
 		}
 	}
 }

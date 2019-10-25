@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
                                          ma_cthd = cthd.orderID,
                                          ten_sp = product.ProductName,
                                          so_luong = cthd.orderQuantity,
-                                         don_gia = cthd.unitPrice,
+                                         don_gia = product.ProductPrice,
                                          thue = cthd.tax
                                      };
             foreach (var tmp in list_database_cthd)
