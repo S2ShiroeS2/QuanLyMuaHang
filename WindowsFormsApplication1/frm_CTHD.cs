@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
         CTHD_controller cthd_ctr = new CTHD_controller();
         public static string ncc_name { get; private set; } = "";
         public static bool flag_them_sp { get; private set; } = true;
-
+        public static string ma_hd { get; private set; } = "";
 
         private void MS_sua_HD_Click(object sender, EventArgs e)
         {
@@ -79,12 +79,14 @@ namespace WindowsFormsApplication1
 
         private void lstv_list_cthd_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (lstv_list_cthd.SelectedItems.Count > 0)
+                ma_hd = txt_Ma_HD.Text;
+
         }
 
         private void lstv_list_cthd_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            
+            CTHD_controller.sp_moi = new ListViewItem();
             if (lstv_list_cthd.SelectedItems[0].Text == "Thêm sản phẩm")
             {
                 flag_them_sp = true;
@@ -95,10 +97,17 @@ namespace WindowsFormsApplication1
                     
                 else
                 {
-                    Frm_Them_SP_vao_HD frm_them_sp = new Frm_Them_SP_vao_HD();
+                    Frm_CTSP_trong_HD frm_them_sp = new Frm_CTSP_trong_HD();
                     this.Hide();
                     ncc_name = cbo_nha_cc.SelectedItem.ToString();
-                    frm_them_sp.ShowDialog();                 
+                    frm_them_sp.ShowDialog();
+                    if(CTHD_controller.sp_moi.SubItems[0].Text!="")
+                    {
+                       if(lstv_list_cthd.FindItemWithText("Thêm sản phẩm").Index - 1>=0)
+                            CTHD_controller.sp_moi.SubItems[0].Text = (Convert.ToInt32( lstv_list_cthd.Items[lstv_list_cthd.FindItemWithText("Thêm sản phẩm").Index - 1].Text)+1).ToString();
+                        lstv_list_cthd.Items.Insert(lstv_list_cthd.FindItemWithText("Thêm sản phẩm").Index, CTHD_controller.sp_moi);
+                    }
+                        
                     this.Show();
                 }
             }
@@ -106,6 +115,12 @@ namespace WindowsFormsApplication1
             {
                 flag_them_sp = true;
             }    
+        }
+
+        private void cbo_nha_cc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            
         }
     }
 }

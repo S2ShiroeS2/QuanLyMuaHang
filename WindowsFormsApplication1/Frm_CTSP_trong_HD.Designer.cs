@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Frm_Them_SP_vao_HD
+    partial class Frm_CTSP_trong_HD
     {
         /// <summary>
         /// Required designer variable.

@@ -22,7 +22,6 @@ namespace WindowsFormsApplication1
         {
             List<ListViewItem> list_lvi_hd = new List<ListViewItem>(); // Mảng lưu trữ thông tin của danh sách hóa đơn
             var data_hd = from hd in data.OrderTables                                           // biến lấy danh sách các hóa đơn trong database
-                          join cthd in data.OrderDetails on hd.orderID equals cthd.orderID
                           join vd in data.Vendors on hd.VendorID equals vd.VendorID
                           join nv in data.NVs on hd.userID equals nv.userID
                           select new
@@ -32,7 +31,7 @@ namespace WindowsFormsApplication1
                               nha_cc= vd.VendorName,
                               ten_nv=nv.userName,
                               tinh_trang=hd.status,
-                              tong_tien=hd.total
+                              
                           };
             foreach(var a in data_hd)
             {
@@ -44,12 +43,10 @@ namespace WindowsFormsApplication1
                 hd.SubItems.Add(a.ten_nv.ToString());
                 if (a.tinh_trang == 1)
                     tinh_trang = "Đang yêu cầu";
-                else if (a.tinh_trang == 2)
-                    tinh_trang = "Đang vận chuyển";
                 else
                     tinh_trang = "Đã nhận hàng";
                 hd.SubItems.Add(tinh_trang);
-                hd.SubItems.Add(a.tong_tien.ToString());
+                //hd.SubItems.Add(a.tong_tien.ToString());
                 list_lvi_hd.Add(hd);
             }
             return list_lvi_hd;

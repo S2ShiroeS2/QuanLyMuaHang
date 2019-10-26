@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString2, mappingSource)
+				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -818,8 +818,6 @@ namespace WindowsFormsApplication1
 		
 		private int _status;
 		
-		private double _total;
-		
 		private System.DateTime _orderDate;
 		
 		private System.Nullable<System.DateTime> _modifyDate;
@@ -844,8 +842,6 @@ namespace WindowsFormsApplication1
     partial void OnuserIDChanged();
     partial void OnstatusChanging(int value);
     partial void OnstatusChanged();
-    partial void OntotalChanging(double value);
-    partial void OntotalChanged();
     partial void OnorderDateChanging(System.DateTime value);
     partial void OnorderDateChanged();
     partial void OnmodifyDateChanging(System.Nullable<System.DateTime> value);
@@ -924,26 +920,6 @@ namespace WindowsFormsApplication1
 					this._status = value;
 					this.SendPropertyChanged("status");
 					this.OnstatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Float NOT NULL")]
-		public double total
-		{
-			get
-			{
-				return this._total;
-			}
-			set
-			{
-				if ((this._total != value))
-				{
-					this.OntotalChanging(value);
-					this.SendPropertyChanging();
-					this._total = value;
-					this.SendPropertyChanged("total");
-					this.OntotalChanged();
 				}
 			}
 		}

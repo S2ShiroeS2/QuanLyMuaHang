@@ -13,12 +13,13 @@ namespace WindowsFormsApplication1
     class CTHD_controller
     {
         DataClasses1DataContext data = new DataClasses1DataContext();
+        public static ListViewItem sp_moi = new ListViewItem();
 
         public List<ListViewItem> load_list_lvi_cthd(int i)
         {
             List<ListViewItem> list_cthd = new List<ListViewItem>();
-            var list_database_cthd = from hd in data.OrderTables
-                                     join cthd in data.OrderDetails on hd.orderID equals cthd.orderID
+            var list_database_cthd = from cthd in data.OrderDetails
+                                     join hd in data.OrderTables on cthd.orderID equals hd.orderID
                                      join vd in data.Vendors on hd.VendorID equals vd.VendorID
                                      join vdpro in data.VendorProducts on cthd.ProductID equals vdpro.ProductID
                                      join product in data.Products on vdpro.ProductID equals product.ProductID
@@ -26,7 +27,7 @@ namespace WindowsFormsApplication1
                                      where vdpro.VendorID == hd.VendorID
                                      select new
                                      {
-                                         ma_cthd = cthd.orderID,
+                                         ma_cthd = cthd.orderDetailID,
                                          ten_sp = product.ProductName,
                                          so_luong = cthd.orderQuantity,
                                          don_gia = product.ProductPrice,
@@ -78,6 +79,7 @@ namespace WindowsFormsApplication1
             return a;
         }
 
+
         public double load_gia_tien_sp(string ten_sp)
         {
            double giasp=0;
@@ -90,6 +92,31 @@ namespace WindowsFormsApplication1
                 break;
             }
             return giasp;
+        }
+
+        /*  public void Them_SP_vao_HD(ListViewItem lvi_SP)
+          {
+              OrderDetail cthd = new OrderDetail();
+              cthd.orderDetailID = data.OrderDetails.Max(x => x.orderDetailID) + 1;
+              cthd.orderID = Convert.ToInt32( frm_CTHD.ma_hd);
+              cthd.ProductID = data.Products.First(x=>x.ProductName==lvi_SP.SubItems[0].Text).ProductID ;
+              cthd.orderQuantity= Convert.ToInt32(lvi_SP.SubItems[1].Text); 
+              cthd.tax=Convert.ToDouble(lvi_SP.SubItems[2].Text);
+              data.OrderDetails.InsertOnSubmit(cthd);
+              data.SubmitChanges();
+          }
+          */
+        public ListViewItem Them_SP(ListViewItem lvi_SP)
+        {
+            ListViewItem lvi_ctsp = new ListViewItem();
+            
+            lvi_ctsp.Text = (data.OrderDetails.Max(x => x.orderDetailID) + 1).ToString();
+            lvi_ctsp.SubItems.Add(  lvi_SP.SubItems[0]);
+            lvi_ctsp.SubItems.Add(lvi_SP.SubItems[1]);
+            lvi_ctsp.SubItems.Add(lvi_SP.SubItems[2]);
+            lvi_ctsp.SubItems.Add(lvi_SP.SubItems[3]);
+            lvi_ctsp.SubItems.Add(lvi_SP.SubItems[4]);
+            return lvi_ctsp;
         }
     }
 }
