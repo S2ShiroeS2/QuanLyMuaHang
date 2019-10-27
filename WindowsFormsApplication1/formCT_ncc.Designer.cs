@@ -210,7 +210,6 @@
             this.nbb_Vat.Name = "nbb_Vat";
             this.nbb_Vat.Size = new System.Drawing.Size(120, 30);
             this.nbb_Vat.TabIndex = 17;
-            this.nbb_Vat.Validating += new System.ComponentModel.CancelEventHandler(this.nbb_Vat_Validating);
             // 
             // formCT_ncc
             // 

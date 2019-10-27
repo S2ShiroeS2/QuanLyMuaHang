@@ -20,6 +20,10 @@ namespace WindowsFormsApplication1
         public static ListViewItem lvi_them_ncc { get; private set; } = new ListViewItem();
         private VendorController Vc = new VendorController();
         private ErrorProvider EP = new ErrorProvider();
+        private bool flag_1 = false;
+        private bool flag_2 = false;
+        private bool flag_3 = false;
+        private bool flag_4 = false;
 
         private void Enable_txb(bool Active)
         {
@@ -83,6 +87,14 @@ namespace WindowsFormsApplication1
             Enable_txb(true);
         }
 
+        private void EnableSaveBtn()
+        {
+            if (flag_1 == true && flag_2 == true && flag_3 == true && flag_4 == true )
+                btn_SaveVendor.Enabled = true;
+            else
+                btn_SaveVendor.Enabled = false;
+        }
+
         //Set ErrorPRovider cho txb_VendorName
         private void txb_ten_ncc_Validating(object sender, CancelEventArgs e)
         {
@@ -91,28 +103,18 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_VendorName.Focus();
                 EP.SetError(txb_VendorName, "Không được để trống");
+                flag_1 = false;
+                EnableSaveBtn();
             }
             else
             {
                 e.Cancel = false;
                 EP.SetError(txb_VendorName, null);
+                flag_1 = true;
+                EnableSaveBtn();
             }
         }
 
-        private void nbb_Vat_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(nbb_Vat.Value.ToString()))
-            {
-                e.Cancel = true;
-                nbb_Vat.Focus();
-                EP.SetError(nbb_Vat, "Không được để trống");
-            }
-            else
-            {
-                e.Cancel = false;
-                EP.SetError(nbb_Vat, null);
-            }
-        }
 
         private void txb_VendorAddress_Validating(object sender, CancelEventArgs e)
         {
@@ -121,11 +123,15 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_VendorAddress.Focus();
                 EP.SetError(txb_VendorAddress, "Không được để trống");
+                flag_3 = false;
+                EnableSaveBtn();
             }
             else
             {
                 e.Cancel = false;
                 EP.SetError(txb_VendorAddress, null);
+                flag_3 = true;
+                EnableSaveBtn();
             }
         }
 
@@ -136,11 +142,15 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_Phone.Focus();
                 EP.SetError(txb_Phone, "Không được để trống");
+                flag_4 = false;
+                EnableSaveBtn(); 
             }
             else
             {
                 e.Cancel = false;
                 EP.SetError(txb_Phone, null);
+                flag_4 = true;
+                EnableSaveBtn();
             }
         }
 
@@ -151,11 +161,15 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_VendorEmail.Focus();
                 EP.SetError(txb_VendorEmail, "Không được để trống");
+                flag_2 = false;
+                EnableSaveBtn();
             }
             else
             {
                 e.Cancel = false;
                 EP.SetError(txb_VendorEmail, null);
+                flag_2 = true;
+                EnableSaveBtn();
             }
         }
     }

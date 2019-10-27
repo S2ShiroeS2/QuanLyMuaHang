@@ -81,6 +81,7 @@
             // 
             // btn_NVSave
             // 
+            this.btn_NVSave.Enabled = false;
             this.btn_NVSave.Location = new System.Drawing.Point(884, 466);
             this.btn_NVSave.Name = "btn_NVSave";
             this.btn_NVSave.Size = new System.Drawing.Size(127, 55);

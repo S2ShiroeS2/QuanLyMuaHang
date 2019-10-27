@@ -132,6 +132,8 @@ namespace WindowsFormsApplication1
                 EP.SetError(txb_Phone, null);
             }
         }
+
+
         //
     }
 }
