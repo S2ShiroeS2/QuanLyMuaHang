@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Thêm sản phẩm"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.lbl_chitiethoadon = new System.Windows.Forms.Label();
             this.txt_Ma_HD = new System.Windows.Forms.TextBox();
@@ -48,7 +48,6 @@
             this.lbl_thue = new System.Windows.Forms.Label();
             this.txt_Tong_tien_HD = new System.Windows.Forms.TextBox();
             this.lbl_tongtien = new System.Windows.Forms.Label();
-            this.btn_sua = new System.Windows.Forms.Button();
             this.btn_luu = new System.Windows.Forms.Button();
             this.lbl_ma_hoa_don = new System.Windows.Forms.Label();
             this.cbo_nha_cc = new System.Windows.Forms.ComboBox();
@@ -116,8 +115,8 @@
             this.lstv_list_cthd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstv_list_cthd.FullRowSelect = true;
             this.lstv_list_cthd.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
-            this.lstv_list_cthd.Location = new System.Drawing.Point(12, 138);
+            listViewItem4});
+            this.lstv_list_cthd.Location = new System.Drawing.Point(16, 138);
             this.lstv_list_cthd.MultiSelect = false;
             this.lstv_list_cthd.Name = "lstv_list_cthd";
             this.lstv_list_cthd.Size = new System.Drawing.Size(900, 199);
@@ -214,27 +213,17 @@
             this.lbl_tongtien.TabIndex = 12;
             this.lbl_tongtien.Text = "Tổng tiền";
             // 
-            // btn_sua
-            // 
-            this.btn_sua.Enabled = false;
-            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.Location = new System.Drawing.Point(25, 401);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(87, 36);
-            this.btn_sua.TabIndex = 15;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.UseVisualStyleBackColor = true;
-            // 
             // btn_luu
             // 
             this.btn_luu.Enabled = false;
             this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_luu.Location = new System.Drawing.Point(142, 401);
+            this.btn_luu.Location = new System.Drawing.Point(12, 426);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.Size = new System.Drawing.Size(87, 36);
             this.btn_luu.TabIndex = 16;
             this.btn_luu.Text = "Lưu";
             this.btn_luu.UseVisualStyleBackColor = true;
+            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
             // lbl_ma_hoa_don
             // 
@@ -260,12 +249,13 @@
             // 
             this.btn_Xoa_SP.Enabled = false;
             this.btn_Xoa_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa_SP.Location = new System.Drawing.Point(25, 343);
+            this.btn_Xoa_SP.Location = new System.Drawing.Point(12, 351);
             this.btn_Xoa_SP.Name = "btn_Xoa_SP";
             this.btn_Xoa_SP.Size = new System.Drawing.Size(129, 36);
             this.btn_Xoa_SP.TabIndex = 19;
             this.btn_Xoa_SP.Text = "Xóa sản phẩm";
             this.btn_Xoa_SP.UseVisualStyleBackColor = true;
+            this.btn_Xoa_SP.Click += new System.EventHandler(this.btn_Xoa_SP_Click);
             // 
             // frm_CTHD
             // 
@@ -276,7 +266,6 @@
             this.Controls.Add(this.cbo_nha_cc);
             this.Controls.Add(this.lbl_ma_hoa_don);
             this.Controls.Add(this.btn_luu);
-            this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.txt_Tong_tien_HD);
             this.Controls.Add(this.lbl_tongtien);
             this.Controls.Add(this.txt_Thue_HD);
@@ -317,7 +306,6 @@
         private System.Windows.Forms.Label lbl_thue;
         private System.Windows.Forms.TextBox txt_Tong_tien_HD;
         private System.Windows.Forms.Label lbl_tongtien;
-        private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_luu;
         private System.Windows.Forms.Label lbl_ma_hoa_don;
         private System.Windows.Forms.ComboBox cbo_nha_cc;

@@ -118,5 +118,45 @@ namespace WindowsFormsApplication1
             lvi_ctsp.SubItems.Add(lvi_SP.SubItems[4]);
             return lvi_ctsp;
         }
+
+        public ListViewItem Sua_SP(ListViewItem lvi_SP)
+        {
+            ListViewItem lvi_ctsp = new ListViewItem();
+            lvi_ctsp = lvi_SP;
+            return lvi_ctsp;
+        }
+        public ListViewItem load_ctsp()
+        {
+            return frm_CTHD.selected_SP;
+        }
+
+
+        public void Luu_HD(ListView.ListViewItemCollection list_cthd,string mahd,string ncc, DateTimePicker ngay_dat_hang)
+        {
+            OrderTable hd = new OrderTable();
+            
+
+            hd.orderID = Convert.ToInt32( mahd);
+            hd.userID = 1;
+            //Them User ID sau
+            hd.status = 0;
+            hd.orderDate = Convert.ToDateTime(ngay_dat_hang.Value.ToShortDateString());
+            hd.VendorID =data.Vendors.First(x => x.VendorName == ncc).VendorID;
+            data.OrderTables.InsertOnSubmit(hd);
+            foreach(ListViewItem lvi in list_cthd)
+            {
+                if(lvi.Text!="Thêm sản phẩm")
+                {
+                    OrderDetail cthd = new OrderDetail();
+                    cthd.orderDetailID = Convert.ToInt32(lvi.SubItems[0].Text);
+                    cthd.orderID = hd.orderID;
+                    cthd.ProductID = data.Products.First(x => x.ProductName == lvi.SubItems[1].Text).ProductID;
+                    cthd.tax = Convert.ToDouble(lvi.SubItems[4].Text);
+                    cthd.orderQuantity = Convert.ToInt32(lvi.SubItems[2].Text);
+                    data.OrderDetails.InsertOnSubmit(cthd);
+                }          
+            }
+            data.SubmitChanges();
+        }
     }
 }

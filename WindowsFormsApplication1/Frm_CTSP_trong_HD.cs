@@ -18,6 +18,8 @@ namespace WindowsFormsApplication1
         }
 
         CTHD_controller cthd_ctrl = new CTHD_controller();
+        ListViewItem ctsp = new ListViewItem();
+
 
         private void Frm_Them_SP_vao_HD_Load(object sender, EventArgs e)
         {
@@ -26,6 +28,19 @@ namespace WindowsFormsApplication1
             foreach (var i in list_sp)
                 cbo_Ten_SP.Items.Add(i);
             txt_Thue.Enabled = txt_So_luong.Enabled =btn_xac_nhan.Enabled= false;
+            if(frm_CTHD.flag_them_sp==false)                // Double click vào sp ở CTHD
+            {
+                ctsp=cthd_ctrl.load_ctsp();
+                cbo_Ten_SP.SelectedItem= ctsp.SubItems[1].Text;
+                txt_So_luong.Text = ctsp.SubItems[2].Text;
+                txt_Don_gia.Text = ctsp.SubItems[3].Text;
+                txt_Thue.Text = ctsp.SubItems[4].Text;
+                cbo_Ten_SP.Enabled = false;
+            }
+            else                                            // Double click vào dòng thêm sản phẩm
+            {
+
+            }
         }
 
         private void cbo_Ten_SP_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,8 +48,11 @@ namespace WindowsFormsApplication1
 
             txt_Thue.Enabled = txt_So_luong.Enabled = true;
             txt_Don_gia.Text = cthd_ctrl.load_gia_tien_sp(cbo_Ten_SP.Text).ToString();
-
-            
+            if (txt_So_luong.Text.Length != 0 && txt_So_luong.Text.All(char.IsNumber) == true && Convert.ToDouble(txt_So_luong.Text) > 0 && txt_Thue.Text.Length != 0 && txt_Thue.Text.All(char.IsNumber) == true && Convert.ToDouble(txt_Thue.Text) >= 0)
+            {
+                txt_tien_thue.Text = (cthd_ctrl.load_gia_tien_sp(cbo_Ten_SP.Text) * Convert.ToDouble(txt_So_luong.Text) * Convert.ToDouble(txt_Thue.Text) / 100).ToString();
+                txt_Tong_tien.Text = (Convert.ToDouble(txt_tien_truoc_thue.Text) + Convert.ToDouble(txt_tien_thue.Text)).ToString();
+            }
         }
 
         private void txt_So_luong_TextChanged(object sender, EventArgs e)
@@ -90,13 +108,24 @@ namespace WindowsFormsApplication1
 
         private void btn_xac_nhan_Click(object sender, EventArgs e)
         {
-            ListViewItem sp = new ListViewItem();
-            sp.Text = cbo_Ten_SP.SelectedItem.ToString();
-            sp.SubItems.Add ( txt_So_luong.Text);
-            sp.SubItems.Add(txt_Don_gia.Text);
-            sp.SubItems.Add(txt_Thue.Text);
-            sp.SubItems.Add(txt_Tong_tien.Text);
-            CTHD_controller.sp_moi = cthd_ctrl.Them_SP(sp);
+            if(frm_CTHD.flag_them_sp==true)
+            {
+                ListViewItem sp = new ListViewItem();
+                sp.Text = cbo_Ten_SP.SelectedItem.ToString();
+                sp.SubItems.Add(txt_So_luong.Text);
+                sp.SubItems.Add(txt_Don_gia.Text);
+                sp.SubItems.Add(txt_Thue.Text);
+                sp.SubItems.Add(txt_Tong_tien.Text);
+                CTHD_controller.sp_moi = cthd_ctrl.Them_SP(sp);
+            }
+            else
+            {
+                ctsp.SubItems[1].Text = cbo_Ten_SP.SelectedItem.ToString();
+                ctsp.SubItems[2].Text = txt_So_luong.Text;
+                ctsp.SubItems[4].Text = txt_Thue.Text;
+                ctsp.SubItems[5].Text = txt_Tong_tien.Text;
+                CTHD_controller.sp_moi = cthd_ctrl.Sua_SP(ctsp);
+            }
             this.Close();
         }
     }

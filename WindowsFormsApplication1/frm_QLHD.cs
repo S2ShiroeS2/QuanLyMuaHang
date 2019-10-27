@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             this.Hide();
             ct.ShowDialog();
             this.Show();
-            
+            this.Refresh();
         }
 
 

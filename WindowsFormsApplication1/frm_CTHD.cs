@@ -22,24 +22,9 @@ namespace WindowsFormsApplication1
         public static string ncc_name { get; private set; } = "";
         public static bool flag_them_sp { get; private set; } = true;
         public static string ma_hd { get; private set; } = "";
+        public static ListViewItem selected_SP { get; private set; } = new ListViewItem();
 
-        private void MS_sua_HD_Click(object sender, EventArgs e)
-        {
-            btn_sua.Enabled = true;
-        }
 
-        private void MS_xoa_HD_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                //do something
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-            }
-        }
 
 
         //
@@ -48,8 +33,8 @@ namespace WindowsFormsApplication1
         private void enable_control(bool flag)
         {
             btn_luu.Enabled =cbo_nha_cc.Enabled=lstv_list_cthd.Enabled= flag;
-            btn_sua.Enabled = !flag;
         }
+
 
         //
         // Load dữ liệu lên form
@@ -79,8 +64,10 @@ namespace WindowsFormsApplication1
 
         private void lstv_list_cthd_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstv_list_cthd.SelectedItems.Count > 0)
-                ma_hd = txt_Ma_HD.Text;
+            if (lstv_list_cthd.SelectedItems.Count>0 && lstv_list_cthd.SelectedItems[0].Text!= "Thêm sản phẩm")
+                btn_Xoa_SP.Enabled = true;
+            else
+                btn_Xoa_SP.Enabled = false;
 
         }
 
@@ -108,19 +95,53 @@ namespace WindowsFormsApplication1
                         lstv_list_cthd.Items.Insert(lstv_list_cthd.FindItemWithText("Thêm sản phẩm").Index, CTHD_controller.sp_moi);
                     }
                         
-                    this.Show();
+                    
                 }
             }
             else
             {
-                flag_them_sp = true;
-            }    
+                flag_them_sp = false;
+                selected_SP = lstv_list_cthd.SelectedItems[0];
+                Frm_CTSP_trong_HD frm_them_sp = new Frm_CTSP_trong_HD();
+                this.Hide();
+                ncc_name = cbo_nha_cc.SelectedItem.ToString();
+                frm_them_sp.ShowDialog();
+                lstv_list_cthd.Items[ lstv_list_cthd.FindItemWithText(CTHD_controller.sp_moi.SubItems[0].Text).Index] = CTHD_controller.sp_moi;
+               
+            }
+            this.Show();
         }
 
         private void cbo_nha_cc_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             
+        }
+
+        private void btn_Xoa_SP_Click(object sender, EventArgs e)
+        {
+            ListViewItem item_selected= lstv_list_cthd.FindItemWithText(lstv_list_cthd.SelectedItems[0].Text);
+            lstv_list_cthd.Items.Remove(lstv_list_cthd.SelectedItems[0]);
+            foreach(ListViewItem lvi in lstv_list_cthd.Items)
+            {
+                if(string.Compare(lvi.Text,item_selected.Text)==1&&lvi.SubItems[0].Text!= "Thêm sản phẩm")
+                {
+                    lvi.SubItems[0].Text = (Convert.ToInt32(lvi.Text)-1).ToString();
+                }
+            }
+            
+        }
+
+        private void btn_luu_Click(object sender, EventArgs e)
+        {
+            if (lstv_list_cthd.Items.Count > 1)
+            {
+                cthd_ctr.Luu_HD(lstv_list_cthd.Items, txt_Ma_HD.Text, cbo_nha_cc.SelectedItem.ToString(), dtpk_ngay_dat_hang);
+                this.Close();
+            }
+                
+            else
+                MessageBox.Show("Hóa đơn chưa có sản phẩm nào");
         }
     }
 }
