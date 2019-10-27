@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+        public delegate void SendMessage(List<ListViewItem> value);
         List<ListViewItem> list_Ncc = new List<ListViewItem>();
         SanPhamController navigate_SanPham = new SanPhamController();
         public static bool flag { get; private set; } = true;
@@ -41,18 +42,29 @@ namespace WindowsFormsApplication1
                 enable_Control(Form_QLSP.flag_sp);
                 foreach (ListViewItem a in list_Ncc)
                     lstv_nha_cung_cap.Items.Add(a);
+                //Them moi nha cc
             }
             else //Tạo mới
             {
                 //enable_Control(flag);
                 txt_ma_sp.Text = (navigate_SanPham.GetMax_ProductCategoryID() + 1).ToString();
+
             }
         }
         //Hiện những trường cần thiết để chỉnh sửa thông tin
         private void enable_Control(bool flag)
         {
-            txt_ten_sp.Enabled = txt_gia_sp.Enabled = txt_nha_sx.Enabled = txt_so_luong_sp.Enabled = cbo_danh_muc_sp.Enabled = cbo_loai_sp.Enabled = lstv_nha_cung_cap.Enabled = btn_luu.Enabled = flag;
+            txt_ten_sp.Enabled = txt_gia_sp.Enabled = txt_nha_sx.Enabled = txt_so_luong_sp.Enabled = cbo_danh_muc_sp.Enabled = cbo_loai_sp.Enabled = lstv_nha_cung_cap.Enabled = btn_luu.Enabled = btn_them_ncc.Enabled = flag;
             btn_sua.Enabled = !flag;
+        }
+        private void UpdateNCC(List<ListViewItem> value)
+        {
+            list_Ncc.Clear();
+            foreach (ListViewItem a in value)
+                list_Ncc.Add(a);           
+            
+
+
         }
         //Nút Sửa
         private void btn_sua_Click(object sender, EventArgs e)
@@ -62,8 +74,19 @@ namespace WindowsFormsApplication1
 
         private void btn_them_ncc_Click(object sender, EventArgs e)
         {
-            frm_themNhaCungCap GUI_NCC = new frm_themNhaCungCap();
+            frm_themNhaCungCap GUI_NCC = new frm_themNhaCungCap(UpdateNCC);
+            foreach (ListViewItem a in list_Ncc)
+                GUI_NCC.list_Ncc_update.Add(a);
             GUI_NCC.ShowDialog();
+            lstv_nha_cung_cap.Items.Clear();
+            lstv_nha_cung_cap.Refresh();
+            foreach (ListViewItem a in list_Ncc)
+            {
+                ListViewItem tmp = new ListViewItem();
+                tmp.Text = a.Text;
+                lstv_nha_cung_cap.Items.Add(tmp);
+            }
+                
         }
 
         private void btn_luu_Click(object sender, EventArgs e)
@@ -75,6 +98,11 @@ namespace WindowsFormsApplication1
             lvi_SanPham.SubItems.Add(cbo_danh_muc_sp.SelectedItem.ToString());
             lvi_SanPham.SubItems.Add(txt_so_luong_sp.Text);
             lvi_SanPham.SubItems.Add(txt_nha_sx.Text);
+        }
+
+        private void lstv_nha_cung_cap_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

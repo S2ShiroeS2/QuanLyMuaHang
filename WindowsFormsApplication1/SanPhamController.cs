@@ -91,19 +91,5 @@ namespace WindowsFormsApplication1
             
             return SP;
         }
-        //public void Insert_Product(ListViewItem lvi_sp)
-        //{
-        //    var SanPham_List = (from SP in data_SP.Products
-        //                        where SP.ProductID.ToString() == lvi_sp.Text
-        //                        select SP);
-        //    foreach(Product SanPham in SanPham_List)
-        //    {
-        //        SanPham.ProductName = lvi_sp.SubItems[0].Text;
-        //        SanPham.ProductType = lvi_sp.SubItems[1].Text == "Được bán" ? true : false;
-        //        SanPham.ProductQuantity = Convert.ToInt32(lvi_sp.SubItems[2].Text);
-        //        SanPham.ProductPrice = Convert.ToDouble(lvi_sp.SubItems[3].Text);
-        //        SanPham.Manufacture = lvi_sp.SubItems[4].Text;
-        //    }
-        //}
     }
 }

@@ -35,6 +35,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lsvt_list_ncc_them = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_luu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_add_one
@@ -62,7 +63,7 @@
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 4;
-            this.btn_delete.Text = "Delete";
+            this.btn_delete.Text = "Xóa";
             this.btn_delete.UseVisualStyleBackColor = true;
             // 
             // lstv_list_ncc_co
@@ -99,18 +100,29 @@
             this.columnHeader2.Text = "Nhà cung cấp thêm";
             this.columnHeader2.Width = 114;
             // 
+            // btn_luu
+            // 
+            this.btn_luu.Location = new System.Drawing.Point(137, 205);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(75, 23);
+            this.btn_luu.TabIndex = 7;
+            this.btn_luu.Text = "Lưu";
+            this.btn_luu.UseVisualStyleBackColor = true;
+            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
+            // 
             // frm_themNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 345);
+            this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.lsvt_list_ncc_them);
             this.Controls.Add(this.lstv_list_ncc_co);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_add_all);
             this.Controls.Add(this.btn_add_one);
             this.Name = "frm_themNhaCungCap";
-            this.Text = "frm_themNhaCungCap";
+            this.Text = "Thêm nhà cung cấp";
             this.Load += new System.EventHandler(this.frm_themNhaCungCap_Load);
             this.ResumeLayout(false);
 
@@ -125,5 +137,6 @@
         private System.Windows.Forms.ListView lsvt_list_ncc_them;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Button btn_luu;
     }
 }

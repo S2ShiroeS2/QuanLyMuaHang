@@ -189,6 +189,7 @@
             this.lstv_nha_cung_cap.TabIndex = 19;
             this.lstv_nha_cung_cap.UseCompatibleStateImageBehavior = false;
             this.lstv_nha_cung_cap.View = System.Windows.Forms.View.Details;
+            this.lstv_nha_cung_cap.SelectedIndexChanged += new System.EventHandler(this.lstv_nha_cung_cap_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
