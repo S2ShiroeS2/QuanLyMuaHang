@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form_QLNV : Form
+    public partial class frm_QLNV : Form
     {
-        public Form_QLNV()
+        public frm_QLNV()
         {
             InitializeComponent();
         }

@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
             lvi_them_nv.SubItems.Add(txb_NVPhone.Text);
             lvi_them_nv.SubItems.Add(txb_NVRole.Text);
             lvi_them_nv.SubItems.Add(txb_NVActivation.Text);
-            if (Form_QLNV.flag_nv)
+            if (frm_QLNV.flag_nv)
             {
                 NVC.NVAddNew(lvi_them_nv, "123");
                 MessageBox.Show("Password mặc định là: 123");
@@ -60,15 +60,15 @@ namespace WindowsFormsApplication1
 
         private void frm_CTNV_Load(object sender, EventArgs e)
         {
-            if (Form_QLNV.flag_nv == false)
+            if (frm_QLNV.flag_nv == false)
             {
-                txb_NVID.Text = Form_QLNV.lvi_nv.SubItems[0].Text;
-                txb_NVName.Text = Form_QLNV.lvi_nv.SubItems[1].Text;
-                txb_NVAccount.Text = Form_QLNV.lvi_nv.SubItems[2].Text;
-                txb_NVEmail.Text = Form_QLNV.lvi_nv.SubItems[3].Text;
-                txb_NVPhone.Text = Form_QLNV.lvi_nv.SubItems[4].Text;
-                txb_NVRole.Text = Form_QLNV.lvi_nv.SubItems[5].Text;
-                txb_NVActivation.Text = Form_QLNV.lvi_nv.SubItems[6].Text;
+                txb_NVID.Text = frm_QLNV.lvi_nv.SubItems[0].Text;
+                txb_NVName.Text = frm_QLNV.lvi_nv.SubItems[1].Text;
+                txb_NVAccount.Text = frm_QLNV.lvi_nv.SubItems[2].Text;
+                txb_NVEmail.Text = frm_QLNV.lvi_nv.SubItems[3].Text;
+                txb_NVPhone.Text = frm_QLNV.lvi_nv.SubItems[4].Text;
+                txb_NVRole.Text = frm_QLNV.lvi_nv.SubItems[5].Text;
+                txb_NVActivation.Text = frm_QLNV.lvi_nv.SubItems[6].Text;
                 btn_NVUpdate.Enabled = true;
                 btn_NVActive.Enabled = true;
                 if (txb_NVActivation.Text == "Active")
@@ -110,6 +110,8 @@ namespace WindowsFormsApplication1
         }
 
         //Set ErrorProvider cho form
+
+        //ErrorProvider cho txb_NVAccount
         private void txb_NVAccount_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txb_NVAccount.Text))
@@ -128,14 +130,23 @@ namespace WindowsFormsApplication1
                 EnableSaveBtn();
             }
         }
-        
+
+        //ErrorProvider cho txb_NVEmail
         private void txb_NVEmail_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txb_NVEmail.Text) && System.Text.RegularExpressions.Regex.IsMatch(txb_NVEmail.Text, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z"))
+            if (string.IsNullOrWhiteSpace(txb_NVEmail.Text))
             {
                 e.Cancel = true;
                 txb_NVEmail.Focus();
                 EP.SetError(txb_NVEmail, "Không được để trống");
+                flag_3 = false;
+                EnableSaveBtn();
+            }
+            else if(!System.Text.RegularExpressions.Regex.IsMatch(txb_NVEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))//Regex email
+            {
+                e.Cancel = true;
+                txb_NVEmail.Focus();
+                EP.SetError(txb_NVEmail, "Email không hợp lệ");
                 flag_3 = false;
                 EnableSaveBtn();
             }
@@ -148,6 +159,7 @@ namespace WindowsFormsApplication1
             }
         }
 
+        //ErrorProvider cho txb_NVPhone
         private void txb_NVPhone_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txb_NVPhone.Text))
@@ -155,6 +167,14 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_NVPhone.Focus();
                 EP.SetError(txb_NVPhone, "Không được để trống");
+                flag_4 = false;
+                EnableSaveBtn();
+            }
+            else if(!System.Text.RegularExpressions.Regex.IsMatch(txb_NVPhone.Text, "^[0-9]+$"))// Regex cho chỉ nhập số
+            {
+                e.Cancel = true;
+                txb_NVPhone.Focus();
+                EP.SetError(txb_NVPhone, "Số điện thoại không hợp lệ");
                 flag_4 = false;
                 EnableSaveBtn();
             }
@@ -166,7 +186,7 @@ namespace WindowsFormsApplication1
                 EnableSaveBtn();
             }
         }
-
+        //ErrorProvider cho txb_NVRole
         private void txb_NVRole_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txb_NVRole.Text))
@@ -185,23 +205,30 @@ namespace WindowsFormsApplication1
                 flag_5 = false;
                 EnableSaveBtn();
             }
-                else
-                {
-                    e.Cancel = false;
-                    EP.SetError(txb_NVRole, null);
-                    flag_5 = true;
-                    EnableSaveBtn();
+            else
+            {
+                e.Cancel = false;
+                EP.SetError(txb_NVRole, null);
+                flag_5 = true;
+                EnableSaveBtn();
                 }
         }
 
-
+        //ErrorProvider cho txb_NVName
         private void txb_NVName_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txb_NVName.Text) && !System.Text.RegularExpressions.Regex.IsMatch(txb_NVName.Text,"^[a-zA-Z ]"))
+            if (string.IsNullOrWhiteSpace(txb_NVName.Text))
             {
 
                 txb_NVName.Focus();
                 EP.SetError(txb_NVName, "Không được để trống");
+                flag_1 = false;
+                EnableSaveBtn();
+            }
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_NVName.Text, "^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$"))//Regex cho nhập chữ Tiếng Việt
+            {
+                txb_NVName.Focus();
+                EP.SetError(txb_NVName, "Chỉ được nhập chữ");
                 flag_1 = false;
                 EnableSaveBtn();
             }

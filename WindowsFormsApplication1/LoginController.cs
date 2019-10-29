@@ -46,5 +46,10 @@ namespace WindowsFormsApplication1
         {
             return NVC.Checkpassword(id, password);
         }
+
+        public void LogOut()
+        {
+            UserID = -1;
+        }
     }
 }

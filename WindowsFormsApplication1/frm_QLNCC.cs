@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form_QLNCC : Form
+    public partial class frm_QLNCC : Form
     {
-        public Form_QLNCC()
+        public frm_QLNCC()
         {
             InitializeComponent();
         }
@@ -53,7 +53,7 @@ namespace WindowsFormsApplication1
         private void bt_tao_moi_NCC_Click(object sender, EventArgs e)
         {
             flag_ncc = true;
-            formCT_ncc formCT_ncc = new formCT_ncc();
+            frm_CTNCC formCT_ncc = new frm_CTNCC();
             formCT_ncc.ShowDialog();
             lam_moi();
         }
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1
             flag_ncc = false;
             if (lv_list_ncc.SelectedItems.Count > 0)
             {
-                formCT_ncc formCT_ncc = new formCT_ncc();
+                frm_CTNCC formCT_ncc = new frm_CTNCC();
                 formCT_ncc.Show();
             }
             else
@@ -87,7 +87,7 @@ namespace WindowsFormsApplication1
         private void lv_list_ncc_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             flag_ncc = false;
-            formCT_ncc formCT_ncc = new formCT_ncc();
+            frm_CTNCC formCT_ncc = new frm_CTNCC();
             formCT_ncc.ShowDialog();
             lam_moi();
 

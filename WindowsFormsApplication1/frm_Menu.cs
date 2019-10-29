@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form_Menu : Form
+    public partial class frm_Menu : Form
     {
-        public Form_Menu()
+        public frm_Menu()
         {
             InitializeComponent();
-        }
-
-        private void TabP_QLHD_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

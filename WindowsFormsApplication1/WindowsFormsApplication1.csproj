@@ -53,11 +53,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
-    <Compile Include="formCT_ncc.cs">
+    <Compile Include="frm_CTNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formCT_ncc.Designer.cs">
-      <DependentUpon>formCT_ncc.cs</DependentUpon>
+    <Compile Include="frm_CTNCC.Designer.cs">
+      <DependentUpon>frm_CTNCC.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_CTHD.cs">
       <SubType>Form</SubType>
@@ -77,11 +77,11 @@
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Menu.cs">
+    <Compile Include="frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Menu.Designer.cs">
-      <DependentUpon>Form_Menu.cs</DependentUpon>
+    <Compile Include="frm_Menu.Designer.cs">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_QLHD.cs">
       <SubType>Form</SubType>
@@ -89,17 +89,17 @@
     <Compile Include="frm_QLHD.Designer.cs">
       <DependentUpon>frm_QLHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_QLNCC.cs">
+    <Compile Include="frm_QLNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_QLNCC.Designer.cs">
-      <DependentUpon>Form_QLNCC.cs</DependentUpon>
+    <Compile Include="frm_QLNCC.Designer.cs">
+      <DependentUpon>frm_QLNCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_QLNV.cs">
+    <Compile Include="frm_QLNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_QLNV.Designer.cs">
-      <DependentUpon>Form_QLNV.cs</DependentUpon>
+    <Compile Include="frm_QLNV.Designer.cs">
+      <DependentUpon>frm_QLNV.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_QLSP.cs">
       <SubType>Form</SubType>
@@ -149,8 +149,8 @@
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="formCT_ncc.resx">
-      <DependentUpon>formCT_ncc.cs</DependentUpon>
+    <EmbeddedResource Include="frm_CTNCC.resx">
+      <DependentUpon>frm_CTNCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CTHD.resx">
       <DependentUpon>frm_CTHD.cs</DependentUpon>
@@ -161,17 +161,17 @@
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Menu.resx">
-      <DependentUpon>Form_Menu.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Menu.resx">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_QLHD.resx">
       <DependentUpon>frm_QLHD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_QLNCC.resx">
-      <DependentUpon>Form_QLNCC.cs</DependentUpon>
+    <EmbeddedResource Include="frm_QLNCC.resx">
+      <DependentUpon>frm_QLNCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_QLNV.resx">
-      <DependentUpon>Form_QLNV.cs</DependentUpon>
+    <EmbeddedResource Include="frm_QLNV.resx">
+      <DependentUpon>frm_QLNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_QLSP.resx">
       <DependentUpon>Form_QLSP.cs</DependentUpon>

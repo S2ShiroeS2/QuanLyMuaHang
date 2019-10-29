@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class formCT_ncc : Form
+    public partial class frm_CTNCC : Form
     {
-        public formCT_ncc()
+        public frm_CTNCC()
         {
             InitializeComponent();
         }
@@ -38,15 +38,15 @@ namespace WindowsFormsApplication1
             txb_VendorID.Clear();
             txb_VendorName.Clear();
             txb_Available.Clear();
-            if (Form_QLNCC.flag_ncc == false)
+            if (frm_QLNCC.flag_ncc == false)
             {
-                txb_VendorID.Text = Form_QLNCC.lvi_ncc.SubItems[0].Text;
-                txb_VendorName.Text = Form_QLNCC.lvi_ncc.SubItems[1].Text;
-                txb_VendorAddress.Text = Form_QLNCC.lvi_ncc.SubItems[2].Text;
-                nbb_Vat.Value = int.Parse(Form_QLNCC.lvi_ncc.SubItems[3].Text);
-                txb_VendorEmail.Text = Form_QLNCC.lvi_ncc.SubItems[4].Text;
-                txb_Phone.Text = Form_QLNCC.lvi_ncc.SubItems[5].Text;
-                txb_Available.Text = Form_QLNCC.lvi_ncc.SubItems[6].Text;
+                txb_VendorID.Text = frm_QLNCC.lvi_ncc.SubItems[0].Text;
+                txb_VendorName.Text = frm_QLNCC.lvi_ncc.SubItems[1].Text;
+                txb_VendorAddress.Text = frm_QLNCC.lvi_ncc.SubItems[2].Text;
+                nbb_Vat.Value = int.Parse(frm_QLNCC.lvi_ncc.SubItems[3].Text);
+                txb_VendorEmail.Text = frm_QLNCC.lvi_ncc.SubItems[4].Text;
+                txb_Phone.Text = frm_QLNCC.lvi_ncc.SubItems[5].Text;
+                txb_Available.Text = frm_QLNCC.lvi_ncc.SubItems[6].Text;
                 btn_UpdateVendor.Enabled = true;
 
                 Enable_txb(false);
@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1
             lvi_them_ncc.SubItems.Add(txb_VendorEmail.Text);
             lvi_them_ncc.SubItems.Add(false.ToString());
             lvi_them_ncc.SubItems.Add(txb_Available.Text);
-            if (Form_QLNCC.flag_ncc)
+            if (frm_QLNCC.flag_ncc)
                 Vc.VendorAddNew(lvi_them_ncc);
             else
                 Vc.SuaNcc(lvi_them_ncc);
@@ -144,14 +144,22 @@ namespace WindowsFormsApplication1
                 EP.SetError(txb_Phone, "Không được để trống");
                 flag_4 = false;
                 EnableSaveBtn(); 
-            }
-            else
-            {
-                e.Cancel = false;
-                EP.SetError(txb_Phone, null);
-                flag_4 = true;
+            }else
+                if(!System.Text.RegularExpressions.Regex.IsMatch(txb_Phone.Text, "^[0-9]+$"))//Regex cho nhập chữ Tiếng Việt
+                {
+                e.Cancel = true;
+                txb_Phone.Focus();
+                EP.SetError(txb_Phone, "Số điện thoại không hợp lệ");
+                flag_4 = false;
                 EnableSaveBtn();
             }
+                else
+                {
+                    e.Cancel = false;
+                    EP.SetError(txb_Phone, null);
+                    flag_4 = true;
+                    EnableSaveBtn();
+                }
         }
 
         private void txb_VendorEmail_Validating(object sender, CancelEventArgs e)
@@ -162,6 +170,14 @@ namespace WindowsFormsApplication1
                 txb_VendorEmail.Focus();
                 EP.SetError(txb_VendorEmail, "Không được để trống");
                 flag_2 = false;
+                EnableSaveBtn();
+            }
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_VendorEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))//Regex email
+            {
+                e.Cancel = true;
+                txb_VendorEmail.Focus();
+                EP.SetError(txb_VendorEmail, "Email không hợp lệ");
+                flag_3 = false;
                 EnableSaveBtn();
             }
             else

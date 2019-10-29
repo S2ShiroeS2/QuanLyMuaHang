@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class formCT_ncc
+    partial class frm_CTNCC
     {
         /// <summary>
         /// Required designer variable.

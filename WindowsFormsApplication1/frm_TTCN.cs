@@ -73,6 +73,8 @@ namespace WindowsFormsApplication1
 
         
         //Set ErrorProvider cho trường dữ liệu
+
+        //Set ErrorProvider cho txb_Name
         private void txb_Name_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txb_Name.Text))
@@ -80,6 +82,11 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_Name.Focus();
                 EP.SetError(txb_Name, "Không được để trống");
+            }
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Name.Text, "^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$"))//Regex cho nhập chữ Tiếng Việt
+            {
+                txb_Name.Focus();
+                EP.SetError(txb_Name, "Chỉ được nhập chữ");
             }
             else
             {
@@ -111,6 +118,12 @@ namespace WindowsFormsApplication1
                 txb_Email.Focus();
                 EP.SetError(txb_Email, "Không được để trống");
             }
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))//Regex email
+            {
+                e.Cancel = true;
+                txb_Email.Focus();
+                EP.SetError(txb_Email, "Email không hợp lệ");
+            }
             else
             {
                 e.Cancel = false;
@@ -125,6 +138,12 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_Phone.Focus();
                 EP.SetError(txb_Phone, "Không được để trống");
+            }
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Phone.Text, "^[0-9]+$"))// Regex cho chỉ nhập số
+            {
+                e.Cancel = true;
+                txb_Phone.Focus();
+                EP.SetError(txb_Phone, "Số điện thoại không hợp lệ");
             }
             else
             {

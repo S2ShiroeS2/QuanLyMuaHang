@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form_QLNV
+    partial class frm_QLNV
     {
         /// <summary>
         /// Required designer variable.
