@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
             var List_SanPham = from ODD in data_SP.OrderDetails                     
                                join SP in data_SP.Products on ODD.ProductID equals SP.ProductID
                                join PC in data_SP.ProductCategories on SP.ProductCategoryID equals PC.ProductCategoryID
-                               group ODD by new { SP.ProductID, SP.ProductName, SP.ProductType, PC.ProductCategoryName,SP.ProductPrice,SP.Manufacture } into Quanti
+                               group ODD by new { SP.ProductID, SP.ProductName, SP.ProductType, PC.ProductCategoryName,SP.Manufacture } into Quanti
                                select new
                                {
                                    MaSP = Quanti.Key.ProductID,
@@ -51,7 +51,7 @@ namespace WindowsFormsApplication1
                                    LoaiSP = Quanti.Key.ProductType,
                                    DanhMucSP = Quanti.Key.ProductCategoryName,
                                    SoLuong = Quanti.Sum(x => x.orderQuantity),
-                                   Gia = Quanti.Key.ProductPrice,
+                                   
                                    NhaSX = Quanti.Key.Manufacture,
                                };
             foreach (var SP in List_SanPham)
@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
                 Items.SubItems.Add(SP.LoaiSP ? "Được bán" : "Không bán");
                 Items.SubItems.Add(SP.DanhMucSP);
                 Items.SubItems.Add(SP.SoLuong.ToString());
-                Items.SubItems.Add(SP.Gia.ToString());
+  
                 Items.SubItems.Add(SP.NhaSX);
                 list_SP.Add(Items);
             }

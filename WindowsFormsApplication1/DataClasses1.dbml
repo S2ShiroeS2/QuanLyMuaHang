@@ -26,6 +26,7 @@
       <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="orderDetailID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="orderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="tax" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="orderQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="OrderTable_OrderDetail" Member="OrderTable" ThisKey="orderID" OtherKey="orderID" Type="OrderTable" IsForeignKey="true" />
@@ -52,7 +53,6 @@
       <Column Name="ProductName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
       <Column Name="ProductType" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="ProductCategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ProductPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="Manufacture" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Association Name="Product_VendorProduct" Member="VendorProducts" ThisKey="ProductID" OtherKey="ProductID" Type="VendorProduct" />
       <Association Name="Product_OrderDetail" Member="OrderDetails" ThisKey="ProductID" OtherKey="ProductID" Type="OrderDetail" />

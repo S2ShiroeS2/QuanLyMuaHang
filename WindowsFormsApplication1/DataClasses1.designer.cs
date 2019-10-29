@@ -578,6 +578,8 @@ namespace WindowsFormsApplication1
 		
 		private int _orderID;
 		
+		private double _UnitPrice;
+		
 		private double _tax;
 		
 		private int _orderQuantity;
@@ -596,6 +598,8 @@ namespace WindowsFormsApplication1
     partial void OnorderDetailIDChanged();
     partial void OnorderIDChanging(int value);
     partial void OnorderIDChanged();
+    partial void OnUnitPriceChanging(double value);
+    partial void OnUnitPriceChanged();
     partial void OntaxChanging(double value);
     partial void OntaxChanged();
     partial void OnorderQuantityChanging(int value);
@@ -673,6 +677,26 @@ namespace WindowsFormsApplication1
 					this._orderID = value;
 					this.SendPropertyChanged("orderID");
 					this.OnorderIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitPrice", DbType="Float NOT NULL")]
+		public double UnitPrice
+		{
+			get
+			{
+				return this._UnitPrice;
+			}
+			set
+			{
+				if ((this._UnitPrice != value))
+				{
+					this.OnUnitPriceChanging(value);
+					this.SendPropertyChanging();
+					this._UnitPrice = value;
+					this.SendPropertyChanged("UnitPrice");
+					this.OnUnitPriceChanged();
 				}
 			}
 		}
@@ -1136,8 +1160,6 @@ namespace WindowsFormsApplication1
 		
 		private int _ProductCategoryID;
 		
-		private double _ProductPrice;
-		
 		private string _Manufacture;
 		
 		private EntitySet<VendorProduct> _VendorProducts;
@@ -1158,8 +1180,6 @@ namespace WindowsFormsApplication1
     partial void OnProductTypeChanged();
     partial void OnProductCategoryIDChanging(int value);
     partial void OnProductCategoryIDChanged();
-    partial void OnProductPriceChanging(double value);
-    partial void OnProductPriceChanged();
     partial void OnManufactureChanging(string value);
     partial void OnManufactureChanged();
     #endregion
@@ -1252,26 +1272,6 @@ namespace WindowsFormsApplication1
 					this._ProductCategoryID = value;
 					this.SendPropertyChanged("ProductCategoryID");
 					this.OnProductCategoryIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductPrice", DbType="Float NOT NULL")]
-		public double ProductPrice
-		{
-			get
-			{
-				return this._ProductPrice;
-			}
-			set
-			{
-				if ((this._ProductPrice != value))
-				{
-					this.OnProductPriceChanging(value);
-					this.SendPropertyChanging();
-					this._ProductPrice = value;
-					this.SendPropertyChanged("ProductPrice");
-					this.OnProductPriceChanged();
 				}
 			}
 		}

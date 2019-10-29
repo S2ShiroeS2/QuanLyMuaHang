@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
                                          ma_cthd = cthd.orderDetailID,
                                          ten_sp = product.ProductName,
                                          so_luong = cthd.orderQuantity,
-                                         don_gia = product.ProductPrice,
+                                         don_gia = cthd.UnitPrice,
                                          thue = cthd.tax
                                      };
             foreach (var tmp in list_database_cthd)
@@ -80,19 +80,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public double load_gia_tien_sp(string ten_sp)
-        {
-           double giasp=0;
-           var i = from p in data.Products
-                  where p.ProductName == ten_sp
-                  select p;
-            foreach (var sp in i)
-            {
-                giasp = sp.ProductPrice;
-                break;
-            }
-            return giasp;
-        }
+
 
         /*  public void Them_SP_vao_HD(ListViewItem lvi_SP)
           {
@@ -143,7 +131,8 @@ namespace WindowsFormsApplication1
             hd.orderDate = Convert.ToDateTime(ngay_dat_hang.Value.ToShortDateString());
             hd.VendorID =data.Vendors.First(x => x.VendorName == ncc).VendorID;
             data.OrderTables.InsertOnSubmit(hd);
-            foreach(ListViewItem lvi in list_cthd)
+            data.SubmitChanges();
+            foreach (ListViewItem lvi in list_cthd)
             {
                 if(lvi.Text!="Thêm sản phẩm")
                 {
@@ -154,9 +143,9 @@ namespace WindowsFormsApplication1
                     cthd.tax = Convert.ToDouble(lvi.SubItems[4].Text);
                     cthd.orderQuantity = Convert.ToInt32(lvi.SubItems[2].Text);
                     data.OrderDetails.InsertOnSubmit(cthd);
+                    data.SubmitChanges();
                 }          
             }
-            data.SubmitChanges();
         }
     }
 }

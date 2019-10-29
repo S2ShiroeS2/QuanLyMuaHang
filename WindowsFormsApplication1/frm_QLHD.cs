@@ -22,18 +22,27 @@ namespace WindowsFormsApplication1
         public static bool flag { get; private set; } = true;// Biến kiểm tra xem button tạo mới được click hay là double click ở listview
         public static int hd_id { get; private set; } = new int();
         public static ListViewItem lvi_selected_hd = new ListViewItem();
+
         private void bt_tao_moi_Click(object sender, EventArgs e)
         {
             flag = true;
             frm_CTHD ct = new frm_CTHD();
             this.Hide();
             ct.ShowDialog();
+            lam_moi_listview(); 
             this.Show();
-            this.Refresh();
+
+
         }
 
-
-
+        private void lam_moi_listview()
+        {
+            list_lvi_hd = new List<ListViewItem>();
+            lstv_list_HD.Items.Clear();
+            list_lvi_hd = QLHD_crtl.load_list_hd();
+            foreach (ListViewItem a in list_lvi_hd)
+                lstv_list_HD.Items.Add(a);
+        }
 
         private void frm_QLHD_Load(object sender, EventArgs e)
         {

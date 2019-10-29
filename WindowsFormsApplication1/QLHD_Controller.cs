@@ -46,7 +46,6 @@ namespace WindowsFormsApplication1
                 else
                     tinh_trang = "Đã nhận hàng";
                 hd.SubItems.Add(tinh_trang);
-                //hd.SubItems.Add(a.tong_tien.ToString());
                 list_lvi_hd.Add(hd);
             }
             return list_lvi_hd;

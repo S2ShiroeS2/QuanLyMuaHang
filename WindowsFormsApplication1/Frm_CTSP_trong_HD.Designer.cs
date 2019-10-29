@@ -48,8 +48,10 @@
             this.txt_tien_thue = new System.Windows.Forms.TextBox();
             this.err_so_luong = new System.Windows.Forms.ErrorProvider(this.components);
             this.err_thue = new System.Windows.Forms.ErrorProvider(this.components);
+            this.err_Don_gia = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.err_so_luong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.err_thue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err_Don_gia)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Ten_SP
@@ -130,13 +132,13 @@
             // 
             // txt_Don_gia
             // 
-            this.txt_Don_gia.Enabled = false;
             this.txt_Don_gia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Don_gia.Location = new System.Drawing.Point(542, 80);
             this.txt_Don_gia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Don_gia.Name = "txt_Don_gia";
             this.txt_Don_gia.Size = new System.Drawing.Size(80, 26);
             this.txt_Don_gia.TabIndex = 6;
+            this.txt_Don_gia.TextChanged += new System.EventHandler(this.txt_Don_gia_TextChanged);
             // 
             // label1
             // 
@@ -240,7 +242,11 @@
             // 
             this.err_thue.ContainerControl = this;
             // 
-            // Frm_Them_SP_vao_HD
+            // err_Don_gia
+            // 
+            this.err_Don_gia.ContainerControl = this;
+            // 
+            // Frm_CTSP_trong_HD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -264,11 +270,12 @@
             this.Controls.Add(this.lbl_Ten_SP);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Frm_Them_SP_vao_HD";
+            this.Name = "Frm_CTSP_trong_HD";
             this.Text = "Frm_Them_SP_vao_HD";
             this.Load += new System.EventHandler(this.Frm_Them_SP_vao_HD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.err_so_luong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.err_thue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err_Don_gia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +302,6 @@
         private System.Windows.Forms.TextBox txt_tien_thue;
         private System.Windows.Forms.ErrorProvider err_so_luong;
         private System.Windows.Forms.ErrorProvider err_thue;
+        private System.Windows.Forms.ErrorProvider err_Don_gia;
     }
 }
