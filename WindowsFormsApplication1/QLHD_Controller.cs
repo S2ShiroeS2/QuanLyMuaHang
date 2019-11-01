@@ -24,14 +24,16 @@ namespace WindowsFormsApplication1
             var data_hd = from hd in data.OrderTables                                           // biến lấy danh sách các hóa đơn trong database
                           join vd in data.Vendors on hd.VendorID equals vd.VendorID
                           join nv in data.NVs on hd.userID equals nv.userID
+                          join od in data.OrderDetails on hd.orderID equals od.orderID
+                          group od by new { hd.orderID, hd.orderDate, vd.VendorName, nv.userName, hd.status } into g
                           select new
                           {
-                              mahd= hd.orderID,
-                              ngay_dat=hd.orderDate,
-                              nha_cc= vd.VendorName,
-                              ten_nv=nv.userName,
-                              tinh_trang=hd.status,
-                              
+                              mahd = g.Key.orderID,
+                              ngay_dat = g.Key.orderDate,
+                              nha_cc = g.Key.VendorName,
+                              ten_nv = g.Key.userName,
+                              tinh_trang = g.Key.status,
+                              tong_tien = g.Sum(x => x.orderQuantity * x.UnitPrice * (1 + x.tax / 100))
                           };
             foreach(var a in data_hd)
             {
@@ -46,6 +48,7 @@ namespace WindowsFormsApplication1
                 else
                     tinh_trang = "Đã nhận hàng";
                 hd.SubItems.Add(tinh_trang);
+                hd.SubItems.Add(a.tong_tien.ToString());
                 list_lvi_hd.Add(hd);
             }
             return list_lvi_hd;
