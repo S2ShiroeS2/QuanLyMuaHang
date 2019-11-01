@@ -35,8 +35,6 @@
             this.lbl_danh_muc_sp = new System.Windows.Forms.Label();
             this.txt_so_luong_sp = new System.Windows.Forms.TextBox();
             this.lbl_so_luong_sp = new System.Windows.Forms.Label();
-            this.txt_gia_sp = new System.Windows.Forms.TextBox();
-            this.lbl_gia_sp = new System.Windows.Forms.Label();
             this.txt_nha_sx = new System.Windows.Forms.TextBox();
             this.lbl_nha_san_xuat = new System.Windows.Forms.Label();
             this.cbo_loai_sp = new System.Windows.Forms.ComboBox();
@@ -92,7 +90,7 @@
             // 
             this.lbl_danh_muc_sp.AutoSize = true;
             this.lbl_danh_muc_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_danh_muc_sp.Location = new System.Drawing.Point(21, 182);
+            this.lbl_danh_muc_sp.Location = new System.Drawing.Point(327, 33);
             this.lbl_danh_muc_sp.Name = "lbl_danh_muc_sp";
             this.lbl_danh_muc_sp.Size = new System.Drawing.Size(82, 20);
             this.lbl_danh_muc_sp.TabIndex = 9;
@@ -101,7 +99,7 @@
             // txt_so_luong_sp
             // 
             this.txt_so_luong_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_so_luong_sp.Location = new System.Drawing.Point(331, 52);
+            this.txt_so_luong_sp.Location = new System.Drawing.Point(331, 104);
             this.txt_so_luong_sp.Name = "txt_so_luong_sp";
             this.txt_so_luong_sp.Size = new System.Drawing.Size(168, 26);
             this.txt_so_luong_sp.TabIndex = 12;
@@ -110,34 +108,16 @@
             // 
             this.lbl_so_luong_sp.AutoSize = true;
             this.lbl_so_luong_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_so_luong_sp.Location = new System.Drawing.Point(327, 29);
+            this.lbl_so_luong_sp.Location = new System.Drawing.Point(327, 81);
             this.lbl_so_luong_sp.Name = "lbl_so_luong_sp";
             this.lbl_so_luong_sp.Size = new System.Drawing.Size(72, 20);
             this.lbl_so_luong_sp.TabIndex = 11;
             this.lbl_so_luong_sp.Text = "Số lượng";
             // 
-            // txt_gia_sp
-            // 
-            this.txt_gia_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gia_sp.Location = new System.Drawing.Point(331, 104);
-            this.txt_gia_sp.Name = "txt_gia_sp";
-            this.txt_gia_sp.Size = new System.Drawing.Size(168, 26);
-            this.txt_gia_sp.TabIndex = 14;
-            // 
-            // lbl_gia_sp
-            // 
-            this.lbl_gia_sp.AutoSize = true;
-            this.lbl_gia_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_gia_sp.Location = new System.Drawing.Point(327, 81);
-            this.lbl_gia_sp.Name = "lbl_gia_sp";
-            this.lbl_gia_sp.Size = new System.Drawing.Size(34, 20);
-            this.lbl_gia_sp.TabIndex = 13;
-            this.lbl_gia_sp.Text = "Giá";
-            // 
             // txt_nha_sx
             // 
             this.txt_nha_sx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nha_sx.Location = new System.Drawing.Point(331, 158);
+            this.txt_nha_sx.Location = new System.Drawing.Point(331, 156);
             this.txt_nha_sx.Name = "txt_nha_sx";
             this.txt_nha_sx.Size = new System.Drawing.Size(168, 26);
             this.txt_nha_sx.TabIndex = 16;
@@ -146,7 +126,7 @@
             // 
             this.lbl_nha_san_xuat.AutoSize = true;
             this.lbl_nha_san_xuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nha_san_xuat.Location = new System.Drawing.Point(327, 135);
+            this.lbl_nha_san_xuat.Location = new System.Drawing.Point(327, 133);
             this.lbl_nha_san_xuat.Name = "lbl_nha_san_xuat";
             this.lbl_nha_san_xuat.Size = new System.Drawing.Size(102, 20);
             this.lbl_nha_san_xuat.TabIndex = 15;
@@ -168,11 +148,7 @@
             // 
             this.cbo_danh_muc_sp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_danh_muc_sp.FormattingEnabled = true;
-            this.cbo_danh_muc_sp.Items.AddRange(new object[] {
-            "Gaming gear",
-            "Đồ điện tử",
-            "Card"});
-            this.cbo_danh_muc_sp.Location = new System.Drawing.Point(25, 206);
+            this.cbo_danh_muc_sp.Location = new System.Drawing.Point(331, 57);
             this.cbo_danh_muc_sp.Name = "cbo_danh_muc_sp";
             this.cbo_danh_muc_sp.Size = new System.Drawing.Size(168, 21);
             this.cbo_danh_muc_sp.TabIndex = 18;
@@ -189,7 +165,6 @@
             this.lstv_nha_cung_cap.TabIndex = 19;
             this.lstv_nha_cung_cap.UseCompatibleStateImageBehavior = false;
             this.lstv_nha_cung_cap.View = System.Windows.Forms.View.Details;
-            this.lstv_nha_cung_cap.SelectedIndexChanged += new System.EventHandler(this.lstv_nha_cung_cap_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -247,8 +222,6 @@
             this.Controls.Add(this.cbo_loai_sp);
             this.Controls.Add(this.txt_nha_sx);
             this.Controls.Add(this.lbl_nha_san_xuat);
-            this.Controls.Add(this.txt_gia_sp);
-            this.Controls.Add(this.lbl_gia_sp);
             this.Controls.Add(this.txt_so_luong_sp);
             this.Controls.Add(this.lbl_so_luong_sp);
             this.Controls.Add(this.lbl_danh_muc_sp);
@@ -274,8 +247,6 @@
         private System.Windows.Forms.Label lbl_danh_muc_sp;
         private System.Windows.Forms.TextBox txt_so_luong_sp;
         private System.Windows.Forms.Label lbl_so_luong_sp;
-        private System.Windows.Forms.TextBox txt_gia_sp;
-        private System.Windows.Forms.Label lbl_gia_sp;
         private System.Windows.Forms.TextBox txt_nha_sx;
         private System.Windows.Forms.Label lbl_nha_san_xuat;
         private System.Windows.Forms.ComboBox cbo_loai_sp;

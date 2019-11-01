@@ -40,19 +40,18 @@ namespace WindowsFormsApplication1
             list_SP.Clear();
             data_SP = new DataClasses1DataContext();
    
-            var List_SanPham = from ODD in data_SP.OrderDetails                     
-                               join SP in data_SP.Products on ODD.ProductID equals SP.ProductID
+            var List_SanPham = from SP in data_SP.Products
+                               //join ODD in data_SP.OrderDetails on SP.ProductID equals ODD.ProductID
                                join PC in data_SP.ProductCategories on SP.ProductCategoryID equals PC.ProductCategoryID
-                               group ODD by new { SP.ProductID, SP.ProductName, SP.ProductType, PC.ProductCategoryName,SP.Manufacture } into Quanti
+                        //       group ODD by new { SP.ProductID, SP.ProductName, SP.ProductType, PC.ProductCategoryName,SP.Manufacture } into Quanti
                                select new
                                {
-                                   MaSP = Quanti.Key.ProductID,
-                                   TenSP = Quanti.Key.ProductName,
-                                   LoaiSP = Quanti.Key.ProductType,
-                                   DanhMucSP = Quanti.Key.ProductCategoryName,
-                                   SoLuong = Quanti.Sum(x => x.orderQuantity),
-                                   
-                                   NhaSX = Quanti.Key.Manufacture,
+                                   MaSP = SP.ProductID,
+                                   TenSP = SP.ProductName,
+                                   LoaiSP = SP.ProductType,
+                                   DanhMucSP = PC.ProductCategoryName,
+                                //   SoLuong = SP.Sum(x => x.orderQuantity),
+                                   NhaSX = SP.Manufacture,
                                };
             foreach (var SP in List_SanPham)
             {
@@ -61,7 +60,7 @@ namespace WindowsFormsApplication1
                 Items.SubItems.Add(SP.TenSP);
                 Items.SubItems.Add(SP.LoaiSP ? "Được bán" : "Không bán");
                 Items.SubItems.Add(SP.DanhMucSP);
-                Items.SubItems.Add(SP.SoLuong.ToString());
+             //   Items.SubItems.Add(SP.SoLuong.ToString());
   
                 Items.SubItems.Add(SP.NhaSX);
                 list_SP.Add(Items);
@@ -81,15 +80,40 @@ namespace WindowsFormsApplication1
                           select Product.ProductCategoryID;
             return list_ProductCategoryID.Max();
         }
-        //Thêm sản phẩm
-        public Product Insert_Product(ListViewItem lvi_sp)
+
+        //Load danh mục sản phẩm
+        public List<string> load_List_Category()
         {
-            Product SP = new Product();
-            SP.ProductID = Convert.ToInt32(lvi_sp.SubItems[0].Text);
-            SP.ProductName = lvi_sp.SubItems[1].Text;
-            SP.ProductType = lvi_sp.SubItems[2].Text == "Được bán" ? true : false;
+            List<string> list_Load = new List<string>();
+            var list_Category = from cate in data_SP.ProductCategories
+                           select cate;
+            foreach (var cate in list_Category)
+                list_Load.Add(cate.ProductCategoryName);
+            return list_Load;
+        }
+        //Thêm sản phẩm
+        public void Insert_Product(ListViewItem lvi_sp,ListView.ListViewItemCollection list_ncc)
+        {
+            Product product = new Product();
+            ProductCategory catagory_Product = new ProductCategory();
+            VendorProduct vendor_Product = new VendorProduct();
+            product.ProductID = Convert.ToInt32(lvi_sp.SubItems[0].Text);
+            product.ProductName = lvi_sp.SubItems[1].Text;
+            product.ProductType = lvi_sp.SubItems[2].Text == "Được bán" ? true : false;
+            product.ProductCategoryID = data_SP.ProductCategories.First(x => x.ProductCategoryName == lvi_sp.SubItems[3].Text).ProductCategoryID;
+            product.Manufacture = lvi_sp.SubItems[4].Text;
+            data_SP.Products.InsertOnSubmit(product);
+            data_SP.SubmitChanges();
+            foreach (ListViewItem i in list_ncc)
+            {
+                vendor_Product.ProductID = product.ProductID;
+                vendor_Product.VendorID = data_SP.Vendors.First(x => x.VendorName == i.Text).VendorID;
+                data_SP.VendorProducts.InsertOnSubmit(vendor_Product);
+                data_SP.SubmitChanges();
+            }
             
-            return SP;
+           
+            
         }
     }
 }

@@ -33,6 +33,9 @@ namespace WindowsFormsApplication1
     partial void InsertNV(NV instance);
     partial void UpdateNV(NV instance);
     partial void DeleteNV(NV instance);
+    partial void InsertVendor(Vendor instance);
+    partial void UpdateVendor(Vendor instance);
+    partial void DeleteVendor(Vendor instance);
     partial void InsertOrderDetail(OrderDetail instance);
     partial void UpdateOrderDetail(OrderDetail instance);
     partial void DeleteOrderDetail(OrderDetail instance);
@@ -45,16 +48,13 @@ namespace WindowsFormsApplication1
     partial void InsertProductCategory(ProductCategory instance);
     partial void UpdateProductCategory(ProductCategory instance);
     partial void DeleteProductCategory(ProductCategory instance);
-    partial void InsertVendor(Vendor instance);
-    partial void UpdateVendor(Vendor instance);
-    partial void DeleteVendor(Vendor instance);
     partial void InsertVendorProduct(VendorProduct instance);
     partial void UpdateVendorProduct(VendorProduct instance);
     partial void DeleteVendorProduct(VendorProduct instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString1, mappingSource)
+				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -91,6 +91,14 @@ namespace WindowsFormsApplication1
 			}
 		}
 		
+		public System.Data.Linq.Table<Vendor> Vendors
+		{
+			get
+			{
+				return this.GetTable<Vendor>();
+			}
+		}
+		
 		public System.Data.Linq.Table<OrderDetail> OrderDetails
 		{
 			get
@@ -120,14 +128,6 @@ namespace WindowsFormsApplication1
 			get
 			{
 				return this.GetTable<ProductCategory>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Vendor> Vendors
-		{
-			get
-			{
-				return this.GetTable<Vendor>();
 			}
 		}
 		
@@ -395,6 +395,268 @@ namespace WindowsFormsApplication1
 		{
 			this.SendPropertyChanging();
 			entity.NV = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Vendor")]
+	public partial class Vendor : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _VendorID;
+		
+		private string _VendorName;
+		
+		private string _VendorAddress;
+		
+		private double _VAT;
+		
+		private string _VendorEmail;
+		
+		private string _VendorPhone;
+		
+		private bool _VendorAvailable;
+		
+		private EntitySet<OrderTable> _OrderTables;
+		
+		private EntitySet<VendorProduct> _VendorProducts;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnVendorIDChanging(int value);
+    partial void OnVendorIDChanged();
+    partial void OnVendorNameChanging(string value);
+    partial void OnVendorNameChanged();
+    partial void OnVendorAddressChanging(string value);
+    partial void OnVendorAddressChanged();
+    partial void OnVATChanging(double value);
+    partial void OnVATChanged();
+    partial void OnVendorEmailChanging(string value);
+    partial void OnVendorEmailChanged();
+    partial void OnVendorPhoneChanging(string value);
+    partial void OnVendorPhoneChanged();
+    partial void OnVendorAvailableChanging(bool value);
+    partial void OnVendorAvailableChanged();
+    #endregion
+		
+		public Vendor()
+		{
+			this._OrderTables = new EntitySet<OrderTable>(new Action<OrderTable>(this.attach_OrderTables), new Action<OrderTable>(this.detach_OrderTables));
+			this._VendorProducts = new EntitySet<VendorProduct>(new Action<VendorProduct>(this.attach_VendorProducts), new Action<VendorProduct>(this.detach_VendorProducts));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int VendorID
+		{
+			get
+			{
+				return this._VendorID;
+			}
+			set
+			{
+				if ((this._VendorID != value))
+				{
+					this.OnVendorIDChanging(value);
+					this.SendPropertyChanging();
+					this._VendorID = value;
+					this.SendPropertyChanged("VendorID");
+					this.OnVendorIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorName", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
+		public string VendorName
+		{
+			get
+			{
+				return this._VendorName;
+			}
+			set
+			{
+				if ((this._VendorName != value))
+				{
+					this.OnVendorNameChanging(value);
+					this.SendPropertyChanging();
+					this._VendorName = value;
+					this.SendPropertyChanged("VendorName");
+					this.OnVendorNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorAddress", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
+		public string VendorAddress
+		{
+			get
+			{
+				return this._VendorAddress;
+			}
+			set
+			{
+				if ((this._VendorAddress != value))
+				{
+					this.OnVendorAddressChanging(value);
+					this.SendPropertyChanging();
+					this._VendorAddress = value;
+					this.SendPropertyChanged("VendorAddress");
+					this.OnVendorAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VAT", DbType="Float NOT NULL")]
+		public double VAT
+		{
+			get
+			{
+				return this._VAT;
+			}
+			set
+			{
+				if ((this._VAT != value))
+				{
+					this.OnVATChanging(value);
+					this.SendPropertyChanging();
+					this._VAT = value;
+					this.SendPropertyChanged("VAT");
+					this.OnVATChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorEmail", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
+		public string VendorEmail
+		{
+			get
+			{
+				return this._VendorEmail;
+			}
+			set
+			{
+				if ((this._VendorEmail != value))
+				{
+					this.OnVendorEmailChanging(value);
+					this.SendPropertyChanging();
+					this._VendorEmail = value;
+					this.SendPropertyChanged("VendorEmail");
+					this.OnVendorEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorPhone", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		public string VendorPhone
+		{
+			get
+			{
+				return this._VendorPhone;
+			}
+			set
+			{
+				if ((this._VendorPhone != value))
+				{
+					this.OnVendorPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._VendorPhone = value;
+					this.SendPropertyChanged("VendorPhone");
+					this.OnVendorPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorAvailable", DbType="Bit NOT NULL")]
+		public bool VendorAvailable
+		{
+			get
+			{
+				return this._VendorAvailable;
+			}
+			set
+			{
+				if ((this._VendorAvailable != value))
+				{
+					this.OnVendorAvailableChanging(value);
+					this.SendPropertyChanging();
+					this._VendorAvailable = value;
+					this.SendPropertyChanged("VendorAvailable");
+					this.OnVendorAvailableChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Vendor_OrderTable", Storage="_OrderTables", ThisKey="VendorID", OtherKey="VendorID")]
+		public EntitySet<OrderTable> OrderTables
+		{
+			get
+			{
+				return this._OrderTables;
+			}
+			set
+			{
+				this._OrderTables.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Vendor_VendorProduct", Storage="_VendorProducts", ThisKey="VendorID", OtherKey="VendorID")]
+		public EntitySet<VendorProduct> VendorProducts
+		{
+			get
+			{
+				return this._VendorProducts;
+			}
+			set
+			{
+				this._VendorProducts.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_OrderTables(OrderTable entity)
+		{
+			this.SendPropertyChanging();
+			entity.Vendor = this;
+		}
+		
+		private void detach_OrderTables(OrderTable entity)
+		{
+			this.SendPropertyChanging();
+			entity.Vendor = null;
+		}
+		
+		private void attach_VendorProducts(VendorProduct entity)
+		{
+			this.SendPropertyChanging();
+			entity.Vendor = this;
+		}
+		
+		private void detach_VendorProducts(VendorProduct entity)
+		{
+			this.SendPropertyChanging();
+			entity.Vendor = null;
 		}
 	}
 	
@@ -1344,268 +1606,6 @@ namespace WindowsFormsApplication1
 		{
 			this.SendPropertyChanging();
 			entity.ProductCategory = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Vendor")]
-	public partial class Vendor : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _VendorID;
-		
-		private string _VendorName;
-		
-		private string _VendorAddress;
-		
-		private double _VAT;
-		
-		private string _VendorEmail;
-		
-		private string _VendorPhone;
-		
-		private bool _VendorAvailable;
-		
-		private EntitySet<OrderTable> _OrderTables;
-		
-		private EntitySet<VendorProduct> _VendorProducts;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnVendorIDChanging(int value);
-    partial void OnVendorIDChanged();
-    partial void OnVendorNameChanging(string value);
-    partial void OnVendorNameChanged();
-    partial void OnVendorAddressChanging(string value);
-    partial void OnVendorAddressChanged();
-    partial void OnVATChanging(double value);
-    partial void OnVATChanged();
-    partial void OnVendorEmailChanging(string value);
-    partial void OnVendorEmailChanged();
-    partial void OnVendorPhoneChanging(string value);
-    partial void OnVendorPhoneChanged();
-    partial void OnVendorAvailableChanging(bool value);
-    partial void OnVendorAvailableChanged();
-    #endregion
-		
-		public Vendor()
-		{
-			this._OrderTables = new EntitySet<OrderTable>(new Action<OrderTable>(this.attach_OrderTables), new Action<OrderTable>(this.detach_OrderTables));
-			this._VendorProducts = new EntitySet<VendorProduct>(new Action<VendorProduct>(this.attach_VendorProducts), new Action<VendorProduct>(this.detach_VendorProducts));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int VendorID
-		{
-			get
-			{
-				return this._VendorID;
-			}
-			set
-			{
-				if ((this._VendorID != value))
-				{
-					this.OnVendorIDChanging(value);
-					this.SendPropertyChanging();
-					this._VendorID = value;
-					this.SendPropertyChanged("VendorID");
-					this.OnVendorIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorName", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
-		public string VendorName
-		{
-			get
-			{
-				return this._VendorName;
-			}
-			set
-			{
-				if ((this._VendorName != value))
-				{
-					this.OnVendorNameChanging(value);
-					this.SendPropertyChanging();
-					this._VendorName = value;
-					this.SendPropertyChanged("VendorName");
-					this.OnVendorNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorAddress", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
-		public string VendorAddress
-		{
-			get
-			{
-				return this._VendorAddress;
-			}
-			set
-			{
-				if ((this._VendorAddress != value))
-				{
-					this.OnVendorAddressChanging(value);
-					this.SendPropertyChanging();
-					this._VendorAddress = value;
-					this.SendPropertyChanged("VendorAddress");
-					this.OnVendorAddressChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VAT", DbType="Float NOT NULL")]
-		public double VAT
-		{
-			get
-			{
-				return this._VAT;
-			}
-			set
-			{
-				if ((this._VAT != value))
-				{
-					this.OnVATChanging(value);
-					this.SendPropertyChanging();
-					this._VAT = value;
-					this.SendPropertyChanged("VAT");
-					this.OnVATChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorEmail", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
-		public string VendorEmail
-		{
-			get
-			{
-				return this._VendorEmail;
-			}
-			set
-			{
-				if ((this._VendorEmail != value))
-				{
-					this.OnVendorEmailChanging(value);
-					this.SendPropertyChanging();
-					this._VendorEmail = value;
-					this.SendPropertyChanged("VendorEmail");
-					this.OnVendorEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorPhone", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
-		public string VendorPhone
-		{
-			get
-			{
-				return this._VendorPhone;
-			}
-			set
-			{
-				if ((this._VendorPhone != value))
-				{
-					this.OnVendorPhoneChanging(value);
-					this.SendPropertyChanging();
-					this._VendorPhone = value;
-					this.SendPropertyChanged("VendorPhone");
-					this.OnVendorPhoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VendorAvailable", DbType="Bit NOT NULL")]
-		public bool VendorAvailable
-		{
-			get
-			{
-				return this._VendorAvailable;
-			}
-			set
-			{
-				if ((this._VendorAvailable != value))
-				{
-					this.OnVendorAvailableChanging(value);
-					this.SendPropertyChanging();
-					this._VendorAvailable = value;
-					this.SendPropertyChanged("VendorAvailable");
-					this.OnVendorAvailableChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Vendor_OrderTable", Storage="_OrderTables", ThisKey="VendorID", OtherKey="VendorID")]
-		public EntitySet<OrderTable> OrderTables
-		{
-			get
-			{
-				return this._OrderTables;
-			}
-			set
-			{
-				this._OrderTables.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Vendor_VendorProduct", Storage="_VendorProducts", ThisKey="VendorID", OtherKey="VendorID")]
-		public EntitySet<VendorProduct> VendorProducts
-		{
-			get
-			{
-				return this._VendorProducts;
-			}
-			set
-			{
-				this._VendorProducts.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_OrderTables(OrderTable entity)
-		{
-			this.SendPropertyChanging();
-			entity.Vendor = this;
-		}
-		
-		private void detach_OrderTables(OrderTable entity)
-		{
-			this.SendPropertyChanging();
-			entity.Vendor = null;
-		}
-		
-		private void attach_VendorProducts(VendorProduct entity)
-		{
-			this.SendPropertyChanging();
-			entity.Vendor = this;
-		}
-		
-		private void detach_VendorProducts(VendorProduct entity)
-		{
-			this.SendPropertyChanging();
-			entity.Vendor = null;
 		}
 	}
 	

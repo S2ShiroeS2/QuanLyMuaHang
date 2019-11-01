@@ -63,9 +63,14 @@ namespace WindowsFormsApplication1
 
         private void btn_tao_moi_SP_Click(object sender, EventArgs e)
         {
-            flag_sp = true; // Lúc sửa sản phẩm
-            form_CTSP GUI_CTSP = new form_CTSP();
-            GUI_CTSP.ShowDialog();
+            flag_sp = true; //Lúc tạo mới
+            if(flag_sp == true)
+            {
+                lvi_sanPham = new ListViewItem();
+                form_CTSP GUI_CTSP = new form_CTSP();
+                GUI_CTSP.ShowDialog();
+                lam_moi();
+            }
         }
     }
 }

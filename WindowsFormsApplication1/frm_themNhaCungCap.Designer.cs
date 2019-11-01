@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.btn_add_one = new System.Windows.Forms.Button();
-            this.btn_add_all = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.lstv_list_ncc_co = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lsvt_list_ncc_them = new System.Windows.Forms.ListView();
+            this.lstv_list_ncc_them = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_luu = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -48,23 +47,15 @@
             this.btn_add_one.UseVisualStyleBackColor = true;
             this.btn_add_one.Click += new System.EventHandler(this.btn_add_one_Click);
             // 
-            // btn_add_all
-            // 
-            this.btn_add_all.Location = new System.Drawing.Point(138, 147);
-            this.btn_add_all.Name = "btn_add_all";
-            this.btn_add_all.Size = new System.Drawing.Size(75, 23);
-            this.btn_add_all.TabIndex = 3;
-            this.btn_add_all.Text = ">>";
-            this.btn_add_all.UseVisualStyleBackColor = true;
-            // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(138, 176);
+            this.btn_delete.Location = new System.Drawing.Point(139, 147);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 4;
             this.btn_delete.Text = "Xóa";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // lstv_list_ncc_co
             // 
@@ -83,17 +74,17 @@
             this.columnHeader1.Text = "Nhà cung cấp sẵn có";
             this.columnHeader1.Width = 115;
             // 
-            // lsvt_list_ncc_them
+            // lstv_list_ncc_them
             // 
-            this.lsvt_list_ncc_them.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstv_list_ncc_them.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2});
-            this.lsvt_list_ncc_them.FullRowSelect = true;
-            this.lsvt_list_ncc_them.Location = new System.Drawing.Point(218, 12);
-            this.lsvt_list_ncc_them.Name = "lsvt_list_ncc_them";
-            this.lsvt_list_ncc_them.Size = new System.Drawing.Size(121, 321);
-            this.lsvt_list_ncc_them.TabIndex = 6;
-            this.lsvt_list_ncc_them.UseCompatibleStateImageBehavior = false;
-            this.lsvt_list_ncc_them.View = System.Windows.Forms.View.Details;
+            this.lstv_list_ncc_them.FullRowSelect = true;
+            this.lstv_list_ncc_them.Location = new System.Drawing.Point(218, 12);
+            this.lstv_list_ncc_them.Name = "lstv_list_ncc_them";
+            this.lstv_list_ncc_them.Size = new System.Drawing.Size(121, 321);
+            this.lstv_list_ncc_them.TabIndex = 6;
+            this.lstv_list_ncc_them.UseCompatibleStateImageBehavior = false;
+            this.lstv_list_ncc_them.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader2
             // 
@@ -102,7 +93,7 @@
             // 
             // btn_luu
             // 
-            this.btn_luu.Location = new System.Drawing.Point(137, 205);
+            this.btn_luu.Location = new System.Drawing.Point(137, 176);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.Size = new System.Drawing.Size(75, 23);
             this.btn_luu.TabIndex = 7;
@@ -116,10 +107,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 345);
             this.Controls.Add(this.btn_luu);
-            this.Controls.Add(this.lsvt_list_ncc_them);
+            this.Controls.Add(this.lstv_list_ncc_them);
             this.Controls.Add(this.lstv_list_ncc_co);
             this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_add_all);
             this.Controls.Add(this.btn_add_one);
             this.Name = "frm_themNhaCungCap";
             this.Text = "Thêm nhà cung cấp";
@@ -131,10 +121,9 @@
         #endregion
 
         private System.Windows.Forms.Button btn_add_one;
-        private System.Windows.Forms.Button btn_add_all;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.ListView lstv_list_ncc_co;
-        private System.Windows.Forms.ListView lsvt_list_ncc_them;
+        private System.Windows.Forms.ListView lstv_list_ncc_them;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btn_luu;

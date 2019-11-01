@@ -35,8 +35,6 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_tao_moi_SP = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -66,8 +64,6 @@
             this.columnHeader9,
             this.columnHeader10,
             this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader1,
             this.columnHeader2});
             this.lstv_list_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstv_list_SP.FullRowSelect = true;
@@ -100,15 +96,6 @@
             // 
             this.columnHeader11.Text = "Danh mục";
             this.columnHeader11.Width = 200;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Số lượng";
-            this.columnHeader12.Width = 191;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Giá";
             // 
             // columnHeader2
             // 
@@ -152,9 +139,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.Button btn_tao_moi_SP;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }
