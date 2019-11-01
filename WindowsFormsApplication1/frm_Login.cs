@@ -19,12 +19,7 @@ namespace WindowsFormsApplication1
 
         public static string LoginAccount { get; private set; }
         public static string LoginPassword { get; private set; }
-        LoginController LC = new LoginController();
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
+        private LoginController LC = new LoginController();
 
         private void bt_Login_Click(object sender, EventArgs e)
         {
@@ -32,10 +27,10 @@ namespace WindowsFormsApplication1
             LoginPassword = txb_Password.Text;
             if (LC.CheckAccount(LoginAccount, LoginPassword))
                 //Put next form here, gonna put a messagebox to fix this gasp
-                MessageBox.Show("Đăng nhập thành công!","Sucess",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Đăng nhập thành công!", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!","Fail",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txb_Password.Clear();
             }
         }

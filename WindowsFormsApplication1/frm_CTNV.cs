@@ -19,22 +19,25 @@ namespace WindowsFormsApplication1
         public static ListViewItem lvi_them_nv { get; private set; } = new ListViewItem();
         private NhanVienController NVC = new NhanVienController();
         private ErrorProvider EP = new ErrorProvider();
+        //Flag cho ErrorProvider
         private bool flag_1 = false;
         private bool flag_2 = false;
         private bool flag_3 = false;
         private bool flag_4 = false;
         private bool flag_5 = true;
 
-
+        //Enable textbox cần thiết
         private void Enable_txb(bool Active)
         {
             txb_NVName.Enabled = txb_NVEmail.Enabled = txb_NVAccount.Enabled = txb_NVPhone.Enabled = btn_NVActive.Enabled = Active;
         }
 
+
         private void btn_nv_update_Click(object sender, EventArgs e)
         {
             Enable_txb(true);
         }
+
 
         private void btn_nv_luu_Click(object sender, EventArgs e)
         {

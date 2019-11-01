@@ -9,11 +9,13 @@ namespace WindowsFormsApplication1
 {
     class NhanVienController
     {
-        DataClasses1DataContext data = new DataClasses1DataContext();
+        private DataClasses1DataContext data = new DataClasses1DataContext();
 
-        List<ListViewItem> listNV = new List<ListViewItem>();
+        private List<ListViewItem> listNV = new List<ListViewItem>();
 
-        public ListViewItem AddLviItem(NV V) {
+        // Thêm thông tin 1 nv vào listviewitem
+        public ListViewItem AddLviItem(NV V)
+        {
             ListViewItem lvi = new ListViewItem();
             lvi.Text = V.userID.ToString();
             lvi.SubItems.Add(V.userName);
@@ -25,13 +27,14 @@ namespace WindowsFormsApplication1
             return lvi;
         }
 
+        //Lay danh sach tat ca nhan vien
         public List<ListViewItem> NhanVienList()
         {
             listNV.Clear();
             data = new DataClasses1DataContext();
             var NhanVienVar = from V in data.NVs
                               select V;
-            foreach (NV V in NhanVienVar) 
+            foreach (NV V in NhanVienVar)
                 listNV.Add(AddLviItem(V));
             return listNV;
         }
@@ -52,11 +55,12 @@ namespace WindowsFormsApplication1
         public int GetMaxNVID()
         {
             var list = from NV_id in data.NVs
-                              select NV_id.userID;
+                       select NV_id.userID;
             return list.Max();
         }
 
-        public NV AddNVInV(ListViewItem lvi_nv,string password) {
+        public NV AddNVInV(ListViewItem lvi_nv, string password)
+        {
             NV V = new NV();
 
             V.userID = Int32.Parse(lvi_nv.Text);
@@ -76,18 +80,18 @@ namespace WindowsFormsApplication1
             return V;
         }
 
-        public void NVAddNew(ListViewItem lvi_nv,string password)
+        public void NVAddNew(ListViewItem lvi_nv, string password)
         {
             //Insert Ncc trong databse voi password 
-            data.NVs.InsertOnSubmit(AddNVInV(lvi_nv,password));
+            data.NVs.InsertOnSubmit(AddNVInV(lvi_nv, password));
             data.SubmitChanges();
         }
 
         public void UpdateNV(ListViewItem lvi_nv) //Update NhanVien trong database(Khong doi password duoc)
         {
             var NhanVienList = (from a in data.NVs
-                              where a.userID.ToString() == lvi_nv.Text
-                              select a);
+                                where a.userID.ToString() == lvi_nv.Text
+                                select a);
             foreach (NV V in NhanVienList)
             {
                 V.userName = lvi_nv.SubItems[1].Text;
@@ -107,11 +111,12 @@ namespace WindowsFormsApplication1
         }
 
         //Kiem tra account co ton tai trong database
-        public bool CheckAccountExsits(string account) {
+        public bool CheckAccountExsits(string account)
+        {
             var listNV = from nhanvien in data.NVs
                          where nhanvien.userAccount == account
                          select nhanvien;
-            if (listNV.Count()>1)
+            if (listNV.Count() > 1)
                 return false;
             return true;
         }
@@ -138,12 +143,12 @@ namespace WindowsFormsApplication1
             return listNV;
         }
 
-        public void ChangePassword(int id,string password)//Thay đổi password
+        public void ChangePassword(int id, string password)//Thay đổi password
         {
             var varnv = from v in data.NVs
-                 where v.userID == id
-                 select v;
-            foreach(NV nv in varnv)
+                        where v.userID == id
+                        select v;
+            foreach (NV nv in varnv)
             {
                 nv.userPassword = password;
             }
@@ -155,7 +160,7 @@ namespace WindowsFormsApplication1
             var varnv = from v in data.NVs
                         where v.userID == id
                         select v;
-            foreach(NV nv in varnv)
+            foreach (NV nv in varnv)
             {
                 if (nv.userPassword == password)
                     return true;

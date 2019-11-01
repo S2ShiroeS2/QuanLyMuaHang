@@ -16,14 +16,11 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        List<ListViewItem> list_vendor = new List<ListViewItem>();
-        VendorController VC = new VendorController();
+        private List<ListViewItem> list_vendor = new List<ListViewItem>();
+        private VendorController VC = new VendorController();
         public static ListViewItem lvi_ncc { get; private set; } = new ListViewItem();
         public static bool flag_ncc { get;private set; } = true;
-        public void _refresh()
-        {
-            this.Refresh();
-        }
+
         private void Form_QLNCC_Load(object sender, EventArgs e)
         {
             list_vendor.Clear();

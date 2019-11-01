@@ -17,8 +17,8 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        List<ListViewItem> list_NV = new List<ListViewItem>();
-        NhanVienController NVC = new NhanVienController();
+        private List<ListViewItem> list_NV = new List<ListViewItem>();
+        private NhanVienController NVC = new NhanVienController();
         public static bool flag_nv { get; private set; } = true;
         public static ListViewItem lvi_nv { get; private set; } = new ListViewItem();
 

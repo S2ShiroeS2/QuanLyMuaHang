@@ -38,7 +38,7 @@ namespace WindowsFormsApplication1
             txb_VendorID.Clear();
             txb_VendorName.Clear();
             txb_Available.Clear();
-            if (frm_QLNCC.flag_ncc == false)
+            if (frm_QLNCC.flag_ncc == false)//KHi xem thông tin chi tiết 1 Vendor
             {
                 txb_VendorID.Text = frm_QLNCC.lvi_ncc.SubItems[0].Text;
                 txb_VendorName.Text = frm_QLNCC.lvi_ncc.SubItems[1].Text;
@@ -51,6 +51,7 @@ namespace WindowsFormsApplication1
 
                 Enable_txb(false);
             }
+            // Khi nhập mới 1 vendor
             else {
                 btn_UpdateVendor.Enabled = false;
                 txb_Available.Text = "False";

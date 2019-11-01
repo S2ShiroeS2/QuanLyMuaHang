@@ -178,9 +178,9 @@
             this.label6.Location = new System.Drawing.Point(731, 57);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 25);
+            this.label6.Size = new System.Drawing.Size(129, 25);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Been there Done that";
+            this.label6.Text = "Có sản phẩm";
             // 
             // txb_Available
             // 
@@ -211,7 +211,7 @@
             this.nbb_Vat.Size = new System.Drawing.Size(120, 30);
             this.nbb_Vat.TabIndex = 17;
             // 
-            // formCT_ncc
+            // frm_CTNCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -233,7 +233,7 @@
             this.Controls.Add(this.txb_VendorName);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "formCT_ncc";
+            this.Name = "frm_CTNCC";
             this.Text = "formCT_ncc";
             this.Load += new System.EventHandler(this.formCT_ncc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nbb_Vat)).EndInit();
