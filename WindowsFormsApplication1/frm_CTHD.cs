@@ -23,8 +23,9 @@ namespace WindowsFormsApplication1
         public static bool flag_them_sp { get; private set; } = true;
         public static string ma_hd { get; private set; } = "";
         public static ListViewItem selected_SP { get; private set; } = new ListViewItem();
-
-
+        double tien_truoc_thue = 0;
+        double tien_thue = 0;
+        string ncc_previous = "";
 
 
         //
@@ -60,6 +61,7 @@ namespace WindowsFormsApplication1
                 foreach (ListViewItem a in list_lvi_item)
                     lstv_list_cthd.Items.Insert(0,a);
             }
+            load_tong_tien();
         }
 
         private void lstv_list_cthd_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,9 +72,10 @@ namespace WindowsFormsApplication1
                 btn_Xoa_SP.Enabled = false;
 
         }
-
         private void lstv_list_cthd_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            tien_truoc_thue = 0;
+            tien_thue = 0;
             CTHD_controller.sp_moi = new ListViewItem();
             if (lstv_list_cthd.SelectedItems[0].Text == "Thêm sản phẩm")
             {
@@ -94,7 +97,7 @@ namespace WindowsFormsApplication1
                             CTHD_controller.sp_moi.SubItems[0].Text = (Convert.ToInt32( lstv_list_cthd.Items[lstv_list_cthd.FindItemWithText("Thêm sản phẩm").Index - 1].Text)+1).ToString();
                         lstv_list_cthd.Items.Insert(lstv_list_cthd.FindItemWithText("Thêm sản phẩm").Index, CTHD_controller.sp_moi);
                     }
-                        
+                    
                     
                 }
             }
@@ -109,17 +112,52 @@ namespace WindowsFormsApplication1
                 lstv_list_cthd.Items[ lstv_list_cthd.FindItemWithText(CTHD_controller.sp_moi.SubItems[0].Text).Index] = CTHD_controller.sp_moi;
                
             }
+            load_tong_tien();
             this.Show();
+        }
+
+        private void load_tong_tien()
+        {
+            foreach (ListViewItem a in lstv_list_cthd.Items)
+            {
+                if (a.Text != "Thêm sản phẩm")
+                {
+                    tien_truoc_thue += Convert.ToInt32(a.SubItems[2].Text) * Convert.ToInt32(a.SubItems[3].Text);
+                    tien_thue += Convert.ToInt32(a.SubItems[2].Text) * Convert.ToInt32(a.SubItems[3].Text) * Convert.ToDouble(a.SubItems[4].Text) / 100;
+                }
+
+            }
+            txt_tong_tien_HD_khong_thue.Text = tien_truoc_thue.ToString();
+            txt_Thue_HD.Text = tien_thue.ToString();
+            txt_Tong_tien_HD.Text = (tien_thue + tien_truoc_thue).ToString();
         }
 
         private void cbo_nha_cc_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            
+            if (ncc_previous != "")
+            {
+                if(ncc_previous!=cbo_nha_cc.SelectedItem.ToString())
+                {
+                    DialogResult result = MessageBox.Show("Chi tiết sản phẩm sẽ bị xóa hết nếu thay đổi nhà cung cấp", "Xác nhận", MessageBoxButtons.OKCancel);
+                    if (result == DialogResult.OK)
+                    {
+                        ListViewItem them_SP = lstv_list_cthd.FindItemWithText("Thêm sản phẩm");
+                        lstv_list_cthd.Items.Clear();
+                        lstv_list_cthd.Items.Add(them_SP);
+                    }
+                    else
+                    {
+                        cbo_nha_cc.SelectedItem = ncc_previous;
+                    }
+                }
+                
+            }  
         }
 
         private void btn_Xoa_SP_Click(object sender, EventArgs e)
         {
+            tien_thue = 0;
+            tien_truoc_thue = 0;
             ListViewItem item_selected= lstv_list_cthd.FindItemWithText(lstv_list_cthd.SelectedItems[0].Text);
             lstv_list_cthd.Items.Remove(lstv_list_cthd.SelectedItems[0]);
             foreach(ListViewItem lvi in lstv_list_cthd.Items)
@@ -129,7 +167,8 @@ namespace WindowsFormsApplication1
                     lvi.SubItems[0].Text = (Convert.ToInt32(lvi.Text)-1).ToString();
                 }
             }
-            
+            load_tong_tien();
+
         }
 
         private void btn_luu_Click(object sender, EventArgs e)
@@ -142,6 +181,14 @@ namespace WindowsFormsApplication1
                 
             else
                 MessageBox.Show("Hóa đơn chưa có sản phẩm nào");
+        }
+
+        private void cbo_nha_cc_DropDown(object sender, EventArgs e)
+        {
+            if (cbo_nha_cc.SelectedItem != null)
+                ncc_previous = cbo_nha_cc.SelectedItem.ToString();
+            else
+                ncc_previous = "";
         }
     }
 }

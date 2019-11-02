@@ -126,8 +126,9 @@ namespace WindowsFormsApplication1
 
             hd.orderID = Convert.ToInt32( mahd);
             hd.userID = 1;
+           // hd.userID = data.NVs.First(x=>x.userAccount==frm_Login.LoginAccount).userID;
             //Them User ID sau
-            hd.status = 0;
+            hd.status = 1;
             hd.orderDate = Convert.ToDateTime(ngay_dat_hang.Value.ToShortDateString());
             hd.VendorID =data.Vendors.First(x => x.VendorName == ncc).VendorID;
             data.OrderTables.InsertOnSubmit(hd);
@@ -141,6 +142,7 @@ namespace WindowsFormsApplication1
                     cthd.orderID = hd.orderID;
                     cthd.ProductID = data.Products.First(x => x.ProductName == lvi.SubItems[1].Text).ProductID;
                     cthd.tax = Convert.ToDouble(lvi.SubItems[4].Text);
+                    cthd.UnitPrice = Convert.ToInt32(lvi.SubItems[3].Text);
                     cthd.orderQuantity = Convert.ToInt32(lvi.SubItems[2].Text);
                     data.OrderDetails.InsertOnSubmit(cthd);
                     data.SubmitChanges();

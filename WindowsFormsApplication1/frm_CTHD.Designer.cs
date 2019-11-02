@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Thêm sản phẩm"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.lbl_chitiethoadon = new System.Windows.Forms.Label();
             this.txt_Ma_HD = new System.Windows.Forms.TextBox();
@@ -115,8 +115,8 @@
             this.lstv_list_cthd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstv_list_cthd.FullRowSelect = true;
             this.lstv_list_cthd.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
-            this.lstv_list_cthd.Location = new System.Drawing.Point(16, 138);
+            listViewItem1});
+            this.lstv_list_cthd.Location = new System.Drawing.Point(25, 146);
             this.lstv_list_cthd.MultiSelect = false;
             this.lstv_list_cthd.Name = "lstv_list_cthd";
             this.lstv_list_cthd.Size = new System.Drawing.Size(900, 199);
@@ -243,6 +243,7 @@
             this.cbo_nha_cc.Name = "cbo_nha_cc";
             this.cbo_nha_cc.Size = new System.Drawing.Size(121, 21);
             this.cbo_nha_cc.TabIndex = 18;
+            this.cbo_nha_cc.DropDown += new System.EventHandler(this.cbo_nha_cc_DropDown);
             this.cbo_nha_cc.SelectedIndexChanged += new System.EventHandler(this.cbo_nha_cc_SelectedIndexChanged);
             // 
             // btn_Xoa_SP

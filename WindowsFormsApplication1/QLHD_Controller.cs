@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1
                 string tinh_trang = "";
                 ListViewItem hd = new ListViewItem();// thông tin 1 hóa đơn được lưu trong một listviewitem
                 hd.Text = a.mahd.ToString();
-                hd.SubItems.Add(a.ngay_dat.ToString());
+                hd.SubItems.Add(a.ngay_dat.ToShortDateString());
                 hd.SubItems.Add(a.nha_cc.ToString());
                 hd.SubItems.Add(a.ten_nv.ToString());
                 if (a.tinh_trang == 1)
@@ -54,5 +54,12 @@ namespace WindowsFormsApplication1
             return list_lvi_hd;
         }
 
+        public void thay_doi_tinh_trang_HD(int id,string a)
+        {
+            OrderTable hd_sp = data.OrderTables.First(x => x.orderID == id);
+            hd_sp.status = a == "Đang yêu cầu" ? 0 : 1;
+            data.SubmitChanges();
+            
+        }
     }
 }

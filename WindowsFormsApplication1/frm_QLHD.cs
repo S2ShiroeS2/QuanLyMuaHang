@@ -65,7 +65,28 @@ namespace WindowsFormsApplication1
         private void lstv_list_HD_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(lstv_list_HD.SelectedItems.Count>0)
+            {
                 hd_id = Convert.ToInt16(lstv_list_HD.SelectedItems[0].SubItems[0].Text);
+                if (lstv_list_HD.SelectedItems[0].SubItems[4].Text == "Đang yêu cầu")
+                    btn_xac_nhan_HD.Enabled = true;
+                else
+                    btn_xac_nhan_HD.Enabled = false;
+            }
+                
+        }
+
+        private void btn_xac_nhan_HD_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Nhà cung cấp đã giao hàng?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                QLHD_crtl.thay_doi_tinh_trang_HD(Convert.ToInt32(lstv_list_HD.SelectedItems[0].SubItems[0].Text), lstv_list_HD.SelectedItems[0].SubItems[4].Text);
+            }
+            else
+            {
+            }
+            lam_moi_listview();
+            btn_xac_nhan_HD.Enabled = false;
         }
     }
 }

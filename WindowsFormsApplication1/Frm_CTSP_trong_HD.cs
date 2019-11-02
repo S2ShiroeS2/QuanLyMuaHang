@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
             if (txt_So_luong.Text.Length != 0&&txt_So_luong.Text.All(char.IsNumber) == true && Convert.ToDouble(txt_So_luong.Text) > 0)
             {
                 this.err_so_luong.Clear();   
-                if (txt_Thue.Text.Length != 0 && txt_Thue.Text.All(char.IsNumber) == true && Convert.ToDouble(txt_Thue.Text) > 0)
+                if (txt_Thue.Text.Length != 0 && txt_Thue.Text.All(char.IsNumber) == true && Convert.ToDouble(txt_Thue.Text) >= 0)
                 {
                     if(txt_Don_gia.Text.Length != 0 && txt_Don_gia.Text.All(char.IsNumber) == true && Convert.ToDouble(txt_Don_gia.Text) > 0)
                     {
@@ -91,10 +91,10 @@ namespace WindowsFormsApplication1
 
         private void txt_Thue_TextChanged(object sender, EventArgs e)
         {
-            if(txt_Thue.Text.Length==0|| txt_Thue.Text.All(char.IsNumber)==false || Convert.ToDouble(txt_Thue.Text) <=0)
+            if(txt_Thue.Text.Length==0|| txt_Thue.Text.All(char.IsNumber)==false || Convert.ToDouble(txt_Thue.Text) <0)
             {
                 btn_xac_nhan.Enabled = false;
-                this.err_thue.SetError(txt_Thue, "Thuế phải là số và lớn hơn 0");
+                this.err_thue.SetError(txt_Thue, "Thuế phải là số");
             }                
             else
             {
@@ -112,15 +112,17 @@ namespace WindowsFormsApplication1
                     else
                     {
                         btn_xac_nhan.Enabled = false;
-                        this.err_Don_gia.SetError(txt_Don_gia, "Giá không được để trống");
-                        
+                        this.err_Don_gia.SetError(txt_Don_gia, "Giá không được để trống");      
                     }
                 }
                 else
                 {
                     btn_xac_nhan.Enabled = false;
                     this.err_so_luong.SetError(txt_So_luong, "Số lượng không được để trống");
-                    this.err_Don_gia.SetError(txt_Don_gia, "Giá không được để trống");
+                    if (txt_Don_gia.Text.Length == 0 && txt_Don_gia.Text.All(char.IsNumber) == false && Convert.ToDouble(txt_Don_gia.Text) <= 0)
+                    {
+                        this.err_Don_gia.SetError(txt_Don_gia, "Giá không được để trống");
+                    }
                 }
                     
             }   
@@ -158,7 +160,7 @@ namespace WindowsFormsApplication1
 
                 if (txt_So_luong.Text.Length != 0 && txt_So_luong.Text.All(char.IsNumber) == true && Convert.ToDouble(txt_So_luong.Text) > 0 )
                 {
-                    if(txt_Thue.Text.Length != 0 && txt_Thue.Text.All(char.IsNumber) == true && Convert.ToDouble(txt_Thue.Text) > 0)
+                    if(txt_Thue.Text.Length != 0 && txt_Thue.Text.All(char.IsNumber) == true && Convert.ToDouble(txt_Thue.Text) >= 0)
                     {
                         txt_tien_truoc_thue.Text = (Convert.ToDouble(txt_Don_gia.Text) * Convert.ToDouble(txt_So_luong.Text)).ToString();
                         txt_tien_thue.Text = (Convert.ToDouble(txt_Don_gia.Text) * Convert.ToDouble(txt_So_luong.Text) * Convert.ToDouble(txt_Thue.Text) / 100).ToString();
