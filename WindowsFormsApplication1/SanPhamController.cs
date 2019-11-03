@@ -39,18 +39,14 @@ namespace WindowsFormsApplication1
         {
             list_SP.Clear();
             data_SP = new DataClasses1DataContext();
-   
             var List_SanPham = from SP in data_SP.Products
-                               //join ODD in data_SP.OrderDetails on SP.ProductID equals ODD.ProductID
                                join PC in data_SP.ProductCategories on SP.ProductCategoryID equals PC.ProductCategoryID
-                        //       group ODD by new { SP.ProductID, SP.ProductName, SP.ProductType, PC.ProductCategoryName,SP.Manufacture } into Quanti
                                select new
                                {
                                    MaSP = SP.ProductID,
                                    TenSP = SP.ProductName,
                                    LoaiSP = SP.ProductType,
                                    DanhMucSP = PC.ProductCategoryName,
-                                //   SoLuong = SP.Sum(x => x.orderQuantity),
                                    NhaSX = SP.Manufacture,
                                };
             foreach (var SP in List_SanPham)
@@ -60,8 +56,6 @@ namespace WindowsFormsApplication1
                 Items.SubItems.Add(SP.TenSP);
                 Items.SubItems.Add(SP.LoaiSP ? "Được bán" : "Không bán");
                 Items.SubItems.Add(SP.DanhMucSP);
-             //   Items.SubItems.Add(SP.SoLuong.ToString());
-  
                 Items.SubItems.Add(SP.NhaSX);
                 list_SP.Add(Items);
             }
@@ -111,9 +105,31 @@ namespace WindowsFormsApplication1
                 data_SP.VendorProducts.InsertOnSubmit(vendor_Product);
                 data_SP.SubmitChanges();
             }
-            
-           
-            
+        }
+
+        //Sửa thông tin sản phẩm
+        public void Edit_Poduct(ListViewItem lvi_products, ListView.ListViewItemCollection list_Vendors)
+        {
+            Product product = new Product();
+            ProductCategory catagory_Product = new ProductCategory();
+            VendorProduct vendor_Product = new VendorProduct();
+            foreach (ListViewItem items in lvi_products.SubItems)
+            {
+                if (product.ProductID == Convert.ToInt32(items.SubItems[0].Text))
+                {
+                    product.ProductName = items.SubItems[1].Text;
+                    product.ProductType = items.SubItems[2].Text == "Được bán" ? true : false;
+                    product.ProductCategoryID = data_SP.ProductCategories.First(x => x.ProductCategoryName == items.SubItems[3].Text).ProductCategoryID;
+                    product.Manufacture = items.SubItems[4].Text;
+                    data_SP.SubmitChanges();
+                    foreach (ListViewItem i in list_Vendors)
+                    {
+                        vendor_Product.ProductID = product.ProductID;
+                        vendor_Product.VendorID = data_SP.Vendors.First(x => x.VendorName == i.Text).VendorID;
+                        data_SP.SubmitChanges();
+                    }
+                }
+            }
         }
     }
 }

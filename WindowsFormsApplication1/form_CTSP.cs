@@ -39,8 +39,7 @@ namespace WindowsFormsApplication1
                     cbo_danh_muc_sp.Items.Add(category);
                 }
                 cbo_danh_muc_sp.SelectedItem = Form_QLSP.lvi_sanPham.SubItems[3].Text;
-                txt_so_luong_sp.Text = Form_QLSP.lvi_sanPham.SubItems[4].Text;
-                txt_nha_sx.Text = Form_QLSP.lvi_sanPham.SubItems[5].Text;
+                txt_nha_sx.Text = Form_QLSP.lvi_sanPham.SubItems[4].Text;
                 list_Ncc = navigate_SanPham.Load_List_Ncc(Convert.ToInt16(txt_ma_sp.Text));
                 enable_Control(Form_QLSP.flag_sp);
                 foreach (ListViewItem a in list_Ncc)
@@ -94,14 +93,21 @@ namespace WindowsFormsApplication1
         private void btn_luu_Click(object sender, EventArgs e)
         {
             lvi_SanPham = new ListViewItem();
-            lvi_SanPham.Text =(txt_ma_sp.Text);
+            lvi_SanPham.Text = (txt_ma_sp.Text);
             lvi_SanPham.SubItems.Add(txt_ten_sp.Text);
             lvi_SanPham.SubItems.Add(cbo_loai_sp.SelectedItem.ToString());
             lvi_SanPham.SubItems.Add(cbo_danh_muc_sp.SelectedItem.ToString());
-            lvi_SanPham.SubItems.Add(txt_so_luong_sp.Text);
             lvi_SanPham.SubItems.Add(txt_nha_sx.Text);
-            navigate_SanPham.Insert_Product(lvi_SanPham, lstv_nha_cung_cap.Items);
-            this.Close();
+            if (flag == true)
+            {
+                navigate_SanPham.Insert_Product(lvi_SanPham, lstv_nha_cung_cap.Items);
+                this.Close();
+            }
+            else
+            {
+                navigate_SanPham.Edit_Poduct(lvi_SanPham, lstv_nha_cung_cap.Items);
+                this.Close();
+            }
         }
     }
 }

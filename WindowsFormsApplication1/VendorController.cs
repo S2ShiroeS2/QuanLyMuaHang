@@ -31,7 +31,6 @@ namespace WindowsFormsApplication1
                 lvi.SubItems.Add(V.VendorAvailable.ToString());
                 listVendor.Add(lvi);
             }
-            
             return listVendor;
         }
         public List<ListViewItem> VendorListSearch(string SearchNameData)
@@ -76,7 +75,6 @@ namespace WindowsFormsApplication1
             V.VendorEmail = lvi_vendor.SubItems[4].Text;
             V.VendorPhone = lvi_vendor.SubItems[5].Text;
             V.VendorAvailable = bool.Parse(lvi_vendor.SubItems[6].Text);
-
             data.Vendors.InsertOnSubmit(V);
             data.SubmitChanges();
         }
