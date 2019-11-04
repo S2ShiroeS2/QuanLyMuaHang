@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
             var list_ncc = from product in data_SP.Products
                            join vendor_product in data_SP.VendorProducts on product.ProductID equals vendor_product.ProductID
                            join vendor in data_SP.Vendors on vendor_product.VendorID equals vendor.VendorID
-                           where (vendor_product.ProductID== product_id)
+                           where (vendor_product.ProductID == product_id)
                            select new
                            {
                                ten_ncc=vendor.VendorName
@@ -110,26 +110,57 @@ namespace WindowsFormsApplication1
         //Sửa thông tin sản phẩm
         public void Edit_Poduct(ListViewItem lvi_products, ListView.ListViewItemCollection list_Vendors)
         {
-            Product product = new Product();
+            Product product = data_SP.Products.First(x => x.ProductID ==Convert.ToInt32( lvi_products.SubItems[0].Text));
             ProductCategory catagory_Product = new ProductCategory();
             VendorProduct vendor_Product = new VendorProduct();
-            foreach (ListViewItem items in lvi_products.SubItems)
+          
+            product.ProductName = lvi_products.SubItems[1].Text;
+            product.ProductType = lvi_products.SubItems[2].Text == "Được bán" ? true : false;
+            product.ProductCategoryID = data_SP.ProductCategories.First(x => x.ProductCategoryName == lvi_products.SubItems[3].Text).ProductCategoryID;
+            product.Manufacture = lvi_products.SubItems[4].Text;
+            data_SP.SubmitChanges();
+            foreach (ListViewItem i in list_Vendors)
             {
-                if (product.ProductID == Convert.ToInt32(items.SubItems[0].Text))
+                vendor_Product.ProductID = product.ProductID;
+                vendor_Product.VendorID = data_SP.Vendors.First(x => x.VendorName == i.Text).VendorID;
+                data_SP.SubmitChanges();
+            }
+        }
+
+        public List<ListViewItem> Search_Product(String name_Product)
+        {
+            bool flag_Search = false; 
+            list_SP.Clear();
+            data_SP = new DataClasses1DataContext();
+            var List_SanPham = from SP in data_SP.Products
+                               join PC in data_SP.ProductCategories on SP.ProductCategoryID equals PC.ProductCategoryID
+                               select new
+                               {
+                                   MaSP = SP.ProductID,
+                                   TenSP = SP.ProductName,
+                                   LoaiSP = SP.ProductType,
+                                   DanhMucSP = PC.ProductCategoryName,
+                                   NhaSX = SP.Manufacture,
+                               };
+            foreach (var SP in List_SanPham)
+            {
+                if(SP.TenSP == name_Product)
                 {
-                    product.ProductName = items.SubItems[1].Text;
-                    product.ProductType = items.SubItems[2].Text == "Được bán" ? true : false;
-                    product.ProductCategoryID = data_SP.ProductCategories.First(x => x.ProductCategoryName == items.SubItems[3].Text).ProductCategoryID;
-                    product.Manufacture = items.SubItems[4].Text;
-                    data_SP.SubmitChanges();
-                    foreach (ListViewItem i in list_Vendors)
-                    {
-                        vendor_Product.ProductID = product.ProductID;
-                        vendor_Product.VendorID = data_SP.Vendors.First(x => x.VendorName == i.Text).VendorID;
-                        data_SP.SubmitChanges();
-                    }
+                    ListViewItem Items = new ListViewItem();
+                    Items.Text = SP.MaSP.ToString();
+                    Items.SubItems.Add(SP.TenSP);
+                    Items.SubItems.Add(SP.LoaiSP ? "Được bán" : "Không bán");
+                    Items.SubItems.Add(SP.DanhMucSP);
+                    Items.SubItems.Add(SP.NhaSX);
+                    list_SP.Add(Items);
+                    flag_Search = true;
                 }
             }
+            if(flag_Search == false)
+            {
+                MessageBox.Show("Không tìm thấy!");
+            }
+            return list_SP;
         }
     }
 }

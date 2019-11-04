@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1
         private void Form_QLSP_Load(object sender, EventArgs e)
         {
             list_SanPham = navigate_SanPham.Load_List_San_Pham();
-            foreach(ListViewItem SanPham in list_SanPham)
+            foreach (ListViewItem SanPham in list_SanPham)
             {
                 lstv_list_SP.Items.Add(SanPham);
             }
@@ -35,6 +35,12 @@ namespace WindowsFormsApplication1
         {
             list_SanPham.Clear();
             lstv_list_SP.Items.Clear();
+            list_SanPham = navigate_SanPham.Search_Product(txt_tim_kiem_SP.Text);
+
+            foreach(ListViewItem item in list_SanPham)
+            {
+                lstv_list_SP.Items.Add(item);
+            }
         }
 
         private void lam_moi()
@@ -52,7 +58,7 @@ namespace WindowsFormsApplication1
             flag_sp = false; // Lúc sửa sản phẩm
             form_CTSP GUI_CTSP = new form_CTSP();
             GUI_CTSP.ShowDialog();
-            
+            lam_moi();
         }
 
         private void lstv_list_SP_SelectedIndexChanged(object sender, EventArgs e)

@@ -16,7 +16,6 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        public delegate void SendMessage(List<ListViewItem> value);
         public static List<ListViewItem> list_Ncc = new List<ListViewItem>();
         SanPhamController navigate_SanPham = new SanPhamController();
         public static bool flag { get; private set; } = true;
