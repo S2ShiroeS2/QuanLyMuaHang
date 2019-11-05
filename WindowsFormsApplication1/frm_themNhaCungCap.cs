@@ -35,7 +35,10 @@ namespace WindowsFormsApplication1
                 if(lstv_list_ncc_them.FindItemWithText(ncc.Text)==null)
                     lstv_list_ncc_co.Items.Add(ncc.Text);
             }
-            
+            if(form_CTSP.flag == false)
+            {
+                btn_delete.Enabled = false;
+            }
         }
 
         private void btn_add_one_Click(object sender, EventArgs e)

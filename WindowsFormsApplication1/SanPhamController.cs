@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1
         {
             Product product = data_SP.Products.First(x => x.ProductID ==Convert.ToInt32( lvi_products.SubItems[0].Text));
             ProductCategory catagory_Product = new ProductCategory();
-            VendorProduct vendor_Product = new VendorProduct();
+            
           
             product.ProductName = lvi_products.SubItems[1].Text;
             product.ProductType = lvi_products.SubItems[2].Text == "Được bán" ? true : false;
@@ -121,10 +121,19 @@ namespace WindowsFormsApplication1
             data_SP.SubmitChanges();
             foreach (ListViewItem i in list_Vendors)
             {
-                vendor_Product.ProductID = product.ProductID;
-                vendor_Product.VendorID = data_SP.Vendors.First(x => x.VendorName == i.Text).VendorID;
-                data_SP.SubmitChanges();
+                VendorProduct vendor_Product = new VendorProduct();
+                int vendor_id = data_SP.Vendors.First(x => x.VendorName == i.Text).VendorID;
+                
+                if(data_SP.VendorProducts.FirstOrDefault(x=>x.VendorID==vendor_id&&x.ProductID==product.ProductID)==null)
+                {
+                    vendor_Product.ProductID = product.ProductID;
+                    vendor_Product.VendorID = data_SP.Vendors.First(x => x.VendorName == i.Text).VendorID;
+                    data_SP.VendorProducts.InsertOnSubmit(vendor_Product);
+                    data_SP.SubmitChanges();
+                }
+                
             }
+
         }
 
         public List<ListViewItem> Search_Product(String name_Product)
