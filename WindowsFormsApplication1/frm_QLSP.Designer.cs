@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form_QLSP
+    partial class frm_QLSP
     {
         /// <summary>
         /// Required designer variable.

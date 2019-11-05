@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form_QLSP : Form
+    public partial class frm_QLSP : Form
     {
-        public Form_QLSP()
+        public frm_QLSP()
         {
             InitializeComponent();
         }
@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
         private void lstv_list_SP_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             flag_sp = false; // Lúc sửa sản phẩm
-            form_CTSP GUI_CTSP = new form_CTSP();
+            frm_CTSP GUI_CTSP = new frm_CTSP();
             GUI_CTSP.ShowDialog();
             lam_moi();
         }
@@ -73,7 +73,7 @@ namespace WindowsFormsApplication1
             if(flag_sp == true)
             {
                 lvi_sanPham = new ListViewItem();
-                form_CTSP GUI_CTSP = new form_CTSP();
+                frm_CTSP GUI_CTSP = new frm_CTSP();
                 GUI_CTSP.ShowDialog();
                 lam_moi();
             }
