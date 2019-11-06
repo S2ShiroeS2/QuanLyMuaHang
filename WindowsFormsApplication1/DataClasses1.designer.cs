@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString2, mappingSource)
+				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

@@ -131,6 +131,12 @@
     <Compile Include="Frm_CTSP_trong_HD.Designer.cs">
       <DependentUpon>Frm_CTSP_trong_HD.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Them_danh_muc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Them_danh_muc.Designer.cs">
+      <DependentUpon>frm_Them_danh_muc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_TTCN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_CTSP_trong_HD.resx">
       <DependentUpon>Frm_CTSP_trong_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Them_danh_muc.resx">
+      <DependentUpon>frm_Them_danh_muc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TTCN.resx">
       <DependentUpon>frm_TTCN.cs</DependentUpon>

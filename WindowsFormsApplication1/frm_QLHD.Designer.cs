@@ -39,7 +39,6 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_tao_moi = new System.Windows.Forms.Button();
             this.btn_xac_nhan_HD = new System.Windows.Forms.Button();
-            this.cbo_loai_tim_kiem = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txt_search
@@ -52,13 +51,13 @@
             // 
             // btn_search
             // 
-            this.btn_search.Enabled = false;
             this.btn_search.Location = new System.Drawing.Point(813, 13);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(81, 40);
             this.btn_search.TabIndex = 16;
             this.btn_search.Text = "Tìm kiếm";
             this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // lstv_list_HD
             // 
@@ -133,27 +132,11 @@
             this.btn_xac_nhan_HD.UseVisualStyleBackColor = true;
             this.btn_xac_nhan_HD.Click += new System.EventHandler(this.btn_xac_nhan_HD_Click);
             // 
-            // cbo_loai_tim_kiem
-            // 
-            this.cbo_loai_tim_kiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_loai_tim_kiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_loai_tim_kiem.FormattingEnabled = true;
-            this.cbo_loai_tim_kiem.Items.AddRange(new object[] {
-            "Ngày đặt hàng",
-            "Nhà cung cấp",
-            "Nhân viên đặt",
-            "Tình trạng"});
-            this.cbo_loai_tim_kiem.Location = new System.Drawing.Point(415, 20);
-            this.cbo_loai_tim_kiem.Name = "cbo_loai_tim_kiem";
-            this.cbo_loai_tim_kiem.Size = new System.Drawing.Size(127, 28);
-            this.cbo_loai_tim_kiem.TabIndex = 19;
-            // 
             // frm_QLHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 474);
-            this.Controls.Add(this.cbo_loai_tim_kiem);
             this.Controls.Add(this.btn_xac_nhan_HD);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.btn_search);
@@ -180,6 +163,5 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Button btn_tao_moi;
         private System.Windows.Forms.Button btn_xac_nhan_HD;
-        private System.Windows.Forms.ComboBox cbo_loai_tim_kiem;
     }
 }

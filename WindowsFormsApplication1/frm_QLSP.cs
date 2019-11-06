@@ -36,11 +36,16 @@ namespace WindowsFormsApplication1
             list_SanPham.Clear();
             lstv_list_SP.Items.Clear();
             list_SanPham = navigate_SanPham.Search_Product(txt_tim_kiem_SP.Text);
-
-            foreach(ListViewItem item in list_SanPham)
+            if (txt_tim_kiem_SP.Text.Length > 0)
             {
-                lstv_list_SP.Items.Add(item);
+                foreach (ListViewItem item in list_SanPham)
+                {
+                    lstv_list_SP.Items.Add(item);
+                }
             }
+            else
+                lam_moi();
+            
         }
 
         private void lam_moi()

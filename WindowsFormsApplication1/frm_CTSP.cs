@@ -33,10 +33,7 @@ namespace WindowsFormsApplication1
                     if(loai.ToString()== frm_QLSP.lvi_sanPham.SubItems[2].Text)
                         cbo_loai_sp.SelectedItem = loai;
                 }
-                foreach(var category in navigate_SanPham.load_List_Category())
-                {
-                    cbo_danh_muc_sp.Items.Add(category);
-                }
+                lam_moi_cbo_danh_muc();
                 cbo_danh_muc_sp.SelectedItem = frm_QLSP.lvi_sanPham.SubItems[3].Text;
                 txt_nha_sx.Text = frm_QLSP.lvi_sanPham.SubItems[4].Text;
                 list_Ncc = navigate_SanPham.Load_List_Ncc(Convert.ToInt16(txt_ma_sp.Text));
@@ -48,10 +45,7 @@ namespace WindowsFormsApplication1
             {
                 flag = true;
                 txt_ma_sp.Text = (navigate_SanPham.GetMax_ProductID() + 1).ToString();
-                foreach (var category in navigate_SanPham.load_List_Category())
-                {
-                    cbo_danh_muc_sp.Items.Add(category);
-                }
+                lam_moi_cbo_danh_muc();
 
             }
         }
@@ -89,6 +83,16 @@ namespace WindowsFormsApplication1
             }
         }
 
+        public void lam_moi_cbo_danh_muc()
+        {
+            cbo_danh_muc_sp.Items.Clear();
+            foreach (var category in navigate_SanPham.load_List_Category())
+            {
+                cbo_danh_muc_sp.Items.Insert(0, category);
+            }
+            cbo_danh_muc_sp.Items.Add( "Thêm danh mục");
+        }
+
         private void btn_luu_Click(object sender, EventArgs e)
         {
             lvi_SanPham = new ListViewItem();
@@ -107,6 +111,21 @@ namespace WindowsFormsApplication1
                 navigate_SanPham.Edit_Poduct(lvi_SanPham, lstv_nha_cung_cap.Items);
                 this.Close();
             }
+        }
+
+        private void cbo_danh_muc_sp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbo_danh_muc_sp.SelectedItem.ToString() == "Thêm danh mục")
+            {
+                frm_Them_danh_muc form_them_dm = new frm_Them_danh_muc();
+                this.Hide();
+                form_them_dm.ShowDialog();
+                lam_moi_cbo_danh_muc();
+                cbo_danh_muc_sp.SelectedText = "";
+                this.Show();
+                
+            }
+                
         }
     }
 }

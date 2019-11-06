@@ -167,9 +167,33 @@ namespace WindowsFormsApplication1
             }
             if(flag_Search == false)
             {
-                MessageBox.Show("Không tìm thấy!");
+                if(name_Product.Length>0)
+                    MessageBox.Show("Không tìm thấy!");
             }
             return list_SP;
+        }
+
+        public int load_ma_danh_muc_max()
+        {
+            var list_danh_muc = from dm in data_SP.ProductCategories
+                                select dm.ProductCategoryID;
+            
+            return list_danh_muc.Max()+1;
+        }
+
+        public void luu_danh_muc_moi(int ma_dm,string ten_dm)
+        {
+            ProductCategory danh_muc_moi = new ProductCategory();
+            if (data_SP.ProductCategories.FirstOrDefault(x => x.ProductCategoryName == ten_dm) == null)
+            {
+                danh_muc_moi.ProductCategoryID = ma_dm;
+                danh_muc_moi.ProductCategoryName = ten_dm;
+                data_SP.ProductCategories.InsertOnSubmit(danh_muc_moi);
+                data_SP.SubmitChanges();
+            }
+            else
+                MessageBox.Show("Đã tồn tại tên danh mục này");
+
         }
     }
 }

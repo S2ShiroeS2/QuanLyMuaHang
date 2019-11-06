@@ -152,6 +152,7 @@
             this.cbo_danh_muc_sp.Name = "cbo_danh_muc_sp";
             this.cbo_danh_muc_sp.Size = new System.Drawing.Size(168, 21);
             this.cbo_danh_muc_sp.TabIndex = 18;
+            this.cbo_danh_muc_sp.SelectedIndexChanged += new System.EventHandler(this.cbo_danh_muc_sp_SelectedIndexChanged);
             // 
             // lstv_nha_cung_cap
             // 
@@ -209,7 +210,7 @@
             this.btn_them_ncc.UseVisualStyleBackColor = true;
             this.btn_them_ncc.Click += new System.EventHandler(this.btn_them_ncc_Click);
             // 
-            // form_CTSP
+            // frm_CTSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -230,7 +231,7 @@
             this.Controls.Add(this.lbl_ten_sp);
             this.Controls.Add(this.txt_ma_sp);
             this.Controls.Add(this.lbl_ma_sp);
-            this.Name = "form_CTSP";
+            this.Name = "frm_CTSP";
             this.Text = "form_CTSP";
             this.Load += new System.EventHandler(this.form_CTSP_Load);
             this.ResumeLayout(false);

@@ -88,5 +88,26 @@ namespace WindowsFormsApplication1
             lam_moi_listview();
             btn_xac_nhan_HD.Enabled = false;
         }
+
+
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            lam_moi_listview();
+            foreach(ListViewItem lvi in lstv_list_HD.Items)
+            {
+                int kiemtra = 0;
+                foreach(ListViewItem.ListViewSubItem sub in lvi.SubItems)
+                {
+                    if (sub.Text.ToLower().Contains(txt_search.Text) == false)
+                    {
+                        kiemtra++;
+                    }        
+                }
+                if (kiemtra == lvi.SubItems.Count)
+                    lstv_list_HD.Items.Remove(lvi);
+            }
+
+        }
     }
 }
