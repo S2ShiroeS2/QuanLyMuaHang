@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class form_CTSP : Form
+    public partial class frm_CTSP : Form
     {
-        public form_CTSP()
+        public frm_CTSP()
         {
             InitializeComponent();
         }
@@ -24,23 +24,23 @@ namespace WindowsFormsApplication1
         private void form_CTSP_Load(object sender, EventArgs e)
         {
             list_Ncc=new List<ListViewItem>();
-            if(Form_QLSP.flag_sp==false) // Sửa sản phẩm
+            if(frm_QLSP.flag_sp==false) // Sửa sản phẩm
             {
-                txt_ma_sp.Text = Form_QLSP.lvi_sanPham.SubItems[0].Text;
-                txt_ten_sp.Text = Form_QLSP.lvi_sanPham.SubItems[1].Text; 
+                txt_ma_sp.Text = frm_QLSP.lvi_sanPham.SubItems[0].Text;
+                txt_ten_sp.Text = frm_QLSP.lvi_sanPham.SubItems[1].Text; 
                 foreach(var loai in cbo_loai_sp.Items)
                 {
-                    if(loai.ToString()== Form_QLSP.lvi_sanPham.SubItems[2].Text)
+                    if(loai.ToString()== frm_QLSP.lvi_sanPham.SubItems[2].Text)
                         cbo_loai_sp.SelectedItem = loai;
                 }
                 foreach(var category in navigate_SanPham.load_List_Category())
                 {
                     cbo_danh_muc_sp.Items.Add(category);
                 }
-                cbo_danh_muc_sp.SelectedItem = Form_QLSP.lvi_sanPham.SubItems[3].Text;
-                txt_nha_sx.Text = Form_QLSP.lvi_sanPham.SubItems[4].Text;
+                cbo_danh_muc_sp.SelectedItem = frm_QLSP.lvi_sanPham.SubItems[3].Text;
+                txt_nha_sx.Text = frm_QLSP.lvi_sanPham.SubItems[4].Text;
                 list_Ncc = navigate_SanPham.Load_List_Ncc(Convert.ToInt16(txt_ma_sp.Text));
-                enable_Control(Form_QLSP.flag_sp);
+                enable_Control(frm_QLSP.flag_sp);
                 foreach (ListViewItem a in list_Ncc)
                     lstv_nha_cung_cap.Items.Add(a);
             }
@@ -75,12 +75,12 @@ namespace WindowsFormsApplication1
             {
                 list_Ncc.Add(i);
             }
-            frm_themNhaCungCap GUI_NCC = new frm_themNhaCungCap();
+            frm_ChiTiet_NCC_SanPham GUI_NCC = new frm_ChiTiet_NCC_SanPham();
             GUI_NCC.ShowDialog();
-            if(frm_themNhaCungCap.list!=null&& frm_themNhaCungCap.flag==true)
+            if(frm_ChiTiet_NCC_SanPham.list!=null&& frm_ChiTiet_NCC_SanPham.flag==true)
             {
                 lstv_nha_cung_cap.Items.Clear();
-                foreach (ListViewItem a in frm_themNhaCungCap.list)
+                foreach (ListViewItem a in frm_ChiTiet_NCC_SanPham.list)
                 {
                     ListViewItem tmp = new ListViewItem();
                     tmp.Text = a.Text;

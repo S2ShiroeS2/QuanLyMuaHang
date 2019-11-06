@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class form_CTSP
+    partial class frm_CTSP
     {
         /// <summary>
         /// Required designer variable.

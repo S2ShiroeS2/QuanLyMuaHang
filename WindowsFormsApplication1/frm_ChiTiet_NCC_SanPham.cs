@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frm_themNhaCungCap : Form
+    public partial class frm_ChiTiet_NCC_SanPham : Form
     {
-        public frm_themNhaCungCap()
+        public frm_ChiTiet_NCC_SanPham()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
             list_Ncc_database = navigate_ncc.Load_Ncc();
             lstv_list_ncc_them.Items.Clear();
             lstv_list_ncc_co.Items.Clear();
-            foreach (ListViewItem ncc in form_CTSP.list_Ncc)
+            foreach (ListViewItem ncc in frm_CTSP.list_Ncc)
             {
                 lstv_list_ncc_them.Items.Add(ncc.Text);
             }
@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1
                 if(lstv_list_ncc_them.FindItemWithText(ncc.Text)==null)
                     lstv_list_ncc_co.Items.Add(ncc.Text);
             }
-            if(form_CTSP.flag == false)
+            if(frm_CTSP.flag == false)
             {
                 btn_delete.Enabled = false;
             }

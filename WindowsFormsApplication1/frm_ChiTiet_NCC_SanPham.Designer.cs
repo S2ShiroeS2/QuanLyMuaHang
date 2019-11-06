@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frm_themNhaCungCap
+    partial class frm_ChiTiet_NCC_SanPham
     {
         /// <summary>
         /// Required designer variable.
