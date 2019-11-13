@@ -12,9 +12,63 @@ namespace WindowsFormsApplication1
 {
     public partial class frm_Menu : Form
     {
+        private frm_QLHD frm_qlhd = new frm_QLHD();
+        private frm_QLSP frm_qlsp = new frm_QLSP();
+        private frm_QLNCC frm_qlncc = new frm_QLNCC();
+        private frm_QLNV frm_qlnv = new frm_QLNV();
+
         public frm_Menu()
         {
             InitializeComponent();
+        }
+
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frm_Menu_Load(object sender, EventArgs e)
+        {
+            if (LoginController.UserRole == "True")
+            {
+                btn_QLNCC.Enabled = true;
+                btn_QLNV.Enabled = true;
+            }
+            else
+            {
+                {
+                    btn_QLNCC.Enabled = false;
+                    btn_QLNV.Enabled = false;
+                }
+            }
+        }
+
+        private void btn_QLHD_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_qlhd.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_QLSP_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_qlsp.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_QLNCC_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_qlncc.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_QLNV_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_qlnv.ShowDialog();
+            this.Show();
         }
     }
 }

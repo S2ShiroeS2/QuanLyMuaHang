@@ -13,12 +13,11 @@ namespace WindowsFormsApplication1
         /// </summary>
         [STAThread]
 
-
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_QLSP());
+            Application.Run(new frm_Login());
         }
     }
 }

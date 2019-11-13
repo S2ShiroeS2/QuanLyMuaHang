@@ -10,8 +10,8 @@ namespace WindowsFormsApplication1
     {
         private DataClasses1DataContext data = new DataClasses1DataContext();
         private NhanVienController NVC = new NhanVienController();
-        public string UserRole { get; private set; }
-        public int UserID { get; private set; }
+        public static string UserRole { get; private set; }
+        public static int UserID { get; private set; }
 
         public bool CheckAccount(string account, string password)//Kiểm tra account có tồn tại trong database kèm theo pass của account đó
         {

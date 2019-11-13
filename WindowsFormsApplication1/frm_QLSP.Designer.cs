@@ -42,16 +42,19 @@
             // txt_tim_kiem_SP
             // 
             this.txt_tim_kiem_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tim_kiem_SP.Location = new System.Drawing.Point(672, 36);
+            this.txt_tim_kiem_SP.Location = new System.Drawing.Point(896, 44);
+            this.txt_tim_kiem_SP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_tim_kiem_SP.Name = "txt_tim_kiem_SP";
-            this.txt_tim_kiem_SP.Size = new System.Drawing.Size(244, 30);
+            this.txt_tim_kiem_SP.Size = new System.Drawing.Size(324, 36);
             this.txt_tim_kiem_SP.TabIndex = 19;
             // 
             // btn_tim_kiem_SP
             // 
-            this.btn_tim_kiem_SP.Location = new System.Drawing.Point(565, 26);
+            this.btn_tim_kiem_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_tim_kiem_SP.Location = new System.Drawing.Point(753, 32);
+            this.btn_tim_kiem_SP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_tim_kiem_SP.Name = "btn_tim_kiem_SP";
-            this.btn_tim_kiem_SP.Size = new System.Drawing.Size(81, 40);
+            this.btn_tim_kiem_SP.Size = new System.Drawing.Size(108, 49);
             this.btn_tim_kiem_SP.TabIndex = 18;
             this.btn_tim_kiem_SP.Text = "Tìm kiếm";
             this.btn_tim_kiem_SP.UseVisualStyleBackColor = true;
@@ -67,10 +70,11 @@
             this.columnHeader2});
             this.lstv_list_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstv_list_SP.FullRowSelect = true;
-            this.lstv_list_SP.Location = new System.Drawing.Point(12, 81);
+            this.lstv_list_SP.Location = new System.Drawing.Point(16, 100);
+            this.lstv_list_SP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstv_list_SP.MultiSelect = false;
             this.lstv_list_SP.Name = "lstv_list_SP";
-            this.lstv_list_SP.Size = new System.Drawing.Size(907, 242);
+            this.lstv_list_SP.Size = new System.Drawing.Size(1208, 297);
             this.lstv_list_SP.TabIndex = 17;
             this.lstv_list_SP.UseCompatibleStateImageBehavior = false;
             this.lstv_list_SP.View = System.Windows.Forms.View.Details;
@@ -105,24 +109,26 @@
             // btn_tao_moi_SP
             // 
             this.btn_tao_moi_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tao_moi_SP.Location = new System.Drawing.Point(12, 26);
+            this.btn_tao_moi_SP.Location = new System.Drawing.Point(16, 32);
+            this.btn_tao_moi_SP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_tao_moi_SP.Name = "btn_tao_moi_SP";
-            this.btn_tao_moi_SP.Size = new System.Drawing.Size(79, 40);
+            this.btn_tao_moi_SP.Size = new System.Drawing.Size(105, 49);
             this.btn_tao_moi_SP.TabIndex = 15;
             this.btn_tao_moi_SP.Text = "Tạo mới";
             this.btn_tao_moi_SP.UseVisualStyleBackColor = true;
             this.btn_tao_moi_SP.Click += new System.EventHandler(this.btn_tao_moi_SP_Click);
             // 
-            // Form_QLSP
+            // frm_QLSP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 474);
+            this.ClientSize = new System.Drawing.Size(1232, 583);
             this.Controls.Add(this.txt_tim_kiem_SP);
             this.Controls.Add(this.btn_tim_kiem_SP);
             this.Controls.Add(this.lstv_list_SP);
             this.Controls.Add(this.btn_tao_moi_SP);
-            this.Name = "Form_QLSP";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frm_QLSP";
             this.Text = "Form_QLSP";
             this.Load += new System.EventHandler(this.Form_QLSP_Load);
             this.ResumeLayout(false);
