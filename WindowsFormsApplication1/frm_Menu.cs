@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         private frm_QLSP frm_qlsp = new frm_QLSP();
         private frm_QLNCC frm_qlncc = new frm_QLNCC();
         private frm_QLNV frm_qlnv = new frm_QLNV();
+        private frm_TTCN frm_ttcn = new frm_TTCN();
 
         public frm_Menu()
         {
@@ -68,6 +69,13 @@ namespace WindowsFormsApplication1
         {
             this.Hide();
             frm_qlnv.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_ChangeInform_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_ttcn.ShowDialog();
             this.Show();
         }
     }

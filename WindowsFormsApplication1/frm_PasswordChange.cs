@@ -21,10 +21,10 @@ namespace WindowsFormsApplication1
 
         private void btn_ConfirmPassword_Click(object sender, EventArgs e)
         {
-            if (LC.CheckPassword(1, txb_OldPassword.Text)) // Thay 1 = LC.userID khi hoàn thành
+            if (LC.CheckPassword(LoginController.UserID, txb_OldPassword.Text)) 
                 if (txb_ConfirmPassword.Text == txb_NewPassword.Text)
                 {
-                    LC.ChangePassword(1, txb_NewPassword.Text);// Thay 1 = LC.userID khi hoàn thành
+                    LC.ChangePassword(LoginController.UserID, txb_NewPassword.Text);
                     MessageBox.Show("Thay đổi mật khẩu thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }

@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
 
         public bool CheckAccount(string account, string password)//Kiểm tra account có tồn tại trong database kèm theo pass của account đó
         {
+            data = new DataClasses1DataContext();
             UserRole = null;
             UserID = -1;
             var N = from VarNhanVien in data.NVs

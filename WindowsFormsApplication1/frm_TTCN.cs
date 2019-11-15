@@ -39,7 +39,10 @@ namespace WindowsFormsApplication1
             txb_Account.Text = lvi_UserInformation[0].SubItems[2].Text;
             txb_Email.Text = lvi_UserInformation[0].SubItems[3].Text;
             txb_Phone.Text = lvi_UserInformation[0].SubItems[4].Text;
-            txb_Role.Text = lvi_UserInformation[0].SubItems[5].Text;
+            if (lvi_UserInformation[0].SubItems[5].Text == "True")
+                txb_Role.Text = "Admin";
+            else
+                txb_Role.Text = "Nhân viên";
         }
         //Kích hoạt textbox
         private void Enable(bool Active)

@@ -124,7 +124,7 @@ namespace WindowsFormsApplication1
         //Lay thong tin NV qua ID cua nv do
         public List<ListViewItem> GetNV(int ID)
         {
-
+            listNV.Clear();
             var NVListFromData = from V in data.NVs
                                  where V.userID == ID
                                  select V;

@@ -33,6 +33,7 @@
             this.btn_QLSP = new System.Windows.Forms.Button();
             this.btn_QLNV = new System.Windows.Forms.Button();
             this.btn_QLNCC = new System.Windows.Forms.Button();
+            this.btn_ChangeInform = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_LogOut
@@ -92,11 +93,23 @@
             this.btn_QLNCC.UseVisualStyleBackColor = true;
             this.btn_QLNCC.Click += new System.EventHandler(this.btn_QLNCC_Click);
             // 
+            // btn_ChangeInform
+            // 
+            this.btn_ChangeInform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_ChangeInform.Location = new System.Drawing.Point(12, 309);
+            this.btn_ChangeInform.Name = "btn_ChangeInform";
+            this.btn_ChangeInform.Size = new System.Drawing.Size(240, 38);
+            this.btn_ChangeInform.TabIndex = 5;
+            this.btn_ChangeInform.Text = "Đổi thông tin cá nhân";
+            this.btn_ChangeInform.UseVisualStyleBackColor = true;
+            this.btn_ChangeInform.Click += new System.EventHandler(this.btn_ChangeInform_Click);
+            // 
             // frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 359);
+            this.Controls.Add(this.btn_ChangeInform);
             this.Controls.Add(this.btn_QLNCC);
             this.Controls.Add(this.btn_QLNV);
             this.Controls.Add(this.btn_QLSP);
@@ -116,5 +129,6 @@
         private System.Windows.Forms.Button btn_QLSP;
         private System.Windows.Forms.Button btn_QLNV;
         private System.Windows.Forms.Button btn_QLNCC;
+        private System.Windows.Forms.Button btn_ChangeInform;
     }
 }

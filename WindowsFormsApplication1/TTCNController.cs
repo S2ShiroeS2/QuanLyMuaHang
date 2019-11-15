@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
 
         public List<ListViewItem> TakeUserInformation()
         {
-            return UserInformation = NVC.GetNV(1);//Thay 1 = Lc.userID khi hoàn thành
+            return UserInformation = NVC.GetNV(LoginController.UserID);
         }
     }
         
