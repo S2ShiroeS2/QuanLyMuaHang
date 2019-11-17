@@ -85,16 +85,19 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_Name.Focus();
                 EP.SetError(txb_Name, "Không được để trống");
+                btn_SaveInform.Enabled=false;
             }
-            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Name.Text, "^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$"))//Regex cho nhập chữ Tiếng Việt
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Name.Text, "^[a-z A-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$"))//Regex cho nhập chữ Tiếng Việt
             {
                 txb_Name.Focus();
                 EP.SetError(txb_Name, "Chỉ được nhập chữ");
+                btn_SaveInform.Enabled=false;
             }
             else
             {
                 e.Cancel = false;
                 EP.SetError(txb_Name, null);
+                btn_SaveInform.Enabled = true;
             }
         }
 
@@ -105,11 +108,13 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_Account.Focus();
                 EP.SetError(txb_Account, "Không được để trống");
+                btn_SaveInform.Enabled=false;
             }
             else
             {
                 e.Cancel = false;
                 EP.SetError(txb_Account, null);
+                btn_SaveInform.Enabled = true;
             }
         }
 
@@ -120,17 +125,20 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_Email.Focus();
                 EP.SetError(txb_Email, "Không được để trống");
+                btn_SaveInform.Enabled=false;
             }
             else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))//Regex email
             {
                 e.Cancel = true;
                 txb_Email.Focus();
                 EP.SetError(txb_Email, "Email không hợp lệ");
+                btn_SaveInform.Enabled=false;
             }
             else
             {
                 e.Cancel = false;
                 EP.SetError(txb_Email, null);
+                btn_SaveInform.Enabled = true;
             }
         }
 
@@ -141,17 +149,20 @@ namespace WindowsFormsApplication1
                 e.Cancel = true;
                 txb_Phone.Focus();
                 EP.SetError(txb_Phone, "Không được để trống");
+                btn_SaveInform.Enabled=false;
             }
-            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Phone.Text, "^[0-9]+$"))// Regex cho chỉ nhập số
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Phone.Text, "^[+]?[0-9]+$"))// Regex cho chỉ nhập số
             {
                 e.Cancel = true;
                 txb_Phone.Focus();
                 EP.SetError(txb_Phone, "Số điện thoại không hợp lệ");
+                btn_SaveInform.Enabled=false;
             }
             else
             {
                 e.Cancel = false;
                 EP.SetError(txb_Phone, null);
+                btn_SaveInform.Enabled = true;
             }
         }
 

@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
         private void bt_Login_Click(object sender, EventArgs e)
         {
             LoginAccount = txb_Account.Text;
-            LoginPassword = txb_Password.Text;
+            LoginPassword = txb_Password.Text.GetHashCode().ToString();
             if (LC.CheckAccount(LoginAccount, LoginPassword))
             {
                 this.Hide();

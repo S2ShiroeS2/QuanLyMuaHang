@@ -53,7 +53,7 @@
             this.txb_Account.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Account.Name = "txb_Account";
             this.txb_Account.Size = new System.Drawing.Size(265, 30);
-            this.txb_Account.TabIndex = 47;
+            this.txb_Account.TabIndex = 2;
             this.txb_Account.Validating += new System.ComponentModel.CancelEventHandler(this.txb_Account_Validating);
             // 
             // label6
@@ -74,7 +74,7 @@
             this.txb_Email.Location = new System.Drawing.Point(177, 300);
             this.txb_Email.Name = "txb_Email";
             this.txb_Email.Size = new System.Drawing.Size(301, 30);
-            this.txb_Email.TabIndex = 45;
+            this.txb_Email.TabIndex = 5;
             this.txb_Email.Validating += new System.ComponentModel.CancelEventHandler(this.txb_Email_Validating);
             // 
             // txb_ID
@@ -85,7 +85,7 @@
             this.txb_ID.Margin = new System.Windows.Forms.Padding(4);
             this.txb_ID.Name = "txb_ID";
             this.txb_ID.Size = new System.Drawing.Size(125, 30);
-            this.txb_ID.TabIndex = 44;
+            this.txb_ID.TabIndex = 3;
             // 
             // label5
             // 
@@ -117,7 +117,7 @@
             this.txb_Phone.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Phone.Name = "txb_Phone";
             this.txb_Phone.Size = new System.Drawing.Size(265, 30);
-            this.txb_Phone.TabIndex = 41;
+            this.txb_Phone.TabIndex = 6;
             this.txb_Phone.Validating += new System.ComponentModel.CancelEventHandler(this.txb_Phone_Validating);
             // 
             // label3
@@ -139,7 +139,7 @@
             this.txb_Name.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Name.Name = "txb_Name";
             this.txb_Name.Size = new System.Drawing.Size(265, 30);
-            this.txb_Name.TabIndex = 37;
+            this.txb_Name.TabIndex = 1;
             this.txb_Name.Validating += new System.ComponentModel.CancelEventHandler(this.txb_Name_Validating);
             // 
             // label1
@@ -159,7 +159,7 @@
             this.btn_ChangePassword.Location = new System.Drawing.Point(177, 382);
             this.btn_ChangePassword.Name = "btn_ChangePassword";
             this.btn_ChangePassword.Size = new System.Drawing.Size(151, 38);
-            this.btn_ChangePassword.TabIndex = 48;
+            this.btn_ChangePassword.TabIndex = 7;
             this.btn_ChangePassword.Text = "Đổi mật khẩu";
             this.btn_ChangePassword.UseVisualStyleBackColor = true;
             this.btn_ChangePassword.Click += new System.EventHandler(this.btn_ChangePassword_Click);
@@ -170,7 +170,7 @@
             this.btn_ChangeInform.Location = new System.Drawing.Point(636, 382);
             this.btn_ChangeInform.Name = "btn_ChangeInform";
             this.btn_ChangeInform.Size = new System.Drawing.Size(231, 38);
-            this.btn_ChangeInform.TabIndex = 49;
+            this.btn_ChangeInform.TabIndex = 8;
             this.btn_ChangeInform.Text = "Đổi thông tin cá nhân";
             this.btn_ChangeInform.UseVisualStyleBackColor = true;
             this.btn_ChangeInform.Click += new System.EventHandler(this.btn_ChangeInform_Click);
@@ -182,7 +182,7 @@
             this.btn_SaveInform.Location = new System.Drawing.Point(903, 382);
             this.btn_SaveInform.Name = "btn_SaveInform";
             this.btn_SaveInform.Size = new System.Drawing.Size(108, 38);
-            this.btn_SaveInform.TabIndex = 50;
+            this.btn_SaveInform.TabIndex = 9;
             this.btn_SaveInform.Text = "Lưu";
             this.btn_SaveInform.UseVisualStyleBackColor = true;
             this.btn_SaveInform.Click += new System.EventHandler(this.btn_SaveInform_Click);
@@ -195,7 +195,7 @@
             this.txb_Role.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Role.Name = "txb_Role";
             this.txb_Role.Size = new System.Drawing.Size(265, 30);
-            this.txb_Role.TabIndex = 52;
+            this.txb_Role.TabIndex = 4;
             // 
             // label2
             // 
@@ -229,7 +229,6 @@
             this.Controls.Add(this.txb_Name);
             this.Controls.Add(this.label1);
             this.Name = "frm_TTCN";
-            this.Text = "frm_TTCN";
             this.Load += new System.EventHandler(this.frm_TTCN_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

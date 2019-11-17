@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1
         //Hiện những trường cần thiết để chỉnh sửa thông tin
         private void enable_Control(bool flag)
         {
-            txt_ten_sp.Enabled = txt_nha_sx.Enabled = txt_so_luong_sp.Enabled = cbo_danh_muc_sp.Enabled = cbo_loai_sp.Enabled = lstv_nha_cung_cap.Enabled = btn_luu.Enabled = btn_them_ncc.Enabled = flag;
+            txt_ten_sp.Enabled = txt_nha_sx.Enabled = cbo_danh_muc_sp.Enabled = cbo_loai_sp.Enabled = lstv_nha_cung_cap.Enabled = btn_luu.Enabled = btn_them_ncc.Enabled = flag;
             btn_sua.Enabled = !flag;
         }
         //Nút Sửa
@@ -95,22 +95,28 @@ namespace WindowsFormsApplication1
 
         private void btn_luu_Click(object sender, EventArgs e)
         {
-            lvi_SanPham = new ListViewItem();
-            lvi_SanPham.Text = (txt_ma_sp.Text);
-            lvi_SanPham.SubItems.Add(txt_ten_sp.Text);
-            lvi_SanPham.SubItems.Add(cbo_loai_sp.SelectedItem.ToString());
-            lvi_SanPham.SubItems.Add(cbo_danh_muc_sp.SelectedItem.ToString());
-            lvi_SanPham.SubItems.Add(txt_nha_sx.Text);
-            if (flag == true)
+            if (lstv_nha_cung_cap.Items.Count > 0 && txt_nha_sx.Text.Length>0 && txt_ten_sp.Text.Length>0 && cbo_danh_muc_sp.SelectedItem!=null && cbo_loai_sp.SelectedItem!=null)
             {
-                navigate_SanPham.Insert_Product(lvi_SanPham, lstv_nha_cung_cap.Items);
-                this.Close();
+
+                lvi_SanPham = new ListViewItem();
+                lvi_SanPham.Text = (txt_ma_sp.Text);
+                lvi_SanPham.SubItems.Add(txt_ten_sp.Text);
+                lvi_SanPham.SubItems.Add(cbo_loai_sp.SelectedItem.ToString());
+                lvi_SanPham.SubItems.Add(cbo_danh_muc_sp.SelectedItem.ToString());
+                lvi_SanPham.SubItems.Add(txt_nha_sx.Text);
+                if (flag == true)
+                {
+                    navigate_SanPham.Insert_Product(lvi_SanPham, lstv_nha_cung_cap.Items);
+                    this.Close();
+                }
+                else
+                {
+                    navigate_SanPham.Edit_Poduct(lvi_SanPham, lstv_nha_cung_cap.Items);
+                    this.Close();
+                }
             }
             else
-            {
-                navigate_SanPham.Edit_Poduct(lvi_SanPham, lstv_nha_cung_cap.Items);
-                this.Close();
-            }
+                MessageBox.Show("Còn dữ liệu chưa nhập vào!");
         }
 
         private void cbo_danh_muc_sp_SelectedIndexChanged(object sender, EventArgs e)

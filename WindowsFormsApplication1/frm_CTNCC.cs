@@ -99,9 +99,29 @@ namespace WindowsFormsApplication1
         //Set ErrorPRovider cho txb_VendorName
         private void txb_ten_ncc_Validating(object sender, CancelEventArgs e)
         {
+            
+        }
+
+
+        private void txb_VendorAddress_Validating(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void txb_Phone_Validating(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void txb_VendorEmail_Validating(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void txb_VendorName_TextChanged(object sender, EventArgs e)
+        {
             if (string.IsNullOrWhiteSpace(txb_VendorName.Text))
             {
-                e.Cancel = true;
                 txb_VendorName.Focus();
                 EP.SetError(txb_VendorName, "Không được để trống");
                 flag_1 = false;
@@ -109,19 +129,16 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                e.Cancel = false;
                 EP.SetError(txb_VendorName, null);
                 flag_1 = true;
                 EnableSaveBtn();
             }
         }
 
-
-        private void txb_VendorAddress_Validating(object sender, CancelEventArgs e)
+        private void txb_VendorAddress_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txb_VendorAddress.Text))
             {
-                e.Cancel = true;
                 txb_VendorAddress.Focus();
                 EP.SetError(txb_VendorAddress, "Không được để trống");
                 flag_3 = false;
@@ -129,45 +146,41 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                e.Cancel = false;
                 EP.SetError(txb_VendorAddress, null);
                 flag_3 = true;
                 EnableSaveBtn();
             }
         }
 
-        private void txb_Phone_Validating(object sender, CancelEventArgs e)
+        private void txb_Phone_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txb_Phone.Text))
             {
-                e.Cancel = true;
                 txb_Phone.Focus();
                 EP.SetError(txb_Phone, "Không được để trống");
                 flag_4 = false;
-                EnableSaveBtn(); 
-            }else
-                if(!System.Text.RegularExpressions.Regex.IsMatch(txb_Phone.Text, "^[0-9]+$"))//Regex cho nhập chữ Tiếng Việt
-                {
-                e.Cancel = true;
+                EnableSaveBtn();
+            }
+            else
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Phone.Text, "^[0-9]+$"))//Regex cho nhập chữ Tiếng Việt
+            {
                 txb_Phone.Focus();
                 EP.SetError(txb_Phone, "Số điện thoại không hợp lệ");
                 flag_4 = false;
                 EnableSaveBtn();
             }
-                else
-                {
-                    e.Cancel = false;
-                    EP.SetError(txb_Phone, null);
-                    flag_4 = true;
-                    EnableSaveBtn();
-                }
+            else
+            {
+                EP.SetError(txb_Phone, null);
+                flag_4 = true;
+                EnableSaveBtn();
+            }
         }
 
-        private void txb_VendorEmail_Validating(object sender, CancelEventArgs e)
+        private void txb_VendorEmail_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txb_VendorEmail.Text))
             {
-                e.Cancel = true;
                 txb_VendorEmail.Focus();
                 EP.SetError(txb_VendorEmail, "Không được để trống");
                 flag_2 = false;
@@ -175,7 +188,6 @@ namespace WindowsFormsApplication1
             }
             else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_VendorEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))//Regex email
             {
-                e.Cancel = true;
                 txb_VendorEmail.Focus();
                 EP.SetError(txb_VendorEmail, "Email không hợp lệ");
                 flag_3 = false;
@@ -183,7 +195,6 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                e.Cancel = false;
                 EP.SetError(txb_VendorEmail, null);
                 flag_2 = true;
                 EnableSaveBtn();

@@ -65,7 +65,8 @@
             this.txb_NVAccount.Margin = new System.Windows.Forms.Padding(4);
             this.txb_NVAccount.Name = "txb_NVAccount";
             this.txb_NVAccount.Size = new System.Drawing.Size(265, 30);
-            this.txb_NVAccount.TabIndex = 31;
+            this.txb_NVAccount.TabIndex = 0;
+            this.txb_NVAccount.TextChanged += new System.EventHandler(this.txb_NVAccount_TextChanged);
             this.txb_NVAccount.Validating += new System.ComponentModel.CancelEventHandler(this.txb_NVAccount_Validating);
             // 
             // label6
@@ -85,7 +86,7 @@
             this.btn_NVSave.Location = new System.Drawing.Point(884, 466);
             this.btn_NVSave.Name = "btn_NVSave";
             this.btn_NVSave.Size = new System.Drawing.Size(127, 55);
-            this.btn_NVSave.TabIndex = 29;
+            this.btn_NVSave.TabIndex = 8;
             this.btn_NVSave.Text = "Lưu";
             this.btn_NVSave.UseVisualStyleBackColor = true;
             this.btn_NVSave.Click += new System.EventHandler(this.btn_nv_luu_Click);
@@ -95,7 +96,7 @@
             this.btn_NVUpdate.Location = new System.Drawing.Point(685, 466);
             this.btn_NVUpdate.Name = "btn_NVUpdate";
             this.btn_NVUpdate.Size = new System.Drawing.Size(127, 55);
-            this.btn_NVUpdate.TabIndex = 28;
+            this.btn_NVUpdate.TabIndex = 7;
             this.btn_NVUpdate.Text = "Sửa ";
             this.btn_NVUpdate.UseVisualStyleBackColor = true;
             this.btn_NVUpdate.Click += new System.EventHandler(this.btn_nv_update_Click);
@@ -105,7 +106,8 @@
             this.txb_NVEmail.Location = new System.Drawing.Point(32, 224);
             this.txb_NVEmail.Name = "txb_NVEmail";
             this.txb_NVEmail.Size = new System.Drawing.Size(301, 22);
-            this.txb_NVEmail.TabIndex = 26;
+            this.txb_NVEmail.TabIndex = 3;
+            this.txb_NVEmail.TextChanged += new System.EventHandler(this.txb_NVEmail_TextChanged);
             this.txb_NVEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txb_NVEmail_Validating);
             // 
             // txb_NVID
@@ -116,7 +118,7 @@
             this.txb_NVID.Margin = new System.Windows.Forms.Padding(4);
             this.txb_NVID.Name = "txb_NVID";
             this.txb_NVID.Size = new System.Drawing.Size(265, 30);
-            this.txb_NVID.TabIndex = 25;
+            this.txb_NVID.TabIndex = 2;
             // 
             // label5
             // 
@@ -147,7 +149,8 @@
             this.txb_NVPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txb_NVPhone.Name = "txb_NVPhone";
             this.txb_NVPhone.Size = new System.Drawing.Size(265, 30);
-            this.txb_NVPhone.TabIndex = 22;
+            this.txb_NVPhone.TabIndex = 4;
+            this.txb_NVPhone.TextChanged += new System.EventHandler(this.txb_NVPhone_TextChanged);
             this.txb_NVPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txb_NVPhone_Validating);
             // 
             // label3
@@ -163,14 +166,16 @@
             // 
             // txb_NVRole
             // 
+            this.txb_NVRole.Enabled = false;
             this.txb_NVRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_NVRole.Location = new System.Drawing.Point(32, 314);
             this.txb_NVRole.Margin = new System.Windows.Forms.Padding(4);
             this.txb_NVRole.Multiline = true;
             this.txb_NVRole.Name = "txb_NVRole";
             this.txb_NVRole.Size = new System.Drawing.Size(105, 30);
-            this.txb_NVRole.TabIndex = 20;
+            this.txb_NVRole.TabIndex = 5;
             this.txb_NVRole.Text = "Nhân viên";
+            this.txb_NVRole.TextChanged += new System.EventHandler(this.txb_NVRole_TextChanged);
             this.txb_NVRole.Validating += new System.ComponentModel.CancelEventHandler(this.txb_NVRole_Validating);
             // 
             // label2
@@ -191,7 +196,8 @@
             this.txb_NVName.Margin = new System.Windows.Forms.Padding(4);
             this.txb_NVName.Name = "txb_NVName";
             this.txb_NVName.Size = new System.Drawing.Size(265, 30);
-            this.txb_NVName.TabIndex = 18;
+            this.txb_NVName.TabIndex = 1;
+            this.txb_NVName.TextChanged += new System.EventHandler(this.txb_NVName_TextChanged);
             this.txb_NVName.Validating += new System.ComponentModel.CancelEventHandler(this.txb_NVName_Validating);
             // 
             // label1
@@ -219,7 +225,7 @@
             this.btn_NVActive.Location = new System.Drawing.Point(597, 298);
             this.btn_NVActive.Name = "btn_NVActive";
             this.btn_NVActive.Size = new System.Drawing.Size(127, 55);
-            this.btn_NVActive.TabIndex = 35;
+            this.btn_NVActive.TabIndex = 6;
             this.btn_NVActive.Text = "Active";
             this.btn_NVActive.UseVisualStyleBackColor = true;
             this.btn_NVActive.Click += new System.EventHandler(this.btn_nv_active_Click);

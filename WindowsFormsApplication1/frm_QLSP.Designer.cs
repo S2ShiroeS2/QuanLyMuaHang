@@ -37,13 +37,14 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_tao_moi_SP = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_tim_kiem_SP
             // 
             this.txt_tim_kiem_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tim_kiem_SP.Location = new System.Drawing.Point(896, 44);
-            this.txt_tim_kiem_SP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_tim_kiem_SP.Location = new System.Drawing.Point(895, 36);
+            this.txt_tim_kiem_SP.Margin = new System.Windows.Forms.Padding(4);
             this.txt_tim_kiem_SP.Name = "txt_tim_kiem_SP";
             this.txt_tim_kiem_SP.Size = new System.Drawing.Size(324, 36);
             this.txt_tim_kiem_SP.TabIndex = 19;
@@ -52,7 +53,7 @@
             // 
             this.btn_tim_kiem_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_tim_kiem_SP.Location = new System.Drawing.Point(753, 32);
-            this.btn_tim_kiem_SP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_tim_kiem_SP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_tim_kiem_SP.Name = "btn_tim_kiem_SP";
             this.btn_tim_kiem_SP.Size = new System.Drawing.Size(108, 49);
             this.btn_tim_kiem_SP.TabIndex = 18;
@@ -71,7 +72,7 @@
             this.lstv_list_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstv_list_SP.FullRowSelect = true;
             this.lstv_list_SP.Location = new System.Drawing.Point(16, 100);
-            this.lstv_list_SP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstv_list_SP.Margin = new System.Windows.Forms.Padding(4);
             this.lstv_list_SP.MultiSelect = false;
             this.lstv_list_SP.Name = "lstv_list_SP";
             this.lstv_list_SP.Size = new System.Drawing.Size(1208, 297);
@@ -84,12 +85,12 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "Mã sản phẩm";
-            this.columnHeader8.Width = 110;
+            this.columnHeader8.Width = 153;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Tên sản phẩm";
-            this.columnHeader9.Width = 200;
+            this.columnHeader9.Width = 191;
             // 
             // columnHeader10
             // 
@@ -104,13 +105,13 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Nhà sản xuất";
-            this.columnHeader2.Width = 200;
+            this.columnHeader2.Width = 267;
             // 
             // btn_tao_moi_SP
             // 
             this.btn_tao_moi_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tao_moi_SP.Location = new System.Drawing.Point(16, 32);
-            this.btn_tao_moi_SP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_tao_moi_SP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_tao_moi_SP.Name = "btn_tao_moi_SP";
             this.btn_tao_moi_SP.Size = new System.Drawing.Size(105, 49);
             this.btn_tao_moi_SP.TabIndex = 15;
@@ -118,16 +119,26 @@
             this.btn_tao_moi_SP.UseVisualStyleBackColor = true;
             this.btn_tao_moi_SP.Click += new System.EventHandler(this.btn_tao_moi_SP_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(892, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 17);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Tìm kiếm theo tên";
+            // 
             // frm_QLSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 583);
+            this.ClientSize = new System.Drawing.Size(1232, 479);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_tim_kiem_SP);
             this.Controls.Add(this.btn_tim_kiem_SP);
             this.Controls.Add(this.lstv_list_SP);
             this.Controls.Add(this.btn_tao_moi_SP);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_QLSP";
             this.Text = "Form_QLSP";
             this.Load += new System.EventHandler(this.Form_QLSP_Load);
@@ -147,5 +158,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Button btn_tao_moi_SP;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Label label1;
     }
 }

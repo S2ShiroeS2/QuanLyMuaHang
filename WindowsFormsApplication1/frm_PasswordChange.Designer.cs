@@ -84,6 +84,7 @@
             this.txb_OldPassword.Name = "txb_OldPassword";
             this.txb_OldPassword.Size = new System.Drawing.Size(226, 22);
             this.txb_OldPassword.TabIndex = 4;
+            this.txb_OldPassword.UseSystemPasswordChar = true;
             // 
             // txb_NewPassword
             // 
@@ -91,6 +92,7 @@
             this.txb_NewPassword.Name = "txb_NewPassword";
             this.txb_NewPassword.Size = new System.Drawing.Size(226, 22);
             this.txb_NewPassword.TabIndex = 5;
+            this.txb_NewPassword.UseSystemPasswordChar = true;
             // 
             // txb_ConfirmPassword
             // 
@@ -98,6 +100,7 @@
             this.txb_ConfirmPassword.Name = "txb_ConfirmPassword";
             this.txb_ConfirmPassword.Size = new System.Drawing.Size(226, 22);
             this.txb_ConfirmPassword.TabIndex = 6;
+            this.txb_ConfirmPassword.UseSystemPasswordChar = true;
             // 
             // frm_PasswordChange
             // 

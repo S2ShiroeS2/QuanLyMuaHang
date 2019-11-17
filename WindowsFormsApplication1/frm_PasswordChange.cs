@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
 
         private void btn_ConfirmPassword_Click(object sender, EventArgs e)
         {
-            if (LC.CheckPassword(LoginController.UserID, txb_OldPassword.Text)) 
+            if (LC.CheckPassword(LoginController.UserID, (txb_OldPassword.Text.GetHashCode().ToString()))) 
                 if (txb_ConfirmPassword.Text == txb_NewPassword.Text)
                 {
                     LC.ChangePassword(LoginController.UserID, txb_NewPassword.Text);
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
 
                 }
             else
-                MessageBox.Show("Sai mật khẩu");
+                MessageBox.Show("Sai mật khẩu cũ");
         }
     }
 }

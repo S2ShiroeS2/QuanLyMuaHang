@@ -39,7 +39,7 @@
             // txb_Account
             // 
             this.txb_Account.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_Account.Location = new System.Drawing.Point(380, 263);
+            this.txb_Account.Location = new System.Drawing.Point(270, 103);
             this.txb_Account.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Account.Name = "txb_Account";
             this.txb_Account.Size = new System.Drawing.Size(188, 34);
@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 267);
+            this.label1.Location = new System.Drawing.Point(34, 107);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 30);
@@ -60,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(169, 338);
+            this.label2.Location = new System.Drawing.Point(34, 165);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 30);
@@ -70,16 +70,17 @@
             // txb_Password
             // 
             this.txb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_Password.Location = new System.Drawing.Point(380, 331);
+            this.txb_Password.Location = new System.Drawing.Point(270, 165);
             this.txb_Password.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Password.Name = "txb_Password";
             this.txb_Password.Size = new System.Drawing.Size(188, 34);
             this.txb_Password.TabIndex = 2;
+            this.txb_Password.UseSystemPasswordChar = true;
             // 
             // bt_Login
             // 
             this.bt_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bt_Login.Location = new System.Drawing.Point(299, 419);
+            this.bt_Login.Location = new System.Drawing.Point(147, 240);
             this.bt_Login.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Login.Name = "bt_Login";
             this.bt_Login.Size = new System.Drawing.Size(132, 57);
@@ -90,19 +91,19 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.label3.Location = new System.Drawing.Point(223, 89);
+            this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(301, 58);
+            this.label3.Size = new System.Drawing.Size(473, 58);
             this.label3.TabIndex = 5;
-            this.label3.Text = "PURCHASE";
+            this.label3.Text = "LOGIN";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 578);
+            this.ClientSize = new System.Drawing.Size(497, 318);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bt_Login);
             this.Controls.Add(this.label2);

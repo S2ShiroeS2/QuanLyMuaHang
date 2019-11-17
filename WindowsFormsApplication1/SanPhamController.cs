@@ -153,7 +153,7 @@ namespace WindowsFormsApplication1
                                };
             foreach (var SP in List_SanPham)
             {
-                if(SP.TenSP == name_Product)
+                if(SP.TenSP.Contains(name_Product))
                 {
                     ListViewItem Items = new ListViewItem();
                     Items.Text = SP.MaSP.ToString();

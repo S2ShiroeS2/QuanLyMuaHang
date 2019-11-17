@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
         //Enable textbox cần thiết
         private void Enable_txb(bool Active)
         {
-            txb_NVName.Enabled = txb_NVEmail.Enabled = txb_NVAccount.Enabled = txb_NVPhone.Enabled = btn_NVActive.Enabled = Active;
+            txb_NVName.Enabled = txb_NVEmail.Enabled = txb_NVAccount.Enabled = txb_NVPhone.Enabled = btn_NVActive.Enabled=txb_NVRole.Enabled=btn_NVSave.Enabled = Active;
         }
 
 
@@ -51,7 +51,7 @@ namespace WindowsFormsApplication1
             lvi_them_nv.SubItems.Add(txb_NVActivation.Text);
             if (frm_QLNV.flag_nv)
             {
-                NVC.NVAddNew(lvi_them_nv, "123");
+                NVC.NVAddNew(lvi_them_nv, "123".GetHashCode().ToString());
                 MessageBox.Show("Password mặc định là: 123");
             }
             else
@@ -117,108 +117,33 @@ namespace WindowsFormsApplication1
         //ErrorProvider cho txb_NVAccount
         private void txb_NVAccount_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txb_NVAccount.Text))
-            {
-                e.Cancel = true;
-                txb_NVAccount.Focus();
-                EP.SetError(txb_NVAccount, "Không được để trống");
-                flag_2 = false;
-                EnableSaveBtn();
-            }
-            else
-            {
-                e.Cancel = false;
-                EP.SetError(txb_NVAccount, null);
-                flag_2 = true;
-                EnableSaveBtn();
-            }
+            
         }
 
         //ErrorProvider cho txb_NVEmail
         private void txb_NVEmail_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txb_NVEmail.Text))
-            {
-                e.Cancel = true;
-                txb_NVEmail.Focus();
-                EP.SetError(txb_NVEmail, "Không được để trống");
-                flag_3 = false;
-                EnableSaveBtn();
-            }
-            else if(!System.Text.RegularExpressions.Regex.IsMatch(txb_NVEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))//Regex email
-            {
-                e.Cancel = true;
-                txb_NVEmail.Focus();
-                EP.SetError(txb_NVEmail, "Email không hợp lệ");
-                flag_3 = false;
-                EnableSaveBtn();
-            }
-            else
-            {
-                e.Cancel = false;
-                EP.SetError(txb_NVEmail, null);
-                flag_3 = true;
-                EnableSaveBtn();
-            }
+            
         }
 
         //ErrorProvider cho txb_NVPhone
         private void txb_NVPhone_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txb_NVPhone.Text))
-            {
-                e.Cancel = true;
-                txb_NVPhone.Focus();
-                EP.SetError(txb_NVPhone, "Không được để trống");
-                flag_4 = false;
-                EnableSaveBtn();
-            }
-            else if(!System.Text.RegularExpressions.Regex.IsMatch(txb_NVPhone.Text, "^[0-9]+$"))// Regex cho chỉ nhập số
-            {
-                e.Cancel = true;
-                txb_NVPhone.Focus();
-                EP.SetError(txb_NVPhone, "Số điện thoại không hợp lệ");
-                flag_4 = false;
-                EnableSaveBtn();
-            }
-            else
-            {
-                e.Cancel = false;
-                EP.SetError(txb_NVPhone, null);
-                flag_4 = true;
-                EnableSaveBtn();
-            }
+            
         }
         //ErrorProvider cho txb_NVRole
         private void txb_NVRole_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txb_NVRole.Text))
-            {
-                e.Cancel = true;
-                txb_NVRole.Focus();
-                EP.SetError(txb_NVRole, "Không được để trống");
-                flag_5 = false;
-                EnableSaveBtn();
-            }
-            else if(string.Compare("nhân viên",txb_NVRole.Text,true)!=0 && string.Compare("admin", txb_NVRole.Text,true) != 0)
-                {
-                e.Cancel = true;
-                txb_NVRole.Focus();
-                EP.SetError(txb_NVRole, "Chỉ dược nhập \"Nhân viên\" hoặc \"Admin\"!");
-                flag_5 = false;
-                EnableSaveBtn();
-            }
-            else
-            {
-                e.Cancel = false;
-                EP.SetError(txb_NVRole, null);
-                flag_5 = true;
-                EnableSaveBtn();
-                }
+            
         }
 
         //ErrorProvider cho txb_NVName
         private void txb_NVName_Validating(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void txb_NVName_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txb_NVName.Text))
             {
@@ -228,7 +153,7 @@ namespace WindowsFormsApplication1
                 flag_1 = false;
                 EnableSaveBtn();
             }
-            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_NVName.Text, "^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$"))//Regex cho nhập chữ Tiếng Việt
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_NVName.Text, "^[a-z A-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$"))//Regex cho nhập chữ Tiếng Việt
             {
                 txb_NVName.Focus();
                 EP.SetError(txb_NVName, "Chỉ được nhập chữ");
@@ -243,6 +168,93 @@ namespace WindowsFormsApplication1
             }
         }
 
-        
+        private void txb_NVAccount_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_NVAccount.Text))
+            {
+                txb_NVAccount.Focus();
+                EP.SetError(txb_NVAccount, "Không được để trống");
+                flag_2 = false;
+                EnableSaveBtn();
+            }
+            else
+            {
+                EP.SetError(txb_NVAccount, null);
+                flag_2 = true;
+                EnableSaveBtn();
+            }
+        }
+
+        private void txb_NVEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_NVEmail.Text))
+            {
+                txb_NVEmail.Focus();
+                EP.SetError(txb_NVEmail, "Không được để trống");
+                flag_3 = false;
+                EnableSaveBtn();
+            }
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_NVEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))//Regex email
+            {
+                txb_NVEmail.Focus();
+                EP.SetError(txb_NVEmail, "Email không hợp lệ");
+                flag_3 = false;
+                EnableSaveBtn();
+            }
+            else
+            {
+                EP.SetError(txb_NVEmail, null);
+                flag_3 = true;
+                EnableSaveBtn();
+            }
+        }
+
+        private void txb_NVPhone_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_NVPhone.Text))
+            {
+                txb_NVPhone.Focus();
+                EP.SetError(txb_NVPhone, "Không được để trống");
+                flag_4 = false;
+                EnableSaveBtn();
+            }
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txb_NVPhone.Text, "^[+]?[0-9]+$"))// Regex cho chỉ nhập số
+            {
+                txb_NVPhone.Focus();
+                EP.SetError(txb_NVPhone, "Số điện thoại không hợp lệ");
+                flag_4 = false;
+                EnableSaveBtn();
+            }
+            else
+            {
+                EP.SetError(txb_NVPhone, null);
+                flag_4 = true;
+                EnableSaveBtn();
+            }
+        }
+
+        private void txb_NVRole_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_NVRole.Text))
+            {
+                txb_NVRole.Focus();
+                EP.SetError(txb_NVRole, "Không được để trống");
+                flag_5 = false;
+                EnableSaveBtn();
+            }
+            else if (string.Compare("nhân viên", txb_NVRole.Text, true) != 0 && string.Compare("admin", txb_NVRole.Text, true) != 0)
+            {
+                txb_NVRole.Focus();
+                EP.SetError(txb_NVRole, "Chỉ dược nhập \"Nhân viên\" hoặc \"Admin\"!");
+                flag_5 = false;
+                EnableSaveBtn();
+            }
+            else
+            {
+                EP.SetError(txb_NVRole, null);
+                flag_5 = true;
+                EnableSaveBtn();
+            }
+        }
     }
 }

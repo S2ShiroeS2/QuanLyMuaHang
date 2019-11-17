@@ -30,7 +30,6 @@
         {
             this.tb_tim_kiem_NCC = new System.Windows.Forms.TextBox();
             this.bt_tim_kiem_NCC = new System.Windows.Forms.Button();
-            this.bt_tai_len_NCC = new System.Windows.Forms.Button();
             this.bt_tao_moi_NCC = new System.Windows.Forms.Button();
             this.lv_list_ncc = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,6 +39,7 @@
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.VendorPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.VendorAvailable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_tim_kiem_NCC
@@ -53,6 +53,7 @@
             // 
             // bt_tim_kiem_NCC
             // 
+            this.bt_tim_kiem_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.bt_tim_kiem_NCC.Location = new System.Drawing.Point(736, 34);
             this.bt_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4);
             this.bt_tim_kiem_NCC.Name = "bt_tim_kiem_NCC";
@@ -61,17 +62,6 @@
             this.bt_tim_kiem_NCC.Text = "Tìm kiếm";
             this.bt_tim_kiem_NCC.UseVisualStyleBackColor = true;
             this.bt_tim_kiem_NCC.Click += new System.EventHandler(this.bt_tim_kiem_NCC_Click);
-            // 
-            // bt_tai_len_NCC
-            // 
-            this.bt_tai_len_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_tai_len_NCC.Location = new System.Drawing.Point(148, 32);
-            this.bt_tai_len_NCC.Margin = new System.Windows.Forms.Padding(4);
-            this.bt_tai_len_NCC.Name = "bt_tai_len_NCC";
-            this.bt_tai_len_NCC.Size = new System.Drawing.Size(105, 49);
-            this.bt_tai_len_NCC.TabIndex = 21;
-            this.bt_tai_len_NCC.Text = "Tải lên";
-            this.bt_tai_len_NCC.UseVisualStyleBackColor = true;
             // 
             // bt_tao_moi_NCC
             // 
@@ -143,18 +133,27 @@
             this.VendorAvailable.Text = "Been there done that";
             this.VendorAvailable.Width = 198;
             // 
-            // Form_QLNCC
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(885, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 17);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Tìm kiếm theo tên";
+            // 
+            // frm_QLNCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 583);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lv_list_ncc);
             this.Controls.Add(this.tb_tim_kiem_NCC);
             this.Controls.Add(this.bt_tim_kiem_NCC);
-            this.Controls.Add(this.bt_tai_len_NCC);
             this.Controls.Add(this.bt_tao_moi_NCC);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form_QLNCC";
+            this.Name = "frm_QLNCC";
             this.Text = "Form_QLNCC";
             this.Load += new System.EventHandler(this.Form_QLNCC_Load);
             this.ResumeLayout(false);
@@ -166,7 +165,6 @@
 
         private System.Windows.Forms.TextBox tb_tim_kiem_NCC;
         private System.Windows.Forms.Button bt_tim_kiem_NCC;
-        private System.Windows.Forms.Button bt_tai_len_NCC;
         private System.Windows.Forms.Button bt_tao_moi_NCC;
         private System.Windows.Forms.ListView lv_list_ncc;
         private System.Windows.Forms.ColumnHeader ID;
@@ -176,5 +174,6 @@
         private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.ColumnHeader VendorPhone;
         private System.Windows.Forms.ColumnHeader VendorAvailable;
+        private System.Windows.Forms.Label label1;
     }
 }
