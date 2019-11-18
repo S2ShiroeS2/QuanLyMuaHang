@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public frm_ChiTiet_NCC_SanPham()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
         public static ListView.ListViewItemCollection list;
         List<ListViewItem> list_Ncc_database = new List<ListViewItem>();

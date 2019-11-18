@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public frm_CTSP()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
         public static List<ListViewItem> list_Ncc = new List<ListViewItem>();
         SanPhamController navigate_SanPham = new SanPhamController();
@@ -112,6 +114,7 @@ namespace WindowsFormsApplication1
                 else
                 {
                     navigate_SanPham.Edit_Poduct(lvi_SanPham, lstv_nha_cung_cap.Items);
+                    MessageBox.Show("lalala");
                     this.Close();
                 }
             }
@@ -132,6 +135,31 @@ namespace WindowsFormsApplication1
                 
             }
                 
+        }
+
+        private void txt_ma_sp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_ten_sp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_nha_sx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbo_loai_sp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstv_nha_cung_cap_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

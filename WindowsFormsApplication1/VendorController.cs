@@ -82,17 +82,14 @@ namespace WindowsFormsApplication1
         public void SuaNcc(ListViewItem lvi_vendor) //Update Vendor trong database
         {
             data = new DataClasses1DataContext();
-            var VendorList = (from V in data.Vendors
-                        where V.VendorID.ToString() == lvi_vendor.Text
-                        select V);
-            foreach (Vendor VD in VendorList) {
-                VD.VendorName = lvi_vendor.SubItems[1].Text;
-                VD.VendorAddress = lvi_vendor.SubItems[2].Text;
-                VD.VAT = Int64.Parse(lvi_vendor.SubItems[3].Text);
-                VD.VendorEmail = lvi_vendor.SubItems[4].Text;
-                VD.VendorPhone = lvi_vendor.SubItems[5].Text;
-                VD.VendorAvailable = bool.Parse(lvi_vendor.SubItems[6].Text);
-            }
+            Vendor VD = data.Vendors.First(x => x.VendorID.ToString() == lvi_vendor.Text);
+            VD.VendorName = lvi_vendor.SubItems[1].Text;
+            VD.VendorAddress = lvi_vendor.SubItems[2].Text;
+            VD.VAT = Int64.Parse(lvi_vendor.SubItems[3].Text);
+            VD.VendorPhone = lvi_vendor.SubItems[4].Text;
+            VD.VendorEmail = lvi_vendor.SubItems[5].Text;
+          //  VD.VendorAvailable = bool.Parse(lvi_vendor.SubItems[6].Text);
+            
             data.SubmitChanges();
         }
 

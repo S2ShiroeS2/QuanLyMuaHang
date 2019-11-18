@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public frm_QLHD()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         QLHD_Controller QLHD_crtl = new QLHD_Controller(); // Khởi tạo biến của QLHD_Controller

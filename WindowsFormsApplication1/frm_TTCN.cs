@@ -20,6 +20,8 @@ namespace WindowsFormsApplication1
         public frm_TTCN()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         //Nút đổi mật khẩu

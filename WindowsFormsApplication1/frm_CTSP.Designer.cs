@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CTSP));
             this.lbl_ma_sp = new System.Windows.Forms.Label();
             this.txt_ma_sp = new System.Windows.Forms.TextBox();
             this.lbl_ten_sp = new System.Windows.Forms.Label();
@@ -58,13 +59,15 @@
             // 
             // txt_ma_sp
             // 
+            this.txt_ma_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_ma_sp.Enabled = false;
             this.txt_ma_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ma_sp.Location = new System.Drawing.Point(33, 64);
-            this.txt_ma_sp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ma_sp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ma_sp.Name = "txt_ma_sp";
             this.txt_ma_sp.Size = new System.Drawing.Size(223, 30);
             this.txt_ma_sp.TabIndex = 1;
+            this.txt_ma_sp.TextChanged += new System.EventHandler(this.txt_ma_sp_TextChanged);
             // 
             // lbl_ten_sp
             // 
@@ -101,12 +104,14 @@
             // 
             // txt_nha_sx
             // 
+            this.txt_nha_sx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_nha_sx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nha_sx.Location = new System.Drawing.Point(441, 128);
-            this.txt_nha_sx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nha_sx.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nha_sx.Name = "txt_nha_sx";
             this.txt_nha_sx.Size = new System.Drawing.Size(223, 30);
             this.txt_nha_sx.TabIndex = 16;
+            this.txt_nha_sx.TextChanged += new System.EventHandler(this.txt_nha_sx_TextChanged);
             // 
             // lbl_nha_san_xuat
             // 
@@ -121,23 +126,26 @@
             // 
             // cbo_loai_sp
             // 
+            this.cbo_loai_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbo_loai_sp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_loai_sp.FormattingEnabled = true;
             this.cbo_loai_sp.Items.AddRange(new object[] {
             "Không bán",
             "Được bán"});
             this.cbo_loai_sp.Location = new System.Drawing.Point(33, 194);
-            this.cbo_loai_sp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_loai_sp.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_loai_sp.Name = "cbo_loai_sp";
             this.cbo_loai_sp.Size = new System.Drawing.Size(223, 24);
             this.cbo_loai_sp.TabIndex = 17;
+            this.cbo_loai_sp.SelectedIndexChanged += new System.EventHandler(this.cbo_loai_sp_SelectedIndexChanged);
             // 
             // cbo_danh_muc_sp
             // 
+            this.cbo_danh_muc_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbo_danh_muc_sp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_danh_muc_sp.FormattingEnabled = true;
             this.cbo_danh_muc_sp.Location = new System.Drawing.Point(441, 70);
-            this.cbo_danh_muc_sp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_danh_muc_sp.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_danh_muc_sp.Name = "cbo_danh_muc_sp";
             this.cbo_danh_muc_sp.Size = new System.Drawing.Size(223, 24);
             this.cbo_danh_muc_sp.TabIndex = 18;
@@ -145,17 +153,19 @@
             // 
             // lstv_nha_cung_cap
             // 
+            this.lstv_nha_cung_cap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lstv_nha_cung_cap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.lstv_nha_cung_cap.FullRowSelect = true;
             this.lstv_nha_cung_cap.Location = new System.Drawing.Point(772, 36);
-            this.lstv_nha_cung_cap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstv_nha_cung_cap.Margin = new System.Windows.Forms.Padding(4);
             this.lstv_nha_cung_cap.MultiSelect = false;
             this.lstv_nha_cung_cap.Name = "lstv_nha_cung_cap";
             this.lstv_nha_cung_cap.Size = new System.Drawing.Size(160, 206);
             this.lstv_nha_cung_cap.TabIndex = 19;
             this.lstv_nha_cung_cap.UseCompatibleStateImageBehavior = false;
             this.lstv_nha_cung_cap.View = System.Windows.Forms.View.Details;
+            this.lstv_nha_cung_cap.SelectedIndexChanged += new System.EventHandler(this.lstv_nha_cung_cap_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -164,10 +174,12 @@
             // 
             // btn_sua
             // 
+            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sua.Location = new System.Drawing.Point(199, 234);
-            this.btn_sua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_sua.Margin = new System.Windows.Forms.Padding(4);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(125, 62);
+            this.btn_sua.Size = new System.Drawing.Size(125, 71);
             this.btn_sua.TabIndex = 20;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
@@ -175,10 +187,12 @@
             // 
             // btn_luu
             // 
+            this.btn_luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_luu.Location = new System.Drawing.Point(438, 234);
-            this.btn_luu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_luu.Name = "btn_luu";
-            this.btn_luu.Size = new System.Drawing.Size(125, 62);
+            this.btn_luu.Size = new System.Drawing.Size(125, 71);
             this.btn_luu.TabIndex = 21;
             this.btn_luu.Text = "Lưu";
             this.btn_luu.UseVisualStyleBackColor = true;
@@ -186,19 +200,23 @@
             // 
             // txt_ten_sp
             // 
+            this.txt_ten_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_ten_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ten_sp.Location = new System.Drawing.Point(33, 128);
-            this.txt_ten_sp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ten_sp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ten_sp.Name = "txt_ten_sp";
             this.txt_ten_sp.Size = new System.Drawing.Size(223, 30);
             this.txt_ten_sp.TabIndex = 3;
+            this.txt_ten_sp.TextChanged += new System.EventHandler(this.txt_ten_sp_TextChanged);
             // 
             // btn_them_ncc
             // 
+            this.btn_them_ncc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_them_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them_ncc.Location = new System.Drawing.Point(789, 252);
-            this.btn_them_ncc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_them_ncc.Margin = new System.Windows.Forms.Padding(4);
             this.btn_them_ncc.Name = "btn_them_ncc";
-            this.btn_them_ncc.Size = new System.Drawing.Size(125, 26);
+            this.btn_them_ncc.Size = new System.Drawing.Size(125, 35);
             this.btn_them_ncc.TabIndex = 22;
             this.btn_them_ncc.Text = "Thêm";
             this.btn_them_ncc.UseVisualStyleBackColor = true;
@@ -208,6 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(969, 320);
             this.Controls.Add(this.btn_them_ncc);
             this.Controls.Add(this.btn_luu);
@@ -223,8 +242,11 @@
             this.Controls.Add(this.lbl_ten_sp);
             this.Controls.Add(this.txt_ma_sp);
             this.Controls.Add(this.lbl_ma_sp);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_CTSP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_CTSP";
             this.Load += new System.EventHandler(this.form_CTSP_Load);
             this.ResumeLayout(false);

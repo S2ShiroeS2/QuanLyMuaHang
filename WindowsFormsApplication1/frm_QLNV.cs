@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public frm_QLNV()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         private List<ListViewItem> list_NV = new List<ListViewItem>();
@@ -34,7 +36,7 @@ namespace WindowsFormsApplication1
         {
             list_NV.Clear();
             lv_list_NV.Items.Clear();
-            list_NV = NVC.NVListSearch(tb_tim_kiem_nv.Text.ToString());
+            list_NV = NVC.NVListSearch(txb_tim_kiem_nv.Text.ToString());
 
             foreach (ListViewItem V in list_NV)
                 lv_list_NV.Items.Add(V);
@@ -70,6 +72,16 @@ namespace WindowsFormsApplication1
             frm_CTNV frm_CtNv = new frm_CTNV();
             frm_CtNv.ShowDialog();
             lam_moi();
+        }
+
+        private void btn_Exit2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

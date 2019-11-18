@@ -43,13 +43,14 @@
             this.btn_SaveInform = new System.Windows.Forms.Button();
             this.txb_Role = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txb_Account
             // 
             this.txb_Account.Enabled = false;
             this.txb_Account.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_Account.Location = new System.Drawing.Point(636, 143);
+            this.txb_Account.Location = new System.Drawing.Point(353, 76);
             this.txb_Account.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Account.Name = "txb_Account";
             this.txb_Account.Size = new System.Drawing.Size(265, 30);
@@ -60,7 +61,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(631, 115);
+            this.label6.Location = new System.Drawing.Point(351, 47);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 25);
@@ -71,7 +72,7 @@
             // 
             this.txb_Email.Enabled = false;
             this.txb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txb_Email.Location = new System.Drawing.Point(177, 300);
+            this.txb_Email.Location = new System.Drawing.Point(6, 206);
             this.txb_Email.Name = "txb_Email";
             this.txb_Email.Size = new System.Drawing.Size(301, 30);
             this.txb_Email.TabIndex = 5;
@@ -81,7 +82,7 @@
             // 
             this.txb_ID.Enabled = false;
             this.txb_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ID.Location = new System.Drawing.Point(177, 217);
+            this.txb_ID.Location = new System.Drawing.Point(6, 139);
             this.txb_ID.Margin = new System.Windows.Forms.Padding(4);
             this.txb_ID.Name = "txb_ID";
             this.txb_ID.Size = new System.Drawing.Size(125, 30);
@@ -91,7 +92,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(172, 188);
+            this.label5.Location = new System.Drawing.Point(1, 110);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 25);
@@ -102,7 +103,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(172, 263);
+            this.label4.Location = new System.Drawing.Point(1, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 25);
@@ -113,7 +114,7 @@
             // 
             this.txb_Phone.Enabled = false;
             this.txb_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_Phone.Location = new System.Drawing.Point(636, 292);
+            this.txb_Phone.Location = new System.Drawing.Point(353, 206);
             this.txb_Phone.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Phone.Name = "txb_Phone";
             this.txb_Phone.Size = new System.Drawing.Size(265, 30);
@@ -124,7 +125,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(631, 263);
+            this.label3.Location = new System.Drawing.Point(348, 177);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 25);
@@ -135,7 +136,7 @@
             // 
             this.txb_Name.Enabled = false;
             this.txb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_Name.Location = new System.Drawing.Point(177, 143);
+            this.txb_Name.Location = new System.Drawing.Point(6, 76);
             this.txb_Name.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Name.Name = "txb_Name";
             this.txb_Name.Size = new System.Drawing.Size(265, 30);
@@ -146,7 +147,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 115);
+            this.label1.Location = new System.Drawing.Point(1, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 25);
@@ -156,7 +157,7 @@
             // btn_ChangePassword
             // 
             this.btn_ChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_ChangePassword.Location = new System.Drawing.Point(177, 382);
+            this.btn_ChangePassword.Location = new System.Drawing.Point(37, 261);
             this.btn_ChangePassword.Name = "btn_ChangePassword";
             this.btn_ChangePassword.Size = new System.Drawing.Size(151, 38);
             this.btn_ChangePassword.TabIndex = 7;
@@ -167,7 +168,7 @@
             // btn_ChangeInform
             // 
             this.btn_ChangeInform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_ChangeInform.Location = new System.Drawing.Point(636, 382);
+            this.btn_ChangeInform.Location = new System.Drawing.Point(286, 261);
             this.btn_ChangeInform.Name = "btn_ChangeInform";
             this.btn_ChangeInform.Size = new System.Drawing.Size(231, 38);
             this.btn_ChangeInform.TabIndex = 8;
@@ -179,7 +180,7 @@
             // 
             this.btn_SaveInform.Enabled = false;
             this.btn_SaveInform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_SaveInform.Location = new System.Drawing.Point(903, 382);
+            this.btn_SaveInform.Location = new System.Drawing.Point(612, 261);
             this.btn_SaveInform.Name = "btn_SaveInform";
             this.btn_SaveInform.Size = new System.Drawing.Size(108, 38);
             this.btn_SaveInform.TabIndex = 9;
@@ -191,7 +192,7 @@
             // 
             this.txb_Role.Enabled = false;
             this.txb_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_Role.Location = new System.Drawing.Point(636, 217);
+            this.txb_Role.Location = new System.Drawing.Point(353, 139);
             this.txb_Role.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Role.Name = "txb_Role";
             this.txb_Role.Size = new System.Drawing.Size(265, 30);
@@ -201,18 +202,30 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(631, 188);
+            this.label2.Location = new System.Drawing.Point(348, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 25);
             this.label2.TabIndex = 51;
             this.label2.Text = "Vai trò";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(197, 25);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Thông tin tài khoản";
+            // 
             // frm_TTCN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 544);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(825, 318);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txb_Role);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_SaveInform);
@@ -228,7 +241,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txb_Name);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_TTCN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_TTCN_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,5 +267,6 @@
         private System.Windows.Forms.Button btn_SaveInform;
         private System.Windows.Forms.TextBox txb_Role;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
     }
 }

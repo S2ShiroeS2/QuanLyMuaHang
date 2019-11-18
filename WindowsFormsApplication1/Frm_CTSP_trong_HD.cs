@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public Frm_CTSP_trong_HD()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         CTHD_controller cthd_ctrl = new CTHD_controller();

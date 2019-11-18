@@ -21,6 +21,8 @@ namespace WindowsFormsApplication1
         public frm_Menu()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         private void btn_LogOut_Click(object sender, EventArgs e)
@@ -77,6 +79,16 @@ namespace WindowsFormsApplication1
             this.Hide();
             frm_ttcn.ShowDialog();
             this.Show();
+        }
+
+        private void btn_Exit2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

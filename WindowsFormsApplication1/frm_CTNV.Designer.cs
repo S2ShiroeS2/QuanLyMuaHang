@@ -51,7 +51,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(486, 269);
+            this.label7.Location = new System.Drawing.Point(491, 187);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 25);
@@ -83,7 +83,7 @@
             // btn_NVSave
             // 
             this.btn_NVSave.Enabled = false;
-            this.btn_NVSave.Location = new System.Drawing.Point(884, 466);
+            this.btn_NVSave.Location = new System.Drawing.Point(485, 403);
             this.btn_NVSave.Name = "btn_NVSave";
             this.btn_NVSave.Size = new System.Drawing.Size(127, 55);
             this.btn_NVSave.TabIndex = 8;
@@ -93,7 +93,7 @@
             // 
             // btn_NVUpdate
             // 
-            this.btn_NVUpdate.Location = new System.Drawing.Point(685, 466);
+            this.btn_NVUpdate.Location = new System.Drawing.Point(32, 403);
             this.btn_NVUpdate.Name = "btn_NVUpdate";
             this.btn_NVUpdate.Size = new System.Drawing.Size(127, 55);
             this.btn_NVUpdate.TabIndex = 7;
@@ -117,7 +117,7 @@
             this.txb_NVID.Location = new System.Drawing.Point(32, 141);
             this.txb_NVID.Margin = new System.Windows.Forms.Padding(4);
             this.txb_NVID.Name = "txb_NVID";
-            this.txb_NVID.Size = new System.Drawing.Size(265, 30);
+            this.txb_NVID.Size = new System.Drawing.Size(301, 30);
             this.txb_NVID.TabIndex = 2;
             // 
             // label5
@@ -145,7 +145,7 @@
             // txb_NVPhone
             // 
             this.txb_NVPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_NVPhone.Location = new System.Drawing.Point(491, 216);
+            this.txb_NVPhone.Location = new System.Drawing.Point(491, 141);
             this.txb_NVPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txb_NVPhone.Name = "txb_NVPhone";
             this.txb_NVPhone.Size = new System.Drawing.Size(265, 30);
@@ -157,7 +157,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(486, 187);
+            this.label3.Location = new System.Drawing.Point(486, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 25);
@@ -172,7 +172,7 @@
             this.txb_NVRole.Margin = new System.Windows.Forms.Padding(4);
             this.txb_NVRole.Multiline = true;
             this.txb_NVRole.Name = "txb_NVRole";
-            this.txb_NVRole.Size = new System.Drawing.Size(105, 30);
+            this.txb_NVRole.Size = new System.Drawing.Size(301, 30);
             this.txb_NVRole.TabIndex = 5;
             this.txb_NVRole.Text = "Nhân viên";
             this.txb_NVRole.TextChanged += new System.EventHandler(this.txb_NVRole_TextChanged);
@@ -195,7 +195,7 @@
             this.txb_NVName.Location = new System.Drawing.Point(32, 67);
             this.txb_NVName.Margin = new System.Windows.Forms.Padding(4);
             this.txb_NVName.Name = "txb_NVName";
-            this.txb_NVName.Size = new System.Drawing.Size(265, 30);
+            this.txb_NVName.Size = new System.Drawing.Size(301, 30);
             this.txb_NVName.TabIndex = 1;
             this.txb_NVName.TextChanged += new System.EventHandler(this.txb_NVName_TextChanged);
             this.txb_NVName.Validating += new System.ComponentModel.CancelEventHandler(this.txb_NVName_Validating);
@@ -214,17 +214,17 @@
             // txb_NVActivation
             // 
             this.txb_NVActivation.Enabled = false;
-            this.txb_NVActivation.Location = new System.Drawing.Point(491, 314);
+            this.txb_NVActivation.Location = new System.Drawing.Point(491, 224);
             this.txb_NVActivation.Name = "txb_NVActivation";
-            this.txb_NVActivation.Size = new System.Drawing.Size(100, 22);
+            this.txb_NVActivation.Size = new System.Drawing.Size(265, 22);
             this.txb_NVActivation.TabIndex = 33;
             // 
             // btn_NVActive
             // 
             this.btn_NVActive.Enabled = false;
-            this.btn_NVActive.Location = new System.Drawing.Point(597, 298);
+            this.btn_NVActive.Location = new System.Drawing.Point(619, 320);
             this.btn_NVActive.Name = "btn_NVActive";
-            this.btn_NVActive.Size = new System.Drawing.Size(127, 55);
+            this.btn_NVActive.Size = new System.Drawing.Size(127, 25);
             this.btn_NVActive.TabIndex = 6;
             this.btn_NVActive.Text = "Active";
             this.btn_NVActive.UseVisualStyleBackColor = true;
@@ -234,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 561);
+            this.ClientSize = new System.Drawing.Size(782, 509);
             this.Controls.Add(this.btn_NVActive);
             this.Controls.Add(this.txb_NVActivation);
             this.Controls.Add(this.label7);

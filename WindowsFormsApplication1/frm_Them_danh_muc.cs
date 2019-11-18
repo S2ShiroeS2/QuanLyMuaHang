@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public frm_Them_danh_muc()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         SanPhamController sp_ctrl=new SanPhamController();

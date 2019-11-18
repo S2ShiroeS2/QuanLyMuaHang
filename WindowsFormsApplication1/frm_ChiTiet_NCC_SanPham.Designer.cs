@@ -39,9 +39,12 @@
             // 
             // btn_add_one
             // 
-            this.btn_add_one.Location = new System.Drawing.Point(138, 118);
+            this.btn_add_one.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add_one.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_one.Location = new System.Drawing.Point(185, 193);
+            this.btn_add_one.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_add_one.Name = "btn_add_one";
-            this.btn_add_one.Size = new System.Drawing.Size(75, 23);
+            this.btn_add_one.Size = new System.Drawing.Size(100, 38);
             this.btn_add_one.TabIndex = 2;
             this.btn_add_one.Text = ">";
             this.btn_add_one.UseVisualStyleBackColor = true;
@@ -49,9 +52,12 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(139, 147);
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(185, 229);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.Size = new System.Drawing.Size(100, 38);
             this.btn_delete.TabIndex = 4;
             this.btn_delete.Text = "Xóa";
             this.btn_delete.UseVisualStyleBackColor = true;
@@ -59,12 +65,14 @@
             // 
             // lstv_list_ncc_co
             // 
+            this.lstv_list_ncc_co.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lstv_list_ncc_co.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.lstv_list_ncc_co.FullRowSelect = true;
-            this.lstv_list_ncc_co.Location = new System.Drawing.Point(12, 12);
+            this.lstv_list_ncc_co.Location = new System.Drawing.Point(16, 65);
+            this.lstv_list_ncc_co.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstv_list_ncc_co.Name = "lstv_list_ncc_co";
-            this.lstv_list_ncc_co.Size = new System.Drawing.Size(121, 321);
+            this.lstv_list_ncc_co.Size = new System.Drawing.Size(160, 344);
             this.lstv_list_ncc_co.TabIndex = 5;
             this.lstv_list_ncc_co.UseCompatibleStateImageBehavior = false;
             this.lstv_list_ncc_co.View = System.Windows.Forms.View.Details;
@@ -76,12 +84,14 @@
             // 
             // lstv_list_ncc_them
             // 
+            this.lstv_list_ncc_them.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lstv_list_ncc_them.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2});
             this.lstv_list_ncc_them.FullRowSelect = true;
-            this.lstv_list_ncc_them.Location = new System.Drawing.Point(218, 12);
+            this.lstv_list_ncc_them.Location = new System.Drawing.Point(291, 65);
+            this.lstv_list_ncc_them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstv_list_ncc_them.Name = "lstv_list_ncc_them";
-            this.lstv_list_ncc_them.Size = new System.Drawing.Size(121, 321);
+            this.lstv_list_ncc_them.Size = new System.Drawing.Size(160, 344);
             this.lstv_list_ncc_them.TabIndex = 6;
             this.lstv_list_ncc_them.UseCompatibleStateImageBehavior = false;
             this.lstv_list_ncc_them.View = System.Windows.Forms.View.Details;
@@ -93,25 +103,32 @@
             // 
             // btn_luu
             // 
-            this.btn_luu.Location = new System.Drawing.Point(137, 176);
+            this.btn_luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luu.Location = new System.Drawing.Point(185, 265);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_luu.Name = "btn_luu";
-            this.btn_luu.Size = new System.Drawing.Size(75, 23);
+            this.btn_luu.Size = new System.Drawing.Size(100, 38);
             this.btn_luu.TabIndex = 7;
             this.btn_luu.Text = "Lưu";
             this.btn_luu.UseVisualStyleBackColor = true;
             this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
-            // frm_themNhaCungCap
+            // frm_ChiTiet_NCC_SanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 345);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(468, 425);
             this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.lstv_list_ncc_them);
             this.Controls.Add(this.lstv_list_ncc_co);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_add_one);
-            this.Name = "frm_themNhaCungCap";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frm_ChiTiet_NCC_SanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm nhà cung cấp";
             this.Load += new System.EventHandler(this.frm_themNhaCungCap_Load);
             this.ResumeLayout(false);

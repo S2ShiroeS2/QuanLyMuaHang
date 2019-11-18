@@ -17,6 +17,8 @@ namespace WindowsFormsApplication1
         public frm_PasswordChange()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         private void btn_ConfirmPassword_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace WindowsFormsApplication1
             if (LC.CheckPassword(LoginController.UserID, (txb_OldPassword.Text.GetHashCode().ToString()))) 
                 if (txb_ConfirmPassword.Text == txb_NewPassword.Text)
                 {
-                    LC.ChangePassword(LoginController.UserID, txb_NewPassword.Text);
+                    LC.ChangePassword(LoginController.UserID, txb_NewPassword.Text.GetHashCode().ToString());
                     MessageBox.Show("Thay đổi mật khẩu thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }

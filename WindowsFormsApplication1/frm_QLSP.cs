@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public frm_QLSP()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         List<ListViewItem> list_SanPham = new List<ListViewItem>();

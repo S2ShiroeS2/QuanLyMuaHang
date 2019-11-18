@@ -15,7 +15,11 @@ namespace WindowsFormsApplication1
         public frm_Login()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
+            //this.InitBorder();
         }
+        
 
         public static string LoginAccount { get; private set; }
         public static string LoginPassword { get; private set; }
@@ -37,6 +41,16 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txb_Password.Clear();
             }
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public frm_CTHD()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         CTHD_controller b = new CTHD_controller();

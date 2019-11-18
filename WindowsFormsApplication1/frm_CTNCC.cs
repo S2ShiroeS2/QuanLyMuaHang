@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public frm_CTNCC()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
 
         public static ListViewItem lvi_them_ncc { get; private set; } = new ListViewItem();
@@ -71,8 +73,8 @@ namespace WindowsFormsApplication1
             lvi_them_ncc.SubItems.Add(nbb_Vat.Value.ToString());
             lvi_them_ncc.SubItems.Add(txb_Phone.Text);
             lvi_them_ncc.SubItems.Add(txb_VendorEmail.Text);
-            lvi_them_ncc.SubItems.Add(false.ToString());
-            lvi_them_ncc.SubItems.Add(txb_Available.Text);
+            lvi_them_ncc.SubItems.Add(frm_QLNCC.flag_ncc ? "false" : txb_Available.Text);
+                lvi_them_ncc.SubItems.Add(txb_Available.Text);
             if (frm_QLNCC.flag_ncc)
                 Vc.VendorAddNew(lvi_them_ncc);
             else
@@ -86,6 +88,8 @@ namespace WindowsFormsApplication1
         private void bt__sua_ncc_Click(object sender, EventArgs e)
         {
             Enable_txb(true);
+            btn_SaveVendor.Enabled = true;
+            btn_UpdateVendor.Enabled = false;
         }
 
         private void EnableSaveBtn()
@@ -162,7 +166,7 @@ namespace WindowsFormsApplication1
                 EnableSaveBtn();
             }
             else
-                if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Phone.Text, "^[0-9]+$"))//Regex cho nhập chữ Tiếng Việt
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txb_Phone.Text, "^[+]?[0-9]+$"))//Regex cho nhập chữ Tiếng Việt
             {
                 txb_Phone.Focus();
                 EP.SetError(txb_Phone, "Số điện thoại không hợp lệ");

@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public frm_QLNCC()
         {
             InitializeComponent();
+            UIBuilder.Border(this);
+            UIBuilder.RenderButton(this);
         }
         private List<ListViewItem> list_vendor = new List<ListViewItem>();
         private VendorController VC = new VendorController();

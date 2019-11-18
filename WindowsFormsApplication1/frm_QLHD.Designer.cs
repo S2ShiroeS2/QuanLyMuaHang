@@ -39,21 +39,28 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_tao_moi = new System.Windows.Forms.Button();
             this.btn_xac_nhan_HD = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_search
             // 
+            this.txt_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.Location = new System.Drawing.Point(563, 20);
+            this.txt_search.Location = new System.Drawing.Point(743, 57);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(244, 30);
+            this.txt_search.Size = new System.Drawing.Size(324, 36);
             this.txt_search.TabIndex = 17;
+            this.txt_search.Text = " ";
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(813, 13);
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Location = new System.Drawing.Point(1093, 57);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(81, 40);
+            this.btn_search.Size = new System.Drawing.Size(108, 36);
             this.btn_search.TabIndex = 16;
             this.btn_search.Text = "Tìm kiếm";
             this.btn_search.UseVisualStyleBackColor = true;
@@ -61,6 +68,7 @@
             // 
             // lstv_list_HD
             // 
+            this.lstv_list_HD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lstv_list_HD.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -70,10 +78,11 @@
             this.columnHeader7});
             this.lstv_list_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstv_list_HD.FullRowSelect = true;
-            this.lstv_list_HD.Location = new System.Drawing.Point(5, 69);
+            this.lstv_list_HD.Location = new System.Drawing.Point(9, 101);
+            this.lstv_list_HD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstv_list_HD.MultiSelect = false;
             this.lstv_list_HD.Name = "lstv_list_HD";
-            this.lstv_list_HD.Size = new System.Drawing.Size(907, 242);
+            this.lstv_list_HD.Size = new System.Drawing.Size(1208, 297);
             this.lstv_list_HD.TabIndex = 15;
             this.lstv_list_HD.UseCompatibleStateImageBehavior = false;
             this.lstv_list_HD.View = System.Windows.Forms.View.Details;
@@ -112,10 +121,12 @@
             // 
             // btn_tao_moi
             // 
-            this.btn_tao_moi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tao_moi.Location = new System.Drawing.Point(7, 12);
+            this.btn_tao_moi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_tao_moi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tao_moi.Location = new System.Drawing.Point(13, 44);
+            this.btn_tao_moi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_tao_moi.Name = "btn_tao_moi";
-            this.btn_tao_moi.Size = new System.Drawing.Size(79, 40);
+            this.btn_tao_moi.Size = new System.Drawing.Size(105, 49);
             this.btn_tao_moi.TabIndex = 13;
             this.btn_tao_moi.Text = "Tạo mới";
             this.btn_tao_moi.UseVisualStyleBackColor = true;
@@ -124,25 +135,43 @@
             // btn_xac_nhan_HD
             // 
             this.btn_xac_nhan_HD.Enabled = false;
-            this.btn_xac_nhan_HD.Location = new System.Drawing.Point(7, 343);
+            this.btn_xac_nhan_HD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xac_nhan_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xac_nhan_HD.Location = new System.Drawing.Point(9, 406);
+            this.btn_xac_nhan_HD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_xac_nhan_HD.Name = "btn_xac_nhan_HD";
-            this.btn_xac_nhan_HD.Size = new System.Drawing.Size(122, 45);
+            this.btn_xac_nhan_HD.Size = new System.Drawing.Size(163, 44);
             this.btn_xac_nhan_HD.TabIndex = 18;
             this.btn_xac_nhan_HD.Text = "Xác nhận nhập hàng";
             this.btn_xac_nhan_HD.UseVisualStyleBackColor = true;
             this.btn_xac_nhan_HD.Click += new System.EventHandler(this.btn_xac_nhan_HD_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 25);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Quản lý hóa đơn";
+            // 
             // frm_QLHD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 474);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1232, 462);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_xac_nhan_HD);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.lstv_list_HD);
             this.Controls.Add(this.btn_tao_moi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_QLHD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_QLHD";
             this.Load += new System.EventHandler(this.frm_QLHD_Load);
             this.ResumeLayout(false);
@@ -163,5 +192,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Button btn_tao_moi;
         private System.Windows.Forms.Button btn_xac_nhan_HD;
+        private System.Windows.Forms.Label label2;
     }
 }
