@@ -86,10 +86,5 @@ namespace WindowsFormsApplication1
                 lam_moi();
             }
         }
-
-        private void txt_tim_kiem_SP_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1
         {
             flag = true;
             if (lstv_list_ncc_them.Items.Count == 0)
-                MessageBox.Show("Khong the de trong ncc");
+                MessageBox.Show("Không được để trống nhà cung cấp!");
             else
             {
                 list = null;

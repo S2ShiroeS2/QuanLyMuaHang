@@ -51,7 +51,6 @@
             this.txt_tim_kiem_SP.Name = "txt_tim_kiem_SP";
             this.txt_tim_kiem_SP.Size = new System.Drawing.Size(324, 36);
             this.txt_tim_kiem_SP.TabIndex = 19;
-            this.txt_tim_kiem_SP.TextChanged += new System.EventHandler(this.txt_tim_kiem_SP_TextChanged);
             // 
             // btn_tim_kiem_SP
             // 

@@ -58,7 +58,6 @@
             this.txt_ma_danh_muc.Name = "txt_ma_danh_muc";
             this.txt_ma_danh_muc.Size = new System.Drawing.Size(109, 30);
             this.txt_ma_danh_muc.TabIndex = 1;
-            this.txt_ma_danh_muc.TextChanged += new System.EventHandler(this.txt_ma_danh_muc_TextChanged);
             // 
             // txt_Ten_danh_muc
             // 

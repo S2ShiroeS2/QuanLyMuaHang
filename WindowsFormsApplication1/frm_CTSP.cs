@@ -109,12 +109,13 @@ namespace WindowsFormsApplication1
                 if (flag == true)
                 {
                     navigate_SanPham.Insert_Product(lvi_SanPham, lstv_nha_cung_cap.Items);
+                    MessageBox.Show("Thêm thành công!");
                     this.Close();
                 }
                 else
                 {
                     navigate_SanPham.Edit_Poduct(lvi_SanPham, lstv_nha_cung_cap.Items);
-                    MessageBox.Show("lalala");
+                    MessageBox.Show("Lưu thành công!");
                     this.Close();
                 }
             }
