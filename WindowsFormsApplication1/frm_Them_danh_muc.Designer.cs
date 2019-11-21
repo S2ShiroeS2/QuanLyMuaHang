@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Them_danh_muc));
             this.lbl_Ma_danh_muc = new System.Windows.Forms.Label();
             this.txt_ma_danh_muc = new System.Windows.Forms.TextBox();
             this.txt_Ten_danh_muc = new System.Windows.Forms.TextBox();
@@ -49,24 +50,26 @@
             // 
             // txt_ma_danh_muc
             // 
-            this.txt_ma_danh_muc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_ma_danh_muc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_ma_danh_muc.Enabled = false;
             this.txt_ma_danh_muc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ma_danh_muc.Location = new System.Drawing.Point(197, 74);
-            this.txt_ma_danh_muc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ma_danh_muc.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ma_danh_muc.Name = "txt_ma_danh_muc";
             this.txt_ma_danh_muc.Size = new System.Drawing.Size(109, 30);
             this.txt_ma_danh_muc.TabIndex = 1;
+            this.txt_ma_danh_muc.TextChanged += new System.EventHandler(this.txt_ma_danh_muc_TextChanged);
             // 
             // txt_Ten_danh_muc
             // 
-            this.txt_Ten_danh_muc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_Ten_danh_muc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Ten_danh_muc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Ten_danh_muc.Location = new System.Drawing.Point(197, 131);
-            this.txt_Ten_danh_muc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Ten_danh_muc.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Ten_danh_muc.Name = "txt_Ten_danh_muc";
             this.txt_Ten_danh_muc.Size = new System.Drawing.Size(219, 30);
             this.txt_Ten_danh_muc.TabIndex = 3;
+            this.txt_Ten_danh_muc.TextChanged += new System.EventHandler(this.txt_Ten_danh_muc_TextChanged);
             // 
             // lbl_ten_danh_muc
             // 
@@ -81,15 +84,16 @@
             // 
             // btn_Luu
             // 
+            this.btn_Luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.Location = new System.Drawing.Point(149, 177);
-            this.btn_Luu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Luu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(113, 43);
             this.btn_Luu.TabIndex = 4;
             this.btn_Luu.Text = "Lưu";
-            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.UseVisualStyleBackColor = false;
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // label1
@@ -106,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(433, 233);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Luu);
@@ -115,7 +119,8 @@
             this.Controls.Add(this.txt_ma_danh_muc);
             this.Controls.Add(this.lbl_Ma_danh_muc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Them_danh_muc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Them_danh_muc";

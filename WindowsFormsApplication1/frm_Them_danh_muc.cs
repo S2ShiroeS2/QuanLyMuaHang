@@ -38,5 +38,15 @@ namespace WindowsFormsApplication1
                 this.Close();
             }
         }
+
+        private void txt_ma_danh_muc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Ten_danh_muc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

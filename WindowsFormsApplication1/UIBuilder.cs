@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
 {
     static class UIBuilder
     {
-        static Color color= Color.FromArgb(192, 255, 255);
+        static Color color= Color.FromArgb(0,0,0);
         public static void Border(Form form)
         {
             int width = 1;

@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
 
         private void Form_QLSP_Load(object sender, EventArgs e)
         {
+            lstv_list_SP.Items.Clear();
             list_SanPham = navigate_SanPham.Load_List_San_Pham();
             foreach (ListViewItem SanPham in list_SanPham)
             {
@@ -84,6 +85,11 @@ namespace WindowsFormsApplication1
                 GUI_CTSP.ShowDialog();
                 lam_moi();
             }
+        }
+
+        private void txt_tim_kiem_SP_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -48,6 +48,7 @@ namespace WindowsFormsApplication1
 
         private void frm_QLHD_Load(object sender, EventArgs e)
         {
+            lstv_list_HD.Items.Clear();
             list_lvi_hd=QLHD_crtl.load_list_hd();
             foreach (ListViewItem a in list_lvi_hd)
                 lstv_list_HD.Items.Add(a);

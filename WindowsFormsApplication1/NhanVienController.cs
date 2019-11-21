@@ -51,14 +51,14 @@ namespace WindowsFormsApplication1
             return listNV;
 
         }
-
+        //Lấy ID lớn nhất của tất cả nv
         public int GetMaxNVID()
         {
             var list = from NV_id in data.NVs
                        select NV_id.userID;
             return list.Max();
         }
-
+        //Thêm nv vào lvi
         public NV AddNVInV(ListViewItem lvi_nv, string password)
         {
             NV V = new NV();
@@ -111,12 +111,13 @@ namespace WindowsFormsApplication1
         }
 
         //Kiem tra account co ton tai trong database
-        public bool CheckAccountExsits(string account)
+        public bool CheckAccountExsits(string account,int id)
         {
+            data = new DataClasses1DataContext();
             var listNV = from nhanvien in data.NVs
-                         where nhanvien.userAccount == account
+                         where (nhanvien.userAccount).ToLower() == account.ToLower() && nhanvien.userID!= id
                          select nhanvien;
-            if (listNV.Count() > 1)
+            if (listNV.Count() > 0)
                 return false;
             return true;
         }

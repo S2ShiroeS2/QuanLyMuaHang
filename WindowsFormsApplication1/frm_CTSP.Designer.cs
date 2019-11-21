@@ -59,7 +59,7 @@
             // 
             // txt_ma_sp
             // 
-            this.txt_ma_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_ma_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_ma_sp.Enabled = false;
             this.txt_ma_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ma_sp.Location = new System.Drawing.Point(33, 64);
@@ -104,7 +104,7 @@
             // 
             // txt_nha_sx
             // 
-            this.txt_nha_sx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_nha_sx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_nha_sx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nha_sx.Location = new System.Drawing.Point(441, 128);
             this.txt_nha_sx.Margin = new System.Windows.Forms.Padding(4);
@@ -126,7 +126,7 @@
             // 
             // cbo_loai_sp
             // 
-            this.cbo_loai_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbo_loai_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbo_loai_sp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_loai_sp.FormattingEnabled = true;
             this.cbo_loai_sp.Items.AddRange(new object[] {
@@ -141,7 +141,7 @@
             // 
             // cbo_danh_muc_sp
             // 
-            this.cbo_danh_muc_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbo_danh_muc_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbo_danh_muc_sp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_danh_muc_sp.FormattingEnabled = true;
             this.cbo_danh_muc_sp.Location = new System.Drawing.Point(441, 70);
@@ -153,7 +153,7 @@
             // 
             // lstv_nha_cung_cap
             // 
-            this.lstv_nha_cung_cap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lstv_nha_cung_cap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lstv_nha_cung_cap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.lstv_nha_cung_cap.FullRowSelect = true;
@@ -174,6 +174,7 @@
             // 
             // btn_sua
             // 
+            this.btn_sua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sua.Location = new System.Drawing.Point(199, 234);
@@ -182,11 +183,12 @@
             this.btn_sua.Size = new System.Drawing.Size(125, 71);
             this.btn_sua.TabIndex = 20;
             this.btn_sua.Text = "Sửa";
-            this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.UseVisualStyleBackColor = false;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_luu
             // 
+            this.btn_luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_luu.Location = new System.Drawing.Point(438, 234);
@@ -195,12 +197,12 @@
             this.btn_luu.Size = new System.Drawing.Size(125, 71);
             this.btn_luu.TabIndex = 21;
             this.btn_luu.Text = "Lưu";
-            this.btn_luu.UseVisualStyleBackColor = true;
+            this.btn_luu.UseVisualStyleBackColor = false;
             this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
             // txt_ten_sp
             // 
-            this.txt_ten_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_ten_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_ten_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ten_sp.Location = new System.Drawing.Point(33, 128);
             this.txt_ten_sp.Margin = new System.Windows.Forms.Padding(4);
@@ -211,6 +213,7 @@
             // 
             // btn_them_ncc
             // 
+            this.btn_them_ncc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_them_ncc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_them_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them_ncc.Location = new System.Drawing.Point(789, 252);
@@ -219,14 +222,14 @@
             this.btn_them_ncc.Size = new System.Drawing.Size(125, 35);
             this.btn_them_ncc.TabIndex = 22;
             this.btn_them_ncc.Text = "Thêm";
-            this.btn_them_ncc.UseVisualStyleBackColor = true;
+            this.btn_them_ncc.UseVisualStyleBackColor = false;
             this.btn_them_ncc.Click += new System.EventHandler(this.btn_them_ncc_Click);
             // 
             // frm_CTSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(969, 320);
             this.Controls.Add(this.btn_them_ncc);
             this.Controls.Add(this.btn_luu);

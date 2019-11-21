@@ -36,11 +36,17 @@
             this.btn_QLNCC = new System.Windows.Forms.Button();
             this.btn_ChangeInform = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lb_Name = new System.Windows.Forms.Label();
+            this.lb_Account = new System.Windows.Forms.Label();
+            this.lb_Role = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_LogOut
             // 
-            this.btn_LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_LogOut.ForeColor = System.Drawing.Color.Black;
@@ -54,7 +60,7 @@
             // 
             // btn_QLHD
             // 
-            this.btn_QLHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_QLHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_QLHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_QLHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_QLHD.ForeColor = System.Drawing.Color.Black;
@@ -68,7 +74,7 @@
             // 
             // btn_QLSP
             // 
-            this.btn_QLSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_QLSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_QLSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_QLSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_QLSP.ForeColor = System.Drawing.Color.Black;
@@ -82,7 +88,7 @@
             // 
             // btn_QLNV
             // 
-            this.btn_QLNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_QLNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_QLNV.Enabled = false;
             this.btn_QLNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_QLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -97,7 +103,7 @@
             // 
             // btn_QLNCC
             // 
-            this.btn_QLNCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_QLNCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_QLNCC.Enabled = false;
             this.btn_QLNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_QLNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -112,7 +118,7 @@
             // 
             // btn_ChangeInform
             // 
-            this.btn_ChangeInform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ChangeInform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_ChangeInform.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ChangeInform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_ChangeInform.ForeColor = System.Drawing.Color.Black;
@@ -127,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 3);
@@ -136,12 +142,78 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Menu";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 24);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Tài khoản :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 24);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Tên :";
+            // 
+            // lb_Name
+            // 
+            this.lb_Name.AutoSize = true;
+            this.lb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Name.Location = new System.Drawing.Point(132, 97);
+            this.lb_Name.Name = "lb_Name";
+            this.lb_Name.Size = new System.Drawing.Size(66, 24);
+            this.lb_Name.TabIndex = 15;
+            this.lb_Name.Text = "label4";
+            // 
+            // lb_Account
+            // 
+            this.lb_Account.AutoSize = true;
+            this.lb_Account.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Account.Location = new System.Drawing.Point(132, 63);
+            this.lb_Account.Name = "lb_Account";
+            this.lb_Account.Size = new System.Drawing.Size(66, 24);
+            this.lb_Account.TabIndex = 14;
+            this.lb_Account.Text = "label5";
+            // 
+            // lb_Role
+            // 
+            this.lb_Role.AutoSize = true;
+            this.lb_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Role.Location = new System.Drawing.Point(132, 132);
+            this.lb_Role.Name = "lb_Role";
+            this.lb_Role.Size = new System.Drawing.Size(66, 24);
+            this.lb_Role.TabIndex = 17;
+            this.lb_Role.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 132);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 24);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Vai trò :";
+            // 
             // frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(566, 513);
+            this.Controls.Add(this.lb_Role);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lb_Name);
+            this.Controls.Add(this.lb_Account);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_ChangeInform);
             this.Controls.Add(this.btn_QLNCC);
@@ -169,5 +241,11 @@
         private System.Windows.Forms.Button btn_QLNCC;
         private System.Windows.Forms.Button btn_ChangeInform;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb_Name;
+        private System.Windows.Forms.Label lb_Account;
+        private System.Windows.Forms.Label lb_Role;
+        private System.Windows.Forms.Label label5;
     }
 }

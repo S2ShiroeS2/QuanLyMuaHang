@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Thêm sản phẩm"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CTHD));
             this.lbl_chitiethoadon = new System.Windows.Forms.Label();
             this.txt_Ma_HD = new System.Windows.Forms.TextBox();
             this.lbl_nhacc = new System.Windows.Forms.Label();
@@ -67,13 +68,15 @@
             // 
             // txt_Ma_HD
             // 
+            this.txt_Ma_HD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Ma_HD.Enabled = false;
             this.txt_Ma_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Ma_HD.Location = new System.Drawing.Point(189, 44);
-            this.txt_Ma_HD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Ma_HD.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Ma_HD.Name = "txt_Ma_HD";
             this.txt_Ma_HD.Size = new System.Drawing.Size(132, 34);
             this.txt_Ma_HD.TabIndex = 1;
+            this.txt_Ma_HD.TextChanged += new System.EventHandler(this.txt_Ma_HD_TextChanged);
             // 
             // lbl_nhacc
             // 
@@ -99,10 +102,11 @@
             // 
             // dtpk_ngay_dat_hang
             // 
+            this.dtpk_ngay_dat_hang.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dtpk_ngay_dat_hang.Enabled = false;
             this.dtpk_ngay_dat_hang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpk_ngay_dat_hang.Location = new System.Drawing.Point(781, 103);
-            this.dtpk_ngay_dat_hang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpk_ngay_dat_hang.Margin = new System.Windows.Forms.Padding(4);
             this.dtpk_ngay_dat_hang.Name = "dtpk_ngay_dat_hang";
             this.dtpk_ngay_dat_hang.Size = new System.Drawing.Size(363, 30);
             this.dtpk_ngay_dat_hang.TabIndex = 6;
@@ -110,6 +114,7 @@
             // lstv_list_cthd
             // 
             this.lstv_list_cthd.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.lstv_list_cthd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lstv_list_cthd.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader6,
@@ -120,9 +125,9 @@
             this.lstv_list_cthd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstv_list_cthd.FullRowSelect = true;
             this.lstv_list_cthd.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem3});
             this.lstv_list_cthd.Location = new System.Drawing.Point(33, 180);
-            this.lstv_list_cthd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstv_list_cthd.Margin = new System.Windows.Forms.Padding(4);
             this.lstv_list_cthd.MultiSelect = false;
             this.lstv_list_cthd.Name = "lstv_list_cthd";
             this.lstv_list_cthd.Size = new System.Drawing.Size(1199, 244);
@@ -164,13 +169,15 @@
             // 
             // txt_tong_tien_HD_khong_thue
             // 
+            this.txt_tong_tien_HD_khong_thue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_tong_tien_HD_khong_thue.Enabled = false;
             this.txt_tong_tien_HD_khong_thue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tong_tien_HD_khong_thue.Location = new System.Drawing.Point(971, 432);
-            this.txt_tong_tien_HD_khong_thue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_tong_tien_HD_khong_thue.Margin = new System.Windows.Forms.Padding(4);
             this.txt_tong_tien_HD_khong_thue.Name = "txt_tong_tien_HD_khong_thue";
             this.txt_tong_tien_HD_khong_thue.Size = new System.Drawing.Size(232, 26);
             this.txt_tong_tien_HD_khong_thue.TabIndex = 9;
+            this.txt_tong_tien_HD_khong_thue.TextChanged += new System.EventHandler(this.txt_tong_tien_HD_khong_thue_TextChanged);
             // 
             // lbl_tientruocthue
             // 
@@ -185,13 +192,15 @@
             // 
             // txt_Thue_HD
             // 
+            this.txt_Thue_HD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Thue_HD.Enabled = false;
             this.txt_Thue_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Thue_HD.Location = new System.Drawing.Point(971, 486);
-            this.txt_Thue_HD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Thue_HD.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Thue_HD.Name = "txt_Thue_HD";
             this.txt_Thue_HD.Size = new System.Drawing.Size(232, 26);
             this.txt_Thue_HD.TabIndex = 11;
+            this.txt_Thue_HD.TextChanged += new System.EventHandler(this.txt_Thue_HD_TextChanged);
             // 
             // lbl_thue
             // 
@@ -206,13 +215,15 @@
             // 
             // txt_Tong_tien_HD
             // 
+            this.txt_Tong_tien_HD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Tong_tien_HD.Enabled = false;
             this.txt_Tong_tien_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Tong_tien_HD.Location = new System.Drawing.Point(971, 542);
-            this.txt_Tong_tien_HD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Tong_tien_HD.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Tong_tien_HD.Name = "txt_Tong_tien_HD";
             this.txt_Tong_tien_HD.Size = new System.Drawing.Size(232, 26);
             this.txt_Tong_tien_HD.TabIndex = 13;
+            this.txt_Tong_tien_HD.TextChanged += new System.EventHandler(this.txt_Tong_tien_HD_TextChanged);
             // 
             // lbl_tongtien
             // 
@@ -227,16 +238,17 @@
             // 
             // btn_luu
             // 
+            this.btn_luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_luu.Enabled = false;
             this.btn_luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_luu.Location = new System.Drawing.Point(16, 524);
-            this.btn_luu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.Size = new System.Drawing.Size(116, 44);
             this.btn_luu.TabIndex = 16;
             this.btn_luu.Text = "Lưu";
-            this.btn_luu.UseVisualStyleBackColor = true;
+            this.btn_luu.UseVisualStyleBackColor = false;
             this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
             // lbl_ma_hoa_don
@@ -252,10 +264,11 @@
             // 
             // cbo_nha_cc
             // 
+            this.cbo_nha_cc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbo_nha_cc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_nha_cc.FormattingEnabled = true;
             this.cbo_nha_cc.Location = new System.Drawing.Point(189, 110);
-            this.cbo_nha_cc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_nha_cc.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_nha_cc.Name = "cbo_nha_cc";
             this.cbo_nha_cc.Size = new System.Drawing.Size(160, 24);
             this.cbo_nha_cc.TabIndex = 18;
@@ -264,23 +277,24 @@
             // 
             // btn_Xoa_SP
             // 
+            this.btn_Xoa_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_Xoa_SP.Enabled = false;
             this.btn_Xoa_SP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xoa_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa_SP.Location = new System.Drawing.Point(16, 432);
-            this.btn_Xoa_SP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Xoa_SP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xoa_SP.Name = "btn_Xoa_SP";
             this.btn_Xoa_SP.Size = new System.Drawing.Size(172, 44);
             this.btn_Xoa_SP.TabIndex = 19;
             this.btn_Xoa_SP.Text = "Xóa sản phẩm";
-            this.btn_Xoa_SP.UseVisualStyleBackColor = true;
+            this.btn_Xoa_SP.UseVisualStyleBackColor = false;
             this.btn_Xoa_SP.Click += new System.EventHandler(this.btn_Xoa_SP_Click);
             // 
             // frm_CTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1232, 583);
             this.Controls.Add(this.btn_Xoa_SP);
             this.Controls.Add(this.cbo_nha_cc);
@@ -299,7 +313,8 @@
             this.Controls.Add(this.txt_Ma_HD);
             this.Controls.Add(this.lbl_chitiethoadon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_CTHD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_CTHD";

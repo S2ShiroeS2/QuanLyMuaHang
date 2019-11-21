@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TTCN));
             this.txb_Account = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txb_Email = new System.Windows.Forms.TextBox();
@@ -48,6 +49,7 @@
             // 
             // txb_Account
             // 
+            this.txb_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_Account.Enabled = false;
             this.txb_Account.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_Account.Location = new System.Drawing.Point(353, 76);
@@ -70,6 +72,7 @@
             // 
             // txb_Email
             // 
+            this.txb_Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_Email.Enabled = false;
             this.txb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txb_Email.Location = new System.Drawing.Point(6, 206);
@@ -80,6 +83,7 @@
             // 
             // txb_ID
             // 
+            this.txb_ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_ID.Enabled = false;
             this.txb_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ID.Location = new System.Drawing.Point(6, 139);
@@ -112,6 +116,7 @@
             // 
             // txb_Phone
             // 
+            this.txb_Phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_Phone.Enabled = false;
             this.txb_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_Phone.Location = new System.Drawing.Point(353, 206);
@@ -134,6 +139,7 @@
             // 
             // txb_Name
             // 
+            this.txb_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_Name.Enabled = false;
             this.txb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_Name.Location = new System.Drawing.Point(6, 76);
@@ -190,6 +196,7 @@
             // 
             // txb_Role
             // 
+            this.txb_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_Role.Enabled = false;
             this.txb_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_Role.Location = new System.Drawing.Point(353, 139);
@@ -223,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(825, 318);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txb_Role);
@@ -242,6 +249,7 @@
             this.Controls.Add(this.txb_Name);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_TTCN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_TTCN_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CTNCC));
             this.label1 = new System.Windows.Forms.Label();
             this.txb_VendorName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@
             // 
             // txb_VendorName
             // 
-            this.txb_VendorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txb_VendorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_VendorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_VendorName.Location = new System.Drawing.Point(13, 90);
             this.txb_VendorName.Margin = new System.Windows.Forms.Padding(4);
@@ -83,7 +84,7 @@
             // 
             // txb_VendorAddress
             // 
-            this.txb_VendorAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txb_VendorAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_VendorAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_VendorAddress.Location = new System.Drawing.Point(13, 216);
             this.txb_VendorAddress.Margin = new System.Windows.Forms.Padding(4);
@@ -96,7 +97,7 @@
             // 
             // txb_Phone
             // 
-            this.txb_Phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txb_Phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_Phone.Location = new System.Drawing.Point(334, 216);
             this.txb_Phone.Margin = new System.Windows.Forms.Padding(4);
@@ -130,7 +131,7 @@
             // 
             // txb_VendorEmail
             // 
-            this.txb_VendorEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txb_VendorEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_VendorEmail.Location = new System.Drawing.Point(12, 278);
             this.txb_VendorEmail.Name = "txb_VendorEmail";
             this.txb_VendorEmail.Size = new System.Drawing.Size(301, 22);
@@ -140,7 +141,7 @@
             // 
             // txb_VendorID
             // 
-            this.txb_VendorID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txb_VendorID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_VendorID.Enabled = false;
             this.txb_VendorID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_VendorID.Location = new System.Drawing.Point(12, 153);
@@ -162,6 +163,7 @@
             // 
             // btn_UpdateVendor
             // 
+            this.btn_UpdateVendor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_UpdateVendor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_UpdateVendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_UpdateVendor.Location = new System.Drawing.Point(151, 332);
@@ -169,11 +171,12 @@
             this.btn_UpdateVendor.Size = new System.Drawing.Size(127, 55);
             this.btn_UpdateVendor.TabIndex = 11;
             this.btn_UpdateVendor.Text = "Sửa ";
-            this.btn_UpdateVendor.UseVisualStyleBackColor = true;
+            this.btn_UpdateVendor.UseVisualStyleBackColor = false;
             this.btn_UpdateVendor.Click += new System.EventHandler(this.bt__sua_ncc_Click);
             // 
             // btn_SaveVendor
             // 
+            this.btn_SaveVendor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_SaveVendor.Enabled = false;
             this.btn_SaveVendor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SaveVendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,7 +185,7 @@
             this.btn_SaveVendor.Size = new System.Drawing.Size(127, 55);
             this.btn_SaveVendor.TabIndex = 12;
             this.btn_SaveVendor.Text = "Lưu";
-            this.btn_SaveVendor.UseVisualStyleBackColor = true;
+            this.btn_SaveVendor.UseVisualStyleBackColor = false;
             this.btn_SaveVendor.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // label6
@@ -198,7 +201,7 @@
             // 
             // txb_Available
             // 
-            this.txb_Available.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txb_Available.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_Available.Enabled = false;
             this.txb_Available.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_Available.Location = new System.Drawing.Point(334, 90);
@@ -220,7 +223,7 @@
             // 
             // nbb_Vat
             // 
-            this.nbb_Vat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nbb_Vat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nbb_Vat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.nbb_Vat.Location = new System.Drawing.Point(334, 153);
             this.nbb_Vat.Name = "nbb_Vat";
@@ -231,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(644, 440);
             this.Controls.Add(this.nbb_Vat);
             this.Controls.Add(this.label7);
@@ -250,6 +253,7 @@
             this.Controls.Add(this.txb_VendorName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_CTNCC";
             this.Text = "formCT_ncc";

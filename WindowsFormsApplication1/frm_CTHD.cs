@@ -192,5 +192,25 @@ namespace WindowsFormsApplication1
             else
                 ncc_previous = "";
         }
+
+        private void txt_Ma_HD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Tong_tien_HD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Thue_HD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_tong_tien_HD_khong_thue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

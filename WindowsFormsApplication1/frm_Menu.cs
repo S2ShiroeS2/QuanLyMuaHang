@@ -44,6 +44,9 @@ namespace WindowsFormsApplication1
                     btn_QLNV.Enabled = false;
                 }
             }
+            lb_Account.Text = LoginController.Account;
+            lb_Name.Text = LoginController.Name;
+            lb_Role.Text = (bool.Parse(LoginController.UserRole)?"Admin":"Nhân viên");
         }
 
         private void btn_QLHD_Click(object sender, EventArgs e)

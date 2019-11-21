@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_QLSP));
             this.txt_tim_kiem_SP = new System.Windows.Forms.TextBox();
             this.btn_tim_kiem_SP = new System.Windows.Forms.Button();
             this.lstv_list_SP = new System.Windows.Forms.ListView();
@@ -43,16 +44,18 @@
             // 
             // txt_tim_kiem_SP
             // 
-            this.txt_tim_kiem_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txt_tim_kiem_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_tim_kiem_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tim_kiem_SP.Location = new System.Drawing.Point(769, 61);
             this.txt_tim_kiem_SP.Margin = new System.Windows.Forms.Padding(4);
             this.txt_tim_kiem_SP.Name = "txt_tim_kiem_SP";
             this.txt_tim_kiem_SP.Size = new System.Drawing.Size(324, 36);
             this.txt_tim_kiem_SP.TabIndex = 19;
+            this.txt_tim_kiem_SP.TextChanged += new System.EventHandler(this.txt_tim_kiem_SP_TextChanged);
             // 
             // btn_tim_kiem_SP
             // 
+            this.btn_tim_kiem_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_tim_kiem_SP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tim_kiem_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tim_kiem_SP.Location = new System.Drawing.Point(1116, 62);
@@ -61,12 +64,12 @@
             this.btn_tim_kiem_SP.Size = new System.Drawing.Size(108, 36);
             this.btn_tim_kiem_SP.TabIndex = 18;
             this.btn_tim_kiem_SP.Text = "Tìm";
-            this.btn_tim_kiem_SP.UseVisualStyleBackColor = true;
+            this.btn_tim_kiem_SP.UseVisualStyleBackColor = false;
             this.btn_tim_kiem_SP.Click += new System.EventHandler(this.btn_tim_kiem_SP_Click);
             // 
             // lstv_list_SP
             // 
-            this.lstv_list_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lstv_list_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lstv_list_SP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader8,
             this.columnHeader9,
@@ -113,6 +116,7 @@
             // 
             // btn_tao_moi_SP
             // 
+            this.btn_tao_moi_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_tao_moi_SP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tao_moi_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tao_moi_SP.Location = new System.Drawing.Point(13, 56);
@@ -121,7 +125,7 @@
             this.btn_tao_moi_SP.Size = new System.Drawing.Size(105, 41);
             this.btn_tao_moi_SP.TabIndex = 15;
             this.btn_tao_moi_SP.Text = "Tạo mới";
-            this.btn_tao_moi_SP.UseVisualStyleBackColor = true;
+            this.btn_tao_moi_SP.UseVisualStyleBackColor = false;
             this.btn_tao_moi_SP.Click += new System.EventHandler(this.btn_tao_moi_SP_Click);
             // 
             // label1
@@ -147,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1232, 428);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -156,6 +160,7 @@
             this.Controls.Add(this.lstv_list_SP);
             this.Controls.Add(this.btn_tao_moi_SP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_QLSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

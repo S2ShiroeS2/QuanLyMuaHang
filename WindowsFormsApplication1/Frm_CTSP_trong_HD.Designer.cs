@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CTSP_trong_HD));
             this.lbl_Ten_SP = new System.Windows.Forms.Label();
             this.cbo_Ten_SP = new System.Windows.Forms.ComboBox();
             this.txt_So_luong = new System.Windows.Forms.TextBox();
@@ -67,6 +68,7 @@
             // 
             // cbo_Ten_SP
             // 
+            this.cbo_Ten_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbo_Ten_SP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Ten_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Ten_SP.ForeColor = System.Drawing.Color.Black;
@@ -80,6 +82,7 @@
             // 
             // txt_So_luong
             // 
+            this.txt_So_luong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_So_luong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_So_luong.ForeColor = System.Drawing.Color.Black;
             this.txt_So_luong.Location = new System.Drawing.Point(148, 137);
@@ -113,6 +116,7 @@
             // 
             // txt_Nha_cc
             // 
+            this.txt_Nha_cc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Nha_cc.Enabled = false;
             this.txt_Nha_cc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nha_cc.ForeColor = System.Drawing.Color.Black;
@@ -135,6 +139,7 @@
             // 
             // txt_Don_gia
             // 
+            this.txt_Don_gia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Don_gia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Don_gia.ForeColor = System.Drawing.Color.Black;
             this.txt_Don_gia.Location = new System.Drawing.Point(542, 80);
@@ -157,6 +162,7 @@
             // 
             // txt_Thue
             // 
+            this.txt_Thue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Thue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Thue.ForeColor = System.Drawing.Color.Black;
             this.txt_Thue.Location = new System.Drawing.Point(542, 137);
@@ -179,6 +185,7 @@
             // 
             // txt_tien_truoc_thue
             // 
+            this.txt_tien_truoc_thue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_tien_truoc_thue.Enabled = false;
             this.txt_tien_truoc_thue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tien_truoc_thue.ForeColor = System.Drawing.Color.Black;
@@ -190,6 +197,7 @@
             // 
             // btn_xac_nhan
             // 
+            this.btn_xac_nhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_xac_nhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_xac_nhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xac_nhan.ForeColor = System.Drawing.Color.Black;
@@ -198,7 +206,7 @@
             this.btn_xac_nhan.Size = new System.Drawing.Size(127, 33);
             this.btn_xac_nhan.TabIndex = 12;
             this.btn_xac_nhan.Text = "Xác nhận";
-            this.btn_xac_nhan.UseVisualStyleBackColor = true;
+            this.btn_xac_nhan.UseVisualStyleBackColor = false;
             this.btn_xac_nhan.Click += new System.EventHandler(this.btn_xac_nhan_Click);
             // 
             // label3
@@ -214,6 +222,7 @@
             // 
             // txt_Tong_tien
             // 
+            this.txt_Tong_tien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_Tong_tien.Enabled = false;
             this.txt_Tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Tong_tien.ForeColor = System.Drawing.Color.Black;
@@ -236,6 +245,7 @@
             // 
             // txt_tien_thue
             // 
+            this.txt_tien_thue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_tien_thue.Enabled = false;
             this.txt_tien_thue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tien_thue.ForeColor = System.Drawing.Color.Black;
@@ -261,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(752, 313);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_tien_thue);
@@ -282,6 +292,7 @@
             this.Controls.Add(this.lbl_Ten_SP);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Frm_CTSP_trong_HD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

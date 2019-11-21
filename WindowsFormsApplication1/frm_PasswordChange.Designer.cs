@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PasswordChange));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@
             // 
             // btn_ConfirmPassword
             // 
+            this.btn_ConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_ConfirmPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_ConfirmPassword.Location = new System.Drawing.Point(210, 188);
@@ -77,12 +79,12 @@
             this.btn_ConfirmPassword.Size = new System.Drawing.Size(75, 36);
             this.btn_ConfirmPassword.TabIndex = 3;
             this.btn_ConfirmPassword.Text = "Lưu";
-            this.btn_ConfirmPassword.UseVisualStyleBackColor = true;
+            this.btn_ConfirmPassword.UseVisualStyleBackColor = false;
             this.btn_ConfirmPassword.Click += new System.EventHandler(this.btn_ConfirmPassword_Click);
             // 
             // txb_OldPassword
             // 
-            this.txb_OldPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txb_OldPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_OldPassword.Location = new System.Drawing.Point(250, 91);
             this.txb_OldPassword.Name = "txb_OldPassword";
             this.txb_OldPassword.Size = new System.Drawing.Size(226, 22);
@@ -91,7 +93,7 @@
             // 
             // txb_NewPassword
             // 
-            this.txb_NewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txb_NewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_NewPassword.Location = new System.Drawing.Point(250, 119);
             this.txb_NewPassword.Name = "txb_NewPassword";
             this.txb_NewPassword.Size = new System.Drawing.Size(226, 22);
@@ -100,7 +102,7 @@
             // 
             // txb_ConfirmPassword
             // 
-            this.txb_ConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txb_ConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_ConfirmPassword.Location = new System.Drawing.Point(250, 148);
             this.txb_ConfirmPassword.Name = "txb_ConfirmPassword";
             this.txb_ConfirmPassword.Size = new System.Drawing.Size(226, 22);
@@ -121,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(520, 257);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txb_ConfirmPassword);
@@ -132,6 +134,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_PasswordChange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_PasswordChange";

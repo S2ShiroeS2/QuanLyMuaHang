@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
 
         private void Form_QLNV_Load(object sender, EventArgs e)
         {
+            lv_list_NV.Items.Clear();
             list_NV = NVC.NhanVienList();
 
             foreach (ListViewItem Nv in list_NV)
