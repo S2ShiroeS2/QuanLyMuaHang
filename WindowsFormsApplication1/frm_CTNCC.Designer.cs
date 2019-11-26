@@ -69,7 +69,6 @@
             this.txb_VendorName.Size = new System.Drawing.Size(265, 30);
             this.txb_VendorName.TabIndex = 1;
             this.txb_VendorName.TextChanged += new System.EventHandler(this.txb_VendorName_TextChanged);
-            this.txb_VendorName.Validating += new System.ComponentModel.CancelEventHandler(this.txb_ten_ncc_Validating);
             // 
             // label2
             // 
@@ -93,7 +92,6 @@
             this.txb_VendorAddress.Size = new System.Drawing.Size(301, 30);
             this.txb_VendorAddress.TabIndex = 3;
             this.txb_VendorAddress.TextChanged += new System.EventHandler(this.txb_VendorAddress_TextChanged);
-            this.txb_VendorAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txb_VendorAddress_Validating);
             // 
             // txb_Phone
             // 
@@ -105,7 +103,6 @@
             this.txb_Phone.Size = new System.Drawing.Size(265, 30);
             this.txb_Phone.TabIndex = 5;
             this.txb_Phone.TextChanged += new System.EventHandler(this.txb_Phone_TextChanged);
-            this.txb_Phone.Validating += new System.ComponentModel.CancelEventHandler(this.txb_Phone_Validating);
             // 
             // label3
             // 
@@ -137,7 +134,6 @@
             this.txb_VendorEmail.Size = new System.Drawing.Size(301, 22);
             this.txb_VendorEmail.TabIndex = 9;
             this.txb_VendorEmail.TextChanged += new System.EventHandler(this.txb_VendorEmail_TextChanged);
-            this.txb_VendorEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txb_VendorEmail_Validating);
             // 
             // txb_VendorID
             // 

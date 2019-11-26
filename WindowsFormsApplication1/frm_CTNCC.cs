@@ -100,27 +100,7 @@ namespace WindowsFormsApplication1
                 btn_SaveVendor.Enabled = false;
         }
 
-        //Set ErrorPRovider cho txb_VendorName
-        private void txb_ten_ncc_Validating(object sender, CancelEventArgs e)
-        {
-            
-        }
-
-
-        private void txb_VendorAddress_Validating(object sender, CancelEventArgs e)
-        {
-            
-        }
-
-        private void txb_Phone_Validating(object sender, CancelEventArgs e)
-        {
-            
-        }
-
-        private void txb_VendorEmail_Validating(object sender, CancelEventArgs e)
-        {
-            
-        }
+        //Set ErrorPRovider cho txb_VendorNames
 
         private void txb_VendorName_TextChanged(object sender, EventArgs e)
         {
@@ -194,7 +174,7 @@ namespace WindowsFormsApplication1
             {
                 txb_VendorEmail.Focus();
                 EP.SetError(txb_VendorEmail, "Email không hợp lệ");
-                flag_3 = false;
+                flag_2 = false;
                 EnableSaveBtn();
             }
             else
