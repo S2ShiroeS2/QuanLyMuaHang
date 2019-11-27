@@ -62,7 +62,7 @@
             this.lbl_Ten_SP.Location = new System.Drawing.Point(8, 86);
             this.lbl_Ten_SP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Ten_SP.Name = "lbl_Ten_SP";
-            this.lbl_Ten_SP.Size = new System.Drawing.Size(138, 25);
+            this.lbl_Ten_SP.Size = new System.Drawing.Size(110, 20);
             this.lbl_Ten_SP.TabIndex = 0;
             this.lbl_Ten_SP.Text = "Tên sản phẩm";
             // 
@@ -76,7 +76,7 @@
             this.cbo_Ten_SP.Location = new System.Drawing.Point(148, 78);
             this.cbo_Ten_SP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbo_Ten_SP.Name = "cbo_Ten_SP";
-            this.cbo_Ten_SP.Size = new System.Drawing.Size(140, 33);
+            this.cbo_Ten_SP.Size = new System.Drawing.Size(140, 28);
             this.cbo_Ten_SP.TabIndex = 1;
             this.cbo_Ten_SP.SelectedIndexChanged += new System.EventHandler(this.cbo_Ten_SP_SelectedIndexChanged);
             // 
@@ -87,8 +87,9 @@
             this.txt_So_luong.ForeColor = System.Drawing.Color.Black;
             this.txt_So_luong.Location = new System.Drawing.Point(148, 137);
             this.txt_So_luong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_So_luong.MaxLength = 30;
             this.txt_So_luong.Name = "txt_So_luong";
-            this.txt_So_luong.Size = new System.Drawing.Size(72, 30);
+            this.txt_So_luong.Size = new System.Drawing.Size(140, 26);
             this.txt_So_luong.TabIndex = 2;
             this.txt_So_luong.TextChanged += new System.EventHandler(this.txt_So_luong_TextChanged);
             // 
@@ -99,7 +100,7 @@
             this.lbl_So_luong.Location = new System.Drawing.Point(8, 143);
             this.lbl_So_luong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_So_luong.Name = "lbl_So_luong";
-            this.lbl_So_luong.Size = new System.Drawing.Size(90, 25);
+            this.lbl_So_luong.Size = new System.Drawing.Size(72, 20);
             this.lbl_So_luong.TabIndex = 3;
             this.lbl_So_luong.Text = "Số lượng";
             // 
@@ -110,7 +111,7 @@
             this.lbl_Nha_CC.Location = new System.Drawing.Point(7, 23);
             this.lbl_Nha_CC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Nha_CC.Name = "lbl_Nha_CC";
-            this.lbl_Nha_CC.Size = new System.Drawing.Size(169, 29);
+            this.lbl_Nha_CC.Size = new System.Drawing.Size(133, 25);
             this.lbl_Nha_CC.TabIndex = 5;
             this.lbl_Nha_CC.Text = "Nhà cung cấp";
             // 
@@ -123,7 +124,7 @@
             this.txt_Nha_cc.Location = new System.Drawing.Point(171, 20);
             this.txt_Nha_cc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Nha_cc.Name = "txt_Nha_cc";
-            this.txt_Nha_cc.Size = new System.Drawing.Size(161, 36);
+            this.txt_Nha_cc.Size = new System.Drawing.Size(161, 30);
             this.txt_Nha_cc.TabIndex = 4;
             // 
             // lbl_Don_gia
@@ -133,7 +134,7 @@
             this.lbl_Don_gia.Location = new System.Drawing.Point(410, 86);
             this.lbl_Don_gia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Don_gia.Name = "lbl_Don_gia";
-            this.lbl_Don_gia.Size = new System.Drawing.Size(135, 25);
+            this.lbl_Don_gia.Size = new System.Drawing.Size(108, 20);
             this.lbl_Don_gia.TabIndex = 7;
             this.lbl_Don_gia.Text = "Đơn giá(VND)";
             // 
@@ -144,8 +145,9 @@
             this.txt_Don_gia.ForeColor = System.Drawing.Color.Black;
             this.txt_Don_gia.Location = new System.Drawing.Point(542, 80);
             this.txt_Don_gia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Don_gia.MaxLength = 30;
             this.txt_Don_gia.Name = "txt_Don_gia";
-            this.txt_Don_gia.Size = new System.Drawing.Size(80, 30);
+            this.txt_Don_gia.Size = new System.Drawing.Size(150, 26);
             this.txt_Don_gia.TabIndex = 6;
             this.txt_Don_gia.TextChanged += new System.EventHandler(this.txt_Don_gia_TextChanged);
             // 
@@ -156,7 +158,7 @@
             this.label1.Location = new System.Drawing.Point(410, 143);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 25);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Thuế(%)";
             // 
@@ -167,8 +169,9 @@
             this.txt_Thue.ForeColor = System.Drawing.Color.Black;
             this.txt_Thue.Location = new System.Drawing.Point(542, 137);
             this.txt_Thue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Thue.MaxLength = 30;
             this.txt_Thue.Name = "txt_Thue";
-            this.txt_Thue.Size = new System.Drawing.Size(80, 30);
+            this.txt_Thue.Size = new System.Drawing.Size(150, 26);
             this.txt_Thue.TabIndex = 8;
             this.txt_Thue.TextChanged += new System.EventHandler(this.txt_Thue_TextChanged);
             // 
@@ -179,7 +182,7 @@
             this.label2.Location = new System.Drawing.Point(431, 201);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 25);
+            this.label2.Size = new System.Drawing.Size(115, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Tiền trước thuế";
             // 
@@ -192,7 +195,7 @@
             this.txt_tien_truoc_thue.Location = new System.Drawing.Point(606, 196);
             this.txt_tien_truoc_thue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_tien_truoc_thue.Name = "txt_tien_truoc_thue";
-            this.txt_tien_truoc_thue.Size = new System.Drawing.Size(133, 30);
+            this.txt_tien_truoc_thue.Size = new System.Drawing.Size(133, 26);
             this.txt_tien_truoc_thue.TabIndex = 10;
             // 
             // btn_xac_nhan
@@ -216,7 +219,7 @@
             this.label3.Location = new System.Drawing.Point(431, 280);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 25);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Tổng tiền";
             // 
@@ -229,7 +232,7 @@
             this.txt_Tong_tien.Location = new System.Drawing.Point(606, 274);
             this.txt_Tong_tien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Tong_tien.Name = "txt_Tong_tien";
-            this.txt_Tong_tien.Size = new System.Drawing.Size(133, 30);
+            this.txt_Tong_tien.Size = new System.Drawing.Size(133, 26);
             this.txt_Tong_tien.TabIndex = 13;
             // 
             // label4
@@ -239,7 +242,7 @@
             this.label4.Location = new System.Drawing.Point(431, 240);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 25);
+            this.label4.Size = new System.Drawing.Size(45, 20);
             this.label4.TabIndex = 16;
             this.label4.Text = "Thuế";
             // 
@@ -252,7 +255,7 @@
             this.txt_tien_thue.Location = new System.Drawing.Point(606, 234);
             this.txt_tien_thue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_tien_thue.Name = "txt_tien_thue";
-            this.txt_tien_thue.Size = new System.Drawing.Size(133, 30);
+            this.txt_tien_thue.Size = new System.Drawing.Size(133, 26);
             this.txt_tien_thue.TabIndex = 15;
             // 
             // err_so_luong
@@ -269,7 +272,7 @@
             // 
             // Frm_CTSP_trong_HD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(752, 313);

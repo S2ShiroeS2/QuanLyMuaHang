@@ -136,9 +136,9 @@ namespace WindowsFormsApplication1
             {
                 ListViewItem sp = new ListViewItem();
                 sp.Text = cbo_Ten_SP.SelectedItem.ToString();
-                sp.SubItems.Add(txt_So_luong.Text);
-                sp.SubItems.Add(txt_Don_gia.Text);
-                sp.SubItems.Add(txt_Thue.Text);
+                sp.SubItems.Add(Convert.ToInt32( txt_So_luong.Text).ToString());
+                sp.SubItems.Add(Convert.ToInt32( txt_Don_gia.Text).ToString());
+                sp.SubItems.Add(Convert.ToInt32(txt_Thue.Text).ToString());
                 sp.SubItems.Add(txt_Tong_tien.Text);
                 CTHD_controller.sp_moi = cthd_ctrl.Them_SP(sp);
             }
