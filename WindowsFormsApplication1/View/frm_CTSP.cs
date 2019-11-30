@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApplication1.Model;
 namespace WindowsFormsApplication1
 {
     public partial class frm_CTSP : Form
@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
         SanPhamController navigate_SanPham = new SanPhamController();
         public static bool flag { get; private set; } = true;
         public static ListViewItem lvi_SanPham { get; private set; } = new ListViewItem();
+        public static int id_sp { get; private set; } = -1;
         //Load dữ liệu lên form chi tiết sản phẩm
         private void form_CTSP_Load(object sender, EventArgs e)
         {
@@ -72,6 +73,7 @@ namespace WindowsFormsApplication1
                 list_Ncc.Add(i);
             }
             frm_ChiTiet_NCC_SanPham GUI_NCC = new frm_ChiTiet_NCC_SanPham();
+            id_sp = Convert.ToInt32( txt_ma_sp.Text);
             GUI_NCC.ShowDialog();
             if(frm_ChiTiet_NCC_SanPham.list!=null&& frm_ChiTiet_NCC_SanPham.flag==true)
             {
@@ -138,29 +140,12 @@ namespace WindowsFormsApplication1
                 
         }
 
-        private void txt_ma_sp_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void txt_ten_sp_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void txt_nha_sx_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void cbo_loai_sp_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void lstv_nha_cung_cap_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

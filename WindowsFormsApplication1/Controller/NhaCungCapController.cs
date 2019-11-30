@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Model;
 
 namespace WindowsFormsApplication1
 {
@@ -31,5 +32,15 @@ namespace WindowsFormsApplication1
             return listview_Ncc;
         }
         //Đẩy sp vào list view
+
+        public bool Check_current_Ncc(string Ncc_selected,int id_sp)
+        {
+            int vendor_id = data_ncc.Vendors.Single(x => x.VendorName == Ncc_selected).VendorID;
+            VendorProduct check = data_ncc.VendorProducts.SingleOrDefault(x => x.VendorID == vendor_id&&x.ProductID==id_sp);
+            if (check == null)
+                return false;
+            else
+                return true;
+        }
     }
 }

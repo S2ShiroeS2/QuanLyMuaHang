@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Model
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString2, mappingSource)
+				base(global::WindowsFormsApplication1.Properties.Settings.Default.PTUDConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

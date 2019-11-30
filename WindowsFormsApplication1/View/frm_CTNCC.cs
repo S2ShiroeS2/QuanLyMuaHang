@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApplication1.Model;
 namespace WindowsFormsApplication1
 {
     public partial class frm_CTNCC : Form

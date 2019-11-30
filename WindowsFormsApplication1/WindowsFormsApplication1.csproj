@@ -52,157 +52,157 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CTHD_controller.cs" />
-    <Compile Include="DataClasses1.designer.cs">
+    <Compile Include="Model\DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
-    <Compile Include="frm_CTNCC.cs">
+    <Compile Include="View\frm_CTNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_CTNCC.Designer.cs">
+    <Compile Include="View\frm_CTNCC.Designer.cs">
       <DependentUpon>frm_CTNCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_CTHD.cs">
+    <Compile Include="View\frm_CTHD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_CTHD.Designer.cs">
+    <Compile Include="View\frm_CTHD.Designer.cs">
       <DependentUpon>frm_CTHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_CTSP.cs">
+    <Compile Include="View\frm_CTSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_CTSP.Designer.cs">
+    <Compile Include="View\frm_CTSP.Designer.cs">
       <DependentUpon>frm_CTSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Login.cs">
+    <Compile Include="View\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Login.Designer.cs">
+    <Compile Include="View\frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Menu.cs">
+    <Compile Include="View\frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Menu.Designer.cs">
+    <Compile Include="View\frm_Menu.Designer.cs">
       <DependentUpon>frm_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_QLHD.cs">
+    <Compile Include="View\frm_QLHD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_QLHD.Designer.cs">
+    <Compile Include="View\frm_QLHD.Designer.cs">
       <DependentUpon>frm_QLHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_QLNCC.cs">
+    <Compile Include="View\frm_QLNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_QLNCC.Designer.cs">
+    <Compile Include="View\frm_QLNCC.Designer.cs">
       <DependentUpon>frm_QLNCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_QLNV.cs">
+    <Compile Include="View\frm_QLNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_QLNV.Designer.cs">
+    <Compile Include="View\frm_QLNV.Designer.cs">
       <DependentUpon>frm_QLNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_QLSP.cs">
+    <Compile Include="View\frm_QLSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_QLSP.Designer.cs">
+    <Compile Include="View\frm_QLSP.Designer.cs">
       <DependentUpon>frm_QLSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_CTNV.cs">
+    <Compile Include="View\frm_CTNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_CTNV.Designer.cs">
+    <Compile Include="View\frm_CTNV.Designer.cs">
       <DependentUpon>frm_CTNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_PasswordChange.cs">
+    <Compile Include="View\frm_PasswordChange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_PasswordChange.Designer.cs">
+    <Compile Include="View\frm_PasswordChange.Designer.cs">
       <DependentUpon>frm_PasswordChange.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_ChiTiet_NCC_SanPham.cs">
+    <Compile Include="View\frm_ChiTiet_NCC_SanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_ChiTiet_NCC_SanPham.Designer.cs">
+    <Compile Include="View\frm_ChiTiet_NCC_SanPham.Designer.cs">
       <DependentUpon>frm_ChiTiet_NCC_SanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_CTSP_trong_HD.cs">
+    <Compile Include="View\Frm_CTSP_trong_HD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_CTSP_trong_HD.Designer.cs">
+    <Compile Include="View\Frm_CTSP_trong_HD.Designer.cs">
       <DependentUpon>Frm_CTSP_trong_HD.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Them_danh_muc.cs">
+    <Compile Include="View\frm_Them_danh_muc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Them_danh_muc.Designer.cs">
+    <Compile Include="View\frm_Them_danh_muc.Designer.cs">
       <DependentUpon>frm_Them_danh_muc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_TTCN.cs">
+    <Compile Include="View\frm_TTCN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_TTCN.Designer.cs">
+    <Compile Include="View\frm_TTCN.Designer.cs">
       <DependentUpon>frm_TTCN.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhaCungCapController.cs" />
-    <Compile Include="QLHD_Controller.cs" />
-    <Compile Include="LoginController.cs" />
-    <Compile Include="NhanVienController.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Controller\NhaCungCapController.cs" />
+    <Compile Include="Controller\QLHD_Controller.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\NhanVienController.cs" />
+    <Compile Include="Controller\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SanPhamController.cs" />
-    <Compile Include="TTCNController.cs" />
-    <Compile Include="UIBuilder.cs" />
-    <Compile Include="VendorController.cs" />
-    <None Include="DataClasses1.dbml.layout">
+    <Compile Include="Controller\SanPhamController.cs" />
+    <Compile Include="Controller\TTCNController.cs" />
+    <Compile Include="Controller\UIBuilder.cs" />
+    <Compile Include="Controller\VendorController.cs" />
+    <None Include="Model\DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="frm_CTNCC.resx">
+    <EmbeddedResource Include="View\frm_CTNCC.resx">
       <DependentUpon>frm_CTNCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_CTHD.resx">
+    <EmbeddedResource Include="View\frm_CTHD.resx">
       <DependentUpon>frm_CTHD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_CTSP.resx">
+    <EmbeddedResource Include="View\frm_CTSP.resx">
       <DependentUpon>frm_CTSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Login.resx">
+    <EmbeddedResource Include="View\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Menu.resx">
+    <EmbeddedResource Include="View\frm_Menu.resx">
       <DependentUpon>frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_QLHD.resx">
+    <EmbeddedResource Include="View\frm_QLHD.resx">
       <DependentUpon>frm_QLHD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_QLNCC.resx">
+    <EmbeddedResource Include="View\frm_QLNCC.resx">
       <DependentUpon>frm_QLNCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_QLNV.resx">
+    <EmbeddedResource Include="View\frm_QLNV.resx">
       <DependentUpon>frm_QLNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_QLSP.resx">
+    <EmbeddedResource Include="View\frm_QLSP.resx">
       <DependentUpon>frm_QLSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_CTNV.resx">
+    <EmbeddedResource Include="View\frm_CTNV.resx">
       <DependentUpon>frm_CTNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_PasswordChange.resx">
+    <EmbeddedResource Include="View\frm_PasswordChange.resx">
       <DependentUpon>frm_PasswordChange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_ChiTiet_NCC_SanPham.resx">
+    <EmbeddedResource Include="View\frm_ChiTiet_NCC_SanPham.resx">
       <DependentUpon>frm_ChiTiet_NCC_SanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_CTSP_trong_HD.resx">
+    <EmbeddedResource Include="View\Frm_CTSP_trong_HD.resx">
       <DependentUpon>Frm_CTSP_trong_HD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Them_danh_muc.resx">
+    <EmbeddedResource Include="View\frm_Them_danh_muc.resx">
       <DependentUpon>frm_Them_danh_muc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_TTCN.resx">
+    <EmbeddedResource Include="View\frm_TTCN.resx">
       <DependentUpon>frm_TTCN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -214,7 +214,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DataClasses1.dbml">
+    <None Include="Model\DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
