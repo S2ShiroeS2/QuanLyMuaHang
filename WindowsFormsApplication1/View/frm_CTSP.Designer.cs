@@ -50,7 +50,7 @@
             // 
             this.lbl_ma_sp.AutoSize = true;
             this.lbl_ma_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ma_sp.Location = new System.Drawing.Point(21, 57);
+            this.lbl_ma_sp.Location = new System.Drawing.Point(26, 45);
             this.lbl_ma_sp.Name = "lbl_ma_sp";
             this.lbl_ma_sp.Size = new System.Drawing.Size(105, 20);
             this.lbl_ma_sp.TabIndex = 0;
@@ -61,17 +61,16 @@
             this.txt_ma_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_ma_sp.Enabled = false;
             this.txt_ma_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ma_sp.Location = new System.Drawing.Point(25, 80);
+            this.txt_ma_sp.Location = new System.Drawing.Point(137, 39);
             this.txt_ma_sp.Name = "txt_ma_sp";
             this.txt_ma_sp.Size = new System.Drawing.Size(168, 26);
             this.txt_ma_sp.TabIndex = 1;
- 
             // 
             // lbl_ten_sp
             // 
             this.lbl_ten_sp.AutoSize = true;
             this.lbl_ten_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ten_sp.Location = new System.Drawing.Point(21, 109);
+            this.lbl_ten_sp.Location = new System.Drawing.Point(26, 86);
             this.lbl_ten_sp.Name = "lbl_ten_sp";
             this.lbl_ten_sp.Size = new System.Drawing.Size(110, 20);
             this.lbl_ten_sp.TabIndex = 2;
@@ -81,7 +80,7 @@
             // 
             this.lbl_loại_sp.AutoSize = true;
             this.lbl_loại_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_loại_sp.Location = new System.Drawing.Point(21, 163);
+            this.lbl_loại_sp.Location = new System.Drawing.Point(26, 168);
             this.lbl_loại_sp.Name = "lbl_loại_sp";
             this.lbl_loại_sp.Size = new System.Drawing.Size(113, 20);
             this.lbl_loại_sp.TabIndex = 7;
@@ -91,7 +90,7 @@
             // 
             this.lbl_danh_muc_sp.AutoSize = true;
             this.lbl_danh_muc_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_danh_muc_sp.Location = new System.Drawing.Point(327, 61);
+            this.lbl_danh_muc_sp.Location = new System.Drawing.Point(313, 168);
             this.lbl_danh_muc_sp.Name = "lbl_danh_muc_sp";
             this.lbl_danh_muc_sp.Size = new System.Drawing.Size(82, 20);
             this.lbl_danh_muc_sp.TabIndex = 9;
@@ -101,17 +100,16 @@
             // 
             this.txt_nha_sx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_nha_sx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nha_sx.Location = new System.Drawing.Point(331, 132);
+            this.txt_nha_sx.Location = new System.Drawing.Point(30, 248);
             this.txt_nha_sx.Name = "txt_nha_sx";
-            this.txt_nha_sx.Size = new System.Drawing.Size(168, 26);
+            this.txt_nha_sx.Size = new System.Drawing.Size(275, 26);
             this.txt_nha_sx.TabIndex = 16;
-
             // 
             // lbl_nha_san_xuat
             // 
             this.lbl_nha_san_xuat.AutoSize = true;
             this.lbl_nha_san_xuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nha_san_xuat.Location = new System.Drawing.Point(327, 109);
+            this.lbl_nha_san_xuat.Location = new System.Drawing.Point(29, 225);
             this.lbl_nha_san_xuat.Name = "lbl_nha_san_xuat";
             this.lbl_nha_san_xuat.Size = new System.Drawing.Size(102, 20);
             this.lbl_nha_san_xuat.TabIndex = 15;
@@ -125,18 +123,17 @@
             this.cbo_loai_sp.Items.AddRange(new object[] {
             "Không bán",
             "Được bán"});
-            this.cbo_loai_sp.Location = new System.Drawing.Point(25, 186);
+            this.cbo_loai_sp.Location = new System.Drawing.Point(30, 191);
             this.cbo_loai_sp.Name = "cbo_loai_sp";
             this.cbo_loai_sp.Size = new System.Drawing.Size(168, 21);
             this.cbo_loai_sp.TabIndex = 17;
-
             // 
             // cbo_danh_muc_sp
             // 
             this.cbo_danh_muc_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbo_danh_muc_sp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_danh_muc_sp.FormattingEnabled = true;
-            this.cbo_danh_muc_sp.Location = new System.Drawing.Point(331, 85);
+            this.cbo_danh_muc_sp.Location = new System.Drawing.Point(317, 191);
             this.cbo_danh_muc_sp.Name = "cbo_danh_muc_sp";
             this.cbo_danh_muc_sp.Size = new System.Drawing.Size(168, 21);
             this.cbo_danh_muc_sp.TabIndex = 18;
@@ -148,26 +145,25 @@
             this.lstv_nha_cung_cap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.lstv_nha_cung_cap.FullRowSelect = true;
-            this.lstv_nha_cung_cap.Location = new System.Drawing.Point(579, 57);
+            this.lstv_nha_cung_cap.Location = new System.Drawing.Point(602, 61);
             this.lstv_nha_cung_cap.MultiSelect = false;
             this.lstv_nha_cung_cap.Name = "lstv_nha_cung_cap";
-            this.lstv_nha_cung_cap.Size = new System.Drawing.Size(121, 168);
+            this.lstv_nha_cung_cap.Size = new System.Drawing.Size(149, 168);
             this.lstv_nha_cung_cap.TabIndex = 19;
             this.lstv_nha_cung_cap.UseCompatibleStateImageBehavior = false;
             this.lstv_nha_cung_cap.View = System.Windows.Forms.View.Details;
-
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Nhà cung cấp";
-            this.columnHeader1.Width = 117;
+            this.columnHeader1.Width = 143;
             // 
             // btn_sua
             // 
             this.btn_sua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.Location = new System.Drawing.Point(149, 218);
+            this.btn_sua.Location = new System.Drawing.Point(150, 293);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(94, 58);
             this.btn_sua.TabIndex = 20;
@@ -180,7 +176,7 @@
             this.btn_luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_luu.Location = new System.Drawing.Point(328, 218);
+            this.btn_luu.Location = new System.Drawing.Point(329, 293);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.Size = new System.Drawing.Size(94, 58);
             this.btn_luu.TabIndex = 21;
@@ -192,22 +188,21 @@
             // 
             this.txt_ten_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_ten_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ten_sp.Location = new System.Drawing.Point(25, 132);
+            this.txt_ten_sp.Location = new System.Drawing.Point(30, 124);
             this.txt_ten_sp.Name = "txt_ten_sp";
-            this.txt_ten_sp.Size = new System.Drawing.Size(168, 26);
+            this.txt_ten_sp.Size = new System.Drawing.Size(455, 26);
             this.txt_ten_sp.TabIndex = 3;
- 
             // 
             // btn_them_ncc
             // 
             this.btn_them_ncc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_them_ncc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_them_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them_ncc.Location = new System.Drawing.Point(592, 233);
+            this.btn_them_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them_ncc.Location = new System.Drawing.Point(602, 235);
             this.btn_them_ncc.Name = "btn_them_ncc";
-            this.btn_them_ncc.Size = new System.Drawing.Size(94, 28);
+            this.btn_them_ncc.Size = new System.Drawing.Size(140, 28);
             this.btn_them_ncc.TabIndex = 22;
-            this.btn_them_ncc.Text = "Thêm";
+            this.btn_them_ncc.Text = "Thêm nhà cung cấp";
             this.btn_them_ncc.UseVisualStyleBackColor = false;
             this.btn_them_ncc.Click += new System.EventHandler(this.btn_them_ncc_Click);
             // 
@@ -216,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(737, 290);
+            this.ClientSize = new System.Drawing.Size(802, 352);
             this.Controls.Add(this.btn_them_ncc);
             this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.btn_sua);

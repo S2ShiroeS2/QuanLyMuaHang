@@ -73,8 +73,8 @@ namespace WindowsFormsApplication1
             V.VendorName = lvi_vendor.SubItems[1].Text;
             V.VendorAddress = lvi_vendor.SubItems[2].Text;
             V.VAT = Int64.Parse(lvi_vendor.SubItems[3].Text);
-            V.VendorEmail = lvi_vendor.SubItems[4].Text;
-            V.VendorPhone = lvi_vendor.SubItems[5].Text;
+            V.VendorEmail = lvi_vendor.SubItems[5].Text;
+            V.VendorPhone = lvi_vendor.SubItems[4].Text;
             V.VendorAvailable = bool.Parse(lvi_vendor.SubItems[6].Text);
             data.Vendors.InsertOnSubmit(V);
             data.SubmitChanges();

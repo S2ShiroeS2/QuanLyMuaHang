@@ -49,10 +49,9 @@
             // 
             this.tb_tim_kiem_NCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tb_tim_kiem_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_tim_kiem_NCC.Location = new System.Drawing.Point(849, 75);
-            this.tb_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_tim_kiem_NCC.Location = new System.Drawing.Point(637, 61);
             this.tb_tim_kiem_NCC.Name = "tb_tim_kiem_NCC";
-            this.tb_tim_kiem_NCC.Size = new System.Drawing.Size(324, 36);
+            this.tb_tim_kiem_NCC.Size = new System.Drawing.Size(244, 30);
             this.tb_tim_kiem_NCC.TabIndex = 23;
             // 
             // bt_tim_kiem_NCC
@@ -60,10 +59,9 @@
             this.bt_tim_kiem_NCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bt_tim_kiem_NCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_tim_kiem_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_tim_kiem_NCC.Location = new System.Drawing.Point(1211, 75);
-            this.bt_tim_kiem_NCC.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_tim_kiem_NCC.Location = new System.Drawing.Point(908, 61);
             this.bt_tim_kiem_NCC.Name = "bt_tim_kiem_NCC";
-            this.bt_tim_kiem_NCC.Size = new System.Drawing.Size(116, 46);
+            this.bt_tim_kiem_NCC.Size = new System.Drawing.Size(87, 37);
             this.bt_tim_kiem_NCC.TabIndex = 22;
             this.bt_tim_kiem_NCC.Text = "Tìm";
             this.bt_tim_kiem_NCC.UseVisualStyleBackColor = false;
@@ -74,10 +72,9 @@
             this.bt_tao_moi_NCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bt_tao_moi_NCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_tao_moi_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_tao_moi_NCC.Location = new System.Drawing.Point(28, 52);
-            this.bt_tao_moi_NCC.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_tao_moi_NCC.Location = new System.Drawing.Point(21, 42);
             this.bt_tao_moi_NCC.Name = "bt_tao_moi_NCC";
-            this.bt_tao_moi_NCC.Size = new System.Drawing.Size(122, 49);
+            this.bt_tao_moi_NCC.Size = new System.Drawing.Size(92, 40);
             this.bt_tao_moi_NCC.TabIndex = 20;
             this.bt_tao_moi_NCC.Text = "Tạo mới";
             this.bt_tao_moi_NCC.UseVisualStyleBackColor = false;
@@ -96,11 +93,10 @@
             this.VendorAvailable});
             this.lv_list_ncc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_list_ncc.FullRowSelect = true;
-            this.lv_list_ncc.Location = new System.Drawing.Point(28, 136);
-            this.lv_list_ncc.Margin = new System.Windows.Forms.Padding(4);
+            this.lv_list_ncc.Location = new System.Drawing.Point(12, 109);
             this.lv_list_ncc.MultiSelect = false;
             this.lv_list_ncc.Name = "lv_list_ncc";
-            this.lv_list_ncc.Size = new System.Drawing.Size(1314, 447);
+            this.lv_list_ncc.Size = new System.Drawing.Size(1227, 364);
             this.lv_list_ncc.TabIndex = 24;
             this.lv_list_ncc.UseCompatibleStateImageBehavior = false;
             this.lv_list_ncc.View = System.Windows.Forms.View.Details;
@@ -110,17 +106,17 @@
             // ID
             // 
             this.ID.Text = "Mã nhà cung cấp";
-            this.ID.Width = 164;
+            this.ID.Width = 134;
             // 
             // VendorName
             // 
             this.VendorName.Text = "Tên nhà cung cấp";
-            this.VendorName.Width = 174;
+            this.VendorName.Width = 259;
             // 
             // VendorAddress
             // 
             this.VendorAddress.Text = "Địa chỉ";
-            this.VendorAddress.Width = 200;
+            this.VendorAddress.Width = 331;
             // 
             // VAT
             // 
@@ -135,19 +131,20 @@
             // VendorPhone
             // 
             this.VendorPhone.Text = "Số điện thoại";
-            this.VendorPhone.Width = 149;
+            this.VendorPhone.Width = 143;
             // 
             // VendorAvailable
             // 
             this.VendorAvailable.Text = "Có sản phẩm";
-            this.VendorAvailable.Width = 198;
+            this.VendorAvailable.Width = 106;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(846, 115);
+            this.label1.Location = new System.Drawing.Point(634, 93);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 17);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 25;
             this.label1.Text = "Tìm kiếm theo tên";
             // 
@@ -155,9 +152,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Location = new System.Drawing.Point(9, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 25);
+            this.label2.Size = new System.Drawing.Size(182, 20);
             this.label2.TabIndex = 26;
             this.label2.Text = "Quản lý nhà cung cấp";
             // 
@@ -169,10 +167,10 @@
             // 
             // frm_QLNCC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1340, 583);
+            this.ClientSize = new System.Drawing.Size(1251, 474);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lv_list_ncc);
@@ -181,7 +179,6 @@
             this.Controls.Add(this.bt_tao_moi_NCC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_QLNCC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_QLNCC";

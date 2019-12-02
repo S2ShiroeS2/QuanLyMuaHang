@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
         //Enable textbox cần thiết
         private void Enable_txb(bool Active)
         {
-            txb_NVName.Enabled = txb_NVEmail.Enabled = txb_NVAccount.Enabled = txb_NVPhone.Enabled =btn_NVSave.Enabled=btn_ResetPassword.Enabled= cmb_NVActivation.Enabled=cmb_NVRole.Enabled = Active;
+            txb_NVName.Enabled = txb_NVEmail.Enabled = txb_NVPhone.Enabled =btn_NVSave.Enabled=btn_ResetPassword.Enabled= cmb_NVActivation.Enabled=cmb_NVRole.Enabled = Active;
         }
 
 
@@ -40,6 +40,8 @@ namespace WindowsFormsApplication1
         {
             btn_NVUpdate.Enabled = false;
             Enable_txb(true);
+            if (LoginController.Account == txb_NVAccount.Text)
+                cmb_NVActivation.Enabled = false;
         }
 
 

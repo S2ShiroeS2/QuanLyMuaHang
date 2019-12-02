@@ -30,6 +30,11 @@ namespace WindowsFormsApplication1
             list_Ncc_database = navigate_ncc.Load_Ncc();
             lstv_list_ncc_them.Items.Clear();
             lstv_list_ncc_co.Items.Clear();
+            txt_ten_sp.Text = "";
+            if (navigate_ncc.load_ten_sp(frm_CTSP.id_sp) != "")
+                txt_ten_sp.Text = navigate_ncc.load_ten_sp(frm_CTSP.id_sp);
+            else
+                txt_ten_sp.Text = "Bạn chưa nhập tên cho sản phẩm";
             foreach (ListViewItem ncc in frm_CTSP.list_Ncc)
             {
                 lstv_list_ncc_them.Items.Add(ncc.Text);

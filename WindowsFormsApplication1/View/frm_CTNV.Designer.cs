@@ -52,21 +52,20 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(491, 187);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(368, 152);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 25);
+            this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 32;
             this.label7.Text = "Kích hoạt";
             // 
             // txb_NVAccount
             // 
             this.txb_NVAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txb_NVAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_NVAccount.Location = new System.Drawing.Point(491, 67);
-            this.txb_NVAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_NVAccount.Enabled = false;
+            this.txb_NVAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_NVAccount.Location = new System.Drawing.Point(368, 54);
             this.txb_NVAccount.Name = "txb_NVAccount";
-            this.txb_NVAccount.Size = new System.Drawing.Size(265, 30);
+            this.txb_NVAccount.Size = new System.Drawing.Size(200, 26);
             this.txb_NVAccount.TabIndex = 0;
             this.txb_NVAccount.TextChanged += new System.EventHandler(this.txb_NVAccount_TextChanged);
             // 
@@ -74,10 +73,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(486, 39);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(364, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 25);
+            this.label6.Size = new System.Drawing.Size(78, 20);
             this.label6.TabIndex = 30;
             this.label6.Text = "Tài khoản";
             // 
@@ -87,9 +85,10 @@
             this.btn_NVSave.Enabled = false;
             this.btn_NVSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NVSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NVSave.Location = new System.Drawing.Point(629, 401);
+            this.btn_NVSave.Location = new System.Drawing.Point(472, 326);
+            this.btn_NVSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_NVSave.Name = "btn_NVSave";
-            this.btn_NVSave.Size = new System.Drawing.Size(127, 55);
+            this.btn_NVSave.Size = new System.Drawing.Size(95, 45);
             this.btn_NVSave.TabIndex = 8;
             this.btn_NVSave.Text = "Lưu";
             this.btn_NVSave.UseVisualStyleBackColor = false;
@@ -100,9 +99,10 @@
             this.btn_NVUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_NVUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NVUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NVUpdate.Location = new System.Drawing.Point(30, 401);
+            this.btn_NVUpdate.Location = new System.Drawing.Point(22, 326);
+            this.btn_NVUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_NVUpdate.Name = "btn_NVUpdate";
-            this.btn_NVUpdate.Size = new System.Drawing.Size(127, 55);
+            this.btn_NVUpdate.Size = new System.Drawing.Size(95, 45);
             this.btn_NVUpdate.TabIndex = 7;
             this.btn_NVUpdate.Text = "Sửa ";
             this.btn_NVUpdate.UseVisualStyleBackColor = false;
@@ -111,9 +111,10 @@
             // txb_NVEmail
             // 
             this.txb_NVEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txb_NVEmail.Location = new System.Drawing.Point(32, 224);
+            this.txb_NVEmail.Location = new System.Drawing.Point(24, 182);
+            this.txb_NVEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txb_NVEmail.Name = "txb_NVEmail";
-            this.txb_NVEmail.Size = new System.Drawing.Size(301, 22);
+            this.txb_NVEmail.Size = new System.Drawing.Size(227, 20);
             this.txb_NVEmail.TabIndex = 3;
             this.txb_NVEmail.TextChanged += new System.EventHandler(this.txb_NVEmail_TextChanged);
             // 
@@ -122,10 +123,9 @@
             this.txb_NVID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_NVID.Enabled = false;
             this.txb_NVID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_NVID.Location = new System.Drawing.Point(32, 141);
-            this.txb_NVID.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_NVID.Location = new System.Drawing.Point(24, 115);
             this.txb_NVID.Name = "txb_NVID";
-            this.txb_NVID.Size = new System.Drawing.Size(301, 30);
+            this.txb_NVID.Size = new System.Drawing.Size(227, 26);
             this.txb_NVID.TabIndex = 2;
             this.txb_NVID.TextChanged += new System.EventHandler(this.txb_NVID_TextChanged);
             // 
@@ -133,10 +133,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 112);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(20, 91);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 25);
+            this.label5.Size = new System.Drawing.Size(103, 20);
             this.label5.TabIndex = 24;
             this.label5.Text = "Mã nhân viên";
             // 
@@ -144,10 +143,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 187);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(20, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 25);
+            this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 23;
             this.label4.Text = "Email";
             // 
@@ -155,10 +153,9 @@
             // 
             this.txb_NVPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_NVPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_NVPhone.Location = new System.Drawing.Point(491, 141);
-            this.txb_NVPhone.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_NVPhone.Location = new System.Drawing.Point(368, 115);
             this.txb_NVPhone.Name = "txb_NVPhone";
-            this.txb_NVPhone.Size = new System.Drawing.Size(265, 30);
+            this.txb_NVPhone.Size = new System.Drawing.Size(200, 26);
             this.txb_NVPhone.TabIndex = 4;
             this.txb_NVPhone.TextChanged += new System.EventHandler(this.txb_NVPhone_TextChanged);
             // 
@@ -166,10 +163,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(486, 112);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(364, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 25);
+            this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Số điện thoại";
             // 
@@ -177,10 +173,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 269);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(20, 219);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 25);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "Quyền";
             // 
@@ -188,10 +183,9 @@
             // 
             this.txb_NVName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_NVName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_NVName.Location = new System.Drawing.Point(32, 67);
-            this.txb_NVName.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_NVName.Location = new System.Drawing.Point(24, 54);
             this.txb_NVName.Name = "txb_NVName";
-            this.txb_NVName.Size = new System.Drawing.Size(301, 30);
+            this.txb_NVName.Size = new System.Drawing.Size(227, 26);
             this.txb_NVName.TabIndex = 1;
             this.txb_NVName.TextChanged += new System.EventHandler(this.txb_NVName_TextChanged);
             // 
@@ -199,10 +193,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(20, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 25);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "Tên nhân viên";
             // 
@@ -214,9 +207,10 @@
             this.cmb_NVActivation.Items.AddRange(new object[] {
             "Active",
             "Deactive"});
-            this.cmb_NVActivation.Location = new System.Drawing.Point(491, 215);
+            this.cmb_NVActivation.Location = new System.Drawing.Point(368, 175);
+            this.cmb_NVActivation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_NVActivation.Name = "cmb_NVActivation";
-            this.cmb_NVActivation.Size = new System.Drawing.Size(121, 30);
+            this.cmb_NVActivation.Size = new System.Drawing.Size(92, 25);
             this.cmb_NVActivation.TabIndex = 34;
             this.cmb_NVActivation.SelectedIndexChanged += new System.EventHandler(this.cmb_NVActivation_SelectedIndexChanged);
             // 
@@ -228,9 +222,10 @@
             this.cmb_NVRole.Items.AddRange(new object[] {
             "Nhân viên",
             "Admin"});
-            this.cmb_NVRole.Location = new System.Drawing.Point(32, 297);
+            this.cmb_NVRole.Location = new System.Drawing.Point(24, 241);
+            this.cmb_NVRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_NVRole.Name = "cmb_NVRole";
-            this.cmb_NVRole.Size = new System.Drawing.Size(121, 30);
+            this.cmb_NVRole.Size = new System.Drawing.Size(92, 25);
             this.cmb_NVRole.TabIndex = 35;
             this.cmb_NVRole.SelectedIndexChanged += new System.EventHandler(this.cmb_NVRole_SelectedIndexChanged);
             // 
@@ -240,9 +235,10 @@
             this.btn_ResetPassword.Enabled = false;
             this.btn_ResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ResetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ResetPassword.Location = new System.Drawing.Point(491, 272);
+            this.btn_ResetPassword.Location = new System.Drawing.Point(368, 221);
+            this.btn_ResetPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ResetPassword.Name = "btn_ResetPassword";
-            this.btn_ResetPassword.Size = new System.Drawing.Size(209, 55);
+            this.btn_ResetPassword.Size = new System.Drawing.Size(157, 45);
             this.btn_ResetPassword.TabIndex = 36;
             this.btn_ResetPassword.Text = "Reset Password";
             this.btn_ResetPassword.UseVisualStyleBackColor = false;
@@ -250,10 +246,10 @@
             // 
             // frm_CTNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(782, 509);
+            this.ClientSize = new System.Drawing.Size(586, 414);
             this.Controls.Add(this.btn_ResetPassword);
             this.Controls.Add(this.cmb_NVRole);
             this.Controls.Add(this.cmb_NVActivation);
@@ -273,7 +269,9 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_CTNV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin chi tiết nhân viên";
             this.Load += new System.EventHandler(this.frm_CTNV_Load);
             this.ResumeLayout(false);

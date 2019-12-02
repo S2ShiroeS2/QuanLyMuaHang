@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1
         //Kích hoạt textbox
         private void Enable(bool Active)
         {
-            txb_Account.Enabled = txb_Email.Enabled = txb_Name.Enabled = txb_Phone.Enabled = Active;
+             txb_Email.Enabled = txb_Name.Enabled = txb_Phone.Enabled = Active;
         }
         
         //Nút kích hoạt textbox để sửa

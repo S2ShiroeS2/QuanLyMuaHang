@@ -42,5 +42,12 @@ namespace WindowsFormsApplication1
             else
                 return true;
         }
+
+        public string load_ten_sp(int id)
+        {
+            if( data_ncc.Products.SingleOrDefault(x => x.ProductID == id)!=null)
+                return data_ncc.Products.SingleOrDefault(x => x.ProductID == id).ProductName;
+            return "";
+        }
     }
 }

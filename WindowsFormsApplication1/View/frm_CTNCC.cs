@@ -30,6 +30,7 @@ namespace WindowsFormsApplication1
         private void Enable_txb(bool Active)
         {
             txb_VendorAddress.Enabled = txb_Phone.Enabled=txb_VendorEmail.Enabled=txb_VendorName.Enabled=nbb_Vat.Enabled=Active;
+            btn_SaveVendor.Enabled = Active;
         }
 
         private void formCT_ncc_Load(object sender, EventArgs e)
@@ -184,5 +185,6 @@ namespace WindowsFormsApplication1
                 EnableSaveBtn();
             }
         }
+
     }
 }
