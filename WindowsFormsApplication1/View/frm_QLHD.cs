@@ -102,7 +102,7 @@ namespace WindowsFormsApplication1
                 int kiemtra = 0;
                 foreach(ListViewItem.ListViewSubItem sub in lvi.SubItems)
                 {
-                    if (sub.Text.ToLower().Contains(txt_search.Text) == false)
+                    if (sub.Text.ToLower().Contains(txt_search.Text.ToLower()) == false)
                     {
                         kiemtra++;
                     }        
@@ -112,5 +112,7 @@ namespace WindowsFormsApplication1
             }
 
         }
+
+
     }
 }
