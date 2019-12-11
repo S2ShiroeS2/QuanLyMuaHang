@@ -97,5 +97,16 @@ namespace WindowsFormsApplication1.Properties {
                 return ((string)(this["PTUDConnectionString4"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=PTUD; Initial Catalog=master;Integrated " +
+            "Security=True")]
+        public string PTUDConnectionString6 {
+            get {
+                return ((string)(this["PTUDConnectionString6"]));
+            }
+        }
     }
 }
