@@ -64,7 +64,10 @@ namespace WindowsFormsApplication1
         {
             var id=from hd in data.OrderTables
                    select hd.orderID;
-            return id.Max()+1;
+            if (id.Count() >0)
+                return id.Max() + 1;
+            else
+                return 1;
         }
 
         public List<string> load_list_sp(string ncc)

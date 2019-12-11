@@ -86,7 +86,7 @@
             this.btn_NVSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NVSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NVSave.Location = new System.Drawing.Point(472, 326);
-            this.btn_NVSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_NVSave.Margin = new System.Windows.Forms.Padding(2);
             this.btn_NVSave.Name = "btn_NVSave";
             this.btn_NVSave.Size = new System.Drawing.Size(95, 45);
             this.btn_NVSave.TabIndex = 8;
@@ -100,7 +100,7 @@
             this.btn_NVUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NVUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NVUpdate.Location = new System.Drawing.Point(22, 326);
-            this.btn_NVUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_NVUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btn_NVUpdate.Name = "btn_NVUpdate";
             this.btn_NVUpdate.Size = new System.Drawing.Size(95, 45);
             this.btn_NVUpdate.TabIndex = 7;
@@ -112,7 +112,7 @@
             // 
             this.txb_NVEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txb_NVEmail.Location = new System.Drawing.Point(24, 182);
-            this.txb_NVEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txb_NVEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txb_NVEmail.Name = "txb_NVEmail";
             this.txb_NVEmail.Size = new System.Drawing.Size(227, 20);
             this.txb_NVEmail.TabIndex = 3;
@@ -208,7 +208,7 @@
             "Active",
             "Deactive"});
             this.cmb_NVActivation.Location = new System.Drawing.Point(368, 175);
-            this.cmb_NVActivation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_NVActivation.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_NVActivation.Name = "cmb_NVActivation";
             this.cmb_NVActivation.Size = new System.Drawing.Size(92, 25);
             this.cmb_NVActivation.TabIndex = 34;
@@ -223,7 +223,7 @@
             "Nhân viên",
             "Admin"});
             this.cmb_NVRole.Location = new System.Drawing.Point(24, 241);
-            this.cmb_NVRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_NVRole.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_NVRole.Name = "cmb_NVRole";
             this.cmb_NVRole.Size = new System.Drawing.Size(92, 25);
             this.cmb_NVRole.TabIndex = 35;
@@ -236,7 +236,7 @@
             this.btn_ResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ResetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ResetPassword.Location = new System.Drawing.Point(368, 221);
-            this.btn_ResetPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ResetPassword.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ResetPassword.Name = "btn_ResetPassword";
             this.btn_ResetPassword.Size = new System.Drawing.Size(157, 45);
             this.btn_ResetPassword.TabIndex = 36;
@@ -269,7 +269,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_CTNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin chi tiết nhân viên";

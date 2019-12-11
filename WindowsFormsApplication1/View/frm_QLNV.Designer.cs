@@ -119,7 +119,7 @@
             // columnHeader15
             // 
             this.columnHeader15.Text = "Tên tài khoản";
-            this.columnHeader15.Width = 190;
+            this.columnHeader15.Width = 150;
             // 
             // columnHeader16
             // 
@@ -134,7 +134,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Vai trò";
-            this.columnHeader2.Width = 77;
+            this.columnHeader2.Width = 97;
             // 
             // columnHeader3
             // 

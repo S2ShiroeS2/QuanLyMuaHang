@@ -111,12 +111,12 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Tình trạng";
-            this.columnHeader5.Width = 183;
+            this.columnHeader5.Width = 139;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Tổng tiền";
-            this.columnHeader7.Width = 99;
+            this.columnHeader7.Width = 147;
             // 
             // btn_tao_moi
             // 
@@ -139,7 +139,7 @@
             this.btn_xac_nhan_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xac_nhan_HD.Location = new System.Drawing.Point(7, 330);
             this.btn_xac_nhan_HD.Name = "btn_xac_nhan_HD";
-            this.btn_xac_nhan_HD.Size = new System.Drawing.Size(122, 36);
+            this.btn_xac_nhan_HD.Size = new System.Drawing.Size(193, 36);
             this.btn_xac_nhan_HD.TabIndex = 18;
             this.btn_xac_nhan_HD.Text = "Xác nhận nhập hàng";
             this.btn_xac_nhan_HD.UseVisualStyleBackColor = false;

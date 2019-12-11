@@ -26,9 +26,14 @@ namespace WindowsFormsApplication1
             if (LC.CheckPassword(LoginController.UserID, (txb_OldPassword.Text.GetHashCode().ToString()))) 
                 if (txb_ConfirmPassword.Text == txb_NewPassword.Text)
                 {
-                    LC.ChangePassword(LoginController.UserID, txb_NewPassword.Text.GetHashCode().ToString());
-                    MessageBox.Show("Thay đổi mật khẩu thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    if (txb_ConfirmPassword.Text.Length > 0)
+                    {
+                        LC.ChangePassword(LoginController.UserID, txb_NewPassword.Text.GetHashCode().ToString());
+                        MessageBox.Show("Thay đổi mật khẩu thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Mật khẩu không được để trống");
                 }
                 else
                 {

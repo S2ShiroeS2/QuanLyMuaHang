@@ -75,5 +75,27 @@ namespace WindowsFormsApplication1.Properties {
                 return ((string)(this["PTUDConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;AttachDbFilename=|DataDirectory|\\PTUD.mdf;Integrated Security=True;" +
+            "User ID=sa;Password=sapassword")]
+        public string PTUDConnectionString3 {
+            get {
+                return ((string)(this["PTUDConnectionString3"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PTUD.mdf;Inte" +
+            "grated Security=True")]
+        public string PTUDConnectionString4 {
+            get {
+                return ((string)(this["PTUDConnectionString4"]));
+            }
+        }
     }
 }

@@ -130,6 +130,7 @@
             this.txt_ten_sp.Enabled = false;
             this.txt_ten_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ten_sp.Location = new System.Drawing.Point(16, 58);
+            this.txt_ten_sp.MaxLength = 200;
             this.txt_ten_sp.Name = "txt_ten_sp";
             this.txt_ten_sp.Size = new System.Drawing.Size(422, 26);
             this.txt_ten_sp.TabIndex = 10;

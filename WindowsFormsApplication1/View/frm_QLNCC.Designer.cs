@@ -36,7 +36,7 @@
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.VendorName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.VendorAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.VAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TIN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.VendorPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.VendorAvailable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -87,7 +87,7 @@
             this.ID,
             this.VendorName,
             this.VendorAddress,
-            this.VAT,
+            this.TIN,
             this.Email,
             this.VendorPhone,
             this.VendorAvailable});
@@ -105,8 +105,8 @@
             // 
             // ID
             // 
-            this.ID.Text = "Mã nhà cung cấp";
-            this.ID.Width = 134;
+            this.ID.Text = "Mã NCC";
+            this.ID.Width = 78;
             // 
             // VendorName
             // 
@@ -116,12 +116,12 @@
             // VendorAddress
             // 
             this.VendorAddress.Text = "Địa chỉ";
-            this.VendorAddress.Width = 331;
+            this.VendorAddress.Width = 315;
             // 
-            // VAT
+            // TIN
             // 
-            this.VAT.Text = "VAT";
-            this.VAT.Width = 63;
+            this.TIN.Text = "TIN";
+            this.TIN.Width = 139;
             // 
             // Email
             // 
@@ -197,7 +197,7 @@
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader VendorName;
         private System.Windows.Forms.ColumnHeader VendorAddress;
-        private System.Windows.Forms.ColumnHeader VAT;
+        private System.Windows.Forms.ColumnHeader TIN;
         private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.ColumnHeader VendorPhone;
         private System.Windows.Forms.ColumnHeader VendorAvailable;

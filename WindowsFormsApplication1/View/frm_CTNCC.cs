@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
 
         private void Enable_txb(bool Active)
         {
-            txb_VendorAddress.Enabled = txb_Phone.Enabled=txb_VendorEmail.Enabled=txb_VendorName.Enabled=nbb_Vat.Enabled=Active;
+            txb_VendorAddress.Enabled = txb_Phone.Enabled=txb_VendorEmail.Enabled=txb_VendorName.Enabled=txb_VAT.Enabled=Active;
             btn_SaveVendor.Enabled = Active;
         }
 
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
                 txb_VendorID.Text = frm_QLNCC.lvi_ncc.SubItems[0].Text;
                 txb_VendorName.Text = frm_QLNCC.lvi_ncc.SubItems[1].Text;
                 txb_VendorAddress.Text = frm_QLNCC.lvi_ncc.SubItems[2].Text;
-                nbb_Vat.Value = int.Parse(frm_QLNCC.lvi_ncc.SubItems[3].Text);
+                txb_VAT.Text = (frm_QLNCC.lvi_ncc.SubItems[3].Text);
                 txb_VendorEmail.Text = frm_QLNCC.lvi_ncc.SubItems[4].Text;
                 txb_Phone.Text = frm_QLNCC.lvi_ncc.SubItems[5].Text;
                 txb_Available.Text = frm_QLNCC.lvi_ncc.SubItems[6].Text;
@@ -57,6 +57,7 @@ namespace WindowsFormsApplication1
             // Khi nhập mới 1 vendor
             else {
                 btn_UpdateVendor.Enabled = false;
+                txb_VAT.Enabled = true;
                 txb_Available.Text = "False";
                 int Next_Vendor_Id = Vc.Get_Max_Vendor_id()+1;
                 txb_VendorID.Text = Next_Vendor_Id.ToString();
@@ -71,7 +72,7 @@ namespace WindowsFormsApplication1
             lvi_them_ncc.Text = txb_VendorID.Text;
             lvi_them_ncc.SubItems.Add(txb_VendorName.Text);
             lvi_them_ncc.SubItems.Add(txb_VendorAddress.Text);
-            lvi_them_ncc.SubItems.Add(nbb_Vat.Value.ToString());
+            lvi_them_ncc.SubItems.Add(txb_VAT.Text.ToString());
             lvi_them_ncc.SubItems.Add(txb_Phone.Text);
             lvi_them_ncc.SubItems.Add(txb_VendorEmail.Text);
             lvi_them_ncc.SubItems.Add(frm_QLNCC.flag_ncc ? "false" : txb_Available.Text);
@@ -186,5 +187,29 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void txb_VAT_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txb_VAT.Text))
+            {
+                txb_VAT.Focus();
+                EP.SetError(txb_VAT, "Không được để trống");
+                flag_4 = false;
+                EnableSaveBtn();
+            }
+            else
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txb_VAT.Text, "^[+]?[0-9]+$"))//Regex cho nhập chữ Tiếng Việt
+            {
+                txb_VAT.Focus();
+                EP.SetError(txb_VAT, "Số điện thoại không hợp lệ");
+                flag_4 = false;
+                EnableSaveBtn();
+            }
+            else
+            {
+                EP.SetError(txb_VAT, null);
+                flag_4 = true;
+                EnableSaveBtn();
+            }
+        }
     }
 }

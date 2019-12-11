@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1
             btn_NVUpdate.Enabled = false;
             Enable_txb(true);
             if (LoginController.Account == txb_NVAccount.Text)
-                cmb_NVActivation.Enabled = false;
+                cmb_NVActivation.Enabled =cmb_NVRole.Enabled= false;
         }
 
 
@@ -79,7 +79,7 @@ namespace WindowsFormsApplication1
                 cmb_NVRole.Text = frm_QLNV.lvi_nv.SubItems[5].Text;
                 cmb_NVActivation.Text = frm_QLNV.lvi_nv.SubItems[6].Text;
                 btn_NVUpdate.Enabled = true;
-                
+                btn_NVSave.Enabled = false;
                 Enable_txb(false);
 
             }
@@ -90,6 +90,7 @@ namespace WindowsFormsApplication1
                 txb_NVID.Text = NextNVId.ToString();
                 cmb_NVActivation.SelectedItem = "Active";
                 cmb_NVRole.SelectedItem = "Nhân viên";
+                txb_NVAccount.Enabled = true;
             }
         }
 

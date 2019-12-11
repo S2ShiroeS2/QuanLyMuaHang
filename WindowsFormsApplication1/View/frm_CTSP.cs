@@ -49,6 +49,7 @@ namespace WindowsFormsApplication1
                 flag = true;
                 txt_ma_sp.Text = (navigate_SanPham.GetMax_ProductID() + 1).ToString();
                 lam_moi_cbo_danh_muc();
+                btn_sua.Enabled = false;
 
             }
         }

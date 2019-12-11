@@ -41,12 +41,14 @@ namespace WindowsFormsApplication1
         //Load dữ liệu lên form
         private void frm_TTCN_Load(object sender, EventArgs e)
         {
+            
             List<ListViewItem> lvi_UserInformation = TTCNC.TakeUserInformation();
             txb_ID.Text = lvi_UserInformation[0].SubItems[0].Text;
             txb_Name.Text = lvi_UserInformation[0].SubItems[1].Text;
             txb_Account.Text = lvi_UserInformation[0].SubItems[2].Text;
             txb_Email.Text = lvi_UserInformation[0].SubItems[3].Text;
             txb_Phone.Text = lvi_UserInformation[0].SubItems[4].Text;
+            btn_SaveInform.Enabled = false;
             if (lvi_UserInformation[0].SubItems[5].Text == "True")
                 txb_Role.Text = "Admin";
             else
