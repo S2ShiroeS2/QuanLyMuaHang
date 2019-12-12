@@ -74,7 +74,7 @@
             this.txb_Email.Enabled = false;
             this.txb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txb_Email.Location = new System.Drawing.Point(4, 167);
-            this.txb_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txb_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txb_Email.Name = "txb_Email";
             this.txb_Email.Size = new System.Drawing.Size(227, 26);
             this.txb_Email.TabIndex = 5;
@@ -156,7 +156,7 @@
             // 
             this.btn_ChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_ChangePassword.Location = new System.Drawing.Point(28, 212);
-            this.btn_ChangePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ChangePassword.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ChangePassword.Name = "btn_ChangePassword";
             this.btn_ChangePassword.Size = new System.Drawing.Size(113, 31);
             this.btn_ChangePassword.TabIndex = 7;
@@ -168,7 +168,7 @@
             // 
             this.btn_ChangeInform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_ChangeInform.Location = new System.Drawing.Point(214, 212);
-            this.btn_ChangeInform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ChangeInform.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ChangeInform.Name = "btn_ChangeInform";
             this.btn_ChangeInform.Size = new System.Drawing.Size(173, 31);
             this.btn_ChangeInform.TabIndex = 8;
@@ -181,7 +181,7 @@
             this.btn_SaveInform.Enabled = false;
             this.btn_SaveInform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_SaveInform.Location = new System.Drawing.Point(459, 212);
-            this.btn_SaveInform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_SaveInform.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SaveInform.Name = "btn_SaveInform";
             this.btn_SaveInform.Size = new System.Drawing.Size(81, 31);
             this.btn_SaveInform.TabIndex = 9;
@@ -225,7 +225,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(619, 258);
+            this.ClientSize = new System.Drawing.Size(674, 328);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txb_Role);
             this.Controls.Add(this.label2);
@@ -244,7 +244,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_TTCN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_TTCN_Load);

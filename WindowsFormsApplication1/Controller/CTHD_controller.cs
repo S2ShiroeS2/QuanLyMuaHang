@@ -85,19 +85,6 @@ namespace WindowsFormsApplication1
 
 
 
-
-        /*  public void Them_SP_vao_HD(ListViewItem lvi_SP)
-          {
-              OrderDetail cthd = new OrderDetail();
-              cthd.orderDetailID = data.OrderDetails.Max(x => x.orderDetailID) + 1;
-              cthd.orderID = Convert.ToInt32( frm_CTHD.ma_hd);
-              cthd.ProductID = data.Products.First(x=>x.ProductName==lvi_SP.SubItems[0].Text).ProductID ;
-              cthd.orderQuantity= Convert.ToInt32(lvi_SP.SubItems[1].Text); 
-              cthd.tax=Convert.ToDouble(lvi_SP.SubItems[2].Text);
-              data.OrderDetails.InsertOnSubmit(cthd);
-              data.SubmitChanges();
-          }
-          */
         public ListViewItem Them_SP(ListViewItem lvi_SP)
         {
             ListViewItem lvi_ctsp = new ListViewItem();
@@ -133,9 +120,8 @@ namespace WindowsFormsApplication1
             
 
             hd.orderID = Convert.ToInt32( mahd);
-            hd.userID = 1;
-           // hd.userID = data.NVs.First(x=>x.userAccount==frm_Login.LoginAccount).userID;
-            //Them User ID sau
+           // hd.userID = 1;
+            hd.userID = data.NVs.First(x=>x.userAccount==frm_Login.LoginAccount).userID;
             hd.status = 1;
             hd.orderDate = Convert.ToDateTime(ngay_dat_hang.Value.ToShortDateString());
             hd.VendorID =data.Vendors.First(x => x.VendorName == ncc).VendorID;

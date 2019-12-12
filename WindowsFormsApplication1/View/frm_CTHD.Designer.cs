@@ -58,10 +58,10 @@
             // lbl_chitiethoadon
             // 
             this.lbl_chitiethoadon.AutoSize = true;
-            this.lbl_chitiethoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_chitiethoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_chitiethoadon.Location = new System.Drawing.Point(12, 9);
             this.lbl_chitiethoadon.Name = "lbl_chitiethoadon";
-            this.lbl_chitiethoadon.Size = new System.Drawing.Size(142, 24);
+            this.lbl_chitiethoadon.Size = new System.Drawing.Size(158, 24);
             this.lbl_chitiethoadon.TabIndex = 0;
             this.lbl_chitiethoadon.Text = "Chi tiết hóa đơn";
             // 
@@ -255,7 +255,7 @@
             this.cbo_nha_cc.FormattingEnabled = true;
             this.cbo_nha_cc.Location = new System.Drawing.Point(142, 89);
             this.cbo_nha_cc.Name = "cbo_nha_cc";
-            this.cbo_nha_cc.Size = new System.Drawing.Size(121, 21);
+            this.cbo_nha_cc.Size = new System.Drawing.Size(231, 21);
             this.cbo_nha_cc.TabIndex = 18;
             this.cbo_nha_cc.DropDown += new System.EventHandler(this.cbo_nha_cc_DropDown);
             this.cbo_nha_cc.SelectedIndexChanged += new System.EventHandler(this.cbo_nha_cc_SelectedIndexChanged);

@@ -214,10 +214,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(8, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 20);
+            this.label8.Size = new System.Drawing.Size(179, 20);
             this.label8.TabIndex = 18;
             this.label8.Text = "Chi tiết nhà cung cấp";
             // 

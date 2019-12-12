@@ -66,6 +66,8 @@ namespace WindowsFormsApplication1
             data.SubmitChanges();
             
         }
+
+
         public void huy_HD(int id, string a)
         {
             OrderTable hd_sp = data.OrderTables.First(x => x.orderID == id);

@@ -284,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images_XhM_icon.ico" />
+    <Content Include="script.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

@@ -44,6 +44,7 @@
             this.btn_luu = new System.Windows.Forms.Button();
             this.txt_ten_sp = new System.Windows.Forms.TextBox();
             this.btn_them_ncc = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_ma_sp
@@ -119,31 +120,34 @@
             // 
             this.cbo_loai_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbo_loai_sp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_loai_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_loai_sp.FormattingEnabled = true;
             this.cbo_loai_sp.Items.AddRange(new object[] {
             "Không bán",
             "Được bán"});
             this.cbo_loai_sp.Location = new System.Drawing.Point(30, 191);
             this.cbo_loai_sp.Name = "cbo_loai_sp";
-            this.cbo_loai_sp.Size = new System.Drawing.Size(168, 21);
+            this.cbo_loai_sp.Size = new System.Drawing.Size(168, 28);
             this.cbo_loai_sp.TabIndex = 17;
             // 
             // cbo_danh_muc_sp
             // 
             this.cbo_danh_muc_sp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbo_danh_muc_sp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_danh_muc_sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_danh_muc_sp.FormattingEnabled = true;
             this.cbo_danh_muc_sp.Location = new System.Drawing.Point(317, 191);
             this.cbo_danh_muc_sp.Name = "cbo_danh_muc_sp";
-            this.cbo_danh_muc_sp.Size = new System.Drawing.Size(168, 21);
+            this.cbo_danh_muc_sp.Size = new System.Drawing.Size(168, 28);
             this.cbo_danh_muc_sp.TabIndex = 18;
             this.cbo_danh_muc_sp.SelectedIndexChanged += new System.EventHandler(this.cbo_danh_muc_sp_SelectedIndexChanged);
             // 
             // lstv_nha_cung_cap
             // 
-            this.lstv_nha_cung_cap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lstv_nha_cung_cap.BackColor = System.Drawing.Color.White;
             this.lstv_nha_cung_cap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
+            this.lstv_nha_cung_cap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstv_nha_cung_cap.FullRowSelect = true;
             this.lstv_nha_cung_cap.Location = new System.Drawing.Point(602, 61);
             this.lstv_nha_cung_cap.MultiSelect = false;
@@ -206,12 +210,23 @@
             this.btn_them_ncc.UseVisualStyleBackColor = false;
             this.btn_them_ncc.Click += new System.EventHandler(this.btn_them_ncc_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(29, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(149, 20);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Chi tiết sản phẩm";
+            // 
             // frm_CTSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(802, 352);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_them_ncc);
             this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.btn_sua);
@@ -254,5 +269,6 @@
         private System.Windows.Forms.Button btn_luu;
         private System.Windows.Forms.TextBox txt_ten_sp;
         private System.Windows.Forms.Button btn_them_ncc;
+        private System.Windows.Forms.Label label8;
     }
 }
