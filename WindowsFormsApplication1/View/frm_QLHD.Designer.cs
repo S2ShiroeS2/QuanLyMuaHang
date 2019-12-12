@@ -81,12 +81,13 @@
             this.lstv_list_HD.Location = new System.Drawing.Point(7, 82);
             this.lstv_list_HD.MultiSelect = false;
             this.lstv_list_HD.Name = "lstv_list_HD";
-            this.lstv_list_HD.Size = new System.Drawing.Size(907, 242);
+            this.lstv_list_HD.Size = new System.Drawing.Size(1033, 242);
             this.lstv_list_HD.TabIndex = 15;
             this.lstv_list_HD.UseCompatibleStateImageBehavior = false;
             this.lstv_list_HD.View = System.Windows.Forms.View.Details;
             this.lstv_list_HD.SelectedIndexChanged += new System.EventHandler(this.lstv_list_HD_SelectedIndexChanged);
             this.lstv_list_HD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstv_list_HD_MouseDoubleClick);
+            this.lstv_list_HD.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lstv_list_HD_MouseDown);
             // 
             // columnHeader1
             // 
@@ -106,7 +107,7 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Nhân viên đặt";
-            this.columnHeader4.Width = 158;
+            this.columnHeader4.Width = 191;
             // 
             // columnHeader5
             // 
@@ -115,8 +116,9 @@
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Tổng tiền";
-            this.columnHeader7.Width = 147;
+            this.columnHeader7.Text = "Tổng tiền(VND)";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader7.Width = 240;
             // 
             // btn_tao_moi
             // 
@@ -161,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(924, 375);
+            this.ClientSize = new System.Drawing.Size(1044, 375);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_xac_nhan_HD);
             this.Controls.Add(this.txt_search);

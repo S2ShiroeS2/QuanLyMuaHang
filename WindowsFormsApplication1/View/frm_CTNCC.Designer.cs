@@ -129,7 +129,7 @@
             this.txb_VendorEmail.MaxLength = 200;
             this.txb_VendorEmail.Name = "txb_VendorEmail";
             this.txb_VendorEmail.Size = new System.Drawing.Size(227, 20);
-            this.txb_VendorEmail.TabIndex = 9;
+            this.txb_VendorEmail.TabIndex = 4;
             this.txb_VendorEmail.TextChanged += new System.EventHandler(this.txb_VendorEmail_TextChanged);
             // 
             // txb_VendorID
@@ -161,7 +161,7 @@
             this.btn_UpdateVendor.Margin = new System.Windows.Forms.Padding(2);
             this.btn_UpdateVendor.Name = "btn_UpdateVendor";
             this.btn_UpdateVendor.Size = new System.Drawing.Size(95, 45);
-            this.btn_UpdateVendor.TabIndex = 11;
+            this.btn_UpdateVendor.TabIndex = 6;
             this.btn_UpdateVendor.Text = "Sửa ";
             this.btn_UpdateVendor.UseVisualStyleBackColor = false;
             this.btn_UpdateVendor.Click += new System.EventHandler(this.bt__sua_ncc_Click);
@@ -176,7 +176,7 @@
             this.btn_SaveVendor.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SaveVendor.Name = "btn_SaveVendor";
             this.btn_SaveVendor.Size = new System.Drawing.Size(95, 45);
-            this.btn_SaveVendor.TabIndex = 12;
+            this.btn_SaveVendor.TabIndex = 7;
             this.btn_SaveVendor.Text = "Lưu";
             this.btn_SaveVendor.UseVisualStyleBackColor = false;
             this.btn_SaveVendor.Click += new System.EventHandler(this.btn_Luu_Click);
@@ -229,7 +229,7 @@
             this.txb_VAT.Location = new System.Drawing.Point(249, 141);
             this.txb_VAT.Name = "txb_VAT";
             this.txb_VAT.Size = new System.Drawing.Size(200, 26);
-            this.txb_VAT.TabIndex = 19;
+            this.txb_VAT.TabIndex = 2;
             this.txb_VAT.TextChanged += new System.EventHandler(this.txb_VAT_TextChanged);
             // 
             // frm_CTNCC

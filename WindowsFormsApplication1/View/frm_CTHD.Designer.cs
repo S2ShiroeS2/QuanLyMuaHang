@@ -149,17 +149,17 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 104;
+            this.columnHeader3.Width = 115;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Thuế";
-            this.columnHeader4.Width = 107;
+            this.columnHeader4.Width = 115;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Tổng tiền";
-            this.columnHeader5.Width = 161;
+            this.columnHeader5.Width = 190;
             // 
             // txt_tong_tien_HD_khong_thue
             // 

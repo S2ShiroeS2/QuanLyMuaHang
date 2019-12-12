@@ -51,7 +51,7 @@
             this.btn_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_LogOut.ForeColor = System.Drawing.Color.Black;
             this.btn_LogOut.Location = new System.Drawing.Point(243, 345);
-            this.btn_LogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_LogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btn_LogOut.Name = "btn_LogOut";
             this.btn_LogOut.Size = new System.Drawing.Size(172, 31);
             this.btn_LogOut.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.btn_QLHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_QLHD.ForeColor = System.Drawing.Color.Black;
             this.btn_QLHD.Location = new System.Drawing.Point(243, 177);
-            this.btn_QLHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_QLHD.Margin = new System.Windows.Forms.Padding(2);
             this.btn_QLHD.Name = "btn_QLHD";
             this.btn_QLHD.Size = new System.Drawing.Size(172, 51);
             this.btn_QLHD.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.btn_QLSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_QLSP.ForeColor = System.Drawing.Color.Black;
             this.btn_QLSP.Location = new System.Drawing.Point(243, 247);
-            this.btn_QLSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_QLSP.Margin = new System.Windows.Forms.Padding(2);
             this.btn_QLSP.Name = "btn_QLSP";
             this.btn_QLSP.Size = new System.Drawing.Size(172, 51);
             this.btn_QLSP.TabIndex = 2;
@@ -97,7 +97,7 @@
             this.btn_QLNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_QLNV.ForeColor = System.Drawing.Color.Black;
             this.btn_QLNV.Location = new System.Drawing.Point(9, 177);
-            this.btn_QLNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_QLNV.Margin = new System.Windows.Forms.Padding(2);
             this.btn_QLNV.Name = "btn_QLNV";
             this.btn_QLNV.Size = new System.Drawing.Size(172, 51);
             this.btn_QLNV.TabIndex = 3;
@@ -113,7 +113,7 @@
             this.btn_QLNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_QLNCC.ForeColor = System.Drawing.Color.Black;
             this.btn_QLNCC.Location = new System.Drawing.Point(9, 247);
-            this.btn_QLNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_QLNCC.Margin = new System.Windows.Forms.Padding(2);
             this.btn_QLNCC.Name = "btn_QLNCC";
             this.btn_QLNCC.Size = new System.Drawing.Size(172, 51);
             this.btn_QLNCC.TabIndex = 4;
@@ -128,11 +128,11 @@
             this.btn_ChangeInform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_ChangeInform.ForeColor = System.Drawing.Color.Black;
             this.btn_ChangeInform.Location = new System.Drawing.Point(9, 345);
-            this.btn_ChangeInform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ChangeInform.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ChangeInform.Name = "btn_ChangeInform";
             this.btn_ChangeInform.Size = new System.Drawing.Size(172, 31);
             this.btn_ChangeInform.TabIndex = 5;
-            this.btn_ChangeInform.Text = "Đổi thông tin cá nhân";
+            this.btn_ChangeInform.Text = "Thông tin cá nhân";
             this.btn_ChangeInform.UseVisualStyleBackColor = false;
             this.btn_ChangeInform.Click += new System.EventHandler(this.btn_ChangeInform_Click);
             // 
@@ -236,7 +236,7 @@
             this.Controls.Add(this.btn_LogOut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Menu";

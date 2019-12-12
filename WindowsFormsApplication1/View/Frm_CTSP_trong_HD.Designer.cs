@@ -73,10 +73,10 @@
             this.cbo_Ten_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Ten_SP.ForeColor = System.Drawing.Color.Black;
             this.cbo_Ten_SP.FormattingEnabled = true;
-            this.cbo_Ten_SP.Location = new System.Drawing.Point(148, 78);
+            this.cbo_Ten_SP.Location = new System.Drawing.Point(126, 78);
             this.cbo_Ten_SP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbo_Ten_SP.Name = "cbo_Ten_SP";
-            this.cbo_Ten_SP.Size = new System.Drawing.Size(140, 28);
+            this.cbo_Ten_SP.Size = new System.Drawing.Size(265, 28);
             this.cbo_Ten_SP.TabIndex = 1;
             this.cbo_Ten_SP.SelectedIndexChanged += new System.EventHandler(this.cbo_Ten_SP_SelectedIndexChanged);
             // 
@@ -85,12 +85,12 @@
             this.txt_So_luong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txt_So_luong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_So_luong.ForeColor = System.Drawing.Color.Black;
-            this.txt_So_luong.Location = new System.Drawing.Point(148, 137);
+            this.txt_So_luong.Location = new System.Drawing.Point(126, 137);
             this.txt_So_luong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_So_luong.MaxLength = 30;
             this.txt_So_luong.Name = "txt_So_luong";
             this.txt_So_luong.Size = new System.Drawing.Size(140, 26);
-            this.txt_So_luong.TabIndex = 2;
+            this.txt_So_luong.TabIndex = 3;
             this.txt_So_luong.TextChanged += new System.EventHandler(this.txt_So_luong_TextChanged);
             // 
             // lbl_So_luong
@@ -148,7 +148,7 @@
             this.txt_Don_gia.MaxLength = 30;
             this.txt_Don_gia.Name = "txt_Don_gia";
             this.txt_Don_gia.Size = new System.Drawing.Size(150, 26);
-            this.txt_Don_gia.TabIndex = 6;
+            this.txt_Don_gia.TabIndex = 2;
             this.txt_Don_gia.TextChanged += new System.EventHandler(this.txt_Don_gia_TextChanged);
             // 
             // label1
@@ -172,7 +172,7 @@
             this.txt_Thue.MaxLength = 30;
             this.txt_Thue.Name = "txt_Thue";
             this.txt_Thue.Size = new System.Drawing.Size(150, 26);
-            this.txt_Thue.TabIndex = 8;
+            this.txt_Thue.TabIndex = 4;
             this.txt_Thue.TextChanged += new System.EventHandler(this.txt_Thue_TextChanged);
             // 
             // label2
@@ -192,10 +192,10 @@
             this.txt_tien_truoc_thue.Enabled = false;
             this.txt_tien_truoc_thue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tien_truoc_thue.ForeColor = System.Drawing.Color.Black;
-            this.txt_tien_truoc_thue.Location = new System.Drawing.Point(606, 196);
+            this.txt_tien_truoc_thue.Location = new System.Drawing.Point(554, 196);
             this.txt_tien_truoc_thue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_tien_truoc_thue.Name = "txt_tien_truoc_thue";
-            this.txt_tien_truoc_thue.Size = new System.Drawing.Size(133, 26);
+            this.txt_tien_truoc_thue.Size = new System.Drawing.Size(185, 26);
             this.txt_tien_truoc_thue.TabIndex = 10;
             // 
             // btn_xac_nhan
@@ -229,10 +229,10 @@
             this.txt_Tong_tien.Enabled = false;
             this.txt_Tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Tong_tien.ForeColor = System.Drawing.Color.Black;
-            this.txt_Tong_tien.Location = new System.Drawing.Point(606, 274);
+            this.txt_Tong_tien.Location = new System.Drawing.Point(554, 274);
             this.txt_Tong_tien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Tong_tien.Name = "txt_Tong_tien";
-            this.txt_Tong_tien.Size = new System.Drawing.Size(133, 26);
+            this.txt_Tong_tien.Size = new System.Drawing.Size(185, 26);
             this.txt_Tong_tien.TabIndex = 13;
             // 
             // label4
@@ -252,10 +252,10 @@
             this.txt_tien_thue.Enabled = false;
             this.txt_tien_thue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tien_thue.ForeColor = System.Drawing.Color.Black;
-            this.txt_tien_thue.Location = new System.Drawing.Point(606, 234);
+            this.txt_tien_thue.Location = new System.Drawing.Point(554, 234);
             this.txt_tien_thue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_tien_thue.Name = "txt_tien_thue";
-            this.txt_tien_thue.Size = new System.Drawing.Size(133, 26);
+            this.txt_tien_thue.Size = new System.Drawing.Size(185, 26);
             this.txt_tien_thue.TabIndex = 15;
             // 
             // err_so_luong

@@ -113,6 +113,16 @@ namespace WindowsFormsApplication1
 
         }
 
-
+        private void lstv_list_HD_MouseDown(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo a=lstv_list_HD.HitTest(e.Location);
+            if (e.Button == MouseButtons.Left)
+            {
+                if (a.Location == ListViewHitTestLocations.None)
+                {
+                    btn_xac_nhan_HD.Enabled = false;
+                }               
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,8 @@ namespace WindowsFormsApplication1
                           };
             foreach(var a in data_hd)
             {
+                var nfi = (NumberFormatInfo)CultureInfo.InvariantCulture.NumberFormat.Clone();
+                nfi.NumberGroupSeparator = " ";
                 string tinh_trang = "";
                 ListViewItem hd = new ListViewItem();// thông tin 1 hóa đơn được lưu trong một listviewitem
                 hd.Text = a.mahd.ToString();
@@ -45,10 +48,12 @@ namespace WindowsFormsApplication1
                 hd.SubItems.Add(a.ten_nv.ToString());
                 if (a.tinh_trang == 1)
                     tinh_trang = "Đang yêu cầu";
-                else
+                else if (a.tinh_trang == 2)
                     tinh_trang = "Đã nhận hàng";
+                else
+                    tinh_trang = "Đã hủy";
                 hd.SubItems.Add(tinh_trang);
-                hd.SubItems.Add(a.tong_tien.ToString());
+                hd.SubItems.Add(a.tong_tien.ToString("#,0.00", nfi));
                 list_lvi_hd.Add(hd);
             }
             return list_lvi_hd;

@@ -100,7 +100,7 @@ namespace WindowsFormsApplication1
 
         private void btn_luu_Click(object sender, EventArgs e)
         {
-            if (lstv_nha_cung_cap.Items.Count > 0 && txt_nha_sx.Text.Length>0 && txt_ten_sp.Text.Length>0 && cbo_danh_muc_sp.SelectedItem!=null && cbo_loai_sp.SelectedItem!=null)
+            if (lstv_nha_cung_cap.Items.Count > 0 && txt_nha_sx.Text.Length>0 && txt_ten_sp.Text.Length>0 && cbo_danh_muc_sp.SelectedItem!=null && cbo_loai_sp.SelectedItem!=null&& (txt_ten_sp.Text.Where(c => !Char.IsWhiteSpace(c)).ToArray()).Count()>0 && (txt_nha_sx.Text.Where(c => !Char.IsWhiteSpace(c)).ToArray()).Count() > 0)
             {
 
                 lvi_SanPham = new ListViewItem();

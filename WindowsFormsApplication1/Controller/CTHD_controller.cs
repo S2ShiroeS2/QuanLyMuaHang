@@ -101,9 +101,13 @@ namespace WindowsFormsApplication1
         public ListViewItem Them_SP(ListViewItem lvi_SP)
         {
             ListViewItem lvi_ctsp = new ListViewItem();
-            
-            lvi_ctsp.Text = (data.OrderDetails.Max(x => x.orderDetailID) + 1).ToString();
-            lvi_ctsp.SubItems.Add(  lvi_SP.SubItems[0]);
+            if (data.OrderDetails.Select(X => X.orderDetailID).ToList().Count > 0)
+            {
+                lvi_ctsp.Text = (data.OrderDetails.Max(x => x.orderDetailID) + 1).ToString();
+            }
+            else
+                lvi_ctsp.Text = "1";
+            lvi_ctsp.SubItems.Add(lvi_SP.SubItems[0]);
             lvi_ctsp.SubItems.Add(lvi_SP.SubItems[1]);
             lvi_ctsp.SubItems.Add(lvi_SP.SubItems[2]);
             lvi_ctsp.SubItems.Add(lvi_SP.SubItems[3]);

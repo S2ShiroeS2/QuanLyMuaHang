@@ -58,6 +58,7 @@ namespace WindowsFormsApplication1
         private void Enable(bool Active)
         {
              txb_Email.Enabled = txb_Name.Enabled = txb_Phone.Enabled = Active;
+            btn_ChangeInform.Enabled = !Active;
         }
         
         //Nút kích hoạt textbox để sửa
