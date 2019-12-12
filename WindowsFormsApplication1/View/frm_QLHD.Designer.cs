@@ -41,6 +41,7 @@
             this.btn_tao_moi = new System.Windows.Forms.Button();
             this.btn_xac_nhan_HD = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_huy_don_hang = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_search
@@ -158,12 +159,27 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Quản lý hóa đơn";
             // 
+            // btn_huy_don_hang
+            // 
+            this.btn_huy_don_hang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_huy_don_hang.Enabled = false;
+            this.btn_huy_don_hang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_huy_don_hang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huy_don_hang.Location = new System.Drawing.Point(226, 330);
+            this.btn_huy_don_hang.Name = "btn_huy_don_hang";
+            this.btn_huy_don_hang.Size = new System.Drawing.Size(193, 36);
+            this.btn_huy_don_hang.TabIndex = 21;
+            this.btn_huy_don_hang.Text = "Hủy đơn hàng";
+            this.btn_huy_don_hang.UseVisualStyleBackColor = false;
+            this.btn_huy_don_hang.Click += new System.EventHandler(this.btn_huy_don_hang_Click);
+            // 
             // frm_QLHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1044, 375);
+            this.Controls.Add(this.btn_huy_don_hang);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_xac_nhan_HD);
             this.Controls.Add(this.txt_search);
@@ -195,5 +211,6 @@
         private System.Windows.Forms.Button btn_tao_moi;
         private System.Windows.Forms.Button btn_xac_nhan_HD;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_huy_don_hang;
     }
 }

@@ -48,7 +48,7 @@ namespace WindowsFormsApplication1
                 hd.SubItems.Add(a.ten_nv.ToString());
                 if (a.tinh_trang == 1)
                     tinh_trang = "Đang yêu cầu";
-                else if (a.tinh_trang == 2)
+                else if (a.tinh_trang == 0)
                     tinh_trang = "Đã nhận hàng";
                 else
                     tinh_trang = "Đã hủy";
@@ -65,6 +65,13 @@ namespace WindowsFormsApplication1
             hd_sp.status = a == "Đang yêu cầu" ? 0 : 1;
             data.SubmitChanges();
             
+        }
+        public void huy_HD(int id, string a)
+        {
+            OrderTable hd_sp = data.OrderTables.First(x => x.orderID == id);
+            hd_sp.status = a == "Đang yêu cầu" ? 2 : 1;
+            data.SubmitChanges();
+
         }
     }
 }

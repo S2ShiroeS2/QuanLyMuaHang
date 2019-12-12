@@ -71,9 +71,9 @@ namespace WindowsFormsApplication1
             {
                 hd_id = Convert.ToInt16(lstv_list_HD.SelectedItems[0].SubItems[0].Text);
                 if (lstv_list_HD.SelectedItems[0].SubItems[4].Text == "Đang yêu cầu")
-                    btn_xac_nhan_HD.Enabled = true;
+                    btn_xac_nhan_HD.Enabled = btn_huy_don_hang.Enabled = true;
                 else
-                    btn_xac_nhan_HD.Enabled = false;
+                    btn_xac_nhan_HD.Enabled=btn_huy_don_hang.Enabled = false;
             }
                 
         }
@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1
             {
             }
             lam_moi_listview();
-            btn_xac_nhan_HD.Enabled = false;
+            btn_xac_nhan_HD.Enabled =btn_huy_don_hang.Enabled= false;
         }
 
 
@@ -121,8 +121,23 @@ namespace WindowsFormsApplication1
                 if (a.Location == ListViewHitTestLocations.None)
                 {
                     btn_xac_nhan_HD.Enabled = false;
+                    btn_huy_don_hang.Enabled = false;
                 }               
             }
+        }
+
+        private void btn_huy_don_hang_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Xác nhận hủy đơn hàng?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                QLHD_crtl.huy_HD(Convert.ToInt32(lstv_list_HD.SelectedItems[0].SubItems[0].Text), lstv_list_HD.SelectedItems[0].SubItems[4].Text);
+            }
+            else
+            {
+            }
+            lam_moi_listview();
+            btn_xac_nhan_HD.Enabled = btn_huy_don_hang.Enabled = false;
         }
     }
 }
